@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"d1/def/structext_1_1_rocks_d_b_serve_1_1_rocks_d_b_handler.html":[0,0,5,2,0,0],
 "d1/def/structext_1_1_rocks_d_b_serve_1_1_rocks_d_b_handler.html#a0263614893dd2b31fe2723004bbea09a":[0,0,5,2,0,0,5],
 "d1/def/structext_1_1_rocks_d_b_serve_1_1_rocks_d_b_handler.html#a112ea357679f0a5be7f2d5ebbea83914":[0,0,5,2,0,0,6],
 "d1/def/structext_1_1_rocks_d_b_serve_1_1_rocks_d_b_handler.html#a482c4c28e7e7b718cdc5f8ef874a917d":[0,0,5,2,0,0,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "d2/d9e/classext_1_1_big_num_mutable.html#a5a6b7e349e4d8cd7f361aeb9c551e63c":[0,0,0,0,1,2],
 "d2/d9e/classext_1_1_big_num_mutable.html#a5bc7e68d73bd780958214b9b3a12c27e":[0,0,0,0,1,50],
 "d2/d9e/classext_1_1_big_num_mutable.html#a5ec25ea199a2a99ccf0418a9ae040304":[0,0,0,0,1,1],
-"d2/d9e/classext_1_1_big_num_mutable.html#a68a945e536b2fcf567d495b8d1e1a313":[0,0,0,0,1,41]
+"d2/d9e/classext_1_1_big_num_mutable.html#a68a945e536b2fcf567d495b8d1e1a313":[0,0,0,0,1,41],
+"d2/d9e/classext_1_1_big_num_mutable.html#a695d473f75215d515a9b676f1683da8d":[0,0,0,0,1,14]
 };

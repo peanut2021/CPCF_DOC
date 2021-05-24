@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"d2/d9e/classext_1_1_big_num_mutable.html#a695d473f75215d515a9b676f1683da8d":[0,0,0,0,1,14],
 "d2/d9e/classext_1_1_big_num_mutable.html#a6b8293d8b1ecbe1155a231a64132ded6":[0,0,0,0,1,45],
 "d2/d9e/classext_1_1_big_num_mutable.html#a74f9285d6945740f64f6bf42cdefd5db":[0,0,0,0,1,17],
 "d2/d9e/classext_1_1_big_num_mutable.html#a75198e8cea9de15de9e36bc3aa0684a8":[0,0,0,0,1,13],
@@ -177,7 +176,6 @@ var NAVTREEINDEX4 =
 "d3/da0/structinet_1_1_datagram.html#ab0062ad21aea7603f3e244773b9717bc":[0,2,0,1,2],
 "d3/da0/structinet_1_1_datagram.html#acd0ffa966d55ba59e6db1f49edfa8070":[0,2,0,1,7],
 "d3/da0/structinet_1_1_datagram.html#ad2f7fd4895d86811c4f04522fbf084de":[0,2,0,1,4],
-"d3/da2/test_botan_8cpp-example.html":[1,6],
 "d3/da3/structrt_1_1_is_zero_bits_3_017_01_4.html":[0,4,6,15],
 "d3/da3/structrt_1_1_is_zero_bits_3_017_01_4.html#a424b140e19f72641005cc8124ad573a4":[0,4,6,15,0],
 "d3/db8/classrt_1_1_buffer.html":[0,4,0,3],
@@ -219,7 +217,7 @@ var NAVTREEINDEX4 =
 "d3/de6/classinet_1_1_async_datagram_core_base.html#add8a96ab94ea8f8e9e5b502d10c2b599":[0,2,0,0,10],
 "d3/de6/classinet_1_1_async_datagram_core_base.html#ae7306ca85846c1727b955482408889ea":[0,2,0,0,11],
 "d3/de6/classinet_1_1_async_datagram_core_base.html#aea61a7fa46caa7ab7657ee715429dabe":[0,2,0,0,6],
-"d3/de8/test_rt_json_8cpp-example.html":[1,4],
+"d3/de8/test_rt_json_8cpp-example.html":[1,3],
 "d3/de9/structrt_1_1_is_zero_bits_3_015_01_4.html":[0,4,6,13],
 "d3/de9/structrt_1_1_is_zero_bits_3_015_01_4.html#a00bb8d1b0e2e4b64cf45643e01b7ba3d":[0,4,6,13,0],
 "d3/def/classinet_1_1_http_response.html":[0,2,3,5],
@@ -249,5 +247,7 @@ var NAVTREEINDEX4 =
 "d3/def/classinet_1_1_http_response.html#a96e639fa8598615c718514c0aaf9e9c0":[0,2,3,5,25],
 "d3/def/classinet_1_1_http_response.html#a9c29a222e2e74424e88474e60b373678":[0,2,3,5,27],
 "d3/def/classinet_1_1_http_response.html#aa1d2ff59a9f78c3b332f068d7a2030b9":[0,2,3,5,32],
-"d3/def/classinet_1_1_http_response.html#aa83fbb514f6c76173fb529e6d752359d":[0,2,3,5,28]
+"d3/def/classinet_1_1_http_response.html#aa83fbb514f6c76173fb529e6d752359d":[0,2,3,5,28],
+"d3/def/classinet_1_1_http_response.html#aa91d11f3f79c3ee4ef360b890df5f8f5":[0,2,3,5,20],
+"d3/def/classinet_1_1_http_response.html#aae91499d85b5a2d8fbe7c9439fe78fcf":[0,2,3,5,30]
 };

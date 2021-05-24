@@ -1,5 +1,9 @@
 var NAVTREEINDEX21 =
 {
+"df/d21/classinet_1_1_http_request_async.html":[0,2,1,3],
+"df/d21/classinet_1_1_http_request_async.html#a2d40c32185cbae0988b4bf2ce1280909":[0,2,1,3,3],
+"df/d21/classinet_1_1_http_request_async.html#a610176083aaa0800bab4d7df6a6bf943":[0,2,1,3,5],
+"df/d21/classinet_1_1_http_request_async.html#a68face9e83c0f42873a9a8067ea0d3e6":[0,2,1,3,4],
 "df/d21/classinet_1_1_http_request_async.html#a840c174b4613f2391d1c04dd858fc5f0":[0,2,1,3,0],
 "df/d21/classinet_1_1_http_request_async.html#acd7f49b472af4b2d1c428e63d54bae28":[0,2,1,3,1],
 "df/d21/classinet_1_1_http_request_async.html#ad4dc29519e44baaa1ad2ae9831f16684":[0,2,1,3,2],
@@ -17,6 +21,7 @@ var NAVTREEINDEX21 =
 "df/d43/classrt_1_1_type_traits_3_01_buffer_ex_3_01_t_01_4_01_4.html#ab36a0374d945ba8c178a1cfcfd92c687":[0,4,0,12,6],
 "df/d62/group__gl.html":[0,1],
 "df/d67/group__string__type__ops.html":[0,4,5],
+"df/d67/test_inet_socket_8cpp-example.html":[1,8],
 "df/d7f/structgl_1_1gdi_font_1_1___code_block.html":[0,1,2,2,0],
 "df/d7f/structgl_1_1gdi_font_1_1___code_block.html#adcdce91c086633b127ecfa6729e81f67":[0,1,2,2,0,0],
 "df/d7f/structgl_1_1gdi_font_1_1___code_block.html#ae61dfa617c96b07ba8eefb700fff5944":[0,1,2,2,0,1],
@@ -74,7 +79,7 @@ var NAVTREEINDEX21 =
 "df/df2/structinet_1_1_tiny_httpd_1_1listening__port.html#a3d425dcb47f6f45fae5b69b5aa1f557f":[0,2,3,6,1,1],
 "df/df2/structinet_1_1_tiny_httpd_1_1listening__port.html#a4d12fa9133a14c02390080149c845f52":[0,2,3,6,1,0],
 "df/df2/structinet_1_1_tiny_httpd_1_1listening__port.html#a5f14432edd06e1d1e925d96c13daa82e":[0,2,3,6,1,2],
-"df/df4/test_api_8cpp-example.html":[1,2],
+"df/df4/test_api_8cpp-example.html":[1,13],
 "df/dfc/group__multi__thread.html":[0,3,4],
 "df/dfc/group__multi__thread.html#ga0a9c1e71bbf3298d53ef66c487278204":[0,3,4,8],
 "df/dfc/group__multi__thread.html#ga0b9d108424cb5331791394fb19e8effc":[0,3,4,9],
