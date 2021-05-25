@@ -133,6 +133,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a19a9dc3781662cd17274365233caf12e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfb/classinet_1_1_http_navigator.html#a19a9dc3781662cd17274365233caf12e">IsResponseSuccess</a> () const</td></tr>
 <tr class="separator:a19a9dc3781662cd17274365233caf12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abab5642d98b6f93ce20327257e626c2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfb/classinet_1_1_http_navigator.html#abab5642d98b6f93ce20327257e626c2a">NavigateTo</a> (LPCSTR pURL, int max_redirection_times=8, const char *pPostData=nullptr, int postDataLen=0, <a class="el" href="../../d4/dec/classinet_1_1_http_session.html#ac746d5a709c72e4b5911ab2fe30930a9">HttpSession::_tagHttpVerb</a> customVerb_for_post=<a class="el" href="../../d4/dec/classinet_1_1_http_session.html#ac746d5a709c72e4b5911ab2fe30930a9aa223dccaff65f3fab8a432dfe8ccb6c9">HttpSession::HTTP_VERB_POST</a>, bool bWaitResponse=true)</td></tr>
+<tr class="memdesc:abab5642d98b6f93ce20327257e626c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">automatic redirection (3xx) handling, cookie storage  <a href="../../d3/dfb/classinet_1_1_http_navigator.html#abab5642d98b6f93ce20327257e626c2a">More...</a><br /></td></tr>
 <tr class="separator:abab5642d98b6f93ce20327257e626c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a042931c5e1c10c597727457ae6704ec7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfb/classinet_1_1_http_navigator.html#a042931c5e1c10c597727457ae6704ec7">SetBindingAddress</a> (const <a class="el" href="../../d9/dac/structinet_1_1_inet_addr.html">InetAddr</a> &amp;addr)</td></tr>
 <tr class="separator:a042931c5e1c10c597727457ae6704ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,6 +145,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a52f380e74c620d211a46e158207a1102"><td class="mdescLeft">&#160;</td><td class="mdescRight">limit the maximum time of server not responding  <a href="../../d3/dfb/classinet_1_1_http_navigator.html#a52f380e74c620d211a46e158207a1102">More...</a><br /></td></tr>
 <tr class="separator:a52f380e74c620d211a46e158207a1102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2139f40fe2b499ab31f63947a685222b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfb/classinet_1_1_http_navigator.html#a2139f40fe2b499ab31f63947a685222b">SetItemEventCallback</a> (<a class="el" href="../../d4/dec/classinet_1_1_http_session.html#ac6fb8125f7570dfb681482daa2f142ee">HttpSession::FUNC_EVENT_CALLBACK</a> cb, LPVOID cookie)</td></tr>
+<tr class="memdesc:a2139f40fe2b499ab31f63947a685222b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Item Event Callback.  <a href="../../d3/dfb/classinet_1_1_http_navigator.html#a2139f40fe2b499ab31f63947a685222b">More...</a><br /></td></tr>
 <tr class="separator:a2139f40fe2b499ab31f63947a685222b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64685c14dfcf19db2ab40995aa8414fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfb/classinet_1_1_http_navigator.html#a64685c14dfcf19db2ab40995aa8414fa">SetProxy</a> (const <a class="el" href="../../d9/dac/structinet_1_1_inet_addr.html">InetAddr</a> &amp;addr)</td></tr>
 <tr class="memdesc:a64685c14dfcf19db2ab40995aa8414fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">SetProxy(inet::InetAddr()); to disable proxy.  <a href="../../d3/dfb/classinet_1_1_http_navigator.html#a64685c14dfcf19db2ab40995aa8414fa">More...</a><br /></td></tr>
@@ -175,7 +177,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#_a50">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00348">348</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00384">384</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af7c605d666670e270d2eff36912d2935"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af7c605d666670e270d2eff36912d2935">&#9670;&nbsp;</a></span>HttpNavigator()</h2>
@@ -202,7 +204,7 @@ Protected Attributes</h2></td></tr>
 
 <p>final redirected URL </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00371">371</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00416">416</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -258,7 +260,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00367">367</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00403">403</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -285,7 +287,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00377">377</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00422">422</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -312,7 +314,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00375">375</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00420">420</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -339,7 +341,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00370">370</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00415">415</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -366,7 +368,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00374">374</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00419">419</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -393,7 +395,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00390">390</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00442">442</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -420,7 +422,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00391">391</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00443">443</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -449,7 +451,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a53">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00376">376</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00421">421</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -476,7 +478,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00394">394</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00446">446</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -503,7 +505,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00392">392</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00444">444</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -530,7 +532,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00383">383</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00428">428</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -557,7 +559,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00393">393</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00445">445</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -610,6 +612,20 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>automatic redirection (3xx) handling, cookie storage </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pURL</td><td></td></tr>
+    <tr><td class="paramname">max_redirection_times</td><td></td></tr>
+    <tr><td class="paramname">pPostData</td><td></td></tr>
+    <tr><td class="paramname">postDataLen</td><td></td></tr>
+    <tr><td class="paramname">customVerb_for_post</td><td></td></tr>
+    <tr><td class="paramname">bWaitResponse</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a52">test_http.cpp</a>.</dd>
 </dl>
 
@@ -685,7 +701,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00385">385</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00430">430</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -715,7 +731,7 @@ Protected Attributes</h2></td></tr>
 
 <p>limit the maximum time of server not responding </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00365">365</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00401">401</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -752,10 +768,19 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Set Item Event Callback. </p>
+<p>Set <a class="el" href="../../d4/dec/classinet_1_1_http_session.html">HttpSession</a> Item Event Callback </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td></td></tr>
+    <tr><td class="paramname">cookie</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a51">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00388">388</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00440">440</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -785,7 +810,7 @@ Protected Attributes</h2></td></tr>
 
 <p>SetProxy(inet::InetAddr()); to disable proxy. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00382">382</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00427">427</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -859,7 +884,7 @@ Protected Attributes</h2></td></tr>
 
 <p>limit the total time of fulfilling the request </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00366">366</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00402">402</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -884,7 +909,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00359">359</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00395">395</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -908,7 +933,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00358">358</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00394">394</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
