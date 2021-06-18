@@ -90,14 +90,8 @@ $(document).ready(function(){initNavTree('df/df4/test_api_8cpp-example.html','..
 <div class="title">test_api.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;../../core/rt/string_type_ops.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;../../core/rt/buffer_type.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;../../core/rt/small_math.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;../../core/rt/xml_xhtml.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;../../core/rt/json.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;../../core/os/kernel.h&quot;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;../../core/os/kernel.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;../../core/os/multi_thread.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;../../core/os/file_dir.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;../../core/os/file_zip.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;../../core/os/high_level.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;../../core/os/precompiler.h&quot;</span></div>
@@ -111,736 +105,12 @@ $(document).ready(function(){initNavTree('df/df4/test_api_8cpp-example.html','..
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><a name="_a0"></a><a class="code" href="../../d1/d3b/classos_1_1_critical_section.html">os::CriticalSection</a> test_multithread_ccs;</div>
-<div class="line"><a name="_a1"></a><a class="code" href="../../d6/d3b/classos_1_1_event.html">os::Event</a> test_multithread_event;</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::multithread()</div>
-<div class="line">{</div>
-<div class="line">    {   DWORD a = 0x0010;</div>
-<div class="line">        DWORD org = <a name="a2"></a><a class="code" href="../../d2/d9f/group__thread__primitive.html#ga63adf045afeb0ccdd21660445451b023">os::AtomicOr</a>(0x1000, &amp;a);</div>
-<div class="line">        <a name="a3"></a><a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;AtomicOr: &quot;</span>&lt;&lt;<a name="_a4"></a><a class="code" href="../../d4/d70/structrt_1_1tos_1_1_hex_num.html">rt::tos::HexNum&lt;&gt;</a>(org)&lt;&lt;<span class="stringliteral">&quot; -&gt; &quot;</span>&lt;&lt;<a class="code" href="../../d4/d70/structrt_1_1tos_1_1_hex_num.html">rt::tos::HexNum&lt;&gt;</a>(a));</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {</div>
-<div class="line">        <span class="keyword">volatile</span> INT c = 0;</div>
-<div class="line">        <span class="keywordtype">bool</span> ends = <span class="keyword">false</span>;</div>
-<div class="line">        <a name="_a5"></a><a class="code" href="../../d1/d15/classos_1_1_thread.html">os::Thread</a> a,b;</div>
-<div class="line">        <span class="keyword">auto</span> th = [&amp;c, &amp;ends]()</div>
-<div class="line">        {   <span class="keywordflow">while</span>(!ends)</div>
-<div class="line">            {   <span class="keywordtype">int</span> x = <a name="a6"></a><a class="code" href="../../d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;c);</div>
-<div class="line">                <a name="a7"></a><a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;c = &quot;</span>&lt;&lt;x&lt;&lt;<span class="stringliteral">&quot; TH=&quot;</span>&lt;&lt;<a name="a8"></a><a class="code" href="../../d1/d15/classos_1_1_thread.html#ab08b3d77a98a599cbcec81b870ad2623">os::Thread::GetCurrentId</a>());</div>
-<div class="line">                <a name="a9"></a><a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(100);</div>
-<div class="line">            }</div>
-<div class="line">            <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;Exit TH=&quot;</span>&lt;&lt;<a class="code" href="../../d1/d15/classos_1_1_thread.html#ab08b3d77a98a599cbcec81b870ad2623">os::Thread::GetCurrentId</a>());</div>
-<div class="line">        };</div>
-<div class="line">        a.<a name="a10"></a><a class="code" href="../../d1/d15/classos_1_1_thread.html#a233ba0e44b407e5b68f9859ab970ca5f">Create</a>(th);</div>
-<div class="line">        b.<a class="code" href="../../d1/d15/classos_1_1_thread.html#a233ba0e44b407e5b68f9859ab970ca5f">Create</a>(th);</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(2000);</div>
-<div class="line">        ends = <span class="keyword">true</span>;</div>
-<div class="line">        a.<a name="a11"></a><a class="code" href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">WaitForEnding</a>();</div>
-<div class="line">        b.<a class="code" href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">WaitForEnding</a>();</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> LOOPCOUNT = 500000;</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">struct </span>_call_atom</div>
-<div class="line">    {   <span class="keyword">static</span> DWORD _atom_inc(LPVOID pi)</div>
-<div class="line">        {   <span class="keyword">volatile</span> <span class="keywordtype">int</span> *p = (<span class="keyword">volatile</span> <span class="keywordtype">int</span> *)pi;</div>
-<div class="line">            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;LOOPCOUNT;i++)</div>
-<div class="line">            {   <a class="code" href="../../d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(p);</div>
-<div class="line">            }</div>
-<div class="line">            <span class="keywordflow">return</span> 0;</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keyword">static</span> DWORD _atom_dec(LPVOID pi)</div>
-<div class="line">        {   <span class="keyword">volatile</span> <span class="keywordtype">int</span> *p = (<span class="keyword">volatile</span> <span class="keywordtype">int</span> *)pi;</div>
-<div class="line">            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;LOOPCOUNT;i++)</div>
-<div class="line">            {   <a name="a12"></a><a class="code" href="../../d2/d9f/group__thread__primitive.html#ga55353ff181e49ac93d2220d6f7ab7f47">os::AtomicDecrement</a>(p);</div>
-<div class="line">            }</div>
-<div class="line">            <span class="keywordflow">return</span> 0;</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keyword">static</span> DWORD _ccs_inc(LPVOID pi)</div>
-<div class="line">        {   <span class="keyword">volatile</span> <span class="keywordtype">int</span> *p = (<span class="keyword">volatile</span> <span class="keywordtype">int</span> *)pi;</div>
-<div class="line">            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;LOOPCOUNT/10;i++)</div>
-<div class="line">            {   <a name="a13"></a><a class="code" href="../../d2/d9f/group__thread__primitive.html#ga6987251445e0c897f98d8d407ced08ee">EnterCSBlock</a>(test_multithread_ccs);</div>
-<div class="line">                (*p)++;</div>
-<div class="line">            }</div>
-<div class="line">            <span class="keywordflow">return</span> 0;</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keyword">static</span> DWORD _ccs_dec(LPVOID pi)</div>
-<div class="line">        {   <span class="keyword">volatile</span> <span class="keywordtype">int</span> *p = (<span class="keyword">volatile</span> <span class="keywordtype">int</span> *)pi;</div>
-<div class="line">            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;LOOPCOUNT/10;i++)</div>
-<div class="line">            {   <a class="code" href="../../d2/d9f/group__thread__primitive.html#ga6987251445e0c897f98d8d407ced08ee">EnterCSBlock</a>(test_multithread_ccs);</div>
-<div class="line">                (*p)--;</div>
-<div class="line">            }</div>
-<div class="line">            <span class="keywordflow">return</span> 0;</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keyword">static</span> DWORD _inc(LPVOID pi)</div>
-<div class="line">        {   <span class="keyword">volatile</span> <span class="keywordtype">int</span> *p = (<span class="keyword">volatile</span> <span class="keywordtype">int</span> *)pi;</div>
-<div class="line">            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;LOOPCOUNT;i++)</div>
-<div class="line">            {   (*p)++;</div>
-<div class="line">            }</div>
-<div class="line">            <span class="keywordflow">return</span> 0;</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keyword">static</span> DWORD _dec(LPVOID pi)</div>
-<div class="line">        {   <span class="keyword">volatile</span> <span class="keywordtype">int</span> *p = (<span class="keyword">volatile</span> <span class="keywordtype">int</span> *)pi;</div>
-<div class="line">            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;LOOPCOUNT;i++)</div>
-<div class="line">            {   (*p)--;</div>
-<div class="line">            }</div>
-<div class="line">            <span class="keywordflow">return</span> 0;</div>
-<div class="line">        }</div>
-<div class="line">    };</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">double</span> ops_atom, ops_ccs, ops_nosync;</div>
-<div class="line"> </div>
-<div class="line">    {   <span class="keyword">volatile</span> <span class="keywordtype">int</span> counter = 456789;</div>
-<div class="line">        <a class="code" href="../../d1/d15/classos_1_1_thread.html">os::Thread</a>  thread_inc[4], thread_dec[4];</div>
-<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a name="a14"></a><a class="code" href="../../dd/d12/group__predefines.html#ga9879f8ef4e651f01c6888dd86b31b50c">sizeofArray</a>(thread_inc);i++)</div>
-<div class="line">        {   thread_inc[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a233ba0e44b407e5b68f9859ab970ca5f">Create</a>(_call_atom::_atom_inc, (LPVOID)&amp;counter);</div>
-<div class="line">            thread_dec[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a233ba0e44b407e5b68f9859ab970ca5f">Create</a>(_call_atom::_atom_dec, (LPVOID)&amp;counter);</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="../../dd/d12/group__predefines.html#ga9879f8ef4e651f01c6888dd86b31b50c">sizeofArray</a>(thread_inc);i++)</div>
-<div class="line">        {   thread_inc[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">WaitForEnding</a>();</div>
-<div class="line">            thread_dec[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">WaitForEnding</a>();</div>
-<div class="line">        }</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;ATOM Result: &quot;</span>&lt;&lt;counter);</div>
-<div class="line"> </div>
-<div class="line">        <a name="_a15"></a><a class="code" href="../../d4/df4/structos_1_1_tick_count.html">os::TickCount</a> t;</div>
-<div class="line">        t.<a name="a16"></a><a class="code" href="../../d9/d7c/group__kernel.html#gaf3319b21bf5d46082bf71de732d10ea8">LoadCurrentTick</a>();</div>
-<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;LOOPCOUNT;i++)</div>
-<div class="line">        {   <a class="code" href="../../d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;counter);</div>
-<div class="line">            <a class="code" href="../../d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;counter);</div>
-<div class="line">            <a class="code" href="../../d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;counter);</div>
-<div class="line">            <a class="code" href="../../d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;counter);</div>
-<div class="line">            <a class="code" href="../../d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;counter);</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordtype">int</span> cost = t.<a name="a17"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga882b24ad98b7095a5fc43f7172f27c51">TimeLapse</a>();</div>
-<div class="line">        ops_atom = (5.0*LOOPCOUNT)/cost;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {   <span class="keyword">volatile</span> <span class="keywordtype">int</span> counter = 456789;</div>
-<div class="line">        <a class="code" href="../../d1/d15/classos_1_1_thread.html">os::Thread</a>  thread_inc[4], thread_dec[4];</div>
-<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="../../dd/d12/group__predefines.html#ga9879f8ef4e651f01c6888dd86b31b50c">sizeofArray</a>(thread_inc);i++)</div>
-<div class="line">        {   thread_inc[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a233ba0e44b407e5b68f9859ab970ca5f">Create</a>(_call_atom::_ccs_inc, (LPVOID)&amp;counter);</div>
-<div class="line">            thread_dec[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a233ba0e44b407e5b68f9859ab970ca5f">Create</a>(_call_atom::_ccs_dec, (LPVOID)&amp;counter);</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="../../dd/d12/group__predefines.html#ga9879f8ef4e651f01c6888dd86b31b50c">sizeofArray</a>(thread_inc);i++)</div>
-<div class="line">        {   thread_inc[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">WaitForEnding</a>();</div>
-<div class="line">            thread_dec[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">WaitForEnding</a>();</div>
-<div class="line">        }</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;CriticalSection Result: &quot;</span>&lt;&lt;counter);</div>
-<div class="line">        </div>
-<div class="line">        <a class="code" href="../../d4/df4/structos_1_1_tick_count.html">os::TickCount</a> t;</div>
-<div class="line">        t.<a class="code" href="../../d9/d7c/group__kernel.html#gaf3319b21bf5d46082bf71de732d10ea8">LoadCurrentTick</a>();</div>
-<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;LOOPCOUNT;i++)</div>
-<div class="line">        {   </div>
-<div class="line">            {   <a class="code" href="../../d2/d9f/group__thread__primitive.html#ga6987251445e0c897f98d8d407ced08ee">EnterCSBlock</a>(test_multithread_ccs); counter++; }</div>
-<div class="line">            {   <a class="code" href="../../d2/d9f/group__thread__primitive.html#ga6987251445e0c897f98d8d407ced08ee">EnterCSBlock</a>(test_multithread_ccs); counter++; }</div>
-<div class="line">            {   <a class="code" href="../../d2/d9f/group__thread__primitive.html#ga6987251445e0c897f98d8d407ced08ee">EnterCSBlock</a>(test_multithread_ccs); counter++; }</div>
-<div class="line">            {   <a class="code" href="../../d2/d9f/group__thread__primitive.html#ga6987251445e0c897f98d8d407ced08ee">EnterCSBlock</a>(test_multithread_ccs); counter++; }</div>
-<div class="line">            {   <a class="code" href="../../d2/d9f/group__thread__primitive.html#ga6987251445e0c897f98d8d407ced08ee">EnterCSBlock</a>(test_multithread_ccs); counter++; }</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordtype">int</span> cost = t.<a class="code" href="../../d9/d7c/group__kernel.html#ga882b24ad98b7095a5fc43f7172f27c51">TimeLapse</a>();</div>
-<div class="line">        ops_ccs = (5.0*LOOPCOUNT)/cost;</div>
-<div class="line">    }</div>
-<div class="line">    {   <span class="keyword">volatile</span> <span class="keywordtype">int</span> counter = 456789;</div>
-<div class="line">        <a class="code" href="../../d1/d15/classos_1_1_thread.html">os::Thread</a>  thread_inc[4], thread_dec[4];</div>
-<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="../../dd/d12/group__predefines.html#ga9879f8ef4e651f01c6888dd86b31b50c">sizeofArray</a>(thread_inc);i++)</div>
-<div class="line">        {   thread_inc[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a233ba0e44b407e5b68f9859ab970ca5f">Create</a>(_call_atom::_inc, (LPVOID)&amp;counter);</div>
-<div class="line">            thread_dec[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a233ba0e44b407e5b68f9859ab970ca5f">Create</a>(_call_atom::_dec, (LPVOID)&amp;counter);</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="../../dd/d12/group__predefines.html#ga9879f8ef4e651f01c6888dd86b31b50c">sizeofArray</a>(thread_inc);i++)</div>
-<div class="line">        {   thread_inc[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">WaitForEnding</a>();</div>
-<div class="line">            thread_dec[i].<a class="code" href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">WaitForEnding</a>();</div>
-<div class="line">        }</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;Async Result: &quot;</span>&lt;&lt;counter);</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;sync is required: &quot;</span>&lt;&lt;(counter!=456789));</div>
-<div class="line"> </div>
-<div class="line">        <a class="code" href="../../d4/df4/structos_1_1_tick_count.html">os::TickCount</a> t;</div>
-<div class="line">        t.<a class="code" href="../../d9/d7c/group__kernel.html#gaf3319b21bf5d46082bf71de732d10ea8">LoadCurrentTick</a>();</div>
-<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;LOOPCOUNT;i++)</div>
-<div class="line">        {   counter++;</div>
-<div class="line">            counter++;</div>
-<div class="line">            counter++;</div>
-<div class="line">            counter++;</div>
-<div class="line">            counter++;</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordtype">int</span> cost = t.<a class="code" href="../../d9/d7c/group__kernel.html#ga882b24ad98b7095a5fc43f7172f27c51">TimeLapse</a>();</div>
-<div class="line">        ops_nosync = (5.0*LOOPCOUNT)/cost;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;// CriticalSection:  &quot;</span>&lt;&lt;ops_ccs&lt;&lt;<span class="stringliteral">&quot; kop/s&quot;</span>);<span class="comment">//&lt;&lt;rt::tos::Number((float)LOOPCOUNT/cost)&lt;&lt;&quot; kop/s&quot;);</span></div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;// ATOM           : &quot;</span>&lt;&lt;ops_atom&lt;&lt;<span class="stringliteral">&quot; kop/s&quot;</span>);<span class="comment">//rt::tos::Number((float)10*LOOPCOUNT/cost)&lt;&lt;&quot; kop/s&quot;);</span></div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;// Nosync         : &quot;</span>&lt;&lt;ops_nosync&lt;&lt;<span class="stringliteral">&quot; kop/s&quot;</span>);<span class="comment">//rt::tos::Number((float)10*LOOPCOUNT/cost)&lt;&lt;&quot; kop/s&quot;);</span></div>
-<div class="line">    </div>
-<div class="line"> </div>
-<div class="line">    test_multithread_event.<a name="a18"></a><a class="code" href="../../d6/d3b/classos_1_1_event.html#a2524187e81b5af6c19458693fef4753c">Reset</a>();</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Event Set: &quot;</span>&lt;&lt;test_multithread_event.<a name="a19"></a><a class="code" href="../../d6/d3b/classos_1_1_event.html#aa7384a237d3f1e694c2d496bd960f635">IsSignaled</a>());</div>
-<div class="line">    test_multithread_event.<a name="a20"></a><a class="code" href="../../d6/d3b/classos_1_1_event.html#a4fa11323b0340aad7c579c5c3b547234">Set</a>();</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Event Set: &quot;</span>&lt;&lt;test_multithread_event.<a class="code" href="../../d6/d3b/classos_1_1_event.html#aa7384a237d3f1e694c2d496bd960f635">IsSignaled</a>());</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">struct </span>_call_event</div>
-<div class="line">    {   <span class="keyword">static</span> DWORD _wait_thread(LPVOID pi)</div>
-<div class="line">        {   </div>
-<div class="line">            <a class="code" href="../../d4/df4/structos_1_1_tick_count.html">os::TickCount</a> t;</div>
-<div class="line">            t.<a class="code" href="../../d9/d7c/group__kernel.html#gaf3319b21bf5d46082bf71de732d10ea8">LoadCurrentTick</a>();</div>
-<div class="line">            test_multithread_event.<a name="a21"></a><a class="code" href="../../d6/d3b/classos_1_1_event.html#ab252527ef21c5c9eea9c96ab6884bf2c">WaitSignal</a>(2000);</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Event Timeout: &quot;</span>&lt;&lt;1000*((200 + t.<a class="code" href="../../d9/d7c/group__kernel.html#ga882b24ad98b7095a5fc43f7172f27c51">TimeLapse</a>())/1000));</div>
-<div class="line">            test_multithread_event.<a class="code" href="../../d6/d3b/classos_1_1_event.html#a2524187e81b5af6c19458693fef4753c">Reset</a>();</div>
-<div class="line">            </div>
-<div class="line">            t.<a class="code" href="../../d9/d7c/group__kernel.html#gaf3319b21bf5d46082bf71de732d10ea8">LoadCurrentTick</a>();</div>
-<div class="line">            test_multithread_event.<a class="code" href="../../d6/d3b/classos_1_1_event.html#ab252527ef21c5c9eea9c96ab6884bf2c">WaitSignal</a>();</div>
-<div class="line">            test_multithread_event.<a class="code" href="../../d6/d3b/classos_1_1_event.html#ab252527ef21c5c9eea9c96ab6884bf2c">WaitSignal</a>();</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Thread Waited: &quot;</span>&lt;&lt;1000*((200 + t.<a class="code" href="../../d9/d7c/group__kernel.html#ga882b24ad98b7095a5fc43f7172f27c51">TimeLapse</a>())/1000)&lt;&lt;<span class="stringliteral">&quot;, &quot;</span>&lt;&lt;test_multithread_event.<a class="code" href="../../d6/d3b/classos_1_1_event.html#aa7384a237d3f1e694c2d496bd960f635">IsSignaled</a>());</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordflow">return</span> 0;</div>
-<div class="line">        }</div>
-<div class="line">    };</div>
-<div class="line"> </div>
-<div class="line">    {   test_multithread_event.<a class="code" href="../../d6/d3b/classos_1_1_event.html#a2524187e81b5af6c19458693fef4753c">Reset</a>();</div>
-<div class="line"> </div>
-<div class="line">        <a class="code" href="../../d1/d15/classos_1_1_thread.html">os::Thread</a>  th;</div>
-<div class="line">        th.<a class="code" href="../../d1/d15/classos_1_1_thread.html#a233ba0e44b407e5b68f9859ab970ca5f">Create</a>(_call_event::_wait_thread, <span class="keyword">nullptr</span>);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Thread Run: &quot;</span>&lt;&lt;th.<a name="a22"></a><a class="code" href="../../d1/d15/classos_1_1_thread.html#a4bf5c21fd85a0359a7765e322d7655a4">IsRunning</a>());</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(4000);</div>
-<div class="line">        </div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Event Set&quot;</span>);</div>
-<div class="line">        test_multithread_event.<a class="code" href="../../d6/d3b/classos_1_1_event.html#a4fa11323b0340aad7c579c5c3b547234">Set</a>();</div>
-<div class="line"> </div>
-<div class="line">        th.<a class="code" href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">WaitForEnding</a>();</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Thread Ended&quot;</span>);</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::precompiler()</div>
-<div class="line">{</div>
-<div class="line">    <a name="_a23"></a><a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> source3 = <a name="a24"></a><a class="code" href="../../df/dc5/group___typedefs__string__type__ops.html#gadafa8c4e9201fb0cdf4d6b4ef3cd5a42">rt::SS</a>(</div>
-<div class="line">        <span class="stringliteral">&quot;#if VAL == 1\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#if true\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;val is 1\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;val is 1 for sure\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#elif VAL == 2\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;val is 2\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#elif VAL == 3\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;val is 3\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#else\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;val &gt; 3\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">    );</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span>(UINT i=1; i&lt;=4; i++)</div>
-<div class="line">    {</div>
-<div class="line">        <a name="_a25"></a><a class="code" href="../../d3/d28/classos_1_1_precompiler_predefined_macros.html">os::PrecompilerPredefinedMacros</a> predefined;</div>
-<div class="line">        predefined.<a name="a26"></a><a class="code" href="../../d3/d28/classos_1_1_precompiler_predefined_macros.html#af01f543dd5d518c7539ca9339b1a00bf">Set</a>(<span class="stringliteral">&quot;VAL&quot;</span>, <a name="_a27"></a><a class="code" href="../../d4/d04/classrt_1_1tos_1_1_s__.html">rt::tos::Number</a>(i));</div>
-<div class="line"> </div>
-<div class="line">        <a name="_a28"></a><a class="code" href="../../d9/dd4/classos_1_1_precompiler.html">os::Precompiler</a> s;</div>
-<div class="line">        s.<a name="a29"></a><a class="code" href="../../d9/dd4/classos_1_1_precompiler.html#a55e3dd08e32ac613fde54b2eba61ca28">SetEnvVars</a>(&amp;predefined);</div>
-<div class="line"> </div>
-<div class="line">        s.<a name="a30"></a><a class="code" href="../../d9/dd4/classos_1_1_precompiler.html#a88b4540275881d0e4f4cfe6b57280588">Compile</a>(<span class="stringliteral">&quot;val.cpp&quot;</span>, source3);</div>
-<div class="line">        <span class="comment">//_LOG(source);</span></div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nPrecompiled:&quot;</span>);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(s.<a name="a31"></a><a class="code" href="../../d9/dd4/classos_1_1_precompiler.html#acd629a575e5c4cd4cdd69010abbf4be1">GetCompiled</a>());</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> source = <a class="code" href="../../df/dc5/group___typedefs__string__type__ops.html#gadafa8c4e9201fb0cdf4d6b4ef3cd5a42">rt::SS</a>(</div>
-<div class="line">        <span class="stringliteral">&quot;#define TT 234\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#define IT \&quot;this is the value of IT\&quot;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#define IT2 Values\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#define MultiLine  Line1 \\\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;                   Line2 \\\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;                   Line3 \n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#define Max(a,b)   a&gt;b?a:b\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#define MERGED     %IT% + %IT2%\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;%Max(1,2)%\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;IT = %IT%%IT2%;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;MultiLine = %MultiLine%;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;MultiLine is Line1 \\\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;             Line2 \\\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;             %COMPUTERNAME%\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;ComSpec = %ComSpec%%HOMEDRIVE%%SomeMissing%\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;%NotClosed %HOMEPATH%%%\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;%Max(%COMPUTERNAME%,12)%\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;Merged = %MERGED%\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#ifdef TT\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;TT = %TT%\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#ifdef TT2\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;TT2 = %TT2%\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#ifndef TT\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;TT not found\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#else\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;TT exists\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;End of File\n\n&quot;</span></div>
-<div class="line">    );</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> source2 = <a class="code" href="../../df/dc5/group___typedefs__string__type__ops.html#gadafa8c4e9201fb0cdf4d6b4ef3cd5a42">rt::SS</a>(</div>
-<div class="line">        <span class="stringliteral">&quot;#define TT 234\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#define IT \&quot;this is the value of it\&quot;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#define IT2 Values\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#define MultiLine  Line1 \\\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;                   Line2 \\\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;                   Line3 \n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#define Max(a,b)   a&gt;b?a:b\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#define MERGED     IT + IT2 + HAHA##TT##XIXI##Max(2,3)##WIWI\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;Max(1,2)\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;it = IT IT2;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;multiLine = MultiLine;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;multiLine is Line1 \\\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;             Line2 \\\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;             COMPUTERNAME\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;comSpec = ComSpec HOMEDRIVE SomeMissing\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;Max(COMPUTERNAME,12)\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;Merged = MERGED\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#ifdef TT\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;tt = TT\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#ifdef TT2\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;tt2 = TT2\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#ifndef TT\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;tt not found\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#else\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;tt exists\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#if defined(IT) || defined(TTTT)\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;it is defined\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#if TT &gt; 100 &amp;&amp; TT &lt;= 300\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;tt is fit\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#if !defined(IT)\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;it is not defined\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#if IT == \&quot;this is the value of it\&quot;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;it is correct\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#if IT != \&quot;this is the value of it\&quot;\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;it is not correct\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;#define TXID(a, b)     (a&lt;&lt;16 | b)\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;TXID(tx.Contract, tx.Op)\n&quot;</span></div>
-<div class="line">        <span class="stringliteral">&quot;End of File\n\n&quot;</span></div>
-<div class="line">    );</div>
-<div class="line">    </div>
-<div class="line">    <a name="_a32"></a><a class="code" href="../../d1/d0a/classos_1_1_command_line.html">os::CommandLine</a> cmd;</div>
-<div class="line">    cmd.<a name="a33"></a><a class="code" href="../../d1/d0a/classos_1_1_command_line.html#ae42a9b495c26b0284da1d94b34fcd22a">LoadEnvironmentVariablesAsOptions</a>();</div>
-<div class="line">    </div>
-<div class="line">    <a class="code" href="../../d3/d28/classos_1_1_precompiler_predefined_macros.html">os::PrecompilerPredefinedMacros</a> predefined;</div>
-<div class="line">    predefined.<a name="a34"></a><a class="code" href="../../d3/d28/classos_1_1_precompiler_predefined_macros.html#a80c74725e8edc6b51b88e51e50bff5f2">ImportCmdLineOptions</a>(cmd);</div>
-<div class="line">    predefined.<a class="code" href="../../d3/d28/classos_1_1_precompiler_predefined_macros.html#af01f543dd5d518c7539ca9339b1a00bf">Set</a>(<span class="stringliteral">&quot;COMPUTERNAME&quot;</span>, <span class="stringliteral">&quot;MOOD-PC&quot;</span>);</div>
-<div class="line">    predefined.<a class="code" href="../../d3/d28/classos_1_1_precompiler_predefined_macros.html#af01f543dd5d518c7539ca9339b1a00bf">Set</a>(<span class="stringliteral">&quot;ComSpec&quot;</span>, <span class="stringliteral">&quot;cmd.exe&quot;</span>);</div>
-<div class="line">    predefined.<a class="code" href="../../d3/d28/classos_1_1_precompiler_predefined_macros.html#af01f543dd5d518c7539ca9339b1a00bf">Set</a>(<span class="stringliteral">&quot;HOMEDRIVE&quot;</span>, <span class="stringliteral">&quot;C:&quot;</span>);</div>
-<div class="line">    predefined.<a class="code" href="../../d3/d28/classos_1_1_precompiler_predefined_macros.html#af01f543dd5d518c7539ca9339b1a00bf">Set</a>(<span class="stringliteral">&quot;HOMEPATH&quot;</span>, <span class="stringliteral">&quot;/var/usr/home&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line">    {   <a class="code" href="../../d9/dd4/classos_1_1_precompiler.html">os::Precompiler</a> s(<span class="stringliteral">&quot;%&quot;</span>, <span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line">        s.<a class="code" href="../../d9/dd4/classos_1_1_precompiler.html#a55e3dd08e32ac613fde54b2eba61ca28">SetEnvVars</a>(&amp;predefined);</div>
-<div class="line">        s.<a class="code" href="../../d9/dd4/classos_1_1_precompiler.html#a88b4540275881d0e4f4cfe6b57280588">Compile</a>(<span class="stringliteral">&quot;test.bat&quot;</span>, source);</div>
-<div class="line">        <span class="comment">//_LOG(source);</span></div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nPrecompiled:&quot;</span>);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(s.<a class="code" href="../../d9/dd4/classos_1_1_precompiler.html#acd629a575e5c4cd4cdd69010abbf4be1">GetCompiled</a>());</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {   <a class="code" href="../../d9/dd4/classos_1_1_precompiler.html">os::Precompiler</a> s;</div>
-<div class="line">        s.<a class="code" href="../../d9/dd4/classos_1_1_precompiler.html#a55e3dd08e32ac613fde54b2eba61ca28">SetEnvVars</a>(&amp;predefined);</div>
-<div class="line">        s.<a class="code" href="../../d9/dd4/classos_1_1_precompiler.html#a88b4540275881d0e4f4cfe6b57280588">Compile</a>(<span class="stringliteral">&quot;test.cpp&quot;</span>, source2);</div>
-<div class="line">        <span class="comment">//_LOG(source);</span></div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nPrecompiled:&quot;</span>);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(s.<a class="code" href="../../d9/dd4/classos_1_1_precompiler.html#acd629a575e5c4cd4cdd69010abbf4be1">GetCompiled</a>());</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">//os::File(&quot;out.cpp&quot;, os::File::Normal_WriteText).Write(os::Precompiler(&quot;main.cpp&quot;).GetCompiled());</span></div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::encoding()</div>
-<div class="line">{</div>
-<div class="line">    <a name="_a35"></a><a class="code" href="../../dd/def/classrt_1_1_randomizer.html">rt::Randomizer</a> r; </div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span>(UINT i=0;i&lt;100000;i++)</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keywordtype">char</span> buf[20];</div>
-<div class="line">        <span class="keywordflow">for</span>(UINT b=1;b&lt;20;b++)</div>
-<div class="line">        {</div>
-<div class="line">            r.<a name="a36"></a><a class="code" href="../../dd/def/classrt_1_1_randomizer.html#ad5e94453aa816f81e162264b0ff272da">Randomize</a>(buf, b);</div>
-<div class="line">            <a name="_a37"></a><a class="code" href="../../d2/d5c/structrt_1_1tos_1_1_base32_crockford_on_stack.html">rt::tos::Base32CrockfordOnStack&lt;&gt;</a> base32(buf, b);</div>
-<div class="line">            <span class="keywordflow">if</span>(i==0)</div>
-<div class="line">            {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a name="_a38"></a><a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf,b)&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;base32);</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordtype">char</span> buf_dec[20];</div>
-<div class="line">            <span class="keywordtype">int</span> dec_b = (<a name="a39"></a><a class="code" href="../../dd/d09/group___macros__type__traits.html#ga8f91a2d43b8639eb05b76f588d3ee657">int</a>)<a name="a40"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga4e711878744ea19b6035003a72d4b34d">os::Base32DecodeLength</a>(base32.GetLength());</div>
-<div class="line">            <a name="a41"></a><a class="code" href="../../d9/d7c/group__kernel.html#gad6eaf5e451af7be3911610a5a5bd3434">os::Base32CrockfordDecode</a>(buf_dec, dec_b, base32, base32.GetLength());</div>
-<div class="line">            <span class="keywordflow">if</span>(dec_b != b || memcmp(buf_dec, buf, b) != 0)</div>
-<div class="line">            {   <a name="a42"></a><a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7214f168f9fb66818944932eda9b4247">_LOG_ERROR</a>(<span class="stringliteral">&quot;ERR: &quot;</span>&lt;&lt;<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf,b)&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;base32&lt;&lt;<span class="stringliteral">&quot; =&gt; &quot;</span>&lt;&lt;<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf_dec, dec_b));</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span>(UINT i=0;i&lt;100000;i++)</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keywordtype">char</span> buf[20];</div>
-<div class="line">        <span class="keywordflow">for</span>(UINT b=1;b&lt;20;b++)</div>
-<div class="line">        {</div>
-<div class="line">            r.<a class="code" href="../../dd/def/classrt_1_1_randomizer.html#ad5e94453aa816f81e162264b0ff272da">Randomize</a>(buf, b);</div>
-<div class="line">            <a name="_a43"></a><a class="code" href="../../d1/d10/structrt_1_1tos_1_1_base32_crockford_lowercase_on_stack.html">rt::tos::Base32CrockfordLowercaseOnStack&lt;&gt;</a> base32(buf, b);</div>
-<div class="line">            <span class="keywordflow">if</span>(i==0)</div>
-<div class="line">            {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf,b)&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;base32);</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordtype">char</span> buf_dec[20];</div>
-<div class="line">            <span class="keywordtype">int</span> dec_b = (<a class="code" href="../../dd/d09/group___macros__type__traits.html#ga8f91a2d43b8639eb05b76f588d3ee657">int</a>)<a class="code" href="../../d9/d7c/group__kernel.html#ga4e711878744ea19b6035003a72d4b34d">os::Base32DecodeLength</a>(base32.GetLength());</div>
-<div class="line">            <a class="code" href="../../d9/d7c/group__kernel.html#gad6eaf5e451af7be3911610a5a5bd3434">os::Base32CrockfordDecode</a>(buf_dec, dec_b, base32, base32.GetLength());</div>
-<div class="line">            <span class="keywordflow">if</span>(dec_b != b || memcmp(buf_dec, buf, b) != 0)</div>
-<div class="line">            {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7214f168f9fb66818944932eda9b4247">_LOG_ERROR</a>(<span class="stringliteral">&quot;ERR: &quot;</span>&lt;&lt;<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf,b)&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;base32&lt;&lt;<span class="stringliteral">&quot; =&gt; &quot;</span>&lt;&lt;<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf_dec, dec_b));</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span>(UINT i=0;i&lt;100000;i++)</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keywordtype">char</span> buf[20];</div>
-<div class="line">        <span class="keywordflow">for</span>(UINT b=1;b&lt;20;b++)</div>
-<div class="line">        {</div>
-<div class="line">            r.<a class="code" href="../../dd/def/classrt_1_1_randomizer.html#ad5e94453aa816f81e162264b0ff272da">Randomize</a>(buf, b);</div>
-<div class="line">            <a name="_a44"></a><a class="code" href="../../d1/d37/structrt_1_1tos_1_1_base32_on_stack.html">rt::tos::Base32OnStack&lt;&gt;</a> base32(buf, b);</div>
-<div class="line">            <span class="keywordflow">if</span>(i==0)</div>
-<div class="line">            {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf,b)&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;base32);</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordtype">char</span> buf_dec[20];</div>
-<div class="line">            <span class="keywordtype">int</span> dec_b = (<a class="code" href="../../dd/d09/group___macros__type__traits.html#ga8f91a2d43b8639eb05b76f588d3ee657">int</a>)<a class="code" href="../../d9/d7c/group__kernel.html#ga4e711878744ea19b6035003a72d4b34d">os::Base32DecodeLength</a>(base32.GetLength());</div>
-<div class="line">            <a name="a45"></a><a class="code" href="../../d9/d7c/group__kernel.html#gac7f8cd4a75379022a6706aefed103680">os::Base32Decode</a>(buf_dec, dec_b, base32, base32.GetLength());</div>
-<div class="line">            <span class="keywordflow">if</span>(dec_b != b || memcmp(buf_dec, buf, b) != 0)</div>
-<div class="line">            {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7214f168f9fb66818944932eda9b4247">_LOG_ERROR</a>(<span class="stringliteral">&quot;ERR: &quot;</span>&lt;&lt;<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf,b)&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;base32&lt;&lt;<span class="stringliteral">&quot; =&gt; &quot;</span>&lt;&lt;<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf_dec, dec_b));</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span>(UINT i=0;i&lt;100000;i++)</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keywordtype">char</span> buf[20];</div>
-<div class="line">        <span class="keywordflow">for</span>(UINT b=1;b&lt;20;b++)</div>
-<div class="line">        {</div>
-<div class="line">            r.<a class="code" href="../../dd/def/classrt_1_1_randomizer.html#ad5e94453aa816f81e162264b0ff272da">Randomize</a>(buf, b);</div>
-<div class="line">            <a name="_a46"></a><a class="code" href="../../da/d0a/structrt_1_1tos_1_1_base32_lowercase_on_stack.html">rt::tos::Base32LowercaseOnStack&lt;&gt;</a> base32(buf, b);</div>
-<div class="line">            <span class="keywordflow">if</span>(i==0)</div>
-<div class="line">            {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf,b)&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;base32);</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordtype">char</span> buf_dec[20];</div>
-<div class="line">            <span class="keywordtype">int</span> dec_b = (<a class="code" href="../../dd/d09/group___macros__type__traits.html#ga8f91a2d43b8639eb05b76f588d3ee657">int</a>)<a class="code" href="../../d9/d7c/group__kernel.html#ga4e711878744ea19b6035003a72d4b34d">os::Base32DecodeLength</a>(base32.GetLength());</div>
-<div class="line">            <a class="code" href="../../d9/d7c/group__kernel.html#gac7f8cd4a75379022a6706aefed103680">os::Base32Decode</a>(buf_dec, dec_b, base32, base32.GetLength());</div>
-<div class="line">            <span class="keywordflow">if</span>(dec_b != b || memcmp(buf_dec, buf, b) != 0)</div>
-<div class="line">            {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7214f168f9fb66818944932eda9b4247">_LOG_ERROR</a>(<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf,b)&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;base32&lt;&lt;<span class="stringliteral">&quot; =&gt; &quot;</span>&lt;&lt;<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf_dec, dec_b));</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span>(UINT i=0;i&lt;100000;i++)</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keywordtype">char</span> buf[20];</div>
-<div class="line">        <span class="keywordflow">for</span>(UINT b=1;b&lt;20;b++)</div>
-<div class="line">        {</div>
-<div class="line">            r.<a class="code" href="../../dd/def/classrt_1_1_randomizer.html#ad5e94453aa816f81e162264b0ff272da">Randomize</a>(buf, b);</div>
-<div class="line">            <a class="code" href="../../d2/d5c/structrt_1_1tos_1_1_base32_crockford_on_stack.html">rt::tos::Base32CrockfordOnStack&lt;&gt;</a> base32(buf, b);</div>
-<div class="line">            <span class="keywordflow">if</span>(i==0)</div>
-<div class="line">            {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf,b)&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;base32);</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordtype">char</span> buf_dec[20];</div>
-<div class="line">            <span class="keywordtype">int</span> dec_b = (<a class="code" href="../../dd/d09/group___macros__type__traits.html#ga8f91a2d43b8639eb05b76f588d3ee657">int</a>)<a class="code" href="../../d9/d7c/group__kernel.html#ga4e711878744ea19b6035003a72d4b34d">os::Base32DecodeLength</a>(base32.GetLength());</div>
-<div class="line">            <a class="code" href="../../d9/d7c/group__kernel.html#gad6eaf5e451af7be3911610a5a5bd3434">os::Base32CrockfordDecode</a>(buf_dec, dec_b, base32, base32.GetLength());</div>
-<div class="line">            <span class="keywordflow">if</span>(dec_b != b || memcmp(buf_dec, buf, b) != 0)</div>
-<div class="line">            {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7214f168f9fb66818944932eda9b4247">_LOG_ERROR</a>(<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf,b)&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;base32&lt;&lt;<span class="stringliteral">&quot; =&gt; &quot;</span>&lt;&lt;<a class="code" href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary&lt;&gt;</a>(buf_dec, dec_b));</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::timedate()</div>
-<div class="line">{</div>
-<div class="line">    {   <a name="_a47"></a><a class="code" href="../../d4/d7c/structos_1_1_timestamp.html">os::Timestamp</a>   tm;</div>
-<div class="line">        tm.<a name="a48"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga2e17494817e13368fb4371a06cd32f76">LoadCurrentTime</a>();</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<a name="_a49"></a><a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(tm));</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(10);</div>
-<div class="line">        tm.<a class="code" href="../../d9/d7c/group__kernel.html#ga2e17494817e13368fb4371a06cd32f76">LoadCurrentTime</a>();</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(tm));</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(10);</div>
-<div class="line">        tm.<a class="code" href="../../d9/d7c/group__kernel.html#ga2e17494817e13368fb4371a06cd32f76">LoadCurrentTime</a>();</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(tm));</div>
-<div class="line"> </div>
-<div class="line">        <a class="code" href="../../d4/d7c/structos_1_1_timestamp.html">os::Timestamp</a>   stm;</div>
-<div class="line">        stm.<a name="a50"></a><a class="code" href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">SetDateTime</a>(<span class="stringliteral">&quot;1980/3/2 12:21:33.321&quot;</span>);   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>((stm.<a name="a51"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">GetDateTime</a>()));</div>
-<div class="line">        stm.<a class="code" href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">SetDateTime</a>(<span class="stringliteral">&quot;1980/3/2 12:21:33&quot;</span>);   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>((stm.<a class="code" href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">GetDateTime</a>()));</div>
-<div class="line">        stm.<a class="code" href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">SetDateTime</a>(<span class="stringliteral">&quot;1980/3/2 12:21&quot;</span>);  <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>((stm.<a class="code" href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">GetDateTime</a>()));</div>
-<div class="line">        stm.<a class="code" href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">SetDateTime</a>(<span class="stringliteral">&quot;12:21:33.321&quot;</span>);    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>((stm.<a class="code" href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">GetDateTime</a>()));</div>
-<div class="line">        stm.<a class="code" href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">SetDateTime</a>(<span class="stringliteral">&quot;12:21:33&quot;</span>);    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>((stm.<a class="code" href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">GetDateTime</a>()));</div>
-<div class="line">        stm.<a class="code" href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">SetDateTime</a>(<span class="stringliteral">&quot;1980/3/2&quot;</span>);    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>((stm.<a class="code" href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">GetDateTime</a>()));</div>
-<div class="line">        stm.<a class="code" href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">SetDateTime</a>(<span class="stringliteral">&quot;12:21&quot;</span>);   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>((stm.<a class="code" href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">GetDateTime</a>()));</div>
-<div class="line">        stm.<a class="code" href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">SetDateTime</a>(<a class="code" href="../../d4/d04/classrt_1_1tos_1_1_s__.html">rt::tos::Number</a>(tm.<a name="a52"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga20629500aaab0c18ec47b8d27f571154">_Timestamp</a>));    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>((stm.<a class="code" href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">GetDateTime</a>()));</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {   <a class="code" href="../../d4/d7c/structos_1_1_timestamp.html">os::Timestamp</a> tm;</div>
-<div class="line">        tm.<a class="code" href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">SetDateTime</a>(1980,3,2);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Day: &quot;</span>&lt;&lt;tm.<a class="code" href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">GetDateTime</a>().DayOfWeek&lt;&lt;<span class="stringliteral">&quot; == &quot;</span>&lt;&lt;<a name="a53"></a><a class="code" href="../../d9/d7c/group__kernel.html#gaa1bb16de1032c9e3d358045b2d1d31df">os::Timestamp::GetDayOfWeek</a>(1980,3,2));</div>
-<div class="line">        tm.<a class="code" href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">SetDateTime</a>(1980,3,4);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Day: &quot;</span>&lt;&lt;tm.<a class="code" href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">GetDateTime</a>().DayOfWeek&lt;&lt;<span class="stringliteral">&quot; == &quot;</span>&lt;&lt;<a class="code" href="../../d9/d7c/group__kernel.html#gaa1bb16de1032c9e3d358045b2d1d31df">os::Timestamp::GetDayOfWeek</a>(1980,3,4));</div>
-<div class="line">        <span class="comment">//_LOG(os::Timestamp::DaysSince0000(1970));</span></div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {   <a class="code" href="../../d4/d7c/structos_1_1_timestamp.html">os::Timestamp</a> tm;</div>
-<div class="line">        tm.<a class="code" href="../../d9/d7c/group__kernel.html#ga2e17494817e13368fb4371a06cd32f76">LoadCurrentTime</a>();</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(50);</div>
-<div class="line">        LONGLONG time_lapse = tm.<a name="a54"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga8919464b1a3a0872f2e0b01c5ec40c9d">TimeLapse</a>();</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Timelapse is between [50, 400]: &quot;</span> &lt;&lt; (50 &lt;= time_lapse &amp;&amp; time_lapse &lt;= 400));</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {   <a name="_a55"></a><a class="code" href="../../dc/d1b/classos_1_1_high_performance_counter.html">os::HighPerformanceCounter</a>  hpc;</div>
-<div class="line">        hpc.<a name="a56"></a><a class="code" href="../../d9/d7c/group__kernel.html#gaf258295e2ba469eee6d5d47cc7a6a7fe">LoadCurrentCount</a>();</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(1000);</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(hpc.<a name="a57"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga3672dcd76e8682f792dbb7a3b5151f3a">TimeLapse</a>() &lt;&lt; <span class="stringliteral">&quot; nano-sec&quot;</span>);</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(1500);</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(hpc.<a class="code" href="../../d9/d7c/group__kernel.html#ga3672dcd76e8682f792dbb7a3b5151f3a">TimeLapse</a>() &lt;&lt; <span class="stringliteral">&quot; nano-sec&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line">        hpc.<a name="a58"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga1c4c5fd20bb894a4c2852053be189515">SetOutputMillisecond</a>();</div>
-<div class="line">        hpc.<a class="code" href="../../d9/d7c/group__kernel.html#gaf258295e2ba469eee6d5d47cc7a6a7fe">LoadCurrentCount</a>();</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(1000);</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(hpc.<a class="code" href="../../d9/d7c/group__kernel.html#ga3672dcd76e8682f792dbb7a3b5151f3a">TimeLapse</a>() &lt;&lt; <span class="stringliteral">&quot; msec&quot;</span>);</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(1500);</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(hpc.<a class="code" href="../../d9/d7c/group__kernel.html#ga3672dcd76e8682f792dbb7a3b5151f3a">TimeLapse</a>() &lt;&lt; <span class="stringliteral">&quot; msec&quot;</span>);</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {   <a class="code" href="../../d4/d7c/structos_1_1_timestamp.html">os::Timestamp</a> tm;</div>
-<div class="line">        tm.<a class="code" href="../../d9/d7c/group__kernel.html#ga2e17494817e13368fb4371a06cd32f76">LoadCurrentTime</a>();</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(tm));</div>
-<div class="line"> </div>
-<div class="line">        tm.<a name="a59"></a><a class="code" href="../../d9/d7c/group__kernel.html#gabaefdd9511fe4603ac01866beeecffe6">SetLocalDateTime</a>(<a name="_a60"></a><a class="code" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html">os::Timestamp::Fields</a>(<span class="stringliteral">&quot;2001-4-3 13:45:3&quot;</span>));</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(tm));</div>
-<div class="line"> </div>
-<div class="line">        tm.<a class="code" href="../../d9/d7c/group__kernel.html#gabaefdd9511fe4603ac01866beeecffe6">SetLocalDateTime</a>(<a class="code" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html">os::Timestamp::Fields</a>(<span class="stringliteral">&quot;2011-7-13&quot;</span>));</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(tm));</div>
-<div class="line">    }</div>
-<div class="line">    </div>
-<div class="line">    {   <a class="code" href="../../d4/d7c/structos_1_1_timestamp.html">os::Timestamp</a>   tt;</div>
-<div class="line">        <a class="code" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html">os::Timestamp::Fields</a> f;</div>
-<div class="line">        f.<a name="a61"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga819f025866fbfd2cef1385dda08106cc">FromInternetTimeFormat</a>(<span class="stringliteral">&quot;Tue, 15 Nov 1994 12:45:26 GMT&quot;</span>);</div>
-<div class="line">        tt.<a class="code" href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">SetDateTime</a>(f);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;FromInternetTimeFormat: &quot;</span>&lt;&lt;<a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(tt, <span class="keyword">false</span>));</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordtype">char</span> ttt[30];</div>
-<div class="line">        tt.<a class="code" href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">GetDateTime</a>().ToInternetTimeFormat(ttt);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;ToInternetTimeFormat: &quot;</span>&lt;&lt;ttt);</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {   <a name="_a62"></a><a class="code" href="../../d2/d99/structos_1_1_date32.html">os::Date32</a> dd;</div>
-<div class="line">        dd.<a name="a63"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga7365efda2ea67ae197f13c7972087ffb">SetDate</a>(2012,1,20);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;LastMonth: &quot;</span>&lt;&lt;<a name="_a64"></a><a class="code" href="../../d5/d40/structrt_1_1tos_1_1_date.html">rt::tos::Date&lt;&gt;</a>(dd.<a name="a65"></a><a class="code" href="../../d9/d7c/group__kernel.html#gac27e06d9c00d65c71dcc8178199c52d9">LastMonth</a>()));</div>
-<div class="line"> </div>
-<div class="line">        <a class="code" href="../../d2/d99/structos_1_1_date32.html">os::Date32</a> dd2 = dd;</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Date32 diff 1: &quot;</span>&lt;&lt;dd2 - dd&lt;&lt;<span class="charliteral">&#39;,&#39;</span>&lt;&lt;dd - dd2);</div>
-<div class="line"> </div>
-<div class="line">        dd2++;</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Date32 diff 1: &quot;</span>&lt;&lt;dd2 - dd&lt;&lt;<span class="charliteral">&#39;,&#39;</span>&lt;&lt;dd - dd2);</div>
-<div class="line"> </div>
-<div class="line">        dd2++;</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Date32 diff 1: &quot;</span>&lt;&lt;dd2 - dd&lt;&lt;<span class="charliteral">&#39;,&#39;</span>&lt;&lt;dd - dd2);</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Waiting for 2 seconds ...&quot;</span>);</div>
-<div class="line">        <a class="code" href="../../d4/d7c/structos_1_1_timestamp.html">os::Timestamp</a>   t1,t2;</div>
-<div class="line">        <a class="code" href="../../d4/df4/structos_1_1_tick_count.html">os::TickCount</a>   tick;</div>
-<div class="line">        t1.<a class="code" href="../../d9/d7c/group__kernel.html#ga2e17494817e13368fb4371a06cd32f76">LoadCurrentTime</a>();</div>
-<div class="line">        tick.<a class="code" href="../../d9/d7c/group__kernel.html#gaf3319b21bf5d46082bf71de732d10ea8">LoadCurrentTick</a>();</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(2100);</div>
-<div class="line">        t2.<a class="code" href="../../d9/d7c/group__kernel.html#ga2e17494817e13368fb4371a06cd32f76">LoadCurrentTime</a>();</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;os::TickCount in sec: &quot;</span> &lt;&lt; tick.<a class="code" href="../../d9/d7c/group__kernel.html#ga882b24ad98b7095a5fc43f7172f27c51">TimeLapse</a>() / 1000);</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::commandline()</div>
-<div class="line">{</div>
-<div class="line">    <a class="code" href="../../d1/d0a/classos_1_1_command_line.html">os::CommandLine</a> cmd;</div>
-<div class="line">    cmd.<a name="a66"></a><a class="code" href="../../d1/d0a/classos_1_1_command_line.html#a56a586ad97d08c62ffba93b8617ec6ed">SetOptionDefault</a>(<span class="stringliteral">&quot;TEST_OPT&quot;</span>, <span class="stringliteral">&quot;SomeValue&quot;</span>);</div>
-<div class="line">    cmd.<a class="code" href="../../d1/d0a/classos_1_1_command_line.html#ae42a9b495c26b0284da1d94b34fcd22a">LoadEnvironmentVariablesAsOptions</a>();</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> text = <span class="stringliteral">&quot;Shell: %ComSpec%\nTest: [%TEST_OPT%]&quot;</span>;</div>
-<div class="line">    cmd.<a name="a67"></a><a class="code" href="../../d1/d0a/classos_1_1_command_line.html#a3a14276b90eaff524668e43aaae39757">SubstituteOptions</a>(text);</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(text);</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::async_write()</div>
-<div class="line">{</div>
-<div class="line">    <a name="_a68"></a><a class="code" href="../../d3/db8/classrt_1_1_buffer.html">rt::Buffer&lt;BYTE&gt;</a>    data;</div>
-<div class="line">    data.<a name="a69"></a><a class="code" href="../../d3/db8/classrt_1_1_buffer.html#a3b88c05d4a3725c1fe885a653527ecdb">SetSize</a>(23*1024*1024);</div>
-<div class="line">    data.<a name="a70"></a><a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#a2e42d12cc6f27f9520cb415661d9818b">RandomBits</a>(94784);</div>
-<div class="line"> </div>
-<div class="line">    LPCSTR fn = <span class="stringliteral">&quot;async_write.test&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">    {</div>
-<div class="line">        <a name="_a71"></a><a class="code" href="../../d4/d1f/classos_1_1_file_write.html">os::FileWrite</a> f;</div>
-<div class="line">        <span class="keywordflow">if</span>(f.<a name="a72"></a><a class="code" href="../../d4/d1f/classos_1_1_file_write.html#a26e68bb4c386da861ca3ce0d637f8cb9">Open</a>(fn, <a name="a73"></a><a class="code" href="../../d4/d1f/classos_1_1_file_write.html#a80849f58926333b99bbf2925deca2e48a1279e1fdc02bbefaa733d693042e54a3">os::FileWrite::FW_TRUNCATE</a>|<a name="a74"></a><a class="code" href="../../d4/d1f/classos_1_1_file_write.html#a80849f58926333b99bbf2925deca2e48afea567ffd10127cefb21dba15a7f9d84">os::FileWrite::FW_ASYNC</a>, 8))</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">for</span>(UINT i=0; i&lt;data.<a name="a75"></a><a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>(); i+=23*1024)</div>
-<div class="line">            {</div>
-<div class="line">                <span class="keywordflow">if</span>(!f.<a name="a76"></a><a class="code" href="../../d4/d1f/classos_1_1_file_write.html#a8e327cca7cb12bec04b814fb8afbfc07">Write</a>(&amp;data[i], 23*1024))</div>
-<div class="line">                    <span class="keywordflow">return</span>;</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        f.<a name="a77"></a><a class="code" href="../../d4/d1f/classos_1_1_file_write.html#aa7ac6dac5e6b415b3028b46cfbfb9187">WriteHeader</a>(0x12345678deadbeefULL);</div>
-<div class="line">        f.<a name="a78"></a><a class="code" href="../../d4/d1f/classos_1_1_file_write.html#a0919eef571349f4f8451ab231bda6109">Close</a>();</div>
-<div class="line"> </div>
-<div class="line">        <a name="_a79"></a><a class="code" href="../../df/db0/structos_1_1_file_buffer.html">os::FileBuffer&lt;BYTE&gt;</a> load;</div>
-<div class="line">        load.<a name="a80"></a><a class="code" href="../../df/db0/structos_1_1_file_buffer.html#a965e5be48e2ca49be8980bd6dbfc9613">Open</a>(fn);</div>
-<div class="line"> </div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Size Header: &quot;</span>&lt;&lt;load.<a name="a81"></a><a class="code" href="../../df/db0/structos_1_1_file_buffer.html#a50a8a6dfc0f199eb31da66de35a55dad">GetSize</a>() - data.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>());</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Header = &quot;</span>&lt;&lt;<a class="code" href="../../d4/d70/structrt_1_1tos_1_1_hex_num.html">rt::tos::HexNum&lt;&gt;</a>(*(ULONGLONG*)load.<a name="a82"></a><a class="code" href="../../df/db0/structos_1_1_file_buffer.html#ae58314b2624bdcb7b488aa072e64f3ea">Begin</a>()));</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Content Match: &quot;</span>&lt;&lt;(0==memcmp(load.<a class="code" href="../../df/db0/structos_1_1_file_buffer.html#ae58314b2624bdcb7b488aa072e64f3ea">Begin</a>() + 8, data.<a name="a83"></a><a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#a9c49154815c7b452336300325ef6df50">Begin</a>(), data.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>())));</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {</div>
-<div class="line">        <a class="code" href="../../d4/d1f/classos_1_1_file_write.html">os::FileWrite</a> f;</div>
-<div class="line">        <span class="keywordflow">if</span>(f.<a class="code" href="../../d4/d1f/classos_1_1_file_write.html#a26e68bb4c386da861ca3ce0d637f8cb9">Open</a>(fn, <a class="code" href="../../d4/d1f/classos_1_1_file_write.html#a80849f58926333b99bbf2925deca2e48a1279e1fdc02bbefaa733d693042e54a3">os::FileWrite::FW_TRUNCATE</a>|<a name="a84"></a><a class="code" href="../../d4/d1f/classos_1_1_file_write.html#a80849f58926333b99bbf2925deca2e48ae1000339a62cddeb60f8c633e3e0d580">os::FileWrite::FW_UTF8SIGN</a>))</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">for</span>(UINT i=0; i&lt;data.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>(); i+=23*1024)</div>
-<div class="line">            {</div>
-<div class="line">                <span class="keywordflow">if</span>(!f.<a class="code" href="../../d4/d1f/classos_1_1_file_write.html#a8e327cca7cb12bec04b814fb8afbfc07">Write</a>(&amp;data[i], 23*1024))</div>
-<div class="line">                    <span class="keywordflow">return</span>;</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        f.<a class="code" href="../../d4/d1f/classos_1_1_file_write.html#a0919eef571349f4f8451ab231bda6109">Close</a>();</div>
-<div class="line"> </div>
-<div class="line">        <a class="code" href="../../df/db0/structos_1_1_file_buffer.html">os::FileBuffer&lt;BYTE&gt;</a> load;</div>
-<div class="line">        load.<a class="code" href="../../df/db0/structos_1_1_file_buffer.html#a965e5be48e2ca49be8980bd6dbfc9613">Open</a>(fn);</div>
-<div class="line"> </div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Size Header: &quot;</span>&lt;&lt;load.<a class="code" href="../../df/db0/structos_1_1_file_buffer.html#a50a8a6dfc0f199eb31da66de35a55dad">GetSize</a>() - data.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>());</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Header = &quot;</span>&lt;&lt;<a name="_a85"></a><a class="code" href="../../d0/dda/structrt_1_1tos_1_1_base16_on_stack.html">rt::tos::Base16OnStack&lt;&gt;</a>(load.<a class="code" href="../../df/db0/structos_1_1_file_buffer.html#ae58314b2624bdcb7b488aa072e64f3ea">Begin</a>(), 3));</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Content Match: &quot;</span>&lt;&lt;(0==memcmp(load.<a class="code" href="../../df/db0/structos_1_1_file_buffer.html#ae58314b2624bdcb7b488aa072e64f3ea">Begin</a>() + 3, data.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#a9c49154815c7b452336300325ef6df50">Begin</a>(), data.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>())));</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <a name="a86"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#a031975d0b35ade3345076132071d2717">os::File::RemovePath</a>(fn);</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::file()</div>
-<div class="line">{</div>
-<div class="line">    {   <a class="code" href="../../df/db0/structos_1_1_file_buffer.html">os::FileBuffer&lt;BYTE&gt;</a>    file(<span class="stringliteral">&quot;D:/ArtSq/Coin-FE/Dev/proj/unit_test/captcha_bg.jpg&quot;</span>);</div>
-<div class="line">        <a name="_a87"></a><a class="code" href="../../d5/d92/classos_1_1_file.html">os::File</a> out;</div>
-<div class="line">        out.<a name="a88"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#aed92f85703b7b0994eeaecd9007e756b">Open</a>(<span class="stringliteral">&quot;data_define.hpp&quot;</span>, <a name="a89"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#a504a4de14d16da480777385c35eb25f2">os::File::Normal_WriteText</a>);</div>
-<div class="line">        out.<a name="a90"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">Write</a>(<a name="_a91"></a><a class="code" href="../../dd/de2/structrt_1_1tos_1_1_static_string.html">rt::SS</a>(<span class="stringliteral">&quot;static const BYTE _Data[&quot;</span>) + (ULONGLONG)file.GetSize() + <span class="stringliteral">&quot;] = {\n&quot;</span>);</div>
-<div class="line">        <a class="code" href="../../dd/d12/group__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a> p = file;</div>
-<div class="line">        UINT sz = (UINT)file.GetSize();</div>
-<div class="line">        <span class="keywordflow">while</span>(sz)</div>
-<div class="line">        {</div>
-<div class="line">            UINT block = <a name="a92"></a><a class="code" href="../../dc/d6c/group___functions__runtime__base.html#gac0f9eb3d76f7c22bf5e0cbce2d9a8195">rt::min</a>(32U, sz);</div>
-<div class="line">            out.<a class="code" href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">Write</a>(<span class="stringliteral">&quot;\t&quot;</span>,1);</div>
-<div class="line">            <span class="keywordflow">for</span>(UINT i=0;i&lt;block;i++)</div>
-<div class="line">            {</div>
-<div class="line">                <span class="keywordtype">char</span> buf[10];</div>
-<div class="line">                sprintf(buf,<span class="stringliteral">&quot;0x%02X,&quot;</span>,p[i]);</div>
-<div class="line">                <span class="keywordflow">if</span>(sz == block &amp;&amp; i == block-1)</div>
-<div class="line">                    out.<a class="code" href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">Write</a>(buf, 4);</div>
-<div class="line">                <span class="keywordflow">else</span></div>
-<div class="line">                    out.<a class="code" href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">Write</a>(buf, 5);</div>
-<div class="line">            }</div>
-<div class="line">            sz-=block;</div>
-<div class="line">            p+=block;</div>
-<div class="line">            out.<a class="code" href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">Write</a>(<span class="stringliteral">&quot;\n&quot;</span>,1);</div>
-<div class="line">        }</div>
-<div class="line">        out.<a class="code" href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">Write</a>(<span class="stringliteral">&quot;};\n&quot;</span>,3);</div>
-<div class="line">        out.<a name="a93"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#a66466dde6b708a50a075e4c0e3360a38">Close</a>();</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">    {   <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a>  fn;</div>
-<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;10;i++)</div>
-<div class="line">        {</div>
-<div class="line">            LPCSTR filename = <span class="stringliteral">&quot;test.txt&quot;</span>;</div>
-<div class="line">            <span class="keywordflow">if</span>(<a name="a94"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#a40d5b32ae5443a0ce054734414c84e8f">os::File::ProbeAvailableFilename</a>(filename, fn))</div>
-<div class="line">                filename = fn;</div>
-<div class="line">            <a class="code" href="../../d5/d92/classos_1_1_file.html">os::File</a>(filename, <a name="a95"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#a84555d6862248f8a6013df2f252455f7">os::File::Normal_Write</a>).<a class="code" href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">Write</a>(<span class="stringliteral">&quot;123&quot;</span>,3);</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(fn);</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <a name="a96"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#a7c69e73340859bccad73bcebc935e529">os::File::Remove</a>(<span class="stringliteral">&quot;test.txt&quot;</span>);</div>
-<div class="line">        <a name="_a97"></a><a class="code" href="../../da/ded/classos_1_1_file_list.html">os::FileList</a> fl;</div>
-<div class="line">        fl.<a name="a98"></a><a class="code" href="../../da/ded/classos_1_1_file_list.html#a0f7f2e23d343431c6dac54fdc0d2f200">Populate</a>(<span class="stringliteral">&quot;.&quot;</span>, <span class="stringliteral">&quot;).txt&quot;</span>);</div>
-<div class="line">        <span class="keywordflow">for</span>(UINT i=0; i&lt;fl.<a name="a99"></a><a class="code" href="../../da/ded/classos_1_1_file_list.html#a6a400ae841393488d4a730b62853ec25">GetCount</a>(); i++)</div>
-<div class="line">            <a class="code" href="../../d5/d92/classos_1_1_file.html#a7c69e73340859bccad73bcebc935e529">os::File::Remove</a>(fl.<a name="a100"></a><a class="code" href="../../da/ded/classos_1_1_file_list.html#a6b3f66d3f1138b8a587240459f4cfbda">GetFilename</a>(i).<a name="a101"></a><a class="code" href="../../d7/dad/classrt_1_1_string___base.html#adb731c820af8d3095c2b9a46861e2632">Begin</a>() + 1);</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    LPCSTR fn = <span class="stringliteral">&quot;test_\xe4\xbd\xa0\xe5\xa5\xbd.txt&quot;</span>;</div>
-<div class="line">    </div>
-<div class="line">    <a class="code" href="../../d5/d92/classos_1_1_file.html">os::File</a>    file;</div>
-<div class="line">    <span class="keywordflow">if</span>(file.<a class="code" href="../../d5/d92/classos_1_1_file.html#aed92f85703b7b0994eeaecd9007e756b">Open</a>(fn, <a class="code" href="../../d5/d92/classos_1_1_file.html#a84555d6862248f8a6013df2f252455f7">os::File::Normal_Write</a>))</div>
-<div class="line">    {</div>
-<div class="line">        file.<a class="code" href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">Write</a>(<a name="_a102"></a><a class="code" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a>(<span class="stringliteral">&quot;Testing String wrote to file !!&quot;</span>));</div>
-<div class="line">        file.<a class="code" href="../../d5/d92/classos_1_1_file.html#a66466dde6b708a50a075e4c0e3360a38">Close</a>();</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> val;</div>
-<div class="line">    <span class="keywordflow">if</span>( file.<a class="code" href="../../d5/d92/classos_1_1_file.html#aed92f85703b7b0994eeaecd9007e756b">Open</a>(fn) &amp;&amp;</div>
-<div class="line">        val.<a name="a103"></a><a class="code" href="../../d2/d96/classrt_1_1_string.html#a3341ecfbe0e0223981c0ebc97cb217b9">SetLength</a>((SIZE_T)file.<a name="a104"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#aac18774fda4673c32404297e0d6252f5">GetLength</a>()) &amp;&amp;</div>
-<div class="line">        (SIZE_T)(file.<a name="a105"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#aa6d38b83722b89343f571d89d7cbd5a6">Read</a>(val,(UINT)val.<a name="a106"></a><a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af82cd4d34fcaed3b54e0436312b376be">GetLength</a>()) == val.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af82cd4d34fcaed3b54e0436312b376be">GetLength</a>())</div>
-<div class="line">    )</div>
-<div class="line">    {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;File Content: &quot;</span>&lt;&lt;val);</div>
-<div class="line">        file.<a class="code" href="../../d5/d92/classos_1_1_file.html#a66466dde6b708a50a075e4c0e3360a38">Close</a>();</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;File Remove: &quot;</span>&lt;&lt;<a class="code" href="../../d5/d92/classos_1_1_file.html#a7c69e73340859bccad73bcebc935e529">os::File::Remove</a>(fn));</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;File Remove: &quot;</span>&lt;&lt;<a class="code" href="../../d5/d92/classos_1_1_file.html#a7c69e73340859bccad73bcebc935e529">os::File::Remove</a>(fn));</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {   <a name="_a107"></a><a class="code" href="../../d0/d28/classos_1_1_file_packed___writer.html">os::FilePacked_Writer</a> f;</div>
-<div class="line">        f.<a name="a108"></a><a class="code" href="../../d0/d28/classos_1_1_file_packed___writer.html#a287e7d4056864f60581c9cd8f5b1e6e4">Open</a>(<span class="stringliteral">&quot;fpack.ckdp&quot;</span>);</div>
-<div class="line">        f.<a name="a109"></a><a class="code" href="../../d0/d28/classos_1_1_file_packed___writer.html#af31f8360902bbdaa55bc112afdb497d4">Write</a>(0x1001, <span class="stringliteral">&quot;1234567890&quot;</span> ,8);</div>
-<div class="line">        f.<a class="code" href="../../d0/d28/classos_1_1_file_packed___writer.html#af31f8360902bbdaa55bc112afdb497d4">Write</a>(0x1002, <span class="stringliteral">&quot;1234567890&quot;</span> ,7);</div>
-<div class="line">        f.<a class="code" href="../../d0/d28/classos_1_1_file_packed___writer.html#af31f8360902bbdaa55bc112afdb497d4">Write</a>(2, <span class="stringliteral">&quot;1234567890&quot;</span> ,6);</div>
-<div class="line">        f.<a class="code" href="../../d0/d28/classos_1_1_file_packed___writer.html#af31f8360902bbdaa55bc112afdb497d4">Write</a>(1, <span class="stringliteral">&quot;1234567890&quot;</span> ,5);</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    {   <a name="_a110"></a><a class="code" href="../../d2/d4d/classos_1_1_file_packed___reader.html">os::FilePacked_Reader</a> f;</div>
-<div class="line">        f.<a name="a111"></a><a class="code" href="../../d2/d4d/classos_1_1_file_packed___reader.html#a1cb9eaaf14ed1d3880df243ba7df2b9f">Open</a>(<span class="stringliteral">&quot;fpack.ckdp&quot;</span>);</div>
-<div class="line">        <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> str;</div>
-<div class="line">        UINT idx = f.<a name="a112"></a><a class="code" href="../../d2/d4d/classos_1_1_file_packed___reader.html#a965943f7f5c0149b19a7962e517b634d">FindFirstFile</a>(2);</div>
-<div class="line">        <span class="keywordflow">if</span>(idx != <a name="a113"></a><a class="code" href="../../dd/d12/group__predefines.html#gaa84a29002ab81c719c0d07bb446296e0">INFINITE</a>)</div>
-<div class="line">        {   str.<a class="code" href="../../d2/d96/classrt_1_1_string.html#a3341ecfbe0e0223981c0ebc97cb217b9">SetLength</a>(f.<a name="a114"></a><a class="code" href="../../d2/d4d/classos_1_1_file_packed___reader.html#a5524068fc1ad5b427224b49df43dffb0">GetFileSize</a>(idx));</div>
-<div class="line">            f.<a name="a115"></a><a class="code" href="../../d2/d4d/classos_1_1_file_packed___reader.html#a609aa031519ada21c89db44810d01fe4">Read</a>(idx,str);</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;2 =&gt; &quot;</span>&lt;&lt;str);</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordflow">if</span>((idx = f.<a class="code" href="../../d2/d4d/classos_1_1_file_packed___reader.html#a965943f7f5c0149b19a7962e517b634d">FindFirstFile</a>(0x1000,0xf000)) != <a class="code" href="../../dd/d12/group__predefines.html#gaa84a29002ab81c719c0d07bb446296e0">INFINITE</a>)</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">do</span></div>
-<div class="line">            {   str.<a class="code" href="../../d2/d96/classrt_1_1_string.html#a3341ecfbe0e0223981c0ebc97cb217b9">SetLength</a>(f.<a class="code" href="../../d2/d4d/classos_1_1_file_packed___reader.html#a5524068fc1ad5b427224b49df43dffb0">GetFileSize</a>(idx));</div>
-<div class="line">                f.<a class="code" href="../../d2/d4d/classos_1_1_file_packed___reader.html#a609aa031519ada21c89db44810d01fe4">Read</a>(idx,str);</div>
-<div class="line">                <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(f.<a name="a116"></a><a class="code" href="../../d2/d4d/classos_1_1_file_packed___reader.html#a307ac8d3b95c9a5d29df8458365a6a38">GetFileName</a>(idx)&lt;&lt;<span class="stringliteral">&quot; =&gt; &quot;</span>&lt;&lt;str);</div>
-<div class="line">            }<span class="keywordflow">while</span>((idx = f.<a name="a117"></a><a class="code" href="../../d2/d4d/classos_1_1_file_packed___reader.html#a8b5cf4dc795441b4e3a61f38a4122857">FindNextFile</a>()) != <a class="code" href="../../dd/d12/group__predefines.html#gaa84a29002ab81c719c0d07bb446296e0">INFINITE</a>);</div>
-<div class="line">        }</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> rt::UnitTests::pfw()</div>
 <div class="line">{</div>
-<div class="line">    {   <a name="_a118"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html">os::ParallelFileWriter</a>  pfw;</div>
+<div class="line">    {   <a name="_a0"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html">os::ParallelFileWriter</a>  pfw;</div>
 <div class="line"> </div>
-<div class="line">        pfw.<a name="a119"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#aeafb5e2adb5e399dde1babd785d13b4a">Open</a>(<span class="stringliteral">&quot;pfw_test.txt&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line">        pfw.<a name="a120"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a494dab5674b5b1386ec73e04a392a14c">SetWriteDownInterval</a>(1000);</div>
+<div class="line">        pfw.<a name="a1"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#aeafb5e2adb5e399dde1babd785d13b4a">Open</a>(<span class="stringliteral">&quot;pfw_test.txt&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line">        pfw.<a name="a2"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a494dab5674b5b1386ec73e04a392a14c">SetWriteDownInterval</a>(1000);</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">struct </span>_call</div>
@@ -850,16 +120,16 @@ $(document).ready(function(){initNavTree('df/df4/test_api_8cpp-example.html','..
 <div class="line">                <a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html">os::ParallelFileWriter</a>* w = (<a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html">os::ParallelFileWriter</a>*)p;</div>
 <div class="line">                <span class="keywordflow">for</span>(UINT i=0;i&lt;5000;i++)</div>
 <div class="line">                {</div>
-<div class="line">                    w-&gt;<a name="a121"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a4acc9cbb411bd12edfeffe0c73bc6ecd">WriteString</a>(<a class="code" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a>(<span class="stringliteral">&quot;ParallelFileWriter Test &quot;</span>) + <a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(<a name="a122"></a><a class="code" href="../../d9/d7c/group__kernel.html#gae99e4ff05a1036c6fbd79c5fddacf0ae">os::Timestamp::Get</a>()) + <a class="code" href="../../df/dc5/group___typedefs__string__type__ops.html#gadafa8c4e9201fb0cdf4d6b4ef3cd5a42">rt::SS</a>(<span class="stringliteral">&quot; \r\n&quot;</span>));</div>
-<div class="line">                    <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(10);</div>
+<div class="line">                    w-&gt;<a name="a3"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a4acc9cbb411bd12edfeffe0c73bc6ecd">WriteString</a>(<a name="_a4"></a><a class="code" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a>(<span class="stringliteral">&quot;ParallelFileWriter Test &quot;</span>) + <a name="_a5"></a><a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(<a name="a6"></a><a class="code" href="../../d4/d7c/structos_1_1_timestamp.html#ae99e4ff05a1036c6fbd79c5fddacf0ae">os::Timestamp::Get</a>()) + <a name="a7"></a><a class="code" href="../../df/dc5/group___typedefs__string__type__ops.html#gadafa8c4e9201fb0cdf4d6b4ef3cd5a42">rt::SS</a>(<span class="stringliteral">&quot; \r\n&quot;</span>));</div>
+<div class="line">                    <a name="a8"></a><a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(10);</div>
 <div class="line">                }</div>
 <div class="line">                <span class="keywordflow">return</span> 0;</div>
 <div class="line">            }</div>
 <div class="line">        };</div>
 <div class="line"> </div>
-<div class="line">        <a name="_a123"></a><a class="code" href="../../d3/db8/classrt_1_1_buffer.html">rt::Buffer&lt;os::Thread&gt;</a>  threads;</div>
-<div class="line">        threads.<a name="a124"></a><a class="code" href="../../d3/db8/classrt_1_1_buffer.html#a3b88c05d4a3725c1fe885a653527ecdb">SetSize</a>(100);</div>
-<div class="line">        <span class="keywordflow">for</span>(UINT i=0;i&lt;threads.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>();i++)</div>
+<div class="line">        <a name="_a9"></a><a class="code" href="../../d3/db8/classrt_1_1_buffer.html">rt::Buffer&lt;os::Thread&gt;</a>  threads;</div>
+<div class="line">        threads.<a name="a10"></a><a class="code" href="../../d3/db8/classrt_1_1_buffer.html#a3b88c05d4a3725c1fe885a653527ecdb">SetSize</a>(100);</div>
+<div class="line">        <span class="keywordflow">for</span>(UINT i=0;i&lt;threads.<a name="a11"></a><a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>();i++)</div>
 <div class="line">        {</div>
 <div class="line">            threads[i].Create(_call::_func, &amp;pfw);</div>
 <div class="line">        }</div>
@@ -867,29 +137,29 @@ $(document).ready(function(){initNavTree('df/df4/test_api_8cpp-example.html','..
 <div class="line">        <span class="keywordflow">for</span>(UINT i=0;i&lt;threads.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>();i++)</div>
 <div class="line">            threads[i].WaitForEnding();</div>
 <div class="line"> </div>
-<div class="line">        pfw.<a name="a125"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a7c2dc5a9dd844656242a4100108df534">LogAlert</a>();</div>
-<div class="line">        pfw.<a name="a126"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#af081368d76b7e94e9e0182df9ffde3fe">Close</a>();</div>
+<div class="line">        pfw.<a name="a12"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a7c2dc5a9dd844656242a4100108df534">LogAlert</a>();</div>
+<div class="line">        pfw.<a name="a13"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#af081368d76b7e94e9e0182df9ffde3fe">Close</a>();</div>
 <div class="line"> </div>
-<div class="line">        <a name="_a127"></a><a class="code" href="../../d9/d17/classos_1_1_file_read_line.html">os::FileReadLine</a> file;</div>
-<div class="line">        file.<a name="a128"></a><a class="code" href="../../d9/d17/classos_1_1_file_read_line.html#a003c3910e0986c9d19174d20c5a7f313">Open</a>(<span class="stringliteral">&quot;pfw_test.txt&quot;</span>);</div>
+<div class="line">        <a name="_a14"></a><a class="code" href="../../d9/d17/classos_1_1_file_read_line.html">os::FileReadLine</a> file;</div>
+<div class="line">        file.<a name="a15"></a><a class="code" href="../../d9/d17/classos_1_1_file_read_line.html#a003c3910e0986c9d19174d20c5a7f313">Open</a>(<span class="stringliteral">&quot;pfw_test.txt&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">        <a class="code" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> line;</div>
 <div class="line">        <span class="keywordtype">int</span> lines = 0;</div>
 <div class="line">        <span class="keywordtype">int</span> len = -1;</div>
 <div class="line"> </div>
-<div class="line">        <span class="keywordflow">while</span>(file.<a name="a129"></a><a class="code" href="../../d9/d17/classos_1_1_file_read_line.html#a6f2cdd4896622c2f8f6532543189c64b">GetNextLine</a>(line))</div>
+<div class="line">        <span class="keywordflow">while</span>(file.<a name="a16"></a><a class="code" href="../../d9/d17/classos_1_1_file_read_line.html#a6f2cdd4896622c2f8f6532543189c64b">GetNextLine</a>(line))</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span>(len == -1)</div>
-<div class="line">            {   len = (<a class="code" href="../../dd/d09/group___macros__type__traits.html#ga8f91a2d43b8639eb05b76f588d3ee657">int</a>)line.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af82cd4d34fcaed3b54e0436312b376be">GetLength</a>();</div>
+<div class="line">            {   len = (<a name="a17"></a><a class="code" href="../../dd/d09/group___macros__type__traits.html#ga8f91a2d43b8639eb05b76f588d3ee657">int</a>)line.<a name="a18"></a><a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af82cd4d34fcaed3b54e0436312b376be">GetLength</a>();</div>
 <div class="line">            }</div>
 <div class="line">            <span class="keywordflow">else</span></div>
-<div class="line">            {   <a name="a130"></a><a class="code" href="../../d1/dc7/group___macros__runtime__base.html#gaca68c0d4ac8df0838e209fb5300f7be3">ASSERT</a>(len == line.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af82cd4d34fcaed3b54e0436312b376be">GetLength</a>());</div>
+<div class="line">            {   <a name="a19"></a><a class="code" href="../../d1/dc7/group___macros__runtime__base.html#gaca68c0d4ac8df0838e209fb5300f7be3">ASSERT</a>(len == line.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af82cd4d34fcaed3b54e0436312b376be">GetLength</a>());</div>
 <div class="line">            }</div>
 <div class="line">        </div>
 <div class="line">            lines++;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Total lines: &quot;</span>&lt;&lt;lines);</div>
+<div class="line">        <a name="a20"></a><a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Total lines: &quot;</span>&lt;&lt;lines);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    {   <a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html">os::ParallelFileWriter</a>  pfw;</div>
@@ -897,8 +167,8 @@ $(document).ready(function(){initNavTree('df/df4/test_api_8cpp-example.html','..
 <div class="line">        pfw.<a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a494dab5674b5b1386ec73e04a392a14c">SetWriteDownInterval</a>(500);</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">for</span>(UINT i=0;i&lt;100;i++)</div>
-<div class="line">        {   pfw.<a name="a131"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a65b014f91f3924512adf59a46e0ba615">WriteLine</a>(<a class="code" href="../../dd/de2/structrt_1_1tos_1_1_static_string.html">rt::SS</a>(<span class="stringliteral">&quot;Some thing appended&quot;</span>) + <a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(<a class="code" href="../../d9/d7c/group__kernel.html#gae99e4ff05a1036c6fbd79c5fddacf0ae">os::Timestamp::Get</a>()));</div>
-<div class="line">            <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(100);</div>
+<div class="line">        {   pfw.<a name="a21"></a><a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a65b014f91f3924512adf59a46e0ba615">WriteLine</a>(<a name="_a22"></a><a class="code" href="../../dd/de2/structrt_1_1tos_1_1_static_string.html">rt::SS</a>(<span class="stringliteral">&quot;Some thing appended&quot;</span>) + <a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(<a class="code" href="../../d4/d7c/structos_1_1_timestamp.html#ae99e4ff05a1036c6fbd79c5fddacf0ae">os::Timestamp::Get</a>()));</div>
+<div class="line">            <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(100);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -907,8 +177,8 @@ $(document).ready(function(){initNavTree('df/df4/test_api_8cpp-example.html','..
 <div class="line">        pfw.<a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a494dab5674b5b1386ec73e04a392a14c">SetWriteDownInterval</a>(500);</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">for</span>(UINT i=0;i&lt;100;i++)</div>
-<div class="line">        {   pfw.<a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a65b014f91f3924512adf59a46e0ba615">WriteLine</a>(<a class="code" href="../../dd/de2/structrt_1_1tos_1_1_static_string.html">rt::SS</a>(<span class="stringliteral">&quot;Some thing appended again&quot;</span>) + <a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(<a class="code" href="../../d9/d7c/group__kernel.html#gae99e4ff05a1036c6fbd79c5fddacf0ae">os::Timestamp::Get</a>()));</div>
-<div class="line">            <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(100);</div>
+<div class="line">        {   pfw.<a class="code" href="../../d0/d52/classos_1_1_parallel_file_writer.html#a65b014f91f3924512adf59a46e0ba615">WriteLine</a>(<a class="code" href="../../dd/de2/structrt_1_1tos_1_1_static_string.html">rt::SS</a>(<span class="stringliteral">&quot;Some thing appended again&quot;</span>) + <a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(<a class="code" href="../../d4/d7c/structos_1_1_timestamp.html#ae99e4ff05a1036c6fbd79c5fddacf0ae">os::Timestamp::Get</a>()));</div>
+<div class="line">            <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(100);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">}</div>
@@ -916,11 +186,11 @@ $(document).ready(function(){initNavTree('df/df4/test_api_8cpp-example.html','..
 <div class="line"><span class="keywordtype">void</span> rt::UnitTests::plog()</div>
 <div class="line">{</div>
 <div class="line"><span class="preprocessor">#ifndef PLATFORM_DISABLE_LOG</span></div>
-<div class="line">    <a name="_a132"></a><a class="code" href="../../da/db1/classos_1_1_parallel_log.html">os::ParallelLog</a> log(500);</div>
+<div class="line">    <a name="_a23"></a><a class="code" href="../../da/db1/classos_1_1_parallel_log.html">os::ParallelLog</a> log(500);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">for</span>(;;)</div>
-<div class="line">    {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Tick: &quot;</span>&lt;&lt;<a name="a133"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga1c4e0e08576dce9f741551e36bfff25e">os::TickCount::Get</a>());</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(100);</div>
+<div class="line">    {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Tick: &quot;</span>&lt;&lt;<a name="a24"></a><a class="code" href="../../d4/df4/structos_1_1_tick_count.html#a1c4e0e08576dce9f741551e36bfff25e">os::TickCount::Get</a>());</div>
+<div class="line">        <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(100);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">//log.Write(&quot;test&quot;, &quot;test_file&quot;, 0, &quot;test_func&quot;, rt::LOGTYPE_IN_CONSOLE|rt::LOGTYPE_INFORMATIONAL);</span></div>
@@ -946,232 +216,27 @@ $(document).ready(function(){initNavTree('df/df4/test_api_8cpp-example.html','..
 <div class="line"><span class="comment">}</span></div>
 <div class="line"><span class="comment">*/</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::b64_encoding()</div>
-<div class="line">{</div>
-<div class="line">    {   <span class="keyword">static</span> <span class="keyword">const</span> LPCSTR testcase[][2] = </div>
-<div class="line">        {</div>
-<div class="line">            { <span class="stringliteral">&quot;1&quot;</span>, <span class="stringliteral">&quot;MQ==&quot;</span> },</div>
-<div class="line">            { <span class="stringliteral">&quot;12&quot;</span>, <span class="stringliteral">&quot;MTI=&quot;</span> },</div>
-<div class="line">            { <span class="stringliteral">&quot;123&quot;</span>, <span class="stringliteral">&quot;MTIz&quot;</span> },</div>
-<div class="line">            { <span class="stringliteral">&quot;1234&quot;</span>, <span class="stringliteral">&quot;MTIzNA==&quot;</span>},</div>
-<div class="line">            { <span class="stringliteral">&quot;12345&quot;</span>, <span class="stringliteral">&quot;MTIzNDU=&quot;</span> }</div>
-<div class="line">        };</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordflow">for</span>(UINT i=0;i&lt;<a class="code" href="../../dd/d12/group__predefines.html#ga9879f8ef4e651f01c6888dd86b31b50c">sizeofArray</a>(testcase);i++)</div>
-<div class="line">        {</div>
-<div class="line">            <a class="code" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> text(testcase[i][0]);</div>
-<div class="line">            <a class="code" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> b64(testcase[i][1]);</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordtype">char</span> buf[100];</div>
-<div class="line">            <a class="code" href="../../d1/dc7/group___macros__runtime__base.html#gaca68c0d4ac8df0838e209fb5300f7be3">ASSERT</a>(<a name="a134"></a><a class="code" href="../../d9/d7c/group__kernel.html#gaea926dfcafd7dba9449691a730566536">os::Base64EncodeLength</a>(text.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af82cd4d34fcaed3b54e0436312b376be">GetLength</a>())==b64.GetLength());</div>
-<div class="line">            <a name="a135"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga913959c649e229afae63049f9b15ac87">os::Base64Encode</a>(buf, text.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#adb731c820af8d3095c2b9a46861e2632">Begin</a>(), text.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af82cd4d34fcaed3b54e0436312b376be">GetLength</a>());</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a class="code" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a>(buf, b64.GetLength())&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;b64);</div>
-<div class="line">            </div>
-<div class="line">            <a class="code" href="../../d1/dc7/group___macros__runtime__base.html#gaca68c0d4ac8df0838e209fb5300f7be3">ASSERT</a>(<a name="a136"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga1664983a81b12666c4c58105afac46f4">os::Base64DecodeLength</a>(b64.Begin(), b64.GetLength())==text.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af82cd4d34fcaed3b54e0436312b376be">GetLength</a>());</div>
-<div class="line">            SIZE_T len;</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Full Data: &quot;</span>&lt;&lt;<a name="a137"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga4ee0f8f680909e5788f7ff71e9830dd8">os::Base64Decode</a>(buf, &amp;len, b64.Begin(), b64.GetLength()));</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a class="code" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a>(buf, len)&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>&lt;&lt;text);</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        {   <span class="comment">// robust decoding</span></div>
-<div class="line">            <span class="keywordtype">char</span> buf[100];</div>
-<div class="line">            <a class="code" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> b64(<span class="stringliteral">&quot;MTIzNDU\n\rew&quot;</span>);</div>
-<div class="line">            SIZE_T  len;</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Full Data: &quot;</span>&lt;&lt;<a class="code" href="../../d9/d7c/group__kernel.html#ga4ee0f8f680909e5788f7ff71e9830dd8">os::Base64Decode</a>(buf, &amp;len, b64.Begin(), b64.GetLength()));</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a class="code" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a>(buf, len));</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a name="_a138"></a><a class="code" href="../../d2/dde/structrt_1_1tos_1_1_base64_on_stack.html">rt::tos::Base64OnStack&lt;256&gt;</a>(<span class="stringliteral">&quot;123456&quot;</span>, 6));</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span>;</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">struct </span>A</div>
-<div class="line">{</div>
-<div class="line">    <a class="code" href="../../d4/df4/structos_1_1_tick_count.html">os::TickCount</a> tc;</div>
-<div class="line">    A(){ tc.<a class="code" href="../../d9/d7c/group__kernel.html#gaf3319b21bf5d46082bf71de732d10ea8">LoadCurrentTick</a>(); }</div>
-<div class="line">    ~A()</div>
-<div class="line">    {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;killed, after &quot;</span>&lt;&lt;tc.<a class="code" href="../../d9/d7c/group__kernel.html#ga882b24ad98b7095a5fc43f7172f27c51">TimeLapse</a>()&lt;&lt;<span class="stringliteral">&quot; msec&quot;</span>);</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::delayed_deletion()</div>
-<div class="line">{</div>
-<div class="line">    A* p = <span class="keyword">new</span> A;</div>
-<div class="line">    <a name="a139"></a><a class="code" href="../../df/dfc/group__multi__thread.html#ga89da061c45faf8c3d43c4dfc65f99e97">_SafeDel_Delayed</a>(p, 2000);</div>
-<div class="line">    p = <span class="keyword">new</span> A;</div>
-<div class="line">    <a class="code" href="../../df/dfc/group__multi__thread.html#ga89da061c45faf8c3d43c4dfc65f99e97">_SafeDel_Delayed</a>(p, 5000);</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(9000);</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::sysinfo()</div>
-<div class="line">{</div>
-<div class="line">    <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> exe, host, user;</div>
-<div class="line">    <a name="a140"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga0e02e1d7a96d09fff0748d5d354014ce">os::GetExecutableFilename</a>(exe);</div>
-<div class="line">    <a name="a141"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga31cafb38f0ee075885d37ec3d737aceb">os::GetHostName</a>(host);</div>
-<div class="line">    <a name="a142"></a><a class="code" href="../../d9/d7c/group__kernel.html#gaea8acb9f6c91fda20f38150917e7a447">os::GetLogonUserName</a>(user);</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;Executable: &quot;</span>&lt;&lt;exe);</div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;User: &quot;</span>&lt;&lt;user&lt;&lt;<span class="charliteral">&#39;@&#39;</span>&lt;&lt;host);</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;#CPU: &quot;</span>&lt;&lt;<a name="a143"></a><a class="code" href="../../d9/d7c/group__kernel.html#gac521d456043b6035b4d1a9b981933c13">os::GetNumberOfProcessors</a>());</div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;#CPU (Physical): &quot;</span>&lt;&lt;<a name="a144"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga154e63cfd82c91cc3df0ef143d14bbb3">os::GetNumberOfPhysicalProcessors</a>());</div>
-<div class="line">    </div>
-<div class="line">    <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> os_name, os_version;</div>
-<div class="line">    <a name="a145"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga6fdc5f77322ce6b328e8079a4f68e628">os::GetOSVersion</a>(os_version, <span class="keyword">false</span>);</div>
-<div class="line">    <a class="code" href="../../d9/d7c/group__kernel.html#ga6fdc5f77322ce6b328e8079a4f68e628">os::GetOSVersion</a>(os_name, <span class="keyword">true</span>);</div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;OS: &quot;</span>&lt;&lt;os_name&lt;&lt;<span class="stringliteral">&quot;  &quot;</span>&lt;&lt;os_version);</div>
-<div class="line">    </div>
-<div class="line">    ULONGLONG busy[2], total[2];</div>
-<div class="line">    {</div>
-<div class="line">        <a name="a146"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga889873370e3614c2c67c2017c7aa8d6f">os::GetProcessorTimes</a>(busy, total);</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(1000);</div>
-<div class="line">        <a class="code" href="../../d9/d7c/group__kernel.html#ga889873370e3614c2c67c2017c7aa8d6f">os::GetProcessorTimes</a>(busy+1, total+1);</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;INV: &quot;</span>&lt;&lt;(total[1] - total[0]));</div>
-<div class="line">    }</div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;CPU USAGE: &quot;</span>&lt;&lt;100*(busy[1]-busy[0])/(total[1]-total[0])&lt;&lt;<span class="charliteral">&#39;%&#39;</span>);</div>
-<div class="line">    {   ULONGLONG free, total;</div>
-<div class="line">        <a name="a147"></a><a class="code" href="../../d9/d7c/group__kernel.html#gafd3d7020652a5b448e4932bcfb6d6826">os::GetSystemMemoryInfo</a>(&amp;free, &amp;total);</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;MEMORY: &quot;</span> &lt;&lt; <a name="_a148"></a><a class="code" href="../../d7/d4a/structrt_1_1tos_1_1_file_size.html">rt::tos::FileSize&lt;&gt;</a>(free) &lt;&lt; <span class="charliteral">&#39;/&#39;</span> &lt;&lt; <a class="code" href="../../d7/d4a/structrt_1_1tos_1_1_file_size.html">rt::tos::FileSize&lt;&gt;</a>(total));</div>
-<div class="line">    }</div>
-<div class="line">    {   SIZE_T free, total;</div>
-<div class="line">        <a name="a149"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga41e4607646ecfca6130149052208c9e3">os::GetProcessMemoryLoad</a>(&amp;free, &amp;total);</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;MEMORY Load: &quot;</span>&lt;&lt;<a class="code" href="../../d7/d4a/structrt_1_1tos_1_1_file_size.html">rt::tos::FileSize&lt;&gt;</a>(free)&lt;&lt;<span class="charliteral">&#39;/&#39;</span>&lt;&lt;<a class="code" href="../../d7/d4a/structrt_1_1tos_1_1_file_size.html">rt::tos::FileSize&lt;&gt;</a>(total));</div>
-<div class="line">    }</div>
-<div class="line">    </div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;FREE DISK: &quot;</span>&lt;&lt;<a class="code" href="../../d7/d4a/structrt_1_1tos_1_1_file_size.html">rt::tos::FileSize&lt;&gt;</a>(<a name="a150"></a><a class="code" href="../../d1/d21/group__file__dir.html#ga3ba1dec8d0ff8300375917c6a68c1b28">os::GetFreeDiskSpace</a>(<span class="stringliteral">&quot;./&quot;</span>)));</div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;Power State: &quot;</span>&lt;&lt;<a name="a151"></a><a class="code" href="../../d9/d7c/group__kernel.html#gac8110b3c841c6a9fc0341fb27e0e13ed">os::GetPowerState</a>());</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> uid;</div>
-<div class="line">    <a name="a152"></a><a class="code" href="../../d9/d7c/group__kernel.html#ga1bdad02a5dae03847a00ea5a8305dc8b">os::GetDeviceUID</a>(uid);</div>
-<div class="line">    <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;DevUID: &quot;</span>&lt;&lt;uid);</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::filelist()</div>
-<div class="line">{</div>
-<div class="line">    <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> fp;</div>
-<div class="line">    <a class="code" href="../../da/ded/classos_1_1_file_list.html">os::FileList</a>    fl;</div>
-<div class="line">    fl.<a class="code" href="../../da/ded/classos_1_1_file_list.html#a0f7f2e23d343431c6dac54fdc0d2f200">Populate</a>(<span class="stringliteral">&quot;../tests&quot;</span>, <span class="stringliteral">&quot;.cpp&quot;</span>);</div>
-<div class="line">    fl.<a name="a153"></a><a class="code" href="../../da/ded/classos_1_1_file_list.html#ab111bc9cca7652d0b6fa3213b987edaf">Sort</a>();</div>
-<div class="line">    <span class="keywordflow">for</span>(UINT i=0;i&lt;fl.<a class="code" href="../../da/ded/classos_1_1_file_list.html#a6a400ae841393488d4a730b62853ec25">GetCount</a>();i++)</div>
-<div class="line">    {</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(fl.<a class="code" href="../../da/ded/classos_1_1_file_list.html#a6b3f66d3f1138b8a587240459f4cfbda">GetFilename</a>(i));</div>
-<div class="line">    }</div>
-<div class="line">    </div>
-<div class="line">    <a name="_a154"></a><a class="code" href="../../d3/db8/classrt_1_1_buffer.html">rt::Buffer&lt;os::Process::Info&gt;</a>   list;</div>
-<div class="line">    <a name="a155"></a><a class="code" href="../../d3/da0/classos_1_1_process.html#a2d7eabf8b9a3f798a7213632a0d03b91">os::Process::Populate</a>(list);</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nProcess Listed &quot;</span>&lt;&lt;!!list.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>());</div>
-<div class="line">    <span class="keywordflow">for</span>(UINT i=0;i&lt;list.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>();i++)</div>
-<div class="line">    {</div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(list[i].Name.GetFileName()&lt;&lt;<span class="charliteral">&#39;(&#39;</span>&lt;&lt;list[i].PID&lt;&lt;<span class="stringliteral">&quot;), &quot;</span>&lt;&lt;<a class="code" href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp&lt;&gt;</a>(list[i].StartTime));</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::sockettimed()</div>
-<div class="line">{</div>
-<div class="line">    <a name="_a156"></a><a class="code" href="../../dd/dbf/classinet_1_1_socket_timed.html">inet::SocketTimed</a> s;</div>
-<div class="line">    <a name="_a157"></a><a class="code" href="../../d9/dac/structinet_1_1_inet_addr.html">inet::InetAddr</a> addr;</div>
-<div class="line">    addr.<a name="a158"></a><a class="code" href="../../dc/d64/classinet_1_1_inet_addr_t.html#a4fa4ceb63e0ee2c15d0b703394bbb411">SetAsLocal</a>();</div>
-<div class="line">    s.<a name="a159"></a><a class="code" href="../../dd/dbf/classinet_1_1_socket_timed.html#abf9b73dbf4ccd6212c445d29f2be062c">Create</a>(addr);</div>
-<div class="line">    <span class="keywordflow">if</span>(s.<a name="a160"></a><a class="code" href="../../dd/dbf/classinet_1_1_socket_timed.html#aca235412570a9af0fb47983144e2d715">ConnectTo</a>(<a class="code" href="../../d9/dac/structinet_1_1_inet_addr.html">inet::InetAddr</a>(<span class="stringliteral">&quot;i-funbox.com&quot;</span>,80)))</div>
-<div class="line">    {</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;connected&quot;</span>);</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">else</span></div>
-<div class="line">    {</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;failed&quot;</span>);</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> rt::UnitTests::vm()</div>
-<div class="line">{</div>
-<div class="line">    LPVOID p = <a name="a161"></a><a class="code" href="../../d9/d7c/group__kernel.html#gaa17399463e607878fe6010c1612e07a3">os::VMAlloc</a>(1024*1024*1024);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;1G VM: &quot;</span>&lt;&lt;!!p);</div>
-<div class="line"> </div>
-<div class="line">    ((LPBYTE)p)[1024*1024*1024 - 1] = 0;</div>
-<div class="line">    <a name="a162"></a><a class="code" href="../../d9/d7c/group__kernel.html#gad6f90979885f66454d82169d97f7d501">os::VMFree</a>(p, 1024*1024*1024);</div>
-<div class="line"> </div>
-<div class="line">    <a name="_a163"></a><a class="code" href="../../d4/d39/classos_1_1_file_mapping.html">os::FileMapping</a> map;</div>
-<div class="line">    </div>
-<div class="line">    <a class="code" href="../../d5/d92/classos_1_1_file.html#a7c69e73340859bccad73bcebc935e529">os::File::Remove</a>(<span class="stringliteral">&quot;filemapping.data&quot;</span>);</div>
-<div class="line">    map.<a name="a164"></a><a class="code" href="../../d4/d39/classos_1_1_file_mapping.html#ae3859646447b486cad8a3206ecc6e3af">Open</a>(<span class="stringliteral">&quot;filemapping.data&quot;</span>, 100*1024*1024, <span class="keyword">false</span>);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;100M File Mapping: &quot;</span>&lt;&lt;!!map.<a name="a165"></a><a class="code" href="../../d4/d39/classos_1_1_file_mapping.html#a9e0347eaaae02725b630a04dcb6dd1f0">GetBasePtr</a>());</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Write Head&quot;</span>);</div>
-<div class="line">    ((LPBYTE)map.<a class="code" href="../../d4/d39/classos_1_1_file_mapping.html#a9e0347eaaae02725b630a04dcb6dd1f0">GetBasePtr</a>())[0] = 0;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Write Tail&quot;</span>);</div>
-<div class="line">    ((LPBYTE)map.<a class="code" href="../../d4/d39/classos_1_1_file_mapping.html#a9e0347eaaae02725b630a04dcb6dd1f0">GetBasePtr</a>())[100*1024*1024 - 1] = 0;</div>
-<div class="line">    map.<a name="a166"></a><a class="code" href="../../d4/d39/classos_1_1_file_mapping.html#a5d7ad86144b31c8198ed768c54d570ae">Close</a>();</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d92/classos_1_1_file.html#a7c69e73340859bccad73bcebc935e529">os::File::Remove</a>(<span class="stringliteral">&quot;filemapping.data&quot;</span>);</div>
-<div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="ttc" id="aclassinet_1_1_inet_addr_t_html_a4fa4ceb63e0ee2c15d0b703394bbb411"><div class="ttname"><a href="../../dc/d64/classinet_1_1_inet_addr_t.html#a4fa4ceb63e0ee2c15d0b703394bbb411">inet::InetAddrT::SetAsLocal</a></div><div class="ttdeci">INLFUNC bool SetAsLocal(bool no_loopback=false)</div><div class="ttdoc">init and set local address</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4a/inet_8h_source.html#l00187">inet.h:187</a></div></div>
-<div class="ttc" id="aclassinet_1_1_socket_timed_html"><div class="ttname"><a href="../../dd/dbf/classinet_1_1_socket_timed.html">inet::SocketTimed</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4a/inet_8h_source.html#l00419">inet.h:420</a></div></div>
-<div class="ttc" id="aclassinet_1_1_socket_timed_html_abf9b73dbf4ccd6212c445d29f2be062c"><div class="ttname"><a href="../../dd/dbf/classinet_1_1_socket_timed.html#abf9b73dbf4ccd6212c445d29f2be062c">inet::SocketTimed::Create</a></div><div class="ttdeci">bool Create(const InetAddr &amp;BindTo, int nSocketType=SOCK_STREAM, bool reuse_addr=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4a/inet_8h_source.html#l00445">inet.h:445</a></div></div>
-<div class="ttc" id="aclassinet_1_1_socket_timed_html_aca235412570a9af0fb47983144e2d715"><div class="ttname"><a href="../../dd/dbf/classinet_1_1_socket_timed.html#aca235412570a9af0fb47983144e2d715">inet::SocketTimed::ConnectTo</a></div><div class="ttdeci">bool ConnectTo(const InetAddr &amp;target)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4a/inet_8h_source.html#l00446">inet.h:446</a></div></div>
-<div class="ttc" id="aclassos_1_1_command_line_html"><div class="ttname"><a href="../../d1/d0a/classos_1_1_command_line.html">os::CommandLine</a></div><div class="ttdoc">Cmdline parser ( option indicator is '/' '-' )</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00526">file_dir.h:527</a></div></div>
-<div class="ttc" id="aclassos_1_1_command_line_html_a3a14276b90eaff524668e43aaae39757"><div class="ttname"><a href="../../d1/d0a/classos_1_1_command_line.html#a3a14276b90eaff524668e43aaae39757">os::CommandLine::SubstituteOptions</a></div><div class="ttdeci">void SubstituteOptions(rt::String &amp;string, const rt::String_Ref &amp;prefix=rt::SS(&quot;%&quot;), const rt::String_Ref &amp;suffix=rt::SS(&quot;%&quot;)) const</div></div>
-<div class="ttc" id="aclassos_1_1_command_line_html_a56a586ad97d08c62ffba93b8617ec6ed"><div class="ttname"><a href="../../d1/d0a/classos_1_1_command_line.html#a56a586ad97d08c62ffba93b8617ec6ed">os::CommandLine::SetOptionDefault</a></div><div class="ttdeci">void SetOptionDefault(const rt::String_Ref &amp;opt_name, const rt::String_Ref &amp;value)</div></div>
-<div class="ttc" id="aclassos_1_1_command_line_html_ae42a9b495c26b0284da1d94b34fcd22a"><div class="ttname"><a href="../../d1/d0a/classos_1_1_command_line.html#ae42a9b495c26b0284da1d94b34fcd22a">os::CommandLine::LoadEnvironmentVariablesAsOptions</a></div><div class="ttdeci">void LoadEnvironmentVariablesAsOptions()</div></div>
-<div class="ttc" id="aclassos_1_1_critical_section_html"><div class="ttname"><a href="../../d1/d3b/classos_1_1_critical_section.html">os::CriticalSection</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00166">thread_primitive.h:167</a></div></div>
-<div class="ttc" id="aclassos_1_1_event_html"><div class="ttname"><a href="../../d6/d3b/classos_1_1_event.html">os::Event</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00256">thread_primitive.h:257</a></div></div>
-<div class="ttc" id="aclassos_1_1_event_html_a2524187e81b5af6c19458693fef4753c"><div class="ttname"><a href="../../d6/d3b/classos_1_1_event.html#a2524187e81b5af6c19458693fef4753c">os::Event::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00266">thread_primitive.h:266</a></div></div>
-<div class="ttc" id="aclassos_1_1_event_html_a4fa11323b0340aad7c579c5c3b547234"><div class="ttname"><a href="../../d6/d3b/classos_1_1_event.html#a4fa11323b0340aad7c579c5c3b547234">os::Event::Set</a></div><div class="ttdeci">void Set()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00265">thread_primitive.h:265</a></div></div>
-<div class="ttc" id="aclassos_1_1_event_html_aa7384a237d3f1e694c2d496bd960f635"><div class="ttname"><a href="../../d6/d3b/classos_1_1_event.html#aa7384a237d3f1e694c2d496bd960f635">os::Event::IsSignaled</a></div><div class="ttdeci">bool IsSignaled()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00264">thread_primitive.h:264</a></div></div>
-<div class="ttc" id="aclassos_1_1_event_html_ab252527ef21c5c9eea9c96ab6884bf2c"><div class="ttname"><a href="../../d6/d3b/classos_1_1_event.html#ab252527ef21c5c9eea9c96ab6884bf2c">os::Event::WaitSignal</a></div><div class="ttdeci">bool WaitSignal(DWORD Timeout=INFINITE)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00263">thread_primitive.h:263</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_html"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html">os::File</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00092">file_dir.h:93</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_html_a031975d0b35ade3345076132071d2717"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#a031975d0b35ade3345076132071d2717">os::File::RemovePath</a></div><div class="ttdeci">static bool RemovePath(const rt::String_Ref &amp;src)</div></div>
-<div class="ttc" id="aclassos_1_1_file_html_a40d5b32ae5443a0ce054734414c84e8f"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#a40d5b32ae5443a0ce054734414c84e8f">os::File::ProbeAvailableFilename</a></div><div class="ttdeci">static bool ProbeAvailableFilename(LPCSTR fn, rt::String &amp;fn_out)</div><div class="ttdoc">true, confliction found, false no confliction, fn_out will not be set in this case</div></div>
-<div class="ttc" id="aclassos_1_1_file_html_a504a4de14d16da480777385c35eb25f2"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#a504a4de14d16da480777385c35eb25f2">os::File::Normal_WriteText</a></div><div class="ttdeci">static const LPCSTR Normal_WriteText</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00105">file_dir.h:105</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_html_a66466dde6b708a50a075e4c0e3360a38"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#a66466dde6b708a50a075e4c0e3360a38">os::File::Close</a></div><div class="ttdeci">void Close()</div></div>
-<div class="ttc" id="aclassos_1_1_file_html_a7c69e73340859bccad73bcebc935e529"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#a7c69e73340859bccad73bcebc935e529">os::File::Remove</a></div><div class="ttdeci">static bool Remove(LPCSTR fn, bool secure=false)</div></div>
-<div class="ttc" id="aclassos_1_1_file_html_a84555d6862248f8a6013df2f252455f7"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#a84555d6862248f8a6013df2f252455f7">os::File::Normal_Write</a></div><div class="ttdeci">static const LPCSTR Normal_Write</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00104">file_dir.h:104</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_html_aa6d38b83722b89343f571d89d7cbd5a6"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#aa6d38b83722b89343f571d89d7cbd5a6">os::File::Read</a></div><div class="ttdeci">SIZE_T Read(LPVOID lpBuf, SIZE_T nCount)</div></div>
-<div class="ttc" id="aclassos_1_1_file_html_aac18774fda4673c32404297e0d6252f5"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#aac18774fda4673c32404297e0d6252f5">os::File::GetLength</a></div><div class="ttdeci">SIZE_T GetLength() const</div></div>
-<div class="ttc" id="aclassos_1_1_file_html_aafd99e7d9e1701e423ec169deeef0f63"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">os::File::Write</a></div><div class="ttdeci">SIZE_T Write(const rt::String_Ref &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00123">file_dir.h:123</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_html_aed92f85703b7b0994eeaecd9007e756b"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#aed92f85703b7b0994eeaecd9007e756b">os::File::Open</a></div><div class="ttdeci">bool Open(LPCSTR fn_utf8, LPCSTR mode=Normal_Read, bool create_path=false)</div></div>
-<div class="ttc" id="aclassos_1_1_file_list_html"><div class="ttname"><a href="../../da/ded/classos_1_1_file_list.html">os::FileList</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00441">file_dir.h:442</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_list_html_a0f7f2e23d343431c6dac54fdc0d2f200"><div class="ttname"><a href="../../da/ded/classos_1_1_file_list.html#a0f7f2e23d343431c6dac54fdc0d2f200">os::FileList::Populate</a></div><div class="ttdeci">UINT Populate(LPCSTR directory, LPCSTR suffix_filter=nullptr, DWORD flag=FLAG_SKIPHIDDEN|FLAG_NODIRECTORY)</div><div class="ttdoc">suffix_filter = &quot;.bmp|.jpg|.png&quot;, up to 64 suffixies, each individul filter should short than 16 char...</div></div>
-<div class="ttc" id="aclassos_1_1_file_list_html_a6a400ae841393488d4a730b62853ec25"><div class="ttname"><a href="../../da/ded/classos_1_1_file_list.html#a6a400ae841393488d4a730b62853ec25">os::FileList::GetCount</a></div><div class="ttdeci">UINT GetCount() const</div></div>
-<div class="ttc" id="aclassos_1_1_file_list_html_a6b3f66d3f1138b8a587240459f4cfbda"><div class="ttname"><a href="../../da/ded/classos_1_1_file_list.html#a6b3f66d3f1138b8a587240459f4cfbda">os::FileList::GetFilename</a></div><div class="ttdeci">const rt::String &amp; GetFilename(UINT idx) const</div><div class="ttdoc">return the relative path including the filenname</div></div>
-<div class="ttc" id="aclassos_1_1_file_list_html_ab111bc9cca7652d0b6fa3213b987edaf"><div class="ttname"><a href="../../da/ded/classos_1_1_file_list.html#ab111bc9cca7652d0b6fa3213b987edaf">os::FileList::Sort</a></div><div class="ttdeci">void Sort()</div></div>
-<div class="ttc" id="aclassos_1_1_file_mapping_html"><div class="ttname"><a href="../../d4/d39/classos_1_1_file_mapping.html">os::FileMapping</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00328">file_dir.h:329</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_mapping_html_a5d7ad86144b31c8198ed768c54d570ae"><div class="ttname"><a href="../../d4/d39/classos_1_1_file_mapping.html#a5d7ad86144b31c8198ed768c54d570ae">os::FileMapping::Close</a></div><div class="ttdeci">void Close(bool also_delete_file=false)</div></div>
-<div class="ttc" id="aclassos_1_1_file_mapping_html_a9e0347eaaae02725b630a04dcb6dd1f0"><div class="ttname"><a href="../../d4/d39/classos_1_1_file_mapping.html#a9e0347eaaae02725b630a04dcb6dd1f0">os::FileMapping::GetBasePtr</a></div><div class="ttdeci">LPVOID GetBasePtr(SIZE_T offset=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00351">file_dir.h:351</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_mapping_html_ae3859646447b486cad8a3206ecc6e3af"><div class="ttname"><a href="../../d4/d39/classos_1_1_file_mapping.html#ae3859646447b486cad8a3206ecc6e3af">os::FileMapping::Open</a></div><div class="ttdeci">bool Open(LPCSTR filename, SIZE_T length=0, bool readonly=true, bool create_new=true)</div></div>
-<div class="ttc" id="aclassos_1_1_file_packed___reader_html"><div class="ttname"><a href="../../d2/d4d/classos_1_1_file_packed___reader.html">os::FilePacked_Reader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00393">file_dir.h:394</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_packed___reader_html_a1cb9eaaf14ed1d3880df243ba7df2b9f"><div class="ttname"><a href="../../d2/d4d/classos_1_1_file_packed___reader.html#a1cb9eaaf14ed1d3880df243ba7df2b9f">os::FilePacked_Reader::Open</a></div><div class="ttdeci">bool Open(LPCSTR fn)</div></div>
-<div class="ttc" id="aclassos_1_1_file_packed___reader_html_a307ac8d3b95c9a5d29df8458365a6a38"><div class="ttname"><a href="../../d2/d4d/classos_1_1_file_packed___reader.html#a307ac8d3b95c9a5d29df8458365a6a38">os::FilePacked_Reader::GetFileName</a></div><div class="ttdeci">ULONGLONG GetFileName(UINT idx)</div></div>
-<div class="ttc" id="aclassos_1_1_file_packed___reader_html_a5524068fc1ad5b427224b49df43dffb0"><div class="ttname"><a href="../../d2/d4d/classos_1_1_file_packed___reader.html#a5524068fc1ad5b427224b49df43dffb0">os::FilePacked_Reader::GetFileSize</a></div><div class="ttdeci">UINT GetFileSize(UINT idx)</div></div>
-<div class="ttc" id="aclassos_1_1_file_packed___reader_html_a609aa031519ada21c89db44810d01fe4"><div class="ttname"><a href="../../d2/d4d/classos_1_1_file_packed___reader.html#a609aa031519ada21c89db44810d01fe4">os::FilePacked_Reader::Read</a></div><div class="ttdeci">bool Read(UINT idx, LPVOID pout)</div></div>
-<div class="ttc" id="aclassos_1_1_file_packed___reader_html_a8b5cf4dc795441b4e3a61f38a4122857"><div class="ttname"><a href="../../d2/d4d/classos_1_1_file_packed___reader.html#a8b5cf4dc795441b4e3a61f38a4122857">os::FilePacked_Reader::FindNextFile</a></div><div class="ttdeci">UINT FindNextFile()</div><div class="ttdoc">return idx, INFINITE if not found</div></div>
-<div class="ttc" id="aclassos_1_1_file_packed___reader_html_a965943f7f5c0149b19a7962e517b634d"><div class="ttname"><a href="../../d2/d4d/classos_1_1_file_packed___reader.html#a965943f7f5c0149b19a7962e517b634d">os::FilePacked_Reader::FindFirstFile</a></div><div class="ttdeci">UINT FindFirstFile(ULONGLONG name, ULONGLONG mask=0xffffffffffffffffLL)</div><div class="ttdoc">return idx, INFINITE if not found</div></div>
-<div class="ttc" id="aclassos_1_1_file_packed___writer_html"><div class="ttname"><a href="../../d0/d28/classos_1_1_file_packed___writer.html">os::FilePacked_Writer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00430">file_dir.h:431</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_packed___writer_html_a287e7d4056864f60581c9cd8f5b1e6e4"><div class="ttname"><a href="../../d0/d28/classos_1_1_file_packed___writer.html#a287e7d4056864f60581c9cd8f5b1e6e4">os::FilePacked_Writer::Open</a></div><div class="ttdeci">bool Open(LPCSTR fn)</div><div class="ttdoc">Read only, or write only.</div></div>
-<div class="ttc" id="aclassos_1_1_file_packed___writer_html_af31f8360902bbdaa55bc112afdb497d4"><div class="ttname"><a href="../../d0/d28/classos_1_1_file_packed___writer.html#af31f8360902bbdaa55bc112afdb497d4">os::FilePacked_Writer::Write</a></div><div class="ttdeci">bool Write(ULONGLONG name, LPCVOID data, UINT size)</div></div>
-<div class="ttc" id="aclassos_1_1_file_read_line_html"><div class="ttname"><a href="../../d9/d17/classos_1_1_file_read_line.html">os::FileReadLine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00247">file_dir.h:248</a></div></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="ttc" id="aclassos_1_1_file_read_line_html"><div class="ttname"><a href="../../d9/d17/classos_1_1_file_read_line.html">os::FileReadLine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00256">file_dir.h:257</a></div></div>
 <div class="ttc" id="aclassos_1_1_file_read_line_html_a003c3910e0986c9d19174d20c5a7f313"><div class="ttname"><a href="../../d9/d17/classos_1_1_file_read_line.html#a003c3910e0986c9d19174d20c5a7f313">os::FileReadLine::Open</a></div><div class="ttdeci">bool Open(LPCSTR fn)</div></div>
-<div class="ttc" id="aclassos_1_1_file_read_line_html_a6f2cdd4896622c2f8f6532543189c64b"><div class="ttname"><a href="../../d9/d17/classos_1_1_file_read_line.html#a6f2cdd4896622c2f8f6532543189c64b">os::FileReadLine::GetNextLine</a></div><div class="ttdeci">bool GetNextLine(rt::String_Ref &amp;line)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00268">file_dir.h:268</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_write_html"><div class="ttname"><a href="../../d4/d1f/classos_1_1_file_write.html">os::FileWrite</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00275">file_dir.h:276</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_write_html_a0919eef571349f4f8451ab231bda6109"><div class="ttname"><a href="../../d4/d1f/classos_1_1_file_write.html#a0919eef571349f4f8451ab231bda6109">os::FileWrite::Close</a></div><div class="ttdeci">void Close()</div></div>
-<div class="ttc" id="aclassos_1_1_file_write_html_a26e68bb4c386da861ca3ce0d637f8cb9"><div class="ttname"><a href="../../d4/d1f/classos_1_1_file_write.html#a26e68bb4c386da861ca3ce0d637f8cb9">os::FileWrite::Open</a></div><div class="ttdeci">bool Open(LPCSTR fn, DWORD flag=0, UINT header_size=0)</div></div>
-<div class="ttc" id="aclassos_1_1_file_write_html_a80849f58926333b99bbf2925deca2e48a1279e1fdc02bbefaa733d693042e54a3"><div class="ttname"><a href="../../d4/d1f/classos_1_1_file_write.html#a80849f58926333b99bbf2925deca2e48a1279e1fdc02bbefaa733d693042e54a3">os::FileWrite::FW_TRUNCATE</a></div><div class="ttdeci">@ FW_TRUNCATE</div><div class="ttdoc">don't append</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00297">file_dir.h:297</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_write_html_a80849f58926333b99bbf2925deca2e48ae1000339a62cddeb60f8c633e3e0d580"><div class="ttname"><a href="../../d4/d1f/classos_1_1_file_write.html#a80849f58926333b99bbf2925deca2e48ae1000339a62cddeb60f8c633e3e0d580">os::FileWrite::FW_UTF8SIGN</a></div><div class="ttdeci">@ FW_UTF8SIGN</div><div class="ttdoc">write UTF8 header</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00300">file_dir.h:299</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_write_html_a80849f58926333b99bbf2925deca2e48afea567ffd10127cefb21dba15a7f9d84"><div class="ttname"><a href="../../d4/d1f/classos_1_1_file_write.html#a80849f58926333b99bbf2925deca2e48afea567ffd10127cefb21dba15a7f9d84">os::FileWrite::FW_ASYNC</a></div><div class="ttdeci">@ FW_ASYNC</div><div class="ttdoc">write buffer async</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00298">file_dir.h:298</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_write_html_a8e327cca7cb12bec04b814fb8afbfc07"><div class="ttname"><a href="../../d4/d1f/classos_1_1_file_write.html#a8e327cca7cb12bec04b814fb8afbfc07">os::FileWrite::Write</a></div><div class="ttdeci">bool Write(LPCVOID p, UINT size)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00307">file_dir.h:307</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_write_html_aa7ac6dac5e6b415b3028b46cfbfb9187"><div class="ttname"><a href="../../d4/d1f/classos_1_1_file_write.html#aa7ac6dac5e6b415b3028b46cfbfb9187">os::FileWrite::WriteHeader</a></div><div class="ttdeci">bool WriteHeader(LPCVOID p, UINT size)</div></div>
-<div class="ttc" id="aclassos_1_1_high_performance_counter_html"><div class="ttname"><a href="../../dc/d1b/classos_1_1_high_performance_counter.html">os::HighPerformanceCounter</a></div><div class="ttdoc">in nanosecond 10^-9 (default), time elapsed excludes system sleep/standby/hibernation</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00128">kernel.h:129</a></div></div>
+<div class="ttc" id="aclassos_1_1_file_read_line_html_a6f2cdd4896622c2f8f6532543189c64b"><div class="ttname"><a href="../../d9/d17/classos_1_1_file_read_line.html#a6f2cdd4896622c2f8f6532543189c64b">os::FileReadLine::GetNextLine</a></div><div class="ttdeci">bool GetNextLine(rt::String_Ref &amp;line)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00277">file_dir.h:277</a></div></div>
 <div class="ttc" id="aclassos_1_1_parallel_file_writer_html"><div class="ttname"><a href="../../d0/d52/classos_1_1_parallel_file_writer.html">os::ParallelFileWriter</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d51/high__level_8h_source.html#l00436">high_level.h:437</a></div></div>
 <div class="ttc" id="aclassos_1_1_parallel_file_writer_html_a494dab5674b5b1386ec73e04a392a14c"><div class="ttname"><a href="../../d0/d52/classos_1_1_parallel_file_writer.html#a494dab5674b5b1386ec73e04a392a14c">os::ParallelFileWriter::SetWriteDownInterval</a></div><div class="ttdeci">void SetWriteDownInterval(UINT write_interval_msec)</div></div>
 <div class="ttc" id="aclassos_1_1_parallel_file_writer_html_a4acc9cbb411bd12edfeffe0c73bc6ecd"><div class="ttname"><a href="../../d0/d52/classos_1_1_parallel_file_writer.html#a4acc9cbb411bd12edfeffe0c73bc6ecd">os::ParallelFileWriter::WriteString</a></div><div class="ttdeci">INLFUNC bool WriteString(const T &amp;x)</div><div class="ttdoc">string expression or json definition</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d51/high__level_8h_source.html#l00548">high_level.h:548</a></div></div>
@@ -1180,107 +245,20 @@ $(document).ready(function(){initNavTree('df/df4/test_api_8cpp-example.html','..
 <div class="ttc" id="aclassos_1_1_parallel_file_writer_html_aeafb5e2adb5e399dde1babd785d13b4a"><div class="ttname"><a href="../../d0/d52/classos_1_1_parallel_file_writer.html#aeafb5e2adb5e399dde1babd785d13b4a">os::ParallelFileWriter::Open</a></div><div class="ttdeci">bool Open(LPCSTR filename, bool append_existing=true, UINT buffer_size=1024 *1024, bool filetime_by_localtime=false)</div><div class="ttdoc">filename may contain macros as YEAR% MONTH% DAY% HOUR% MINUTE% HALFHOUR% QUARTER%</div></div>
 <div class="ttc" id="aclassos_1_1_parallel_file_writer_html_af081368d76b7e94e9e0182df9ffde3fe"><div class="ttname"><a href="../../d0/d52/classos_1_1_parallel_file_writer.html#af081368d76b7e94e9e0182df9ffde3fe">os::ParallelFileWriter::Close</a></div><div class="ttdeci">void Close()</div></div>
 <div class="ttc" id="aclassos_1_1_parallel_log_html"><div class="ttname"><a href="../../da/db1/classos_1_1_parallel_log.html">os::ParallelLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d51/high__level_8h_source.html#l00380">high_level.h:381</a></div></div>
-<div class="ttc" id="aclassos_1_1_precompiler_html"><div class="ttname"><a href="../../d9/dd4/classos_1_1_precompiler.html">os::Precompiler</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/precompiler_8h_source.html#l00081">precompiler.h:82</a></div></div>
-<div class="ttc" id="aclassos_1_1_precompiler_html_a55e3dd08e32ac613fde54b2eba61ca28"><div class="ttname"><a href="../../d9/dd4/classos_1_1_precompiler.html#a55e3dd08e32ac613fde54b2eba61ca28">os::Precompiler::SetEnvVars</a></div><div class="ttdeci">void SetEnvVars(const PrecompilerPredefinedMacros *pv)</div></div>
-<div class="ttc" id="aclassos_1_1_precompiler_html_a88b4540275881d0e4f4cfe6b57280588"><div class="ttname"><a href="../../d9/dd4/classos_1_1_precompiler.html#a88b4540275881d0e4f4cfe6b57280588">os::Precompiler::Compile</a></div><div class="ttdeci">void Compile(LPCSTR filename, const rt::String_Ref &amp;source=nullptr)</div></div>
-<div class="ttc" id="aclassos_1_1_precompiler_html_acd629a575e5c4cd4cdd69010abbf4be1"><div class="ttname"><a href="../../d9/dd4/classos_1_1_precompiler.html#acd629a575e5c4cd4cdd69010abbf4be1">os::Precompiler::GetCompiled</a></div><div class="ttdeci">const rt::String_Ref &amp; GetCompiled() const</div></div>
-<div class="ttc" id="aclassos_1_1_precompiler_predefined_macros_html"><div class="ttname"><a href="../../d3/d28/classos_1_1_precompiler_predefined_macros.html">os::PrecompilerPredefinedMacros</a></div><div class="ttdoc">for C/C++/Java/Javascript code</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6f/precompiler_8h_source.html#l00066">precompiler.h:67</a></div></div>
-<div class="ttc" id="aclassos_1_1_precompiler_predefined_macros_html_a80c74725e8edc6b51b88e51e50bff5f2"><div class="ttname"><a href="../../d3/d28/classos_1_1_precompiler_predefined_macros.html#a80c74725e8edc6b51b88e51e50bff5f2">os::PrecompilerPredefinedMacros::ImportCmdLineOptions</a></div><div class="ttdeci">void ImportCmdLineOptions(const os::CommandLine &amp;cmd)</div></div>
-<div class="ttc" id="aclassos_1_1_precompiler_predefined_macros_html_af01f543dd5d518c7539ca9339b1a00bf"><div class="ttname"><a href="../../d3/d28/classos_1_1_precompiler_predefined_macros.html#af01f543dd5d518c7539ca9339b1a00bf">os::PrecompilerPredefinedMacros::Set</a></div><div class="ttdeci">void Set(const rt::String_Ref &amp;macro, const rt::String_Ref &amp;value)</div></div>
-<div class="ttc" id="aclassos_1_1_process_html_a2d7eabf8b9a3f798a7213632a0d03b91"><div class="ttname"><a href="../../d3/da0/classos_1_1_process.html#a2d7eabf8b9a3f798a7213632a0d03b91">os::Process::Populate</a></div><div class="ttdeci">static void Populate(rt::Buffer&lt; Info &gt; &amp;list_out)</div></div>
-<div class="ttc" id="aclassos_1_1_thread_html"><div class="ttname"><a href="../../d1/d15/classos_1_1_thread.html">os::Thread</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/db7/multi__thread_8h_source.html#l00059">multi_thread.h:60</a></div></div>
-<div class="ttc" id="aclassos_1_1_thread_html_a233ba0e44b407e5b68f9859ab970ca5f"><div class="ttname"><a href="../../d1/d15/classos_1_1_thread.html#a233ba0e44b407e5b68f9859ab970ca5f">os::Thread::Create</a></div><div class="ttdeci">bool Create(LPVOID obj, const THISCALL_MFPTR &amp;on_run, LPVOID param=nullptr, ULONGLONG CPU_affinity=0xffffffffffffffffULL, UINT stack_size=0)</div></div>
-<div class="ttc" id="aclassos_1_1_thread_html_a4bf5c21fd85a0359a7765e322d7655a4"><div class="ttname"><a href="../../d1/d15/classos_1_1_thread.html#a4bf5c21fd85a0359a7765e322d7655a4">os::Thread::IsRunning</a></div><div class="ttdeci">bool IsRunning() const</div></div>
-<div class="ttc" id="aclassos_1_1_thread_html_a9f054b5584558abd41bd949c5f353a67"><div class="ttname"><a href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">os::Thread::WaitForEnding</a></div><div class="ttdeci">bool WaitForEnding(UINT time_wait_ms=INFINITE, bool terminate_if_timeout=false)</div></div>
-<div class="ttc" id="aclassos_1_1_thread_html_ab08b3d77a98a599cbcec81b870ad2623"><div class="ttname"><a href="../../d1/d15/classos_1_1_thread.html#ab08b3d77a98a599cbcec81b870ad2623">os::Thread::GetCurrentId</a></div><div class="ttdeci">static SIZE_T GetCurrentId()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db7/multi__thread_8h_source.html#l00141">multi_thread.h:141</a></div></div>
-<div class="ttc" id="aclassrt_1_1_buffer___ref_html_a2e42d12cc6f27f9520cb415661d9818b"><div class="ttname"><a href="../../d0/da6/classrt_1_1_buffer___ref.html#a2e42d12cc6f27f9520cb415661d9818b">rt::Buffer_Ref::RandomBits</a></div><div class="ttdeci">void RandomBits(DWORD seed=rand())</div><div class="ttdoc">Random bits by using rt::Randomizer.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00310">buffer_type.h:310</a></div></div>
-<div class="ttc" id="aclassrt_1_1_buffer___ref_html_a9c49154815c7b452336300325ef6df50"><div class="ttname"><a href="../../d0/da6/classrt_1_1_buffer___ref.html#a9c49154815c7b452336300325ef6df50">rt::Buffer_Ref::Begin</a></div><div class="ttdeci">LPCItemType Begin() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00090">buffer_type.h:90</a></div></div>
 <div class="ttc" id="aclassrt_1_1_buffer___ref_html_ad7443dc12fc2a4fd9107fe00c3d96a58"><div class="ttname"><a href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">rt::Buffer_Ref::GetSize</a></div><div class="ttdeci">t_Index GetSize() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00108">buffer_type.h:108</a></div></div>
-<div class="ttc" id="aclassrt_1_1_buffer_html"><div class="ttname"><a href="../../d3/db8/classrt_1_1_buffer.html">rt::Buffer&lt; BYTE &gt;</a></div></div>
-<div class="ttc" id="aclassrt_1_1_buffer_html_a3b88c05d4a3725c1fe885a653527ecdb"><div class="ttname"><a href="../../d3/db8/classrt_1_1_buffer.html#a3b88c05d4a3725c1fe885a653527ecdb">rt::Buffer::SetSize</a></div><div class="ttdeci">bool SetSize(SIZE_T co=0)</div><div class="ttdoc">Set buffer size.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00408">buffer_type.h:408</a></div></div>
-<div class="ttc" id="aclassrt_1_1_randomizer_html"><div class="ttname"><a href="../../dd/def/classrt_1_1_randomizer.html">rt::Randomizer</a></div><div class="ttdoc">simple pseudo-random number generator invented by George Marsaglia.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l01601">runtime_base.h:1602</a></div></div>
-<div class="ttc" id="aclassrt_1_1_randomizer_html_ad5e94453aa816f81e162264b0ff272da"><div class="ttname"><a href="../../dd/def/classrt_1_1_randomizer.html#ad5e94453aa816f81e162264b0ff272da">rt::Randomizer::Randomize</a></div><div class="ttdeci">FORCEINL auto &amp; Randomize(T &amp;pod)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l01616">runtime_base.h:1616</a></div></div>
-<div class="ttc" id="aclassrt_1_1_string___base_html_adb731c820af8d3095c2b9a46861e2632"><div class="ttname"><a href="../../d7/dad/classrt_1_1_string___base.html#adb731c820af8d3095c2b9a46861e2632">rt::String_Base::Begin</a></div><div class="ttdeci">const char * Begin() const</div><div class="ttdoc">may NOT terminated by ZERO !!</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l00357">string_type.h:357</a></div></div>
+<div class="ttc" id="aclassrt_1_1_buffer_html"><div class="ttname"><a href="../../d3/db8/classrt_1_1_buffer.html">rt::Buffer&lt; os::Thread &gt;</a></div></div>
+<div class="ttc" id="aclassrt_1_1_buffer_html_a3b88c05d4a3725c1fe885a653527ecdb"><div class="ttname"><a href="../../d3/db8/classrt_1_1_buffer.html#a3b88c05d4a3725c1fe885a653527ecdb">rt::Buffer::SetSize</a></div><div class="ttdeci">bool SetSize(SIZE_T co=0)</div><div class="ttdoc">Set buffer size.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00411">buffer_type.h:411</a></div></div>
 <div class="ttc" id="aclassrt_1_1_string___base_html_af82cd4d34fcaed3b54e0436312b376be"><div class="ttname"><a href="../../d7/dad/classrt_1_1_string___base.html#af82cd4d34fcaed3b54e0436312b376be">rt::String_Base::GetLength</a></div><div class="ttdeci">SIZE_T GetLength() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l00332">string_type.h:332</a></div></div>
 <div class="ttc" id="aclassrt_1_1_string___ref_html"><div class="ttname"><a href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a></div><div class="ttdoc">String_Ref represent a string with length, the string is not necessary zero-terminated.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01387">string_type.h:1388</a></div></div>
-<div class="ttc" id="aclassrt_1_1_string_html"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html">rt::String</a></div><div class="ttdoc">only contains address and length.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01803">string_type.h:1804</a></div></div>
-<div class="ttc" id="aclassrt_1_1_string_html_a3341ecfbe0e0223981c0ebc97cb217b9"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html#a3341ecfbe0e0223981c0ebc97cb217b9">rt::String::SetLength</a></div><div class="ttdeci">bool SetLength(SIZE_T sz)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01820">string_type.h:1820</a></div></div>
-<div class="ttc" id="aclassrt_1_1tos_1_1_s___html"><div class="ttname"><a href="../../d4/d04/classrt_1_1tos_1_1_s__.html">rt::tos::S_</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01513">string_type.h:1514</a></div></div>
-<div class="ttc" id="agroup___both__consoleand__file_html_ga7214f168f9fb66818944932eda9b4247"><div class="ttname"><a href="../../d5/d96/group___both__consoleand__file.html#ga7214f168f9fb66818944932eda9b4247">_LOG_ERROR</a></div><div class="ttdeci">#define _LOG_ERROR(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00221">runtime_base.h:221</a></div></div>
 <div class="ttc" id="agroup___both__consoleand__file_html_ga7263964d3be25fc05cdc28e40b88409e"><div class="ttname"><a href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a></div><div class="ttdeci">#define _LOG(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00218">runtime_base.h:218</a></div></div>
-<div class="ttc" id="agroup___functions__runtime__base_html_gac0f9eb3d76f7c22bf5e0cbce2d9a8195"><div class="ttname"><a href="../../dc/d6c/group___functions__runtime__base.html#gac0f9eb3d76f7c22bf5e0cbce2d9a8195">rt::min</a></div><div class="ttdeci">INLFUNC T min(const T &amp;x, const T &amp;y)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00366">runtime_base.h:366</a></div></div>
+<div class="ttc" id="agroup___functions__kernel_html_gae28a7736b963f4b1ed2f183641e6d865"><div class="ttname"><a href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a></div><div class="ttdeci">void Sleep(DWORD msec=INFINITE, const bool *interrupt_flag=nullptr)</div></div>
 <div class="ttc" id="agroup___macros__runtime__base_html_gaca68c0d4ac8df0838e209fb5300f7be3"><div class="ttname"><a href="../../d1/dc7/group___macros__runtime__base.html#gaca68c0d4ac8df0838e209fb5300f7be3">ASSERT</a></div><div class="ttdeci">#define ASSERT(x)</div><div class="ttdoc">Debugging and error handling.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00273">runtime_base.h:273</a></div></div>
 <div class="ttc" id="agroup___macros__type__traits_html_ga8f91a2d43b8639eb05b76f588d3ee657"><div class="ttname"><a href="../../dd/d09/group___macros__type__traits.html#ga8f91a2d43b8639eb05b76f588d3ee657">rt::int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d63/type__traits_8h_source.html#l00495">type_traits.h:495</a></div></div>
-<div class="ttc" id="agroup___only__log__to__console_html_ga12e244ee457ec371bbadf2f027e1d440"><div class="ttname"><a href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a></div><div class="ttdeci">#define _LOGC(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00232">runtime_base.h:232</a></div></div>
 <div class="ttc" id="agroup___typedefs__string__type__ops_html_gadafa8c4e9201fb0cdf4d6b4ef3cd5a42"><div class="ttname"><a href="../../df/dc5/group___typedefs__string__type__ops.html#gadafa8c4e9201fb0cdf4d6b4ef3cd5a42">rt::SS</a></div><div class="ttdeci">tos::StaticString SS</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5f/string__type__ops_8h_source.html#l00370">string_type_ops.h:370</a></div></div>
-<div class="ttc" id="agroup__file__dir_html_ga3ba1dec8d0ff8300375917c6a68c1b28"><div class="ttname"><a href="../../d1/d21/group__file__dir.html#ga3ba1dec8d0ff8300375917c6a68c1b28">os::GetFreeDiskSpace</a></div><div class="ttdeci">ULONGLONG GetFreeDiskSpace(LPCSTR path, ULONGLONG *pTotal=nullptr)</div><div class="ttdoc">in MB</div></div>
-<div class="ttc" id="agroup__kernel_html_ga0e02e1d7a96d09fff0748d5d354014ce"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga0e02e1d7a96d09fff0748d5d354014ce">os::GetExecutableFilename</a></div><div class="ttdeci">void GetExecutableFilename(rt::String &amp;name)</div></div>
-<div class="ttc" id="agroup__kernel_html_ga1360dbf2e2d484dc1e8cd0dd7aeea7e0"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga1360dbf2e2d484dc1e8cd0dd7aeea7e0">os::Timestamp::GetDateTime</a></div><div class="ttdeci">bool GetDateTime(Fields &amp;f) const</div><div class="ttdoc">GMT time.</div></div>
-<div class="ttc" id="agroup__kernel_html_ga154e63cfd82c91cc3df0ef143d14bbb3"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga154e63cfd82c91cc3df0ef143d14bbb3">os::GetNumberOfPhysicalProcessors</a></div><div class="ttdeci">UINT GetNumberOfPhysicalProcessors()</div></div>
-<div class="ttc" id="agroup__kernel_html_ga1664983a81b12666c4c58105afac46f4"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga1664983a81b12666c4c58105afac46f4">os::Base64DecodeLength</a></div><div class="ttdeci">SIZE_T Base64DecodeLength(LPCSTR pBase64, SIZE_T len)</div></div>
-<div class="ttc" id="agroup__kernel_html_ga1bdad02a5dae03847a00ea5a8305dc8b"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga1bdad02a5dae03847a00ea5a8305dc8b">os::GetDeviceUID</a></div><div class="ttdeci">bool GetDeviceUID(rt::String &amp;uid)</div></div>
-<div class="ttc" id="agroup__kernel_html_ga1c4c5fd20bb894a4c2852053be189515"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga1c4c5fd20bb894a4c2852053be189515">os::HighPerformanceCounter::SetOutputMillisecond</a></div><div class="ttdeci">void SetOutputMillisecond()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00159">kernel.h:159</a></div></div>
-<div class="ttc" id="agroup__kernel_html_ga1c4e0e08576dce9f741551e36bfff25e"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga1c4e0e08576dce9f741551e36bfff25e">os::TickCount::Get</a></div><div class="ttdeci">static FORCEINL DWORD Get()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00085">kernel.h:85</a></div></div>
-<div class="ttc" id="agroup__kernel_html_ga20629500aaab0c18ec47b8d27f571154"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga20629500aaab0c18ec47b8d27f571154">os::Timestamp::_Timestamp</a></div><div class="ttdeci">LONGLONG _Timestamp</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00342">kernel.h:342</a></div></div>
-<div class="ttc" id="agroup__kernel_html_ga2e17494817e13368fb4371a06cd32f76"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga2e17494817e13368fb4371a06cd32f76">os::Timestamp::LoadCurrentTime</a></div><div class="ttdeci">FORCEINL void LoadCurrentTime()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00348">kernel.h:348</a></div></div>
-<div class="ttc" id="agroup__kernel_html_ga31cafb38f0ee075885d37ec3d737aceb"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga31cafb38f0ee075885d37ec3d737aceb">os::GetHostName</a></div><div class="ttdeci">void GetHostName(rt::String &amp;name)</div></div>
-<div class="ttc" id="agroup__kernel_html_ga3672dcd76e8682f792dbb7a3b5151f3a"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga3672dcd76e8682f792dbb7a3b5151f3a">os::HighPerformanceCounter::TimeLapse</a></div><div class="ttdeci">LONGLONG TimeLapse(LONGLONG later) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00152">kernel.h:152</a></div></div>
-<div class="ttc" id="agroup__kernel_html_ga41e4607646ecfca6130149052208c9e3"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga41e4607646ecfca6130149052208c9e3">os::GetProcessMemoryLoad</a></div><div class="ttdeci">bool GetProcessMemoryLoad(SIZE_T *vmem, SIZE_T *phy_mem)</div></div>
-<div class="ttc" id="agroup__kernel_html_ga4e711878744ea19b6035003a72d4b34d"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga4e711878744ea19b6035003a72d4b34d">os::Base32DecodeLength</a></div><div class="ttdeci">SIZE_T Base32DecodeLength(SIZE_T len)</div></div>
-<div class="ttc" id="agroup__kernel_html_ga4ee0f8f680909e5788f7ff71e9830dd8"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga4ee0f8f680909e5788f7ff71e9830dd8">os::Base64Decode</a></div><div class="ttdeci">bool Base64Decode(LPVOID pDataOut, SIZE_T *pDataOutLen, LPCSTR pBase64, SIZE_T str_len)</div><div class="ttdoc">false if partial data decoded due to illegal data (*pDataOutLen) might be smaller than Base64DecodeLe...</div></div>
-<div class="ttc" id="agroup__kernel_html_ga6fdc5f77322ce6b328e8079a4f68e628"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga6fdc5f77322ce6b328e8079a4f68e628">os::GetOSVersion</a></div><div class="ttdeci">void GetOSVersion(rt::String &amp;name, bool friendly_info=true)</div></div>
-<div class="ttc" id="agroup__kernel_html_ga7365efda2ea67ae197f13c7972087ffb"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga7365efda2ea67ae197f13c7972087ffb">os::Date32::SetDate</a></div><div class="ttdeci">INLFUNC void SetDate(int year, int mon, int day)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00548">kernel.h:548</a></div></div>
-<div class="ttc" id="agroup__kernel_html_ga819f025866fbfd2cef1385dda08106cc"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga819f025866fbfd2cef1385dda08106cc">os::Timestamp::Fields::FromInternetTimeFormat</a></div><div class="ttdeci">bool FromInternetTimeFormat(const rt::String_Ref &amp;s)</div><div class="ttdoc">RFC 1123 format, //Tue, 15 Nov 1994 12:45:26 GMT.</div></div>
-<div class="ttc" id="agroup__kernel_html_ga882b24ad98b7095a5fc43f7172f27c51"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga882b24ad98b7095a5fc43f7172f27c51">os::TickCount::TimeLapse</a></div><div class="ttdeci">FORCEINL int TimeLapse(DWORD later) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00109">kernel.h:109</a></div></div>
-<div class="ttc" id="agroup__kernel_html_ga889873370e3614c2c67c2017c7aa8d6f"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga889873370e3614c2c67c2017c7aa8d6f">os::GetProcessorTimes</a></div><div class="ttdeci">bool GetProcessorTimes(ULONGLONG *busy, ULONGLONG *total=nullptr)</div><div class="ttdoc">msec, {idle, total}</div></div>
-<div class="ttc" id="agroup__kernel_html_ga8919464b1a3a0872f2e0b01c5ec40c9d"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga8919464b1a3a0872f2e0b01c5ec40c9d">os::Timestamp::TimeLapse</a></div><div class="ttdeci">FORCEINL LONGLONG TimeLapse() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00351">kernel.h:351</a></div></div>
-<div class="ttc" id="agroup__kernel_html_ga913959c649e229afae63049f9b15ac87"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga913959c649e229afae63049f9b15ac87">os::Base64Encode</a></div><div class="ttdeci">void Base64Encode(LPSTR pBase64Out, LPCVOID pData, SIZE_T data_len)</div><div class="ttdoc">assuming the data is well formated</div></div>
-<div class="ttc" id="agroup__kernel_html_gaa17399463e607878fe6010c1612e07a3"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gaa17399463e607878fe6010c1612e07a3">os::VMAlloc</a></div><div class="ttdeci">LPVOID VMAlloc(SIZE_T length)</div></div>
-<div class="ttc" id="agroup__kernel_html_gaa1bb16de1032c9e3d358045b2d1d31df"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gaa1bb16de1032c9e3d358045b2d1d31df">os::Timestamp::GetDayOfWeek</a></div><div class="ttdeci">static FORCEINL int GetDayOfWeek(int year, int month, int day)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00404">kernel.h:404</a></div></div>
-<div class="ttc" id="agroup__kernel_html_gabaefdd9511fe4603ac01866beeecffe6"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gabaefdd9511fe4603ac01866beeecffe6">os::Timestamp::SetLocalDateTime</a></div><div class="ttdeci">bool SetLocalDateTime(const Fields &amp;f)</div></div>
-<div class="ttc" id="agroup__kernel_html_gac27e06d9c00d65c71dcc8178199c52d9"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gac27e06d9c00d65c71dcc8178199c52d9">os::Date32::LastMonth</a></div><div class="ttdeci">INLFUNC Date32 LastMonth() const</div><div class="ttdoc">&lt; day will be 1</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00605">kernel.h:605</a></div></div>
-<div class="ttc" id="agroup__kernel_html_gac521d456043b6035b4d1a9b981933c13"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gac521d456043b6035b4d1a9b981933c13">os::GetNumberOfProcessors</a></div><div class="ttdeci">UINT GetNumberOfProcessors()</div></div>
-<div class="ttc" id="agroup__kernel_html_gac7f8cd4a75379022a6706aefed103680"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gac7f8cd4a75379022a6706aefed103680">os::Base32Decode</a></div><div class="ttdeci">bool Base32Decode(LPVOID pDataOut, SIZE_T data_len, LPCSTR pBase32, SIZE_T str_len)</div><div class="ttdoc">for both upper/lowercase</div></div>
-<div class="ttc" id="agroup__kernel_html_gac8110b3c841c6a9fc0341fb27e0e13ed"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gac8110b3c841c6a9fc0341fb27e0e13ed">os::GetPowerState</a></div><div class="ttdeci">UINT GetPowerState(bool *pHasBattery=nullptr, bool *pPlugged=nullptr)</div><div class="ttdoc">precentage of battery remaining</div></div>
-<div class="ttc" id="agroup__kernel_html_gad6eaf5e451af7be3911610a5a5bd3434"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gad6eaf5e451af7be3911610a5a5bd3434">os::Base32CrockfordDecode</a></div><div class="ttdeci">bool Base32CrockfordDecode(LPVOID pDataOut, SIZE_T data_len, LPCSTR pBase32, SIZE_T str_len)</div><div class="ttdoc">for both upper/lowercase</div></div>
-<div class="ttc" id="agroup__kernel_html_gad6f90979885f66454d82169d97f7d501"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gad6f90979885f66454d82169d97f7d501">os::VMFree</a></div><div class="ttdeci">void VMFree(LPVOID ptr, SIZE_T size)</div></div>
-<div class="ttc" id="agroup__kernel_html_gae28a7736b963f4b1ed2f183641e6d865"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a></div><div class="ttdeci">void Sleep(DWORD msec=INFINITE, const bool *interrupt_flag=nullptr)</div></div>
-<div class="ttc" id="agroup__kernel_html_gae99e4ff05a1036c6fbd79c5fddacf0ae"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gae99e4ff05a1036c6fbd79c5fddacf0ae">os::Timestamp::Get</a></div><div class="ttdeci">static FORCEINL Timestamp Get()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00417">kernel.h:417</a></div></div>
-<div class="ttc" id="agroup__kernel_html_gaea8acb9f6c91fda20f38150917e7a447"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gaea8acb9f6c91fda20f38150917e7a447">os::GetLogonUserName</a></div><div class="ttdeci">void GetLogonUserName(rt::String &amp;name)</div></div>
-<div class="ttc" id="agroup__kernel_html_gaea926dfcafd7dba9449691a730566536"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gaea926dfcafd7dba9449691a730566536">os::Base64EncodeLength</a></div><div class="ttdeci">SIZE_T Base64EncodeLength(SIZE_T len)</div></div>
-<div class="ttc" id="agroup__kernel_html_gaf217c18958bb4c31257b1e53ba286189"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gaf217c18958bb4c31257b1e53ba286189">os::Timestamp::SetDateTime</a></div><div class="ttdeci">bool SetDateTime(const Fields &amp;f)</div></div>
-<div class="ttc" id="agroup__kernel_html_gaf258295e2ba469eee6d5d47cc7a6a7fe"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gaf258295e2ba469eee6d5d47cc7a6a7fe">os::HighPerformanceCounter::LoadCurrentCount</a></div><div class="ttdeci">void LoadCurrentCount()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00156">kernel.h:156</a></div></div>
-<div class="ttc" id="agroup__kernel_html_gaf3319b21bf5d46082bf71de732d10ea8"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gaf3319b21bf5d46082bf71de732d10ea8">os::TickCount::LoadCurrentTick</a></div><div class="ttdeci">FORCEINL void LoadCurrentTick()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00108">kernel.h:108</a></div></div>
-<div class="ttc" id="agroup__kernel_html_gafd3d7020652a5b448e4932bcfb6d6826"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gafd3d7020652a5b448e4932bcfb6d6826">os::GetSystemMemoryInfo</a></div><div class="ttdeci">bool GetSystemMemoryInfo(ULONGLONG *free, ULONGLONG *total=nullptr)</div><div class="ttdoc">in bytes</div></div>
-<div class="ttc" id="agroup__multi__thread_html_ga89da061c45faf8c3d43c4dfc65f99e97"><div class="ttname"><a href="../../df/dfc/group__multi__thread.html#ga89da061c45faf8c3d43c4dfc65f99e97">_SafeDel_Delayed</a></div><div class="ttdeci">#define _SafeDel_Delayed(x, TTL_msec)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db7/multi__thread_8h_source.html#l00224">multi_thread.h:224</a></div></div>
-<div class="ttc" id="agroup__predefines_html_ga9879f8ef4e651f01c6888dd86b31b50c"><div class="ttname"><a href="../../dd/d12/group__predefines.html#ga9879f8ef4e651f01c6888dd86b31b50c">sizeofArray</a></div><div class="ttdeci">#define sizeofArray(array_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db2/predefines_8h_source.html#l00197">predefines.h:197</a></div></div>
-<div class="ttc" id="agroup__predefines_html_ga9cc247081519bb565d3b159594cbf5fd"><div class="ttname"><a href="../../dd/d12/group__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a></div><div class="ttdeci">const BYTE * LPCBYTE</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db2/predefines_8h_source.html#l00171">predefines.h:171</a></div></div>
-<div class="ttc" id="agroup__predefines_html_gaa84a29002ab81c719c0d07bb446296e0"><div class="ttname"><a href="../../dd/d12/group__predefines.html#gaa84a29002ab81c719c0d07bb446296e0">INFINITE</a></div><div class="ttdeci">#define INFINITE</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db2/predefines_8h_source.html#l00162">predefines.h:162</a></div></div>
-<div class="ttc" id="agroup__thread__primitive_html_ga55353ff181e49ac93d2220d6f7ab7f47"><div class="ttname"><a href="../../d2/d9f/group__thread__primitive.html#ga55353ff181e49ac93d2220d6f7ab7f47">os::AtomicDecrement</a></div><div class="ttdeci">FORCEINL int AtomicDecrement(volatile int *theValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00091">thread_primitive.h:91</a></div></div>
-<div class="ttc" id="agroup__thread__primitive_html_ga63adf045afeb0ccdd21660445451b023"><div class="ttname"><a href="../../d2/d9f/group__thread__primitive.html#ga63adf045afeb0ccdd21660445451b023">os::AtomicOr</a></div><div class="ttdeci">FORCEINL DWORD AtomicOr(DWORD bits, volatile DWORD *theValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00094">thread_primitive.h:94</a></div></div>
-<div class="ttc" id="agroup__thread__primitive_html_ga6987251445e0c897f98d8d407ced08ee"><div class="ttname"><a href="../../d2/d9f/group__thread__primitive.html#ga6987251445e0c897f98d8d407ced08ee">EnterCSBlock</a></div><div class="ttdeci">#define EnterCSBlock(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00066">thread_primitive.h:66</a></div></div>
-<div class="ttc" id="agroup__thread__primitive_html_gae6a9edf1f6f7cfe9f9a487fec043c323"><div class="ttname"><a href="../../d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a></div><div class="ttdeci">FORCEINL int AtomicIncrement(volatile int *theValue)</div><div class="ttdoc">All Atomic operation return the value after operation, EXCEPT AtomicOr and AtomicAnd.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00090">thread_primitive.h:90</a></div></div>
-<div class="ttc" id="astructinet_1_1_inet_addr_html"><div class="ttname"><a href="../../d9/dac/structinet_1_1_inet_addr.html">inet::InetAddr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4a/inet_8h_source.html#l00293">inet.h:294</a></div></div>
-<div class="ttc" id="astructos_1_1_date32_html"><div class="ttname"><a href="../../d2/d99/structos_1_1_date32.html">os::Date32</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00532">kernel.h:533</a></div></div>
-<div class="ttc" id="astructos_1_1_file_buffer_html"><div class="ttname"><a href="../../df/db0/structos_1_1_file_buffer.html">os::FileBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00358">file_dir.h:359</a></div></div>
-<div class="ttc" id="astructos_1_1_file_buffer_html_a50a8a6dfc0f199eb31da66de35a55dad"><div class="ttname"><a href="../../df/db0/structos_1_1_file_buffer.html#a50a8a6dfc0f199eb31da66de35a55dad">os::FileBuffer::GetSize</a></div><div class="ttdeci">SIZE_T GetSize() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00370">file_dir.h:370</a></div></div>
-<div class="ttc" id="astructos_1_1_file_buffer_html_a965e5be48e2ca49be8980bd6dbfc9613"><div class="ttname"><a href="../../df/db0/structos_1_1_file_buffer.html#a965e5be48e2ca49be8980bd6dbfc9613">os::FileBuffer::Open</a></div><div class="ttdeci">bool Open(LPCSTR filename, SIZE_T count=0, bool readonly=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00366">file_dir.h:366</a></div></div>
-<div class="ttc" id="astructos_1_1_file_buffer_html_ae58314b2624bdcb7b488aa072e64f3ea"><div class="ttname"><a href="../../df/db0/structos_1_1_file_buffer.html#ae58314b2624bdcb7b488aa072e64f3ea">os::FileBuffer::Begin</a></div><div class="ttdeci">T * Begin()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00372">file_dir.h:372</a></div></div>
-<div class="ttc" id="astructos_1_1_tick_count_html"><div class="ttname"><a href="../../d4/df4/structos_1_1_tick_count.html">os::TickCount</a></div><div class="ttdoc">in msec, 10^-3</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00080">kernel.h:81</a></div></div>
-<div class="ttc" id="astructos_1_1_timestamp_1_1_fields_html"><div class="ttname"><a href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html">os::Timestamp::Fields</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00314">kernel.h:315</a></div></div>
-<div class="ttc" id="astructos_1_1_timestamp_html"><div class="ttname"><a href="../../d4/d7c/structos_1_1_timestamp.html">os::Timestamp</a></div><div class="ttdoc">UNIX time (UTC) in millisecond, compatible to javascript's (new Date(x))</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00312">kernel.h:313</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1_base16_on_stack_html"><div class="ttname"><a href="../../d0/dda/structrt_1_1tos_1_1_base16_on_stack.html">rt::tos::Base16OnStack</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l01021">kernel.h:1022</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1_base32_crockford_lowercase_on_stack_html"><div class="ttname"><a href="../../d1/d10/structrt_1_1tos_1_1_base32_crockford_lowercase_on_stack.html">rt::tos::Base32CrockfordLowercaseOnStack</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l01005">kernel.h:1006</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1_base32_crockford_on_stack_html"><div class="ttname"><a href="../../d2/d5c/structrt_1_1tos_1_1_base32_crockford_on_stack.html">rt::tos::Base32CrockfordOnStack</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00989">kernel.h:990</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1_base32_lowercase_on_stack_html"><div class="ttname"><a href="../../da/d0a/structrt_1_1tos_1_1_base32_lowercase_on_stack.html">rt::tos::Base32LowercaseOnStack</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00973">kernel.h:974</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1_base32_on_stack_html"><div class="ttname"><a href="../../d1/d37/structrt_1_1tos_1_1_base32_on_stack.html">rt::tos::Base32OnStack</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00957">kernel.h:958</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1_base64_on_stack_html"><div class="ttname"><a href="../../d2/dde/structrt_1_1tos_1_1_base64_on_stack.html">rt::tos::Base64OnStack</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00941">kernel.h:942</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1_binary_html"><div class="ttname"><a href="../../d0/db8/structrt_1_1tos_1_1_binary.html">rt::tos::Binary</a></div><div class="ttdoc">Binary.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5f/string__type__ops_8h_source.html#l00301">string_type_ops.h:302</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1_date_html"><div class="ttname"><a href="../../d5/d40/structrt_1_1tos_1_1_date.html">rt::tos::Date</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5f/string__type__ops_8h_source.html#l00250">string_type_ops.h:251</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1_file_size_html"><div class="ttname"><a href="../../d7/d4a/structrt_1_1tos_1_1_file_size.html">rt::tos::FileSize</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5f/string__type__ops_8h_source.html#l00147">string_type_ops.h:148</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1_hex_num_html"><div class="ttname"><a href="../../d4/d70/structrt_1_1tos_1_1_hex_num.html">rt::tos::HexNum</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5f/string__type__ops_8h_source.html#l00273">string_type_ops.h:274</a></div></div>
+<div class="ttc" id="astructos_1_1_tick_count_html_a1c4e0e08576dce9f741551e36bfff25e"><div class="ttname"><a href="../../d4/df4/structos_1_1_tick_count.html#a1c4e0e08576dce9f741551e36bfff25e">os::TickCount::Get</a></div><div class="ttdeci">static FORCEINL DWORD Get()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00085">kernel.h:85</a></div></div>
+<div class="ttc" id="astructos_1_1_timestamp_html_ae99e4ff05a1036c6fbd79c5fddacf0ae"><div class="ttname"><a href="../../d4/d7c/structos_1_1_timestamp.html#ae99e4ff05a1036c6fbd79c5fddacf0ae">os::Timestamp::Get</a></div><div class="ttdeci">static FORCEINL Timestamp Get()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00498">kernel.h:498</a></div></div>
 <div class="ttc" id="astructrt_1_1tos_1_1_static_string_html"><div class="ttname"><a href="../../dd/de2/structrt_1_1tos_1_1_static_string.html">rt::tos::StaticString</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5f/string__type__ops_8h_source.html#l00091">string_type_ops.h:92</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1_timestamp_html"><div class="ttname"><a href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00456">kernel.h:457</a></div></div>
+<div class="ttc" id="astructrt_1_1tos_1_1_timestamp_html"><div class="ttname"><a href="../../d9/dfa/structrt_1_1tos_1_1_timestamp.html">rt::tos::Timestamp</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00547">kernel.h:548</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

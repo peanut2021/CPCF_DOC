@@ -101,6 +101,9 @@ $(document).ready(function(){initNavTree('d4/dec/classinet_1_1_http_session.html
 </div><!--header-->
 <div class="contents">
 
+<p>HTTP connection supports HTTP HTTPS and Proxy.  
+ <a href="../../d4/dec/classinet_1_1_http_session.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -126,7 +129,7 @@ Public Types</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ac746d5a709c72e4b5911ab2fe30930a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4100fc71a48c132e4ad4cee51de704f"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classinet_1_1_http_session.html#aa4100fc71a48c132e4ad4cee51de704f">FUNC_DATA_CALLBACK</a>) (<a class="el" href="../../dd/d12/group__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a> data, UINT data_len, UINT start_pos, bool fin, LPVOID cookie)</td></tr>
+<tr class="memitem:aa4100fc71a48c132e4ad4cee51de704f"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classinet_1_1_http_session.html#aa4100fc71a48c132e4ad4cee51de704f">FUNC_DATA_CALLBACK</a>) (<a class="el" href="../../df/da5/group___typedefs__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a> data, UINT data_len, UINT start_pos, bool fin, LPVOID cookie)</td></tr>
 <tr class="memdesc:aa4100fc71a48c132e4ad4cee51de704f"><td class="mdescLeft">&#160;</td><td class="mdescRight">return &gt;0 to remove exiting response data from internal buffer, -1 for stopping downloading  <a href="../../d4/dec/classinet_1_1_http_session.html#aa4100fc71a48c132e4ad4cee51de704f">More...</a><br /></td></tr>
 <tr class="separator:aa4100fc71a48c132e4ad4cee51de704f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6fb8125f7570dfb681482daa2f142ee"><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classinet_1_1_http_session.html#ac6fb8125f7570dfb681482daa2f142ee">FUNC_EVENT_CALLBACK</a>) (LPVOID param, UINT event, LPVOID cookie)</td></tr>
@@ -177,9 +180,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3785b4cc200290c183c393bc5b5376d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classinet_1_1_http_session.html#a3785b4cc200290c183c393bc5b5376d1">Request_Get</a> (LPCSTR pURL, LPCSTR additional_header=nullptr, UINT additional_header_len=0)</td></tr>
 <tr class="memdesc:a3785b4cc200290c183c393bc5b5376d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">no automatic redirection (3xx) handling  <a href="../../d4/dec/classinet_1_1_http_session.html#a3785b4cc200290c183c393bc5b5376d1">More...</a><br /></td></tr>
 <tr class="separator:a3785b4cc200290c183c393bc5b5376d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3eb013e2f97368fcefc45963276f496d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classinet_1_1_http_session.html#a3eb013e2f97368fcefc45963276f496d">Request_Post</a> (LPCSTR pURL, <a class="el" href="../../dd/d12/group__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a> data, UINT sz=0, LPCSTR data_type=&quot;text/plain&quot;, LPCSTR charset=&quot;utf-8&quot;, bool keep_alive=true)</td></tr>
+<tr class="memitem:a3eb013e2f97368fcefc45963276f496d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classinet_1_1_http_session.html#a3eb013e2f97368fcefc45963276f496d">Request_Post</a> (LPCSTR pURL, <a class="el" href="../../df/da5/group___typedefs__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a> data, UINT sz=0, LPCSTR data_type=&quot;text/plain&quot;, LPCSTR charset=&quot;utf-8&quot;, bool keep_alive=true)</td></tr>
 <tr class="separator:a3eb013e2f97368fcefc45963276f496d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b6a1bb38b497a1d38fd6e2fc2687250"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classinet_1_1_http_session.html#a4b6a1bb38b497a1d38fd6e2fc2687250">Request_PostFile</a> (LPCSTR pURL, <a class="el" href="../../dd/d12/group__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a> data, UINT sz, LPCSTR local_filename, bool keep_alive=true)</td></tr>
+<tr class="memitem:a4b6a1bb38b497a1d38fd6e2fc2687250"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classinet_1_1_http_session.html#a4b6a1bb38b497a1d38fd6e2fc2687250">Request_PostFile</a> (LPCSTR pURL, <a class="el" href="../../df/da5/group___typedefs__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a> data, UINT sz, LPCSTR local_filename, bool keep_alive=true)</td></tr>
 <tr class="memdesc:a4b6a1bb38b497a1d38fd6e2fc2687250"><td class="mdescLeft">&#160;</td><td class="mdescRight">as multipart/form-data  <a href="../../d4/dec/classinet_1_1_http_session.html#a4b6a1bb38b497a1d38fd6e2fc2687250">More...</a><br /></td></tr>
 <tr class="separator:a4b6a1bb38b497a1d38fd6e2fc2687250"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a140695c7a52498144413858d2007b206"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classinet_1_1_http_session.html#a140695c7a52498144413858d2007b206">Request_Post</a> (LPCSTR pURL, const <a class="el" href="../../da/d49/structinet_1_1_http_session_1_1_data_buf.html">DataBuf</a> *pBufs, UINT BufCount, LPCSTR data_type=&quot;text/plain&quot;, LPCSTR charset=&quot;utf-8&quot;, bool keep_alive=true)</td></tr>
@@ -284,10 +287,11 @@ Friends</h2></td></tr>
 <tr class="separator:a25c68d4b6204aaafb4a38cf37f8463e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#_a29">test_http.cpp</a>.</dd>
+<div class="textblock"><p>HTTP connection supports HTTP HTTPS and Proxy. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#_a29">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00090">90</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00094">94</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="aa4100fc71a48c132e4ad4cee51de704f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4100fc71a48c132e4ad4cee51de704f">&#9670;&nbsp;</a></span>FUNC_DATA_CALLBACK</h2>
@@ -296,14 +300,14 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int(* inet::HttpSession::FUNC_DATA_CALLBACK) (<a class="el" href="../../dd/d12/group__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a> data, UINT data_len, UINT start_pos, bool fin, LPVOID cookie)</td>
+          <td class="memname">typedef int(* inet::HttpSession::FUNC_DATA_CALLBACK) (<a class="el" href="../../df/da5/group___typedefs__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a> data, UINT data_len, UINT start_pos, bool fin, LPVOID cookie)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>return &gt;0 to remove exiting response data from internal buffer, -1 for stopping downloading </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00125">125</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00129">129</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -319,7 +323,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00124">124</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00128">128</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -345,7 +349,7 @@ Friends</h2></td></tr>
 <tr><td class="fieldname"><a id="ac746d5a709c72e4b5911ab2fe30930a9ae0959d936c16346f085e5d633528fd6d"></a>HTTP_VERB_MAX&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00186">186</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00190">190</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -454,7 +458,7 @@ Friends</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a49">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00258">258</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00262">262</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -481,7 +485,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00257">257</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00261">261</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -508,7 +512,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00203">203</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00207">207</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -535,7 +539,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00259">259</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00263">263</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -583,7 +587,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00250">250</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00254">254</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -610,7 +614,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00254">254</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00258">258</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -698,7 +702,7 @@ Friends</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a46">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00204">204</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00208">208</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -725,7 +729,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00128">128</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00132">132</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -752,7 +756,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00202">202</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00206">206</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1055,7 +1059,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/d12/group__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/da5/group___typedefs__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a>&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
@@ -1107,7 +1111,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/d12/group__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/da5/group___typedefs__predefines.html#ga9cc247081519bb565d3b159594cbf5fd">LPCBYTE</a>&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
@@ -1387,7 +1391,7 @@ Friends</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a43">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00238">238</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00242">242</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1425,7 +1429,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00127">127</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00131">131</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1457,7 +1461,7 @@ Friends</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a30">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00264">264</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00268">268</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1496,7 +1500,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set Item Event Callback. </p>
-<p>Set <a class="el" href="../../d4/dec/classinet_1_1_http_session.html">HttpSession</a> Item Event Callback </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Set <a class="el" href="../../d4/dec/classinet_1_1_http_session.html" title="HTTP connection supports HTTP HTTPS and Proxy.">HttpSession</a> Item Event Callback </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cb</td><td></td></tr>
     <tr><td class="paramname">cookie</td><td></td></tr>
@@ -1506,7 +1510,7 @@ Friends</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a31">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00217">217</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00221">221</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1556,7 +1560,7 @@ Friends</h2></td></tr>
 
 <p>limit the total time of fulfilling the request </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00265">265</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00269">269</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1600,7 +1604,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00098">98</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00102">102</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1625,7 +1629,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00136">136</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00140">140</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1649,7 +1653,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00135">135</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00139">139</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1673,7 +1677,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00142">142</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00146">146</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1697,7 +1701,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00140">140</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00144">144</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1721,7 +1725,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00141">141</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00145">145</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1745,7 +1749,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00137">137</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00141">141</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1769,7 +1773,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00139">139</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00143">143</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1793,7 +1797,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00138">138</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00142">142</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1817,7 +1821,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00134">134</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00138">138</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1841,7 +1845,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00132">132</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00136">136</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1857,7 +1861,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00185">185</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00189">189</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1881,7 +1885,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00131">131</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00135">135</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1899,7 +1903,7 @@ Friends</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a39">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00119">119</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00123">123</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1917,7 +1921,7 @@ Friends</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a38">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00118">118</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00122">122</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1935,7 +1939,7 @@ Friends</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a41">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00121">121</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00125">125</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>
@@ -1953,7 +1957,7 @@ Friends</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#a40">test_http.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00120">120</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df2/http__client_8h_source.html#l00124">124</a> of file <a class="el" href="../../d9/df2/http__client_8h_source.html">http_client.h</a>.</p>
 
 </div>
 </div>

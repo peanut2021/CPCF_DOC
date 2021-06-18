@@ -118,7 +118,7 @@ Macros</h2></td></tr>
 <tr class="separator:gafe466f246d400bff1278c24b37d2b60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga757e53dd81fc9ad874049c7a26d37f23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga757e53dd81fc9ad874049c7a26d37f23">_EnlargeTo32AL</a>(num)&#160;&#160;&#160;((((num) + 0x7)&amp;(~((SIZE_T)0x7))))</td></tr>
 <tr class="separator:ga757e53dd81fc9ad874049c7a26d37f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8caf50ab1aef2554eead9fd9aad487b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga8caf50ab1aef2554eead9fd9aad487b8">_LOGNL</a>&#160;&#160;&#160;{ ::<a class="el" href="../../d9/d7c/group__kernel.html#ga4fa6634b2502efd7e48a2f4bb9ed95ad">os::LogWrite</a>(&quot;&quot;,__FILE__,__LINE__,__FUNCTION__, <a class="el" href="../../d2/d26/group___enums__runtime__base.html#ggafc89440a3aa9869b60a191d92c2ef36ca997191915da79e649fd88e522b29b993">rt::LOGTYPE_VERBOSE</a>); }</td></tr>
+<tr class="memitem:ga8caf50ab1aef2554eead9fd9aad487b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga8caf50ab1aef2554eead9fd9aad487b8">_LOGNL</a>&#160;&#160;&#160;{ ::<a class="el" href="../../da/ddf/group___functions__kernel.html#ga4fa6634b2502efd7e48a2f4bb9ed95ad">os::LogWrite</a>(&quot;&quot;,__FILE__,__LINE__,__FUNCTION__, <a class="el" href="../../d2/d26/group___enums__runtime__base.html#ggafc89440a3aa9869b60a191d92c2ef36ca997191915da79e649fd88e522b29b993">rt::LOGTYPE_VERBOSE</a>); }</td></tr>
 <tr class="separator:ga8caf50ab1aef2554eead9fd9aad487b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4edfc988a8708941c6afaa7d842930df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga4edfc988a8708941c6afaa7d842930df">_LOGP</a>&#160;&#160;&#160;<a class="el" href="../../d6/d69/structos_1_1_log_prefix.html">os::LogPrefix</a>()</td></tr>
 <tr class="separator:ga4edfc988a8708941c6afaa7d842930df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,14 +131,19 @@ Macros</h2></td></tr>
 <tr class="memitem:gaf77ac1b58abe2bd3abbff19cc6779207"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc7/group___macros__runtime__base.html#gaf77ac1b58abe2bd3abbff19cc6779207">_NewArray</a>(type,  co)&#160;&#160;&#160;(<a class="el" href="../../dc/d6c/group___functions__runtime__base.html#ga6552d63424db43706dee5a0ed5ac4905">os::IsMemoryExceptionEnabledInThread</a>()? new type[co] : new (std::nothrow) type[co])</td></tr>
 <tr class="separator:gaf77ac1b58abe2bd3abbff19cc6779207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga55fee02399b4fe5089450f6a63458081"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga55fee02399b4fe5089450f6a63458081">_SafeDel</a>(ptr)&#160;&#160;&#160;{ <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga54656728acf81567d0e4e108e4471335">_SafeDel_ConstPtr</a>(ptr); ptr = nullptr; }</td></tr>
+<tr class="memdesc:ga55fee02399b4fe5089450f6a63458081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use macro <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga7051bd7c493c73f8bf4714cdb1a3390b">_New()</a>  <a href="../../d1/dc7/group___macros__runtime__base.html#ga55fee02399b4fe5089450f6a63458081">More...</a><br /></td></tr>
 <tr class="separator:ga55fee02399b4fe5089450f6a63458081"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga54656728acf81567d0e4e108e4471335"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga54656728acf81567d0e4e108e4471335">_SafeDel_ConstPtr</a>(x)&#160;&#160;&#160;{ if(x){delete x; } }</td></tr>
+<tr class="memdesc:ga54656728acf81567d0e4e108e4471335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use macro <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga7051bd7c493c73f8bf4714cdb1a3390b">_New()</a>  <a href="../../d1/dc7/group___macros__runtime__base.html#ga54656728acf81567d0e4e108e4471335">More...</a><br /></td></tr>
 <tr class="separator:ga54656728acf81567d0e4e108e4471335"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga673ee104a5281d797cf84b62782b6c53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga673ee104a5281d797cf84b62782b6c53">_SafeDel_Untracked</a>(ptr)&#160;&#160;&#160;{ if(ptr){ delete ptr; ptr = nullptr; }}</td></tr>
+<tr class="memdesc:ga673ee104a5281d797cf84b62782b6c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use macro <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga7051bd7c493c73f8bf4714cdb1a3390b">_New()</a>  <a href="../../d1/dc7/group___macros__runtime__base.html#ga673ee104a5281d797cf84b62782b6c53">More...</a><br /></td></tr>
 <tr class="separator:ga673ee104a5281d797cf84b62782b6c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2e8cf56f772757fcf96d9156c944b6b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga2e8cf56f772757fcf96d9156c944b6b9">_SafeDelArray</a>(ptr)&#160;&#160;&#160;{ <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga75a5116bbddc05f35013f38b0d700a44">_SafeDelArray_ConstPtr</a>(ptr); ptr = nullptr; }</td></tr>
+<tr class="memdesc:ga2e8cf56f772757fcf96d9156c944b6b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use macro <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga7051bd7c493c73f8bf4714cdb1a3390b">_New()</a>  <a href="../../d1/dc7/group___macros__runtime__base.html#ga2e8cf56f772757fcf96d9156c944b6b9">More...</a><br /></td></tr>
 <tr class="separator:ga2e8cf56f772757fcf96d9156c944b6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga75a5116bbddc05f35013f38b0d700a44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga75a5116bbddc05f35013f38b0d700a44">_SafeDelArray_ConstPtr</a>(x)&#160;&#160;&#160;{ if(x){delete [] x; } }</td></tr>
+<tr class="memdesc:ga75a5116bbddc05f35013f38b0d700a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use macro <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga7051bd7c493c73f8bf4714cdb1a3390b">_New()</a>  <a href="../../d1/dc7/group___macros__runtime__base.html#ga75a5116bbddc05f35013f38b0d700a44">More...</a><br /></td></tr>
 <tr class="separator:ga75a5116bbddc05f35013f38b0d700a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4c61cdc165b8da8c8387800133d9a3b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga4c61cdc165b8da8c8387800133d9a3b8">_SafeFree32AL</a>(ptr)&#160;&#160;&#160;{ <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#gac0db9e5c32925c52c7323388580ce5c5">_SafeFree32AL_ConstPtr</a>(ptr); ptr = nullptr; }</td></tr>
 <tr class="separator:ga4c61cdc165b8da8c8387800133d9a3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,10 +198,10 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">                                    {    \</div>
 <div class="line">                                    std::ostringstream _ostr;                           \</div>
-<div class="line">                                    _ostr&lt;&lt;x;                                           <a class="code" href="../../d9/d7c/group__kernel.html#ga4fa6634b2502efd7e48a2f4bb9ed95ad">\</a></div>
-<div class="line"><a class="code" href="../../d9/d7c/group__kernel.html#ga4fa6634b2502efd7e48a2f4bb9ed95ad">									::os::LogWrite</a>(    _ostr.rdbuf()-&gt;str().c_str(),__FILE__,__LINE__,__FUNCTION__, type); \</div>
+<div class="line">                                    _ostr&lt;&lt;x;                                           <a class="code" href="../../da/ddf/group___functions__kernel.html#ga4fa6634b2502efd7e48a2f4bb9ed95ad">\</a></div>
+<div class="line"><a class="code" href="../../da/ddf/group___functions__kernel.html#ga4fa6634b2502efd7e48a2f4bb9ed95ad">									::os::LogWrite</a>(    _ostr.rdbuf()-&gt;str().c_str(),__FILE__,__LINE__,__FUNCTION__, type); \</div>
 <div class="line">                                }</div>
-<div class="ttc" id="agroup__kernel_html_ga4fa6634b2502efd7e48a2f4bb9ed95ad"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga4fa6634b2502efd7e48a2f4bb9ed95ad">os::LogWrite</a></div><div class="ttdeci">void LogWrite(LPCSTR log, LPCSTR file, int line_num, LPCSTR func, int type)</div></div>
+<div class="ttc" id="agroup___functions__kernel_html_ga4fa6634b2502efd7e48a2f4bb9ed95ad"><div class="ttname"><a href="../../da/ddf/group___functions__kernel.html#ga4fa6634b2502efd7e48a2f4bb9ed95ad">os::LogWrite</a></div><div class="ttdeci">void LogWrite(LPCSTR log, LPCSTR file, int line_num, LPCSTR func, int type)</div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/runtime__base_8h_source.html#l00197">197</a> of file <a class="el" href="../../df/d5e/runtime__base_8h_source.html">runtime_base.h</a>.</p>
 
@@ -283,7 +288,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define _LOGNL&#160;&#160;&#160;{ ::<a class="el" href="../../d9/d7c/group__kernel.html#ga4fa6634b2502efd7e48a2f4bb9ed95ad">os::LogWrite</a>(&quot;&quot;,__FILE__,__LINE__,__FUNCTION__, <a class="el" href="../../d2/d26/group___enums__runtime__base.html#ggafc89440a3aa9869b60a191d92c2ef36ca997191915da79e649fd88e522b29b993">rt::LOGTYPE_VERBOSE</a>); }</td>
+          <td class="memname">#define _LOGNL&#160;&#160;&#160;{ ::<a class="el" href="../../da/ddf/group___functions__kernel.html#ga4fa6634b2502efd7e48a2f4bb9ed95ad">os::LogWrite</a>(&quot;&quot;,__FILE__,__LINE__,__FUNCTION__, <a class="el" href="../../d2/d26/group___enums__runtime__base.html#ggafc89440a3aa9869b60a191d92c2ef36ca997191915da79e649fd88e522b29b993">rt::LOGTYPE_VERBOSE</a>); }</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -438,6 +443,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Use macro <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga7051bd7c493c73f8bf4714cdb1a3390b">_New()</a> </p>
+
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/runtime__base_8h_source.html#l00950">950</a> of file <a class="el" href="../../df/d5e/runtime__base_8h_source.html">runtime_base.h</a>.</p>
 
 </div>
@@ -457,6 +464,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Use macro <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga7051bd7c493c73f8bf4714cdb1a3390b">_New()</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/runtime__base_8h_source.html#l00938">938</a> of file <a class="el" href="../../df/d5e/runtime__base_8h_source.html">runtime_base.h</a>.</p>
 
@@ -478,6 +487,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Use macro <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga7051bd7c493c73f8bf4714cdb1a3390b">_New()</a> </p>
+
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/runtime__base_8h_source.html#l00951">951</a> of file <a class="el" href="../../df/d5e/runtime__base_8h_source.html">runtime_base.h</a>.</p>
 
 </div>
@@ -498,6 +509,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Use macro <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga7051bd7c493c73f8bf4714cdb1a3390b">_New()</a> </p>
+
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/runtime__base_8h_source.html#l00952">952</a> of file <a class="el" href="../../df/d5e/runtime__base_8h_source.html">runtime_base.h</a>.</p>
 
 </div>
@@ -517,6 +530,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Use macro <a class="el" href="../../d1/dc7/group___macros__runtime__base.html#ga7051bd7c493c73f8bf4714cdb1a3390b">_New()</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/runtime__base_8h_source.html#l00939">939</a> of file <a class="el" href="../../df/d5e/runtime__base_8h_source.html">runtime_base.h</a>.</p>
 
@@ -641,7 +656,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Debugging and error handling. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../df/df4/test_api_8cpp-example.html#a130">test_api.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../df/df4/test_api_8cpp-example.html#a19">test_api.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d5e/runtime__base_8h_source.html#l00273">273</a> of file <a class="el" href="../../df/d5e/runtime__base_8h_source.html">runtime_base.h</a>.</p>

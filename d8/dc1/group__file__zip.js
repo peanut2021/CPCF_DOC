@@ -229,6 +229,5 @@ var group__file__zip =
       [ "stream_read_zlib", "dc/d18/classos_1_1_file_zip.html#a0487710f21e52a9106dd25490db7f952", null ],
       [ "stream_write_store", "dc/d18/classos_1_1_file_zip.html#acf5306b9cbb5285a703d06fedbba009c", null ],
       [ "stream_write_zlib", "dc/d18/classos_1_1_file_zip.html#aa225bd1b2e302b86032ee72fc6aa7917", null ]
-    ] ],
-    [ "EnableCrashDump", "d8/dc1/group__file__zip.html#ga0072b2257db370a888d0362d1eac567b", null ]
+    ] ]
 ];

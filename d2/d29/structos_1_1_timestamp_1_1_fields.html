@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('d2/d29/structos_1_1_timestamp_1_1_fiel
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../d6/d80/structos_1_1_timestamp_1_1_fields-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::Timestamp::Fields Struct Reference<div class="ingroups"><a class="el" href="../../de/d5c/group__os.html">Os</a> &raquo; <a class="el" href="../../d9/d7c/group__kernel.html">Kernel</a></div></div>  </div>
+<div class="title">os::Timestamp::Fields Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -99,61 +99,601 @@ $(document).ready(function(){initNavTree('d2/d29/structos_1_1_timestamp_1_1_fiel
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ga4965f0a66ec5b982bb07c73499e881b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga4965f0a66ec5b982bb07c73499e881b4">Fields</a> ()</td></tr>
-<tr class="separator:ga4965f0a66ec5b982bb07c73499e881b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafa549914a382f9fcaa464cd40db938c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#gafa549914a382f9fcaa464cd40db938c2">Fields</a> (const <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> &amp;s)</td></tr>
-<tr class="separator:gafa549914a382f9fcaa464cd40db938c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafe9742d777eef71de596aebd0381e936"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#gafe9742d777eef71de596aebd0381e936">Fields</a> (int year, int mon, int day, int hour=0, int min=0, int sec=0, int msec=0)</td></tr>
-<tr class="separator:gafe9742d777eef71de596aebd0381e936"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga819f025866fbfd2cef1385dda08106cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga819f025866fbfd2cef1385dda08106cc">FromInternetTimeFormat</a> (const <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> &amp;s)</td></tr>
-<tr class="memdesc:ga819f025866fbfd2cef1385dda08106cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">RFC 1123 format, //Tue, 15 Nov 1994 12:45:26 GMT.  <a href="../../d9/d7c/group__kernel.html#ga819f025866fbfd2cef1385dda08106cc">More...</a><br /></td></tr>
-<tr class="separator:ga819f025866fbfd2cef1385dda08106cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga210420fae09dc646585f4833145e6c9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga210420fae09dc646585f4833145e6c9b">FromString</a> (const <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> &amp;s, bool low_bound=true)</td></tr>
-<tr class="memdesc:ga210420fae09dc646585f4833145e6c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">&gt;0 # of fields parsed ok, &lt;0 error. -1: only 1 field found, others not a number in parsed fields  <a href="../../d9/d7c/group__kernel.html#ga210420fae09dc646585f4833145e6c9b">More...</a><br /></td></tr>
-<tr class="separator:ga210420fae09dc646585f4833145e6c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga253c7add3492b834d6f1825af7298949"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga253c7add3492b834d6f1825af7298949">GetDayOfWeekName</a> () const</td></tr>
-<tr class="separator:ga253c7add3492b834d6f1825af7298949"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3b15a36f5901434fb2f134e8f45f0d09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> WORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga3b15a36f5901434fb2f134e8f45f0d09">GetDosDate</a> () const</td></tr>
-<tr class="separator:ga3b15a36f5901434fb2f134e8f45f0d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaff209c26f56531d7ccb40dd0583aae8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> WORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#gaff209c26f56531d7ccb40dd0583aae8d">GetDosTime</a> () const</td></tr>
-<tr class="separator:gaff209c26f56531d7ccb40dd0583aae8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad9e173aa540f67296bba77df53d0465d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#gad9e173aa540f67296bba77df53d0465d">GetMonthName</a> () const</td></tr>
-<tr class="separator:gad9e173aa540f67296bba77df53d0465d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8c3b368ca92f0342a2aebe31a8cf9ef2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga8c3b368ca92f0342a2aebe31a8cf9ef2">SetDateTime</a> (int year, int mon, int day, int hour=0, int min=0, int sec=0, int msec=0)</td></tr>
-<tr class="separator:ga8c3b368ca92f0342a2aebe31a8cf9ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga133c8c3ed5d22edd4a4932b86742d329"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga133c8c3ed5d22edd4a4932b86742d329">SetDosTime</a> (WORD date, WORD timex)</td></tr>
-<tr class="separator:ga133c8c3ed5d22edd4a4932b86742d329"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4d5100a119f7f88d6bd1f18afd36d80d"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga4d5100a119f7f88d6bd1f18afd36d80d">ToInternetTimeFormat</a> (LPSTR buf) const</td></tr>
-<tr class="memdesc:ga4d5100a119f7f88d6bd1f18afd36d80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">RFC 1123 format, buf size &gt; 30, zero-terminated , //Tue, 15 Nov 1994 12:45:26 GMT.  <a href="../../d9/d7c/group__kernel.html#ga4d5100a119f7f88d6bd1f18afd36d80d">More...</a><br /></td></tr>
-<tr class="separator:ga4d5100a119f7f88d6bd1f18afd36d80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4965f0a66ec5b982bb07c73499e881b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a4965f0a66ec5b982bb07c73499e881b4">Fields</a> ()</td></tr>
+<tr class="separator:a4965f0a66ec5b982bb07c73499e881b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa549914a382f9fcaa464cd40db938c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#afa549914a382f9fcaa464cd40db938c2">Fields</a> (const <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> &amp;s)</td></tr>
+<tr class="separator:afa549914a382f9fcaa464cd40db938c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9742d777eef71de596aebd0381e936"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#afe9742d777eef71de596aebd0381e936">Fields</a> (int year, int mon, int day, int hour=0, int min=0, int sec=0, int msec=0)</td></tr>
+<tr class="separator:afe9742d777eef71de596aebd0381e936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819f025866fbfd2cef1385dda08106cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a819f025866fbfd2cef1385dda08106cc">FromInternetTimeFormat</a> (const <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> &amp;s)</td></tr>
+<tr class="memdesc:a819f025866fbfd2cef1385dda08106cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">RFC 1123 format, //Tue, 15 Nov 1994 12:45:26 GMT.  <a href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a819f025866fbfd2cef1385dda08106cc">More...</a><br /></td></tr>
+<tr class="separator:a819f025866fbfd2cef1385dda08106cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a210420fae09dc646585f4833145e6c9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a210420fae09dc646585f4833145e6c9b">FromString</a> (const <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> &amp;s, bool low_bound=true)</td></tr>
+<tr class="memdesc:a210420fae09dc646585f4833145e6c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">&gt;0 # of fields parsed ok, &lt;0 error. -1: only 1 field found, others not a number in parsed fields  <a href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a210420fae09dc646585f4833145e6c9b">More...</a><br /></td></tr>
+<tr class="separator:a210420fae09dc646585f4833145e6c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a253c7add3492b834d6f1825af7298949"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a253c7add3492b834d6f1825af7298949">GetDayOfWeekName</a> () const</td></tr>
+<tr class="separator:a253c7add3492b834d6f1825af7298949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b15a36f5901434fb2f134e8f45f0d09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> WORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a3b15a36f5901434fb2f134e8f45f0d09">GetDosDate</a> () const</td></tr>
+<tr class="separator:a3b15a36f5901434fb2f134e8f45f0d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff209c26f56531d7ccb40dd0583aae8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> WORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#aff209c26f56531d7ccb40dd0583aae8d">GetDosTime</a> () const</td></tr>
+<tr class="separator:aff209c26f56531d7ccb40dd0583aae8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e173aa540f67296bba77df53d0465d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#ad9e173aa540f67296bba77df53d0465d">GetMonthName</a> () const</td></tr>
+<tr class="separator:ad9e173aa540f67296bba77df53d0465d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c3b368ca92f0342a2aebe31a8cf9ef2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a8c3b368ca92f0342a2aebe31a8cf9ef2">SetDateTime</a> (int year, int mon, int day, int hour=0, int min=0, int sec=0, int msec=0)</td></tr>
+<tr class="separator:a8c3b368ca92f0342a2aebe31a8cf9ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a133c8c3ed5d22edd4a4932b86742d329"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a133c8c3ed5d22edd4a4932b86742d329">SetDosTime</a> (WORD date, WORD timex)</td></tr>
+<tr class="separator:a133c8c3ed5d22edd4a4932b86742d329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5100a119f7f88d6bd1f18afd36d80d"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a4d5100a119f7f88d6bd1f18afd36d80d">ToInternetTimeFormat</a> (LPSTR buf) const</td></tr>
+<tr class="memdesc:a4d5100a119f7f88d6bd1f18afd36d80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">RFC 1123 format, buf size &gt; 30, zero-terminated , //Tue, 15 Nov 1994 12:45:26 GMT.  <a href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a4d5100a119f7f88d6bd1f18afd36d80d">More...</a><br /></td></tr>
+<tr class="separator:a4d5100a119f7f88d6bd1f18afd36d80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ga5e17719976842179b3147ff0719fe7b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga5e17719976842179b3147ff0719fe7b1">Day</a></td></tr>
-<tr class="memdesc:ga5e17719976842179b3147ff0719fe7b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Day of Month.  <a href="../../d9/d7c/group__kernel.html#ga5e17719976842179b3147ff0719fe7b1">More...</a><br /></td></tr>
-<tr class="separator:ga5e17719976842179b3147ff0719fe7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9f4c740a4c734c56ff2dee659ac3543a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga9f4c740a4c734c56ff2dee659ac3543a">DayOfWeek</a></td></tr>
-<tr class="memdesc:ga9f4c740a4c734c56ff2dee659ac3543a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sunday is 0.  <a href="../../d9/d7c/group__kernel.html#ga9f4c740a4c734c56ff2dee659ac3543a">More...</a><br /></td></tr>
-<tr class="separator:ga9f4c740a4c734c56ff2dee659ac3543a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga288f2b60e562cd8380f6ce30830b9965"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga288f2b60e562cd8380f6ce30830b9965">Hour</a></td></tr>
-<tr class="separator:ga288f2b60e562cd8380f6ce30830b9965"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacfb9749d3cf3a11bd8842df29c69a048"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#gacfb9749d3cf3a11bd8842df29c69a048">MillSecond</a></td></tr>
-<tr class="separator:gacfb9749d3cf3a11bd8842df29c69a048"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1a48f2ef91e4529ad3068d9a164b6053"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga1a48f2ef91e4529ad3068d9a164b6053">Minute</a></td></tr>
-<tr class="separator:ga1a48f2ef91e4529ad3068d9a164b6053"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga08850cfeefb62bf39ea4208c0e300b2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga08850cfeefb62bf39ea4208c0e300b2a">Month</a></td></tr>
-<tr class="separator:ga08850cfeefb62bf39ea4208c0e300b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf5fd4bb7b0d600df84f2d31003a2f88d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#gaf5fd4bb7b0d600df84f2d31003a2f88d">Second</a></td></tr>
-<tr class="separator:gaf5fd4bb7b0d600df84f2d31003a2f88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga087b7b13e4eb1e2f1bb13fc99927b01c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d7c/group__kernel.html#ga087b7b13e4eb1e2f1bb13fc99927b01c">Year</a></td></tr>
-<tr class="separator:ga087b7b13e4eb1e2f1bb13fc99927b01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e17719976842179b3147ff0719fe7b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a5e17719976842179b3147ff0719fe7b1">Day</a></td></tr>
+<tr class="memdesc:a5e17719976842179b3147ff0719fe7b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Day of Month.  <a href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a5e17719976842179b3147ff0719fe7b1">More...</a><br /></td></tr>
+<tr class="separator:a5e17719976842179b3147ff0719fe7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f4c740a4c734c56ff2dee659ac3543a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a9f4c740a4c734c56ff2dee659ac3543a">DayOfWeek</a></td></tr>
+<tr class="memdesc:a9f4c740a4c734c56ff2dee659ac3543a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sunday is 0.  <a href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a9f4c740a4c734c56ff2dee659ac3543a">More...</a><br /></td></tr>
+<tr class="separator:a9f4c740a4c734c56ff2dee659ac3543a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288f2b60e562cd8380f6ce30830b9965"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a288f2b60e562cd8380f6ce30830b9965">Hour</a></td></tr>
+<tr class="separator:a288f2b60e562cd8380f6ce30830b9965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb9749d3cf3a11bd8842df29c69a048"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#acfb9749d3cf3a11bd8842df29c69a048">MillSecond</a></td></tr>
+<tr class="separator:acfb9749d3cf3a11bd8842df29c69a048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a48f2ef91e4529ad3068d9a164b6053"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a1a48f2ef91e4529ad3068d9a164b6053">Minute</a></td></tr>
+<tr class="separator:a1a48f2ef91e4529ad3068d9a164b6053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08850cfeefb62bf39ea4208c0e300b2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a08850cfeefb62bf39ea4208c0e300b2a">Month</a></td></tr>
+<tr class="separator:a08850cfeefb62bf39ea4208c0e300b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5fd4bb7b0d600df84f2d31003a2f88d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#af5fd4bb7b0d600df84f2d31003a2f88d">Second</a></td></tr>
+<tr class="separator:af5fd4bb7b0d600df84f2d31003a2f88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087b7b13e4eb1e2f1bb13fc99927b01c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d29/structos_1_1_timestamp_1_1_fields.html#a087b7b13e4eb1e2f1bb13fc99927b01c">Year</a></td></tr>
+<tr class="separator:a087b7b13e4eb1e2f1bb13fc99927b01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../df/df4/test_api_8cpp-example.html#_a60">test_api.cpp</a>.</dd>
-</dl>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00355">355</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afe9742d777eef71de596aebd0381e936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe9742d777eef71de596aebd0381e936">&#9670;&nbsp;</a></span>Fields() <span class="overload">[1/3]</span></h2>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00314">314</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> os::Timestamp::Fields::Fields </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sec</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>msec</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00366">366</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="a4965f0a66ec5b982bb07c73499e881b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4965f0a66ec5b982bb07c73499e881b4">&#9670;&nbsp;</a></span>Fields() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> os::Timestamp::Fields::Fields </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00367">367</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="afa549914a382f9fcaa464cd40db938c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa549914a382f9fcaa464cd40db938c2">&#9670;&nbsp;</a></span>Fields() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> os::Timestamp::Fields::Fields </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00368">368</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a819f025866fbfd2cef1385dda08106cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819f025866fbfd2cef1385dda08106cc">&#9670;&nbsp;</a></span>FromInternetTimeFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool os::Timestamp::Fields::FromInternetTimeFormat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RFC 1123 format, //Tue, 15 Nov 1994 12:45:26 GMT. </p>
+
+</div>
+</div>
+<a id="a210420fae09dc646585f4833145e6c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210420fae09dc646585f4833145e6c9b">&#9670;&nbsp;</a></span>FromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os::Timestamp::Fields::FromString </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>low_bound</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>&gt;0 # of fields parsed ok, &lt;0 error. -1: only 1 field found, others not a number in parsed fields </p>
+
+</div>
+</div>
+<a id="a253c7add3492b834d6f1825af7298949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a253c7add3492b834d6f1825af7298949">&#9670;&nbsp;</a></span>GetDayOfWeekName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> os::Timestamp::Fields::GetDayOfWeekName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00376">376</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="a3b15a36f5901434fb2f134e8f45f0d09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b15a36f5901434fb2f134e8f45f0d09">&#9670;&nbsp;</a></span>GetDosDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> WORD os::Timestamp::Fields::GetDosDate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00371">371</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="aff209c26f56531d7ccb40dd0583aae8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff209c26f56531d7ccb40dd0583aae8d">&#9670;&nbsp;</a></span>GetDosTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> WORD os::Timestamp::Fields::GetDosTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00372">372</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="ad9e173aa540f67296bba77df53d0465d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e173aa540f67296bba77df53d0465d">&#9670;&nbsp;</a></span>GetMonthName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> os::Timestamp::Fields::GetMonthName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00375">375</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="a8c3b368ca92f0342a2aebe31a8cf9ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c3b368ca92f0342a2aebe31a8cf9ef2">&#9670;&nbsp;</a></span>SetDateTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> void os::Timestamp::Fields::SetDateTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sec</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>msec</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00370">370</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="a133c8c3ed5d22edd4a4932b86742d329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a133c8c3ed5d22edd4a4932b86742d329">&#9670;&nbsp;</a></span>SetDosTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> void os::Timestamp::Fields::SetDosTime </td>
+          <td>(</td>
+          <td class="paramtype">WORD&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WORD&#160;</td>
+          <td class="paramname"><em>timex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00373">373</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="a4d5100a119f7f88d6bd1f18afd36d80d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d5100a119f7f88d6bd1f18afd36d80d">&#9670;&nbsp;</a></span>ToInternetTimeFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT os::Timestamp::Fields::ToInternetTimeFormat </td>
+          <td>(</td>
+          <td class="paramtype">LPSTR&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RFC 1123 format, buf size &gt; 30, zero-terminated , //Tue, 15 Nov 1994 12:45:26 GMT. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5e17719976842179b3147ff0719fe7b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e17719976842179b3147ff0719fe7b1">&#9670;&nbsp;</a></span>Day</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os::Timestamp::Fields::Day</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Day of Month. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00359">359</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="a9f4c740a4c734c56ff2dee659ac3543a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f4c740a4c734c56ff2dee659ac3543a">&#9670;&nbsp;</a></span>DayOfWeek</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os::Timestamp::Fields::DayOfWeek</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sunday is 0. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00360">360</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="a288f2b60e562cd8380f6ce30830b9965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a288f2b60e562cd8380f6ce30830b9965">&#9670;&nbsp;</a></span>Hour</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os::Timestamp::Fields::Hour</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00361">361</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="acfb9749d3cf3a11bd8842df29c69a048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb9749d3cf3a11bd8842df29c69a048">&#9670;&nbsp;</a></span>MillSecond</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os::Timestamp::Fields::MillSecond</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00364">364</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="a1a48f2ef91e4529ad3068d9a164b6053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a48f2ef91e4529ad3068d9a164b6053">&#9670;&nbsp;</a></span>Minute</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os::Timestamp::Fields::Minute</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00362">362</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="a08850cfeefb62bf39ea4208c0e300b2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08850cfeefb62bf39ea4208c0e300b2a">&#9670;&nbsp;</a></span>Month</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os::Timestamp::Fields::Month</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00358">358</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="af5fd4bb7b0d600df84f2d31003a2f88d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5fd4bb7b0d600df84f2d31003a2f88d">&#9670;&nbsp;</a></span>Second</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os::Timestamp::Fields::Second</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00363">363</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<a id="a087b7b13e4eb1e2f1bb13fc99927b01c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a087b7b13e4eb1e2f1bb13fc99927b01c">&#9670;&nbsp;</a></span>Year</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os::Timestamp::Fields::Year</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/daa/kernel_8h_source.html#l00357">357</a> of file <a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>core/os/<a class="el" href="../../d0/daa/kernel_8h_source.html">kernel.h</a></li>
 </ul>
 </div><!-- contents -->

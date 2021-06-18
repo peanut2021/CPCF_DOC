@@ -126,7 +126,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga29f50493afc8009527264b0d18f072b2"><td class="memTemplParams" colspan="2">template&lt;typename T_Enum &gt; </td></tr>
-<tr class="memitem:ga29f50493afc8009527264b0d18f072b2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d54/group___macros__to__register__enum__for__log__conversion.html#ga29f50493afc8009527264b0d18f072b2">rt::EnumStringify::EnumStringify</a> (T_Enum x)</td></tr>
+<tr class="memitem:ga29f50493afc8009527264b0d18f072b2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d54/group___macros__to__register__enum__for__log__conversion.html#ga29f50493afc8009527264b0d18f072b2">rt::EnumStringify::EnumStringify</a> (T_Enum x)</td></tr>
 <tr class="separator:ga29f50493afc8009527264b0d18f072b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacb79c3c8d4d289cccf6e0f743138fb94"><td class="memItemLeft" align="right" valign="top">static T_Enum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d54/group___macros__to__register__enum__for__log__conversion.html#gacb79c3c8d4d289cccf6e0f743138fb94">rt::_details::_EnumString&lt; T_Enum &gt;::FromString</a> (const <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> &amp;name, T_Enum default_val=(T_Enum) -1)</td></tr>
 <tr class="separator:gacb79c3c8d4d289cccf6e0f743138fb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -308,13 +308,13 @@ Functions</h2></td></tr>
 <div class="line">                                                };}}                                                                \</div>
 <div class="line">                                                namespace ns {                                                      \</div>
 <div class="line">                                                template&lt;class t_Ostream&gt;                                           \</div>
-<div class="line">                                                INLFUNC t_Ostream&amp; <a class="code" href="../../d9/d7c/group__kernel.html#ga796a0be7e74d2eb52ee7eb05bc379560">operator&lt;&lt;</a>(t_Ostream&amp; Ostream, type x)           \</div>
+<div class="line">                                                INLFUNC t_Ostream&amp; <a class="code" href="../../da/ddf/group___functions__kernel.html#ga796a0be7e74d2eb52ee7eb05bc379560">operator&lt;&lt;</a>(t_Ostream&amp; Ostream, type x)           \</div>
 <div class="line">                                                {   Ostream&lt;&lt;<a class="code" href="../../d2/df9/structrt_1_1_enum_stringify.html">::rt::EnumStringify</a>(x);                                \</div>
 <div class="line">                                                    return Ostream;                                                 \</div>
 <div class="line">                                                }   <a class="code" href="../../d4/d54/group___macros__to__register__enum__for__log__conversion.html#ga58221f6401cc885e18c4ec6459391a06">STRINGIFY_ENUM_OPS</a>(type)                                        \</div>
 <div class="line">                                                }</div>
+<div class="ttc" id="agroup___functions__kernel_html_ga796a0be7e74d2eb52ee7eb05bc379560"><div class="ttname"><a href="../../da/ddf/group___functions__kernel.html#ga796a0be7e74d2eb52ee7eb05bc379560">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;s, const os::Date32 &amp;d)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00739">kernel.h:739</a></div></div>
 <div class="ttc" id="agroup___macros__to__register__enum__for__log__conversion_html_ga58221f6401cc885e18c4ec6459391a06"><div class="ttname"><a href="../../d4/d54/group___macros__to__register__enum__for__log__conversion.html#ga58221f6401cc885e18c4ec6459391a06">STRINGIFY_ENUM_OPS</a></div><div class="ttdeci">#define STRINGIFY_ENUM_OPS(type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5f/string__type__ops_8h_source.html#l00523">string_type_ops.h:523</a></div></div>
-<div class="ttc" id="agroup__kernel_html_ga796a0be7e74d2eb52ee7eb05bc379560"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#ga796a0be7e74d2eb52ee7eb05bc379560">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;s, const os::Date32 &amp;d)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00629">kernel.h:629</a></div></div>
 <div class="ttc" id="astructrt_1_1_enum_stringify_html"><div class="ttname"><a href="../../d2/df9/structrt_1_1_enum_stringify.html">rt::EnumStringify</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5f/string__type__ops_8h_source.html#l00535">string_type_ops.h:536</a></div></div>
 </div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/d3a/test_rt_string_8cpp-example.html#a2">test_rt_string.cpp</a>.</dd>
 </dl>
@@ -359,7 +359,7 @@ Functions</h2></td></tr>
 <div class="line">                                                };}}                                                                \</div>
 <div class="line">                                                namespace ns1 { <span class="keyword">namespace </span>ns2 {                                     \</div>
 <div class="line">                                                template&lt;class t_Ostream&gt;                                           \</div>
-<div class="line">                                                INLFUNC t_Ostream&amp; <a class="code" href="../../d9/d7c/group__kernel.html#ga796a0be7e74d2eb52ee7eb05bc379560">operator&lt;&lt;</a>(t_Ostream&amp; Ostream, type x)           \</div>
+<div class="line">                                                INLFUNC t_Ostream&amp; <a class="code" href="../../da/ddf/group___functions__kernel.html#ga796a0be7e74d2eb52ee7eb05bc379560">operator&lt;&lt;</a>(t_Ostream&amp; Ostream, type x)           \</div>
 <div class="line">                                                {   Ostream&lt;&lt;<a class="code" href="../../d2/df9/structrt_1_1_enum_stringify.html">::rt::EnumStringify</a>(x);                                \</div>
 <div class="line">                                                    return Ostream;                                                 \</div>
 <div class="line">                                                }   <a class="code" href="../../d4/d54/group___macros__to__register__enum__for__log__conversion.html#ga58221f6401cc885e18c4ec6459391a06">STRINGIFY_ENUM_OPS</a>(type)                                        \</div>
@@ -388,7 +388,7 @@ Functions</h2></td></tr>
 <div class="line">                                                    }                                                               \</div>
 <div class="line">                                                };}}                                                                \</div>
 <div class="line">                                                template&lt;class t_Ostream&gt;                                           \</div>
-<div class="line">                                                INLFUNC t_Ostream&amp; <a class="code" href="../../d9/d7c/group__kernel.html#ga796a0be7e74d2eb52ee7eb05bc379560">operator&lt;&lt;</a>(t_Ostream&amp; Ostream, type x)           \</div>
+<div class="line">                                                INLFUNC t_Ostream&amp; <a class="code" href="../../da/ddf/group___functions__kernel.html#ga796a0be7e74d2eb52ee7eb05bc379560">operator&lt;&lt;</a>(t_Ostream&amp; Ostream, type x)           \</div>
 <div class="line">                                                {   Ostream&lt;&lt;<a class="code" href="../../d2/df9/structrt_1_1_enum_stringify.html">::rt::EnumStringify</a>(x);                                \</div>
 <div class="line">                                                    return Ostream;                                                 \</div>
 <div class="line">                                                }   <a class="code" href="../../d4/d54/group___macros__to__register__enum__for__log__conversion.html#ga58221f6401cc885e18c4ec6459391a06">STRINGIFY_ENUM_OPS</a>(type)</div>
@@ -412,14 +412,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                                                <a class="code" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> type operator | (type a, type b){ <span class="keywordflow">return</span> (type)((UINT)a|(UINT)b); } \</div>
+<b>Value:</b><div class="fragment"><div class="line">                                                <a class="code" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> type operator | (type a, type b){ <span class="keywordflow">return</span> (type)((UINT)a|(UINT)b); } \</div>
 <div class="line">                                                INLFUNC type operator &amp; (type a, type b){ <span class="keywordflow">return</span> (type)((UINT)a&amp;(UINT)b); } \</div>
 <div class="line">                                                INLFUNC type operator ^ (type a, type b){ <span class="keywordflow">return</span> (type)((UINT)a^(UINT)b); } \</div>
 <div class="line">                                                INLFUNC type operator |= (type&amp; a, type b){ <span class="keywordflow">return</span> a = (type)((UINT)a|(UINT)b); } \</div>
 <div class="line">                                                INLFUNC type operator &amp;= (type&amp; a, type b){ <span class="keywordflow">return</span> a = (type)((UINT)a&amp;(UINT)b); } \</div>
 <div class="line">                                                INLFUNC type operator ^= (type&amp; a, type b){ <span class="keywordflow">return</span> a = (type)((UINT)a^(UINT)b); } \</div>
 <div class="line">                                                INLFUNC type operator ~ (type b){ <span class="keywordflow">return</span> (type)(~((UINT)b)); } \</div>
-<div class="ttc" id="agroup__predefines_html_gaf45d6d2caa407162dbb1af3cd21b0057"><div class="ttname"><a href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a></div><div class="ttdeci">#define INLFUNC</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db2/predefines_8h_source.html#l00214">predefines.h:214</a></div></div>
+<div class="ttc" id="agroup___macros__predefines_html_gaf45d6d2caa407162dbb1af3cd21b0057"><div class="ttname"><a href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a></div><div class="ttdeci">#define INLFUNC</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db2/predefines_8h_source.html#l00221">predefines.h:221</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="../../d2/d5f/string__type__ops_8h_source.html#l00523">523</a> of file <a class="el" href="../../d2/d5f/string__type__ops_8h_source.html">string_type_ops.h</a>.</p>
 
@@ -438,7 +438,7 @@ template&lt;typename T_Enum &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dd/d12/group__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> rt::EnumStringify::EnumStringify </td>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> rt::EnumStringify::EnumStringify </td>
           <td>(</td>
           <td class="paramtype">T_Enum&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tagdatefmt_7478',['tagDATEFMT',['../d9/d7c/group__kernel.html#gaf4ef61826986c6fa81e7d32835d7ac7d',1,'os']]]
+  ['tagdatefmt_7486',['tagDATEFMT',['../d5/d51/group___enums__kernel.html#gaf4ef61826986c6fa81e7d32835d7ac7d',1,'os']]]
 ];

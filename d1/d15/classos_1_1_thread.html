@@ -121,12 +121,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa448fc7f5ab16bd20a0c982d19a4786d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88ab908732f6898ee031eef8864f322d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d15/classos_1_1_thread.html#a88ab908732f6898ee031eef8864f322d">~Thread</a> ()</td></tr>
 <tr class="separator:a88ab908732f6898ee031eef8864f322d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42b972f9a445a2e65d27fa14f2bce1a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d15/classos_1_1_thread.html#a42b972f9a445a2e65d27fa14f2bce1a1">Create</a> (<a class="el" href="../../df/dfc/group__multi__thread.html#ga76fb917885b41732cb8ed80e3253118d">FUNC_THREAD_ROUTE</a> x, LPVOID thread_cookie=nullptr, ULONGLONG CPU_affinity=0xffffffffffffffffULL, UINT stack_size=0)</td></tr>
+<tr class="memitem:a42b972f9a445a2e65d27fa14f2bce1a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d15/classos_1_1_thread.html#a42b972f9a445a2e65d27fa14f2bce1a1">Create</a> (<a class="el" href="../../db/d7b/group___typedefs__multi__thread.html#ga76fb917885b41732cb8ed80e3253118d">FUNC_THREAD_ROUTE</a> x, LPVOID thread_cookie=nullptr, ULONGLONG CPU_affinity=0xffffffffffffffffULL, UINT stack_size=0)</td></tr>
 <tr class="separator:a42b972f9a445a2e65d27fa14f2bce1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a233ba0e44b407e5b68f9859ab970ca5f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d15/classos_1_1_thread.html#a233ba0e44b407e5b68f9859ab970ca5f">Create</a> (LPVOID obj, const <a class="el" href="../../dd/d09/group___macros__type__traits.html#ga0b8eac104e99087947a8f5d25011bca1">THISCALL_MFPTR</a> &amp;on_run, LPVOID param=nullptr, ULONGLONG CPU_affinity=0xffffffffffffffffULL, UINT stack_size=0)</td></tr>
 <tr class="separator:a233ba0e44b407e5b68f9859ab970ca5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfcde9ae63c8ead52dc4cf5457e58776"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:acfcde9ae63c8ead52dc4cf5457e58776"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d15/classos_1_1_thread.html#acfcde9ae63c8ead52dc4cf5457e58776">Create</a> (T threadroute, ULONGLONG CPU_affinity=0xffffffffffffffffULL, UINT stack_size=0)</td></tr>
+<tr class="memdesc:acfcde9ae63c8ead52dc4cf5457e58776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caller should ensure the lifetime of variables captured by the lambda function.  <a href="../../d1/d15/classos_1_1_thread.html#acfcde9ae63c8ead52dc4cf5457e58776">More...</a><br /></td></tr>
 <tr class="separator:acfcde9ae63c8ead52dc4cf5457e58776"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2283fe965339c46e026d09190e177d32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d15/classos_1_1_thread.html#a2283fe965339c46e026d09190e177d32">DetachThread</a> ()</td></tr>
 <tr class="separator:a2283fe965339c46e026d09190e177d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,7 +141,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afae79ccf2ea8caa1eb3c250fce57bbb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac92e7d15bed539d0da0172993f9c154f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d15/classos_1_1_thread.html#ac92e7d15bed539d0da0172993f9c154f">TerminateForcely</a> ()</td></tr>
 <tr class="separator:ac92e7d15bed539d0da0172993f9c154f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f054b5584558abd41bd949c5f353a67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">WaitForEnding</a> (UINT time_wait_ms=<a class="el" href="../../dd/d12/group__predefines.html#gaa84a29002ab81c719c0d07bb446296e0">INFINITE</a>, bool terminate_if_timeout=false)</td></tr>
+<tr class="memitem:a9f054b5584558abd41bd949c5f353a67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">WaitForEnding</a> (UINT time_wait_ms=<a class="el" href="../../df/da5/group___typedefs__predefines.html#gaa84a29002ab81c719c0d07bb446296e0">INFINITE</a>, bool terminate_if_timeout=false)</td></tr>
+<tr class="memdesc:a9f054b5584558abd41bd949c5f353a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait For Ending.  <a href="../../d1/d15/classos_1_1_thread.html#a9f054b5584558abd41bd949c5f353a67">More...</a><br /></td></tr>
 <tr class="separator:a9f054b5584558abd41bd949c5f353a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90d856a6d8478e3f82cffad2ea55cbfb"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d15/classos_1_1_thread.html#a90d856a6d8478e3f82cffad2ea55cbfb">WantExit</a> ()</td></tr>
 <tr class="separator:a90d856a6d8478e3f82cffad2ea55cbfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,10 +191,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ac349514746438a1491ed5e0a50e7fc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../df/df4/test_api_8cpp-example.html#_a5">test_api.cpp</a>, <a class="el" href="../../d6/d98/test_http_8cpp-example.html#_a57">test_http.cpp</a>, and <a class="el" href="../../df/d67/test_inet_socket_8cpp-example.html#_a5">test_inet_socket.cpp</a>.</dd>
+<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d6/d98/test_http_8cpp-example.html#_a57">test_http.cpp</a>, and <a class="el" href="../../df/d67/test_inet_socket_8cpp-example.html#_a5">test_inet_socket.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00059">59</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00062">62</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ac6064e0a9a5ccf6588f407aec0c44606"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6064e0a9a5ccf6588f407aec0c44606">&#9670;&nbsp;</a></span>_tagThreadPriority</h2>
@@ -213,7 +215,7 @@ Protected Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="ac6064e0a9a5ccf6588f407aec0c44606aaf64653c1fa47bcc0d7b656a9d56b9d4"></a>PRIORITY_IDLE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00073">73</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00076">76</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -349,7 +351,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool os::Thread::Create </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dfc/group__multi__thread.html#ga76fb917885b41732cb8ed80e3253118d">FUNC_THREAD_ROUTE</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../db/d7b/group___typedefs__multi__thread.html#ga76fb917885b41732cb8ed80e3253118d">FUNC_THREAD_ROUTE</a>&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
@@ -423,7 +425,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../df/df4/test_api_8cpp-example.html#a10">test_api.cpp</a>, and <a class="el" href="../../df/d67/test_inet_socket_8cpp-example.html#a6">test_inet_socket.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../df/d67/test_inet_socket_8cpp-example.html#a6">test_inet_socket.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -469,14 +471,25 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stack_size</td><td>Caller should ensure the lifetime of variables captured by the lambda function </td></tr>
+
+<p>Caller should ensure the lifetime of variables captured by the lambda function. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">threadroute</td><td></td></tr>
+    <tr><td class="paramname">CPU_affinity</td><td></td></tr>
+    <tr><td class="paramname">stack_size</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00125">125</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00140">140</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -503,7 +516,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00113">113</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00121">121</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -529,10 +542,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../df/df4/test_api_8cpp-example.html#a8">test_api.cpp</a>.</dd>
-</dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00141">141</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00156">156</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -559,7 +570,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00108">108</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00116">116</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -619,8 +630,6 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../df/df4/test_api_8cpp-example.html#a22">test_api.cpp</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -695,7 +704,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">bool os::Thread::WaitForEnding </td>
           <td>(</td>
           <td class="paramtype">UINT&#160;</td>
-          <td class="paramname"><em>time_wait_ms</em> = <code><a class="el" href="../../dd/d12/group__predefines.html#gaa84a29002ab81c719c0d07bb446296e0">INFINITE</a></code>, </td>
+          <td class="paramname"><em>time_wait_ms</em> = <code><a class="el" href="../../df/da5/group___typedefs__predefines.html#gaa84a29002ab81c719c0d07bb446296e0">INFINITE</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -710,7 +719,17 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../df/df4/test_api_8cpp-example.html#a11">test_api.cpp</a>, and <a class="el" href="../../df/d67/test_inet_socket_8cpp-example.html#a7">test_inet_socket.cpp</a>.</dd>
+
+<p>Wait For Ending. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time_wait_ms</td><td>Time(ms) wait for this thread (Other threads are running normally) </td></tr>
+    <tr><td class="paramname">terminate_if_timeout</td><td>When the value is true, timeout forcibly terminates the thread </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../df/d67/test_inet_socket_8cpp-example.html#a7">test_inet_socket.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -738,7 +757,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00110">110</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00118">118</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -765,7 +784,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00111">111</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00119">119</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -811,7 +830,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00145">145</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00160">160</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -836,7 +855,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00095">95</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00098">98</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -860,7 +879,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00096">96</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00099">99</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -884,7 +903,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00094">94</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00097">97</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -908,7 +927,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00092">92</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00095">95</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>
@@ -934,7 +953,7 @@ template&lt;typename T &gt; </div>
 
 <p>the thread route return to skip clean up </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00102">102</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/db7/multi__thread_8h_source.html#l00105">105</a> of file <a class="el" href="../../db/db7/multi__thread_8h_source.html">multi_thread.h</a>.</p>
 
 </div>
 </div>

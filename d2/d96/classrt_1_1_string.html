@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('d2/d96/classrt_1_1_string.html','../..
 </div><!--header-->
 <div class="contents">
 
-<p>only contains address and length.  
+<p>Memory efficient strings operations and expression.  
  <a href="../../d2/d96/classrt_1_1_string.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>&gt;</code></p>
@@ -188,7 +188,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a79b74ed2d0c42b5471cfe7e25fa93e2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d96/classrt_1_1_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d96/classrt_1_1_string.html#a79b74ed2d0c42b5471cfe7e25fa93e2f">UnescapeCharacters</a> (const <a class="el" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a> &amp;input, const <a class="el" href="../../de/d25/classrt_1_1_character_set.html">CharacterSet</a> &amp;escape, <a class="el" href="../../dd/d09/group___macros__type__traits.html#ga9bdd43c51fc046a3611153be67b755f5">char</a> escape_sign='\\')</td></tr>
 <tr class="separator:a79b74ed2d0c42b5471cfe7e25fa93e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">operators</div></td></tr>
-<tr class="memitem:ae0442de7eda1a6c19d2249f499c83109"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> <a class="el" href="../../d2/d96/classrt_1_1_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d96/classrt_1_1_string.html#ae0442de7eda1a6c19d2249f499c83109">operator=</a> (<a class="el" href="../../d2/d96/classrt_1_1_string.html">String</a> &amp;&amp;x)</td></tr>
+<tr class="memitem:ae0442de7eda1a6c19d2249f499c83109"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> <a class="el" href="../../d2/d96/classrt_1_1_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d96/classrt_1_1_string.html#ae0442de7eda1a6c19d2249f499c83109">operator=</a> (<a class="el" href="../../d2/d96/classrt_1_1_string.html">String</a> &amp;&amp;x)</td></tr>
 <tr class="separator:ae0442de7eda1a6c19d2249f499c83109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93be55b55ad49876d68b0dc8c8a59961"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/d96/classrt_1_1_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d96/classrt_1_1_string.html#a93be55b55ad49876d68b0dc8c8a59961">operator=</a> (const <a class="el" href="../../dd/d09/group___macros__type__traits.html#ga9bdd43c51fc046a3611153be67b755f5">char</a> *x)</td></tr>
 <tr class="separator:a93be55b55ad49876d68b0dc8c8a59961"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -531,12 +531,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aea061428d5332bbdbd53b56699b9efc0 inherit pub_attribs_structrt_1_1__details_1_1___string_ptr_store"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>only contains address and length. </p>
-<p>The functions that change the length are all placed in this class. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../da/db5/entrypoint_8cpp-example.html#_a0">entrypoint.cpp</a>, <a class="el" href="../../d5/d68/experiments_8cpp-example.html#_a1">experiments.cpp</a>, <a class="el" href="../../df/df4/test_api_8cpp-example.html#_a23">test_api.cpp</a>, <a class="el" href="../../d9/d17/test_ext_8cpp-example.html#_a30">test_ext.cpp</a>, <a class="el" href="../../d6/d98/test_http_8cpp-example.html#_a67">test_http.cpp</a>, <a class="el" href="../../d8/df7/test_inet_datagrampump_8cpp-example.html#_a1">test_inet_datagrampump.cpp</a>, <a class="el" href="../../d3/de8/test_rt_json_8cpp-example.html#_a8">test_rt_json.cpp</a>, <a class="el" href="../../d5/da4/test_rt_smallmath_8cpp-example.html#_a2">test_rt_smallmath.cpp</a>, <a class="el" href="../../dc/d3a/test_rt_string_8cpp-example.html#_a7">test_rt_string.cpp</a>, and <a class="el" href="../../da/d19/test_rt_xml_8cpp-example.html#_a0">test_rt_xml.cpp</a>.</dd>
+<div class="textblock"><p>Memory efficient strings operations and expression. </p>
+<p>based on string without trailing NULL, only contains address and length. The functions that change the length are all placed in this class. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../da/db5/entrypoint_8cpp-example.html#_a0">entrypoint.cpp</a>, <a class="el" href="../../d5/d68/experiments_8cpp-example.html#_a1">experiments.cpp</a>, <a class="el" href="../../d9/d17/test_ext_8cpp-example.html#_a30">test_ext.cpp</a>, <a class="el" href="../../d6/d98/test_http_8cpp-example.html#_a67">test_http.cpp</a>, <a class="el" href="../../d8/df7/test_inet_datagrampump_8cpp-example.html#_a1">test_inet_datagrampump.cpp</a>, <a class="el" href="../../d3/de8/test_rt_json_8cpp-example.html#_a8">test_rt_json.cpp</a>, <a class="el" href="../../d5/da4/test_rt_smallmath_8cpp-example.html#_a2">test_rt_smallmath.cpp</a>, <a class="el" href="../../dc/d3a/test_rt_string_8cpp-example.html#_a7">test_rt_string.cpp</a>, and <a class="el" href="../../da/d19/test_rt_xml_8cpp-example.html#_a0">test_rt_xml.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01803">1803</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01804">1804</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1b418682c8d653f8f41bdffc14b104b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b418682c8d653f8f41bdffc14b104b4">&#9670;&nbsp;</a></span>~String()</h2>
@@ -561,7 +561,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01828">1828</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01829">1829</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -588,7 +588,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01833">1833</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01834">1834</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -616,7 +616,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01834">1834</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01835">1835</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -644,7 +644,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01835">1835</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01836">1836</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -672,7 +672,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01836">1836</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01837">1837</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -700,7 +700,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01837">1837</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01838">1838</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -738,7 +738,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01838">1838</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01839">1839</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -776,7 +776,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01839">1839</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01840">1840</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -814,7 +814,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01840">1840</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01841">1841</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -844,7 +844,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01842">1842</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01843">1843</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -879,7 +879,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01807">1807</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01808">1808</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -906,7 +906,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02147">2147</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02148">2148</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -933,7 +933,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01829">1829</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01830">1830</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -962,7 +962,7 @@ template&lt;typename T &gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d5/d68/experiments_8cpp-example.html#a2">experiments.cpp</a>, and <a class="el" href="../../d9/d17/test_ext_8cpp-example.html#a33">test_ext.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01830">1830</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01831">1831</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -996,7 +996,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02156">2156</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02157">2157</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1044,7 +1044,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02035">2035</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02036">2036</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1101,7 +1101,7 @@ template&lt;typename T &gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/d3a/test_rt_string_8cpp-example.html#a12">test_rt_string.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02007">2007</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02008">2008</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1129,7 +1129,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02161">2161</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02162">2162</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1167,7 +1167,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01915">1915</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01916">1916</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1216,7 +1216,7 @@ template&lt;typename T &gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/d3a/test_rt_string_8cpp-example.html#a16">test_rt_string.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02112">2112</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02113">2113</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1263,7 +1263,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02124">2124</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02125">2125</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1290,7 +1290,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01910">1910</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01911">1911</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1317,7 +1317,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01911">1911</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01912">1912</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1345,7 +1345,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01901">1901</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01902">1902</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1375,7 +1375,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01880">1880</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01881">1881</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1403,7 +1403,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01899">1899</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01900">1900</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1431,7 +1431,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01900">1900</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01901">1901</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1459,7 +1459,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01849">1849</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01850">1850</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1487,7 +1487,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01850">1850</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01851">1851</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1515,7 +1515,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01848">1848</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01849">1849</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1543,7 +1543,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01866">1866</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01867">1867</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1571,7 +1571,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01851">1851</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01852">1852</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1601,7 +1601,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01868">1868</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01869">1869</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1615,7 +1615,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> <a class="el" href="../../d2/d96/classrt_1_1_string.html">String</a>&amp; rt::String::operator= </td>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> <a class="el" href="../../d2/d96/classrt_1_1_string.html">String</a>&amp; rt::String::operator= </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d2/d96/classrt_1_1_string.html">String</a> &amp;&amp;&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
@@ -1629,7 +1629,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01847">1847</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01848">1848</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1656,7 +1656,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01914">1914</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01915">1915</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1688,7 +1688,7 @@ template&lt;typename T &gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/d3a/test_rt_string_8cpp-example.html#a8">test_rt_string.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02142">2142</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02143">2143</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1716,7 +1716,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01913">1913</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01914">1914</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1758,7 +1758,7 @@ template&lt;typename T &gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/d3a/test_rt_string_8cpp-example.html#a30">test_rt_string.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01918">1918</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01919">1919</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1802,7 +1802,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01919">1919</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01920">1920</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1858,7 +1858,7 @@ template&lt;typename T1 &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>return # of replacement </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01940">1940</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01941">1941</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1885,7 +1885,7 @@ template&lt;typename T1 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01831">1831</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01832">1832</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1913,7 +1913,7 @@ template&lt;typename T1 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02131">2131</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02132">2132</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1940,10 +1940,8 @@ template&lt;typename T1 &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../df/df4/test_api_8cpp-example.html#a103">test_api.cpp</a>.</dd>
-</dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01820">1820</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01821">1821</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -1971,7 +1969,7 @@ template&lt;typename T1 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02152">2152</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02153">2153</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -2010,7 +2008,7 @@ template&lt;typename T1 &gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/d3a/test_rt_string_8cpp-example.html#a11">test_rt_string.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02063">2063</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l02064">2064</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -2049,7 +2047,7 @@ template&lt;typename T1 &gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/d3a/test_rt_string_8cpp-example.html#a13">test_rt_string.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01961">1961</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01962">1962</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -2097,7 +2095,7 @@ template&lt;typename T1 &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01974">1974</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01975">1975</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -2141,7 +2139,7 @@ template&lt;typename T1 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01987">1987</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01988">1988</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>
@@ -2166,7 +2164,7 @@ template&lt;typename T1 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01806">1806</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1d/string__type_8h_source.html#l01807">1807</a> of file <a class="el" href="../../d0/d1d/string__type_8h_source.html">string_type.h</a>.</p>
 
 </div>
 </div>

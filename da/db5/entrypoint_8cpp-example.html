@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('da/db5/entrypoint_8cpp-example.html','
 <div class="line"><span class="preprocessor">#if defined (PLATFORM_ANDROID) || defined (PLATFORM_IOS)</span></div>
 <div class="line"><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="keywordtype">void</span> TestMain()</div>
+<div class="line"><span class="keywordtype">void</span> TestMain(<span class="keywordtype">int</span>  mode)</div>
 <div class="line">{</div>
 <div class="line">    <a name="_a0"></a><a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> out;</div>
 <div class="line">    <a name="a1"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#adf49bb291dd39facb9a0fc959fb03aa7">os::File::GetCurrentDirectory</a>(out);</div>
@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('da/db5/entrypoint_8cpp-example.html','
 <div class="line">    </div>
 <div class="line"><span class="preprocessor">#if defined (PLATFORM_ANDROID) || defined (PLATFORM_IOS)</span></div>
 <div class="line">    {   <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> cd;</div>
-<div class="line">        <a name="a3"></a><a class="code" href="../../d1/d21/group__file__dir.html#ga80dd9e90d360a3892635ca0a032a63fe">os::GetAppSandbox</a>(cd, <span class="keyword">nullptr</span>);</div>
+<div class="line">        <a name="a3"></a><a class="code" href="../../d4/d6f/group___functions__file__dir.html#ga80dd9e90d360a3892635ca0a032a63fe">os::GetAppSandbox</a>(cd, <span class="keyword">nullptr</span>);</div>
 <div class="line">        <a name="a4"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#a0e2ed313dc54843a2c7f8bd60b70e6e1">os::File::SetCurrentDirectory</a>(cd);</div>
 <div class="line">    }</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
@@ -116,8 +116,19 @@ $(document).ready(function(){initNavTree('da/db5/entrypoint_8cpp-example.html','
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span>(!<a name="a6"></a><a class="code" href="../../d1/d0a/classos_1_1_command_line.html#a741c3c77bbc5c2e47fa14bfc9a8690b4">os::CommandLine::Get</a>().HasOption(<span class="stringliteral">&quot;verify&quot;</span>))</div>
 <div class="line">    {</div>
-<div class="line">        <a name="a7"></a><a class="code" href="../../d5/d38/group___unit_tests.html#gabbb91d11561a65e9bb680f7426d8b354">TYPETRAITS_UNITTEST</a>(http_nav);</div>
-<div class="line">        </div>
+<div class="line">        <span class="keywordflow">if</span> (mode == 0)</div>
+<div class="line">        {</div>
+<div class="line">            <a name="a7"></a><a class="code" href="../../d5/d38/group___unit_tests.html#gabbb91d11561a65e9bb680f7426d8b354">TYPETRAITS_UNITTEST</a>(filelist);</div>
+<div class="line"> </div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mode ==1)</div>
+<div class="line">        {</div>
+<div class="line">            <a class="code" href="../../d5/d38/group___unit_tests.html#gabbb91d11561a65e9bb680f7426d8b354">TYPETRAITS_UNITTEST</a>(pump_client);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mode == 2)</div>
+<div class="line">        {</div>
+<div class="line">            <a class="code" href="../../d5/d38/group___unit_tests.html#gabbb91d11561a65e9bb680f7426d8b354">TYPETRAITS_UNITTEST</a>(pump_client2);</div>
+<div class="line">        }</div>
 <div class="line">        <span class="keywordflow">return</span>;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">else</span></div>
@@ -184,11 +195,11 @@ $(document).ready(function(){initNavTree('da/db5/entrypoint_8cpp-example.html','
 <div class="ttc" id="aclassos_1_1_command_line_html_a741c3c77bbc5c2e47fa14bfc9a8690b4"><div class="ttname"><a href="../../d1/d0a/classos_1_1_command_line.html#a741c3c77bbc5c2e47fa14bfc9a8690b4">os::CommandLine::Get</a></div><div class="ttdeci">static const CommandLine &amp; Get()</div></div>
 <div class="ttc" id="aclassos_1_1_file_html_a0e2ed313dc54843a2c7f8bd60b70e6e1"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#a0e2ed313dc54843a2c7f8bd60b70e6e1">os::File::SetCurrentDirectory</a></div><div class="ttdeci">static bool SetCurrentDirectory(LPCSTR path)</div></div>
 <div class="ttc" id="aclassos_1_1_file_html_adf49bb291dd39facb9a0fc959fb03aa7"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#adf49bb291dd39facb9a0fc959fb03aa7">os::File::GetCurrentDirectory</a></div><div class="ttdeci">static void GetCurrentDirectory(rt::String &amp;out)</div></div>
-<div class="ttc" id="aclassrt_1_1_string_html"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html">rt::String</a></div><div class="ttdoc">only contains address and length.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01803">string_type.h:1804</a></div></div>
+<div class="ttc" id="aclassrt_1_1_string_html"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html">rt::String</a></div><div class="ttdoc">Memory efficient strings operations and expression.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01804">string_type.h:1805</a></div></div>
+<div class="ttc" id="agroup___functions__file__dir_html_ga80dd9e90d360a3892635ca0a032a63fe"><div class="ttname"><a href="../../d4/d6f/group___functions__file__dir.html#ga80dd9e90d360a3892635ca0a032a63fe">os::GetAppSandbox</a></div><div class="ttdeci">void GetAppSandbox(rt::String &amp;out_path, LPCSTR app_name)</div><div class="ttdoc">app_name not necessarily appears in the path</div></div>
 <div class="ttc" id="agroup___only__log__to__console_html_ga12e244ee457ec371bbadf2f027e1d440"><div class="ttname"><a href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a></div><div class="ttdeci">#define _LOGC(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00232">runtime_base.h:232</a></div></div>
 <div class="ttc" id="agroup___unit_tests_html_gabbb91d11561a65e9bb680f7426d8b354"><div class="ttname"><a href="../../d5/d38/group___unit_tests.html#gabbb91d11561a65e9bb680f7426d8b354">TYPETRAITS_UNITTEST</a></div><div class="ttdeci">#define TYPETRAITS_UNITTEST(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d63/type__traits_8h_source.html#l00183">type_traits.h:183</a></div></div>
 <div class="ttc" id="agroup___unit_tests_html_gacfe57ea35814eb6b5d624ae1733449a6"><div class="ttname"><a href="../../d5/d38/group___unit_tests.html#gacfe57ea35814eb6b5d624ae1733449a6">TYPETRAITS_UNITTEST_OUTPUT</a></div><div class="ttdeci">#define TYPETRAITS_UNITTEST_OUTPUT(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d63/type__traits_8h_source.html#l00182">type_traits.h:182</a></div></div>
-<div class="ttc" id="agroup__file__dir_html_ga80dd9e90d360a3892635ca0a032a63fe"><div class="ttname"><a href="../../d1/d21/group__file__dir.html#ga80dd9e90d360a3892635ca0a032a63fe">os::GetAppSandbox</a></div><div class="ttdeci">void GetAppSandbox(rt::String &amp;out_path, LPCSTR app_name)</div><div class="ttdoc">app_name not necessarily appears in the path</div></div>
 <div class="ttc" id="anamespacert_html"><div class="ttname"><a href="../../d8/dda/namespacert.html">rt</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00046">buffer_type.h:47</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->

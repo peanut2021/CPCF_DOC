@@ -1,5 +1,7 @@
 var group__thread__primitive =
 [
+    [ "Functions_thread_primitive", "de/d53/group___functions__thread__primitive.html", "de/d53/group___functions__thread__primitive" ],
+    [ "Macros_thread_primitive", "da/db3/group___macros__thread__primitive.html", "da/db3/group___macros__thread__primitive" ],
     [ "AtomicLock", "d1/db5/classos_1_1_atomic_lock.html", [
       [ "AtomicLock", "d1/db5/classos_1_1_atomic_lock.html#aba244e644504bb606d5bfc8b6564925b", null ],
       [ "IsLocked", "d1/db5/classos_1_1_atomic_lock.html#a0011aabf428188674cd03ebdaa4f0bb4", null ],
@@ -42,14 +44,5 @@ var group__thread__primitive =
       [ "~TryEnterCSBlock", "d8/db5/classos_1_1_try_enter_c_s_block.html#a3d10bf64d77fda02cc84c06b8c2d0fe5", null ],
       [ "IsLocked", "d8/db5/classos_1_1_try_enter_c_s_block.html#a7db72cebaf980d4192aa5ab0466b3ce3", null ],
       [ "operator bool", "d8/db5/classos_1_1_try_enter_c_s_block.html#a413e895ca4563dff6d972e517a9032c3", null ]
-    ] ],
-    [ "ASSERT_NONRECURSIVE", "d2/d9f/group__thread__primitive.html#gae986a5d298f31f21d5b267db0422fb44", null ],
-    [ "EnterCSBlock", "d2/d9f/group__thread__primitive.html#ga6987251445e0c897f98d8d407ced08ee", null ],
-    [ "AtomicAdd", "d2/d9f/group__thread__primitive.html#ga03223cf2ebbfea21bef5409173522a63", null ],
-    [ "AtomicAnd", "d2/d9f/group__thread__primitive.html#gab362035f231e89e2302fe04e4497a855", null ],
-    [ "AtomicDecrement", "d2/d9f/group__thread__primitive.html#ga55353ff181e49ac93d2220d6f7ab7f47", null ],
-    [ "AtomicIncrement", "d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323", null ],
-    [ "AtomicOr", "d2/d9f/group__thread__primitive.html#ga63adf045afeb0ccdd21660445451b023", null ],
-    [ "AtomicSet", "d2/d9f/group__thread__primitive.html#ga97124762568a803b9f49bc92277d800d", null ],
-    [ "GetCurrentThreadId", "d2/d9f/group__thread__primitive.html#ga2a0c17f54c95b4da3671d3298c69b219", null ]
+    ] ]
 ];

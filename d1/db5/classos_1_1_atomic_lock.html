@@ -94,28 +94,29 @@ $(document).ready(function(){initNavTree('d1/db5/classos_1_1_atomic_lock.html','
 </div><!--header-->
 <div class="contents">
 
-<p>&lt; a non-waiting <a class="el" href="../../d1/d3b/classos_1_1_critical_section.html">CriticalSection</a>, no thread-recursive  
+<p>a non-waiting <a class="el" href="../../d1/d3b/classos_1_1_critical_section.html" title="Use Macro EnterCSBlock.">CriticalSection</a>, no thread-recursive  
  <a href="../../d1/db5/classos_1_1_atomic_lock.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aba244e644504bb606d5bfc8b6564925b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db5/classos_1_1_atomic_lock.html#aba244e644504bb606d5bfc8b6564925b">AtomicLock</a> ()</td></tr>
+<tr class="memitem:aba244e644504bb606d5bfc8b6564925b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db5/classos_1_1_atomic_lock.html#aba244e644504bb606d5bfc8b6564925b">AtomicLock</a> ()</td></tr>
 <tr class="separator:aba244e644504bb606d5bfc8b6564925b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0011aabf428188674cd03ebdaa4f0bb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db5/classos_1_1_atomic_lock.html#a0011aabf428188674cd03ebdaa4f0bb4">IsLocked</a> ()</td></tr>
+<tr class="memitem:a0011aabf428188674cd03ebdaa4f0bb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db5/classos_1_1_atomic_lock.html#a0011aabf428188674cd03ebdaa4f0bb4">IsLocked</a> ()</td></tr>
 <tr class="separator:a0011aabf428188674cd03ebdaa4f0bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a556e2a16aa3bd4ad01cb1bafa92320d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db5/classos_1_1_atomic_lock.html#a556e2a16aa3bd4ad01cb1bafa92320d1">Reset</a> ()</td></tr>
+<tr class="memitem:a556e2a16aa3bd4ad01cb1bafa92320d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db5/classos_1_1_atomic_lock.html#a556e2a16aa3bd4ad01cb1bafa92320d1">Reset</a> ()</td></tr>
 <tr class="separator:a556e2a16aa3bd4ad01cb1bafa92320d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b1ce839e6850477d94b38fc18541207"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db5/classos_1_1_atomic_lock.html#a9b1ce839e6850477d94b38fc18541207">TryLock</a> ()</td></tr>
+<tr class="memitem:a9b1ce839e6850477d94b38fc18541207"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db5/classos_1_1_atomic_lock.html#a9b1ce839e6850477d94b38fc18541207">TryLock</a> ()</td></tr>
+<tr class="memdesc:a9b1ce839e6850477d94b38fc18541207"><td class="mdescLeft">&#160;</td><td class="mdescRight">must call Unlock ONCE, or Reset, if return true  <a href="../../d1/db5/classos_1_1_atomic_lock.html#a9b1ce839e6850477d94b38fc18541207">More...</a><br /></td></tr>
 <tr class="separator:a9b1ce839e6850477d94b38fc18541207"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0658df75946bbe97055ae59995240825"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db5/classos_1_1_atomic_lock.html#a0658df75946bbe97055ae59995240825">Unlock</a> ()</td></tr>
+<tr class="memitem:a0658df75946bbe97055ae59995240825"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db5/classos_1_1_atomic_lock.html#a0658df75946bbe97055ae59995240825">Unlock</a> ()</td></tr>
 <tr class="separator:a0658df75946bbe97055ae59995240825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>&lt; a non-waiting <a class="el" href="../../d1/d3b/classos_1_1_critical_section.html">CriticalSection</a>, no thread-recursive </p>
+<div class="textblock"><p>a non-waiting <a class="el" href="../../d1/d3b/classos_1_1_critical_section.html" title="Use Macro EnterCSBlock.">CriticalSection</a>, no thread-recursive </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00146">146</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00161">161</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aba244e644504bb606d5bfc8b6564925b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba244e644504bb606d5bfc8b6564925b">&#9670;&nbsp;</a></span>AtomicLock()</h2>
@@ -127,7 +128,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> os::AtomicLock::AtomicLock </td>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> os::AtomicLock::AtomicLock </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -140,7 +141,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00150">150</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00165">165</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
 
 </div>
 </div>
@@ -155,7 +156,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> bool os::AtomicLock::IsLocked </td>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> bool os::AtomicLock::IsLocked </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -168,7 +169,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00158">158</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00177">177</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
 
 </div>
 </div>
@@ -182,7 +183,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> void os::AtomicLock::Reset </td>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> void os::AtomicLock::Reset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -195,7 +196,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00151">151</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00166">166</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
 
 </div>
 </div>
@@ -209,7 +210,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> bool os::AtomicLock::TryLock </td>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> bool os::AtomicLock::TryLock </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -222,7 +223,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00152">152</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
+<p>must call Unlock ONCE, or Reset, if return true </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00171">171</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
 
 </div>
 </div>
@@ -236,7 +240,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dd/d12/group__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> void os::AtomicLock::Unlock </td>
+          <td class="memname"><a class="el" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> void os::AtomicLock::Unlock </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -249,7 +253,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00159">159</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dea/thread__primitive_8h_source.html#l00178">178</a> of file <a class="el" href="../../da/dea/thread__primitive_8h_source.html">thread_primitive.h</a>.</p>
 
 </div>
 </div>

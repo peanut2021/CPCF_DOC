@@ -94,6 +94,11 @@ $(document).ready(function(){initNavTree('d8/df7/test_inet_datagrampump_8cpp-exa
 <div class="line"><span class="preprocessor">#include &quot;../../core/inet/datagram_pump.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;test.h&quot;</span></div>
 <div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;../../../3rdparty/CRCpp/inc/CRC.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span> <span class="comment">// Includes ::std::cout</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cstdint&gt;</span>  <span class="comment">// Includes ::std::uint32_t</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;random&gt;</span></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../da/d42/namespaceinet.html">inet</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">volatile</span> <span class="keywordtype">int</span> packet_count = 0;</div>
@@ -104,9 +109,9 @@ $(document).ready(function(){initNavTree('d8/df7/test_inet_datagrampump_8cpp-exa
 <div class="line">    <span class="keywordtype">void</span> OnRecv(Datagram* g)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> (g)</div>
-<div class="line">            <a name="a0"></a><a class="code" href="../../d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;packet_count);</div>
+<div class="line">            <a name="a0"></a><a class="code" href="../../de/d53/group___functions__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;packet_count);</div>
 <div class="line">        <span class="keywordflow">else</span></div>
-<div class="line">            <a class="code" href="../../d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;packet_error);</div>
+<div class="line">            <a class="code" href="../../de/d53/group___functions__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;packet_error);</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
@@ -155,13 +160,13 @@ $(document).ready(function(){initNavTree('d8/df7/test_inet_datagrampump_8cpp-exa
 <div class="line">        {</div>
 <div class="line"> </div>
 <div class="line">            local_send.SendTo(<span class="stringliteral">&quot;from any&quot;</span>, <span class="keyword">sizeof</span>(<span class="stringliteral">&quot;from any&quot;</span>) - 1, remote_addr);</div>
-<div class="line">            <a name="a9"></a><a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(100);</div>
+<div class="line">            <a name="a9"></a><a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(100);</div>
 <div class="line"> </div>
 <div class="line">            local.SendTo(<span class="stringliteral">&quot;from local&quot;</span>, <span class="keyword">sizeof</span>(<span class="stringliteral">&quot;from local&quot;</span>) - 1, remote_addr);</div>
-<div class="line">            <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(100);</div>
+<div class="line">            <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(100);</div>
 <div class="line"> </div>
 <div class="line">            remote.SendTo(<span class="stringliteral">&quot;from remote&quot;</span>, <span class="keyword">sizeof</span>(<span class="stringliteral">&quot;from remote&quot;</span>) - 1, local_addr);</div>
-<div class="line">            <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(1000);</div>
+<div class="line">            <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(1000);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        core.Term();</div>
@@ -195,7 +200,7 @@ $(document).ready(function(){initNavTree('d8/df7/test_inet_datagrampump_8cpp-exa
 <div class="line">            sockets[i].SendTo(&amp;i, 4, addr);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(2000);</div>
+<div class="line">    <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(2000);</div>
 <div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;1 Packet Recv = &quot;</span> &lt;&lt; packet_count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; packet_error);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">for</span> (UINT i = 0; i &lt; sockets.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>(); i++)</div>
@@ -203,7 +208,7 @@ $(document).ready(function(){initNavTree('d8/df7/test_inet_datagrampump_8cpp-exa
 <div class="line">        core.AddObject(&amp;sockets[i]);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(2000);</div>
+<div class="line">    <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(2000);</div>
 <div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;2 Packet Recv = &quot;</span> &lt;&lt; packet_count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; packet_error);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">for</span> (UINT i = 0; i &lt; sockets.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>(); i++)</div>
@@ -212,7 +217,7 @@ $(document).ready(function(){initNavTree('d8/df7/test_inet_datagrampump_8cpp-exa
 <div class="line">        sockets[i].SendTo(&amp;i, 4, addr);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(2000);</div>
+<div class="line">    <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(2000);</div>
 <div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;3 Packet Recv = &quot;</span> &lt;&lt; packet_count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; packet_error);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">for</span> (UINT i = 0; i &lt; sockets.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">GetSize</a>(); i++)</div>
@@ -221,24 +226,138 @@ $(document).ready(function(){initNavTree('d8/df7/test_inet_datagrampump_8cpp-exa
 <div class="line">        sender.SendTo(&amp;i, 4, addr);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(2000);</div>
+<div class="line">    <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(2000);</div>
 <div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;4 Packet Recv = &quot;</span> &lt;&lt; packet_count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; packet_error);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">volatile</span> <span class="keywordtype">int</span> _count = 0;</div>
+<div class="line"><span class="keyword">volatile</span> <span class="keywordtype">int</span> _error = 0;</div>
+<div class="line"><span class="keyword">struct </span>SocketIOObj_Routing1 : <span class="keyword">public</span> DatagramSocket</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> Name;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> OnRecv(Datagram* g)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (g)</div>
+<div class="line">        {                       </div>
+<div class="line">            <span class="comment">//_LOG(&quot;[&quot; &lt;&lt; Name &lt;&lt; &quot;] Recv: \&quot;&quot; &lt;&lt; rt::DS(g-&gt;RecvBuf, g-&gt;RecvSize) &lt;&lt; &quot;\&quot; from: &quot; &lt;&lt; rt::tos::ip(g-&gt;PeerAddressV4).TrimBefore(&#39;:&#39;));</span></div>
+<div class="line">            std::uint32_t crc;</div>
+<div class="line">            crc = CRC::Calculate(g-&gt;RecvBuf, g-&gt;RecvSize, CRC::CRC_32());</div>
+<div class="line">            <span class="keywordflow">for</span> (UINT i = 0; i &lt; 2000; i++)</div>
+<div class="line">            {</div>
+<div class="line">                <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(0);</div>
+<div class="line">                <span class="keywordflow">if</span> (crc != CRC::Calculate(g-&gt;RecvBuf, g-&gt;RecvSize, CRC::CRC_32()))</div>
+<div class="line">                {</div>
+<div class="line">                    <a class="code" href="../../de/d53/group___functions__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;_error);</div>
+<div class="line">                    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Find it!&quot;</span>);</div>
+<div class="line">                    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; Name &lt;&lt; <span class="stringliteral">&quot;] Recv: \&quot;&quot;</span> &lt;&lt; <a class="code" href="../../db/d9e/structrt_1_1tos_1_1_data_as_string.html">rt::DS</a>(g-&gt;RecvBuf, g-&gt;RecvSize) &lt;&lt; <span class="stringliteral">&quot;\&quot; from: &quot;</span> &lt;&lt; <a class="code" href="../../d5/d45/structrt_1_1tos_1_1ip.html">rt::tos::ip</a>(g-&gt;PeerAddressV4).<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#a2fdd05ed7c3e515efa018bc917231524">TrimBefore</a>(<span class="charliteral">&#39;:&#39;</span>));</div>
+<div class="line">                    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(crc);</div>
+<div class="line">                    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(CRC::Calculate(g-&gt;RecvBuf, g-&gt;RecvSize, CRC::CRC_32()));                   </div>
+<div class="line">                }               </div>
+<div class="line">            }</div>
+<div class="line">            <a class="code" href="../../de/d53/group___functions__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a>(&amp;_count);</div>
+<div class="line">            <span class="keywordflow">if</span> (_count % 500000 == 0)</div>
+<div class="line">                <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(_count&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt; Name);</div>
+<div class="line">        }</div>
+<div class="line">            </div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    SocketIOObj_Routing1(<span class="keyword">const</span> <a class="code" href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a>&amp; name) :Name(name) {}</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">char</span> charRand()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">char</span> tmp;</div>
+<div class="line">    std::random_device rd;</div>
+<div class="line">    std::default_random_engine random(rd());</div>
+<div class="line">    tmp = random() % 36;    </div>
+<div class="line">    <span class="keywordflow">if</span> (tmp &lt; 10) {         </div>
+<div class="line">        tmp += <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span> {          </div>
+<div class="line">        tmp -= 10;</div>
+<div class="line">        tmp += <span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> tmp;</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> rt::UnitTests::pump_client()</div>
+<div class="line">{</div>
+<div class="line">    InetAddr remote_addr(<span class="stringliteral">&quot;192.168.218.72&quot;</span>, 33010);</div>
+<div class="line"> </div>
+<div class="line">    InetAddr local_send_addr;</div>
+<div class="line">    local_send_addr.SetAsLocal();</div>
+<div class="line">    local_send_addr.SetPort(33000);</div>
+<div class="line">    Socket local_send;</div>
+<div class="line">    local_send.Create(local_send_addr, SOCK_DGRAM, <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">char</span> send_message[500];</div>
+<div class="line">    <span class="keywordflow">for</span> (;;)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; <span class="keyword">sizeof</span>(send_message); i++)</div>
+<div class="line">        {</div>
+<div class="line">            send_message[i] = charRand();</div>
+<div class="line">        }</div>
+<div class="line">        local_send.SendTo(send_message, <span class="keyword">sizeof</span>(send_message), remote_addr);</div>
+<div class="line">        <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(1);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordtype">void</span> rt::UnitTests::pump_client2()</div>
+<div class="line">{</div>
+<div class="line">    InetAddr remote_addr(<span class="stringliteral">&quot;192.168.218.72&quot;</span>, 33020);</div>
+<div class="line"> </div>
+<div class="line">    InetAddr local_send_addr;</div>
+<div class="line">    local_send_addr.SetAsLocal();</div>
+<div class="line">    local_send_addr.SetPort(32000);</div>
+<div class="line">    Socket local_send;</div>
+<div class="line">    local_send.Create(local_send_addr, SOCK_DGRAM, <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">char</span> send_message[500];</div>
+<div class="line">    <span class="keywordflow">for</span> (;;)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <span class="keyword">sizeof</span>(send_message); i++)</div>
+<div class="line">        {</div>
+<div class="line">            send_message[i] = charRand();</div>
+<div class="line">        }</div>
+<div class="line">        local_send.SendTo(send_message, <span class="keyword">sizeof</span>(send_message), remote_addr);</div>
+<div class="line">        <a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>(1);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordtype">void</span> rt::UnitTests::pump_server()</div>
+<div class="line">{       </div>
+<div class="line">    DatagramPump&lt;SocketIOObj_Routing1&gt;  core;</div>
+<div class="line">    <a class="code" href="../../d1/dc7/group___macros__runtime__base.html#ga3675cf895544424c921cf6f8f5e91887">VERIFY</a>(core.Init());</div>
+<div class="line">    InetAddr remote_addr1(<span class="stringliteral">&quot;192.168.218.72&quot;</span>, 33010);</div>
+<div class="line">    InetAddr remote_addr2(<span class="stringliteral">&quot;192.168.218.72&quot;</span>, 33020);</div>
+<div class="line">    SocketIOObj_Routing1    remote1(<span class="stringliteral">&quot;Remote1&quot;</span>);</div>
+<div class="line">    remote1.Create(remote_addr1);</div>
+<div class="line">    SocketIOObj_Routing1    remote2(<span class="stringliteral">&quot;Remote2&quot;</span>);</div>
+<div class="line">    remote2.Create(remote_addr2);</div>
+<div class="line">    core.AddObject(&amp;remote1);</div>
+<div class="line">    core.AddObject(&amp;remote2);</div>
+<div class="line">    <span class="keywordflow">for</span> (;;)</div>
+<div class="line">    {</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    core.Term();</div>
+<div class="line"> </div>
+<div class="line">}</div>
 <div class="ttc" id="aclassrt_1_1_buffer___ref_html_ad7443dc12fc2a4fd9107fe00c3d96a58"><div class="ttname"><a href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">rt::Buffer_Ref::GetSize</a></div><div class="ttdeci">t_Index GetSize() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00108">buffer_type.h:108</a></div></div>
-<div class="ttc" id="aclassrt_1_1_buffer_html"><div class="ttname"><a href="../../d3/db8/classrt_1_1_buffer.html">rt::Buffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00370">buffer_type.h:371</a></div></div>
-<div class="ttc" id="aclassrt_1_1_buffer_html_a3b88c05d4a3725c1fe885a653527ecdb"><div class="ttname"><a href="../../d3/db8/classrt_1_1_buffer.html#a3b88c05d4a3725c1fe885a653527ecdb">rt::Buffer::SetSize</a></div><div class="ttdeci">bool SetSize(SIZE_T co=0)</div><div class="ttdoc">Set buffer size.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00408">buffer_type.h:408</a></div></div>
+<div class="ttc" id="aclassrt_1_1_buffer_html"><div class="ttname"><a href="../../d3/db8/classrt_1_1_buffer.html">rt::Buffer</a></div><div class="ttdoc">Simple linear container with assuming move syntax.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00373">buffer_type.h:374</a></div></div>
+<div class="ttc" id="aclassrt_1_1_buffer_html_a3b88c05d4a3725c1fe885a653527ecdb"><div class="ttname"><a href="../../d3/db8/classrt_1_1_buffer.html#a3b88c05d4a3725c1fe885a653527ecdb">rt::Buffer::SetSize</a></div><div class="ttdeci">bool SetSize(SIZE_T co=0)</div><div class="ttdoc">Set buffer size.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00411">buffer_type.h:411</a></div></div>
 <div class="ttc" id="aclassrt_1_1_string___base_html_a2fdd05ed7c3e515efa018bc917231524"><div class="ttname"><a href="../../d7/dad/classrt_1_1_string___base.html#a2fdd05ed7c3e515efa018bc917231524">rt::String_Base::TrimBefore</a></div><div class="ttdeci">t_StrRef TrimBefore(const CharacterSet &amp;seps) const</div><div class="ttdoc">Trim Before Separator.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01246">string_type.h:1246</a></div></div>
 <div class="ttc" id="aclassrt_1_1_string___ref_html"><div class="ttname"><a href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a></div><div class="ttdoc">String_Ref represent a string with length, the string is not necessary zero-terminated.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01387">string_type.h:1388</a></div></div>
-<div class="ttc" id="aclassrt_1_1_string_html"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html">rt::String</a></div><div class="ttdoc">only contains address and length.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01803">string_type.h:1804</a></div></div>
+<div class="ttc" id="aclassrt_1_1_string_html"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html">rt::String</a></div><div class="ttdoc">Memory efficient strings operations and expression.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01804">string_type.h:1805</a></div></div>
 <div class="ttc" id="agroup___both__consoleand__file_html_ga7263964d3be25fc05cdc28e40b88409e"><div class="ttname"><a href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a></div><div class="ttdeci">#define _LOG(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00218">runtime_base.h:218</a></div></div>
+<div class="ttc" id="agroup___functions__kernel_html_gae28a7736b963f4b1ed2f183641e6d865"><div class="ttname"><a href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a></div><div class="ttdeci">void Sleep(DWORD msec=INFINITE, const bool *interrupt_flag=nullptr)</div></div>
+<div class="ttc" id="agroup___functions__thread__primitive_html_gae6a9edf1f6f7cfe9f9a487fec043c323"><div class="ttname"><a href="../../de/d53/group___functions__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a></div><div class="ttdeci">FORCEINL int AtomicIncrement(volatile int *theValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00097">thread_primitive.h:97</a></div></div>
 <div class="ttc" id="agroup___macros__runtime__base_html_ga3675cf895544424c921cf6f8f5e91887"><div class="ttname"><a href="../../d1/dc7/group___macros__runtime__base.html#ga3675cf895544424c921cf6f8f5e91887">VERIFY</a></div><div class="ttdeci">#define VERIFY(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00282">runtime_base.h:282</a></div></div>
 <div class="ttc" id="agroup___only__log__to__console_html_ga12e244ee457ec371bbadf2f027e1d440"><div class="ttname"><a href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a></div><div class="ttdeci">#define _LOGC(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00232">runtime_base.h:232</a></div></div>
-<div class="ttc" id="agroup__kernel_html_gae28a7736b963f4b1ed2f183641e6d865"><div class="ttname"><a href="../../d9/d7c/group__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a></div><div class="ttdeci">void Sleep(DWORD msec=INFINITE, const bool *interrupt_flag=nullptr)</div></div>
-<div class="ttc" id="agroup__thread__primitive_html_gae6a9edf1f6f7cfe9f9a487fec043c323"><div class="ttname"><a href="../../d2/d9f/group__thread__primitive.html#gae6a9edf1f6f7cfe9f9a487fec043c323">os::AtomicIncrement</a></div><div class="ttdeci">FORCEINL int AtomicIncrement(volatile int *theValue)</div><div class="ttdoc">All Atomic operation return the value after operation, EXCEPT AtomicOr and AtomicAnd.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/thread__primitive_8h_source.html#l00090">thread_primitive.h:90</a></div></div>
 <div class="ttc" id="anamespaceinet_html"><div class="ttname"><a href="../../da/d42/namespaceinet.html">inet</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d55/datagram__pump_8h_source.html#l00044">datagram_pump.h:45</a></div></div>
 <div class="ttc" id="astructrt_1_1tos_1_1_data_as_string_html"><div class="ttname"><a href="../../db/d9e/structrt_1_1tos_1_1_data_as_string.html">rt::tos::DataAsString</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5f/string__type__ops_8h_source.html#l00108">string_type_ops.h:109</a></div></div>
-<div class="ttc" id="astructrt_1_1tos_1_1ip_html"><div class="ttname"><a href="../../d5/d45/structrt_1_1tos_1_1ip.html">rt::tos::ip</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4a/inet_8h_source.html#l00677">inet.h:678</a></div></div>
+<div class="ttc" id="astructrt_1_1tos_1_1ip_html"><div class="ttname"><a href="../../d5/d45/structrt_1_1tos_1_1ip.html">rt::tos::ip</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4a/inet_8h_source.html#l00694">inet.h:695</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,5 +1,6 @@
 var group__file__dir =
 [
+    [ "Functions_file_dir", "d4/d6f/group___functions__file__dir.html", "d4/d6f/group___functions__file__dir" ],
     [ "CommandLine", "d1/d0a/classos_1_1_command_line.html", [
       [ "CommandLine", "d1/d0a/classos_1_1_command_line.html#a13bafd07618330b4119e2eb264bc838d", null ],
       [ "~CommandLine", "d1/d0a/classos_1_1_command_line.html#a2dd33a5ebebb6e544dac464ed7001c88", null ],
@@ -305,9 +306,5 @@ var group__file__dir =
       [ "_ExitCode", "d3/da0/classos_1_1_process.html#aa1fd43c7ff9a81d7abb5203aee77faab", null ],
       [ "_ExitTime", "d3/da0/classos_1_1_process.html#a6b6f4f7b37622bb58d923445a891c809", null ],
       [ "_hProcess", "d3/da0/classos_1_1_process.html#a455e13b7271bfc5dd2d914a94eeaafc6", null ]
-    ] ],
-    [ "EnableCrashDump", "d1/d21/group__file__dir.html#ga49d1e2d9d9e46a17a97b9bcfbb44972c", null ],
-    [ "GetAppSandbox", "d1/d21/group__file__dir.html#ga80dd9e90d360a3892635ca0a032a63fe", null ],
-    [ "GetFreeDiskSpace", "d1/d21/group__file__dir.html#ga3ba1dec8d0ff8300375917c6a68c1b28", null ],
-    [ "SetAppSandboxAsCurrentDirectory", "d1/d21/group__file__dir.html#ga6cf8edbbaaeb95662ea6d318327d99eb", null ]
+    ] ]
 ];
