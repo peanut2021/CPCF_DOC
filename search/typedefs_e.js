@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['quaterniond_7352',['Quaterniond',['../dc/dab/group___typedefs__small__math.html#ga962c53edfddc314dfad3494dab11bec5',1,'rt']]],
-  ['quaternionf_7353',['Quaternionf',['../dc/dab/group___typedefs__small__math.html#gad9988d5f48150f3ba4d65be51f949718',1,'rt']]],
-  ['qword_7354',['QWORD',['../df/da5/group___typedefs__predefines.html#ga07c344bf3bb9e0640b919df3f74a88ab',1,'predefines.h']]]
+  ['privatekey_7711',['PrivateKey',['../d1/d2c/structsec_1_1__details_1_1_e_c_c_3_01_e_c_d_s_a___s_e_c_p256_k1_01_4.html#ac758dcb18fcb26b6a02d30dc15fd0040',1,'sec::_details::ECC&lt; ECDSA_SECP256K1 &gt;::PrivateKey()'],['../d6/d8d/structsec_1_1__details_1_1_e_c_c_3_01_e_c_d_s_a___s_e_c_p256_r1_01_4.html#a7d3c53a2fea7c56ef160efac3a1d3cd5',1,'sec::_details::ECC&lt; ECDSA_SECP256R1 &gt;::PrivateKey()'],['../df/d04/classsec_1_1_keypair.html#a56822e29711c19521bf23cd3cf01412a',1,'sec::Keypair::PrivateKey()']]],
+  ['publickey_7712',['PublicKey',['../d1/d2c/structsec_1_1__details_1_1_e_c_c_3_01_e_c_d_s_a___s_e_c_p256_k1_01_4.html#aef1e66889ab96973003c7671d59b9c05',1,'sec::_details::ECC&lt; ECDSA_SECP256K1 &gt;::PublicKey()'],['../d6/d8d/structsec_1_1__details_1_1_e_c_c_3_01_e_c_d_s_a___s_e_c_p256_r1_01_4.html#a4fd00023dfcc63663d0741d794db504d',1,'sec::_details::ECC&lt; ECDSA_SECP256R1 &gt;::PublicKey()'],['../df/d04/classsec_1_1_keypair.html#a6e8aeb4b52ba565e34e0859a678ff81a',1,'sec::Keypair::PublicKey()']]]
 ];

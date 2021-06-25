@@ -247,7 +247,7 @@ var group__kernel =
       [ "ShiftHours", "d4/d7c/structos_1_1_timestamp.html#abf9d7b0e1eb690dd7271f0b6da242046", null ],
       [ "ShiftWeeks", "d4/d7c/structos_1_1_timestamp.html#a9917e203560d44a92b6509fcec483ce4", null ],
       [ "TimeLapse", "d4/d7c/structos_1_1_timestamp.html#a8919464b1a3a0872f2e0b01c5ec40c9d", null ],
-      [ "TimeLapse", "d4/d7c/structos_1_1_timestamp.html#aa404373baccf558b271c72996db5e9f0", null ],
+      [ "TimeLapse", "d4/d7c/structos_1_1_timestamp.html#a852ffaa0310dcbb8d419e45c34a980d5", null ],
       [ "_Timestamp", "d4/d7c/structos_1_1_timestamp.html#a20629500aaab0c18ec47b8d27f571154", null ]
     ] ],
     [ "Timestamp", "d9/dfa/structrt_1_1tos_1_1_timestamp.html", [

@@ -96,6 +96,8 @@ $(document).ready(function(){initNavTree('d8/d19/group___macros__small__math.htm
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:gae7c7404b285545cb5d9fead7498ecfdf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d19/group___macros__small__math.html#gae7c7404b285545cb5d9fead7498ecfdf">CPF_STRING_VEC_CONNECT_OP</a>(T)</td></tr>
+<tr class="separator:gae7c7404b285545cb5d9fead7498ecfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae5d89f3d0d6c0b18df28332077e89b74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d19/group___macros__small__math.html#gae5d89f3d0d6c0b18df28332077e89b74">DEF_VEC_FUNC</a></td></tr>
 <tr class="separator:gae5d89f3d0d6c0b18df28332077e89b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7fcc00f34b6bfc02850675f08c678097"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d19/group___macros__small__math.html#ga7fcc00f34b6bfc02850675f08c678097">DEF_VEC_OP</a>(name,  op)&#160;&#160;&#160;static <a class="el" href="../../d5/dde/group___macros__predefines.html#gaf45d6d2caa407162dbb1af3cd21b0057">INLFUNC</a> void name(const VEC&amp; a, const VEC&amp; b, VEC&amp; c){ VecExp&lt;VEC,INDX-1&gt;::name(a,b,c); c[INDX] = a[INDX] op b[INDX]; }</td></tr>
@@ -115,6 +117,41 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gae7c7404b285545cb5d9fead7498ecfdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7c7404b285545cb5d9fead7498ecfdf">&#9670;&nbsp;</a></span>CPF_STRING_VEC_CONNECT_OP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CPF_STRING_VEC_CONNECT_OP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> chan&gt; \</div>
+<div class="line">FORCEINL _SE&lt;String_Ref, tos::S_&lt;chan&gt; &gt;  <a class="code" href="../../d1/d64/group___functions__json.html#gaf71ddcc9172b68fbfef49958e854ba6a">operator + </a>(<span class="keyword">const</span> String_Ref&amp; left, <span class="keyword">const</span> Vec&lt;T,chan&gt;&amp; right) \</div>
+<div class="line">{ <span class="keywordflow">return</span> _SE&lt;String_Ref, tos::S_&lt;chan&gt; &gt; ( (left), (right) ); } \</div>
+<div class="line">template&lt;int chan&gt; \</div>
+<div class="line">FORCEINL _SE&lt;tos::S_&lt;chan&gt;, String_Ref&gt;  <a class="code" href="../../d1/d64/group___functions__json.html#gaf71ddcc9172b68fbfef49958e854ba6a">operator + </a>(<span class="keyword">const</span> Vec&lt;T,chan&gt;&amp; left, <span class="keyword">const</span> String_Ref&amp; right) \</div>
+<div class="line">{ <span class="keywordflow">return</span> _SE&lt;tos::S_&lt;chan&gt;, String_Ref&gt; ( (left), (right) ); }      \</div>
+<div class="line">template&lt;typename t_Left, typename t_Right, int chan&gt; FORCEINL      \</div>
+<div class="line">_SE&lt;tos::S_&lt;chan&gt;, _SE&lt;t_Left,t_Right&gt; &gt;                            \</div>
+<div class="line">operator + (<span class="keyword">const</span> Vec&lt;T,chan&gt;&amp; p, <span class="keyword">const</span> _SE&lt;t_Left,t_Right&gt;&amp; x)     \</div>
+<div class="line">{ <span class="keywordflow">return</span> _SE&lt;tos::S_&lt;chan&gt;, _SE&lt;t_Left,t_Right&gt; &gt;((p),x); }         \</div>
+<div class="line">template&lt;typename t_Left, typename t_Right, int chan&gt; FORCEINL      \</div>
+<div class="line">_SE&lt;_SE&lt;t_Left,t_Right&gt; , tos::S_&lt;chan&gt;&gt;                                        \</div>
+<div class="line">operator + (<span class="keyword">const</span> _SE&lt;t_Left,t_Right&gt;&amp; x, <span class="keyword">const</span> Vec&lt;T,chan&gt;&amp; p)     \</div>
+<div class="line">{ <span class="keywordflow">return</span> _SE&lt;_SE&lt;t_Left,t_Right&gt;, tos::S_&lt;chan&gt;&gt;(x, (p)); }         \</div>
+<div class="ttc" id="agroup___functions__json_html_gaf71ddcc9172b68fbfef49958e854ba6a"><div class="ttname"><a href="../../d1/d64/group___functions__json.html#gaf71ddcc9172b68fbfef49958e854ba6a">rt::operator+</a></div><div class="ttdeci">FORCEINL auto operator+(const String_Ref &amp;left, const _JVar&lt; LEFT, T, VAL_TYPE &gt; &amp;right)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d05/json_8h_source.html#l00337">json.h:337</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../da/d52/small__math_8h_source.html#l00529">529</a> of file <a class="el" href="../../da/d52/small__math_8h_source.html">small_math.h</a>.</p>
+
+</div>
+</div>
 <a id="gae5d89f3d0d6c0b18df28332077e89b74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae5d89f3d0d6c0b18df28332077e89b74">&#9670;&nbsp;</a></span>DEF_VEC_FUNC</h2>
 

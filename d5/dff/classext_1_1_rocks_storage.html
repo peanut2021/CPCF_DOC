@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('d5/dff/classext_1_1_rocks_storage.html
 <a href="#friends">Friends</a> &#124;
 <a href="../../d9/de9/classext_1_1_rocks_storage-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ext::RocksStorage Class Reference<div class="ingroups"><a class="el" href="../../d8/d54/group__ext.html">Ext</a> &raquo; <a class="el" href="../../d6/d8c/group__rocksdb.html">Rocksdb</a> &raquo; <a class="el" href="../../d9/dfa/group__rocks__db.html">Rocks_db</a></div></div>  </div>
+<div class="title">ext::RocksStorage Class Reference<div class="ingroups"><a class="el" href="../../d8/d54/group__ext.html">Ext</a> &raquo; <a class="el" href="../../d6/d8c/group__rocksdb.html">Rocksdb</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -122,19 +122,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a622ead40fd25146e3168893e80fcaa1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa40de34ae56ea150e18cd3d465dffd91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dff/classext_1_1_rocks_storage.html#aa40de34ae56ea150e18cd3d465dffd91">IsOpen</a> () const</td></tr>
 <tr class="separator:aa40de34ae56ea150e18cd3d465dffd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e511314f467f78cd8db682166c8430"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dff/classext_1_1_rocks_storage.html#a66e511314f467f78cd8db682166c8430">Open</a> (LPCSTR db_path, const <a class="el" href="../../d9/dfa/group__rocks__db.html#gadc76a6eb8f25aece222c8840c1620d7c">Options</a> *opt)</td></tr>
+<tr class="memitem:a66e511314f467f78cd8db682166c8430"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dff/classext_1_1_rocks_storage.html#a66e511314f467f78cd8db682166c8430">Open</a> (LPCSTR db_path, const <a class="el" href="../../d1/d10/group___typedefs___rocksdb.html#gadc76a6eb8f25aece222c8840c1620d7c">Options</a> *opt)</td></tr>
 <tr class="separator:a66e511314f467f78cd8db682166c8430"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e889e17a8b4b52e55b4a51b7ea286aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dff/classext_1_1_rocks_storage.html#a9e889e17a8b4b52e55b4a51b7ea286aa">Open</a> (LPCSTR db_path, <a class="el" href="../../d9/dfa/group__rocks__db.html#ga257f0abdd99c2b5664445e047fb1a391">RocksStorageWriteRobustness</a> robustness=<a class="el" href="../../d9/dfa/group__rocks__db.html#gga257f0abdd99c2b5664445e047fb1a391a870c44f978e44fdedd06c0fed04bc946">ROCKSSTG_DEFAULT</a>, bool open_existed_only=false, UINT file_thread_co=2, UINT logfile_num_max=1)</td></tr>
+<tr class="memitem:a9e889e17a8b4b52e55b4a51b7ea286aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dff/classext_1_1_rocks_storage.html#a9e889e17a8b4b52e55b4a51b7ea286aa">Open</a> (LPCSTR db_path, <a class="el" href="../../d0/dd9/group___enums___rocksdb.html#ga257f0abdd99c2b5664445e047fb1a391">RocksStorageWriteRobustness</a> robustness=<a class="el" href="../../d0/dd9/group___enums___rocksdb.html#gga257f0abdd99c2b5664445e047fb1a391a870c44f978e44fdedd06c0fed04bc946">ROCKSSTG_DEFAULT</a>, bool open_existed_only=false, UINT file_thread_co=2, UINT logfile_num_max=1)</td></tr>
 <tr class="separator:a9e889e17a8b4b52e55b4a51b7ea286aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a772c767e8f56b714d15c852aba5eb5a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dff/classext_1_1_rocks_storage.html#a772c767e8f56b714d15c852aba5eb5a7">SetDBDefaultOpenOption</a> (const <a class="el" href="../../d0/d4e/classext_1_1_rocks_d_b_open_option.html">RocksDBOpenOption</a> &amp;opt)</td></tr>
 <tr class="separator:a772c767e8f56b714d15c852aba5eb5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9276cb97d0c74237ada223dac4e05dac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dff/classext_1_1_rocks_storage.html#a9276cb97d0c74237ada223dac4e05dac">SetDBOpenOption</a> (LPCSTR db_name, const <a class="el" href="../../d0/d4e/classext_1_1_rocks_d_b_open_option.html">RocksDBOpenOption</a> &amp;opt)</td></tr>
-<tr class="memdesc:a9276cb97d0c74237ada223dac4e05dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">first ':' in the name will be treated as wild prefix so you can set db_name to "abc:" and all column famlity with db_name starts with "abc:" will be applied the specified options  <a href="../../d5/dff/classext_1_1_rocks_storage.html#a9276cb97d0c74237ada223dac4e05dac">More...</a><br /></td></tr>
+<tr class="memdesc:a9276cb97d0c74237ada223dac4e05dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set DB Open Option.  <a href="../../d5/dff/classext_1_1_rocks_storage.html#a9276cb97d0c74237ada223dac4e05dac">More...</a><br /></td></tr>
 <tr class="separator:a9276cb97d0c74237ada223dac4e05dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8df8d52316669856267c8508bbc7c0bb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dff/classext_1_1_rocks_storage.html#a8df8d52316669856267c8508bbc7c0bb">Nuke</a> (LPCSTR db_path)</td></tr>
+<tr class="memdesc:a8df8d52316669856267c8508bbc7c0bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nuke.  <a href="../../d5/dff/classext_1_1_rocks_storage.html#a8df8d52316669856267c8508bbc7c0bb">More...</a><br /></td></tr>
 <tr class="separator:a8df8d52316669856267c8508bbc7c0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5636e1bcfc05f39559bcd23a65b37fb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dff/classext_1_1_rocks_storage.html#aa5636e1bcfc05f39559bcd23a65b37fb">Rename</a> (LPCSTR db_old_path, LPCSTR db_new_path)</td></tr>
 <tr class="separator:aa5636e1bcfc05f39559bcd23a65b37fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,7 +163,7 @@ Friends</h2></td></tr>
 <div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d9/d17/test_ext_8cpp-example.html#_a23">test_ext.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00409">409</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00419">419</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a6b503346a7c53b54a1bdd87dbc4cf666"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b503346a7c53b54a1bdd87dbc4cf666">&#9670;&nbsp;</a></span>T_DBS</h2>
@@ -184,7 +185,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00452">452</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00462">462</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
 
 </div>
 </div>
@@ -229,7 +230,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00458">458</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00468">468</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
 
 </div>
 </div>
@@ -329,7 +330,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00461">461</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00471">471</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
 
 </div>
 </div>
@@ -356,6 +357,15 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Nuke. </p>
+<p>Try DestroyDB &amp; RemovePath 10 times in 1 sec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">db_path</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d9/d17/test_ext_8cpp-example.html#a20">test_ext.cpp</a>.</dd>
 </dl>
 
@@ -376,7 +386,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d9/dfa/group__rocks__db.html#gadc76a6eb8f25aece222c8840c1620d7c">Options</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d10/group___typedefs___rocksdb.html#gadc76a6eb8f25aece222c8840c1620d7c">Options</a> *&#160;</td>
           <td class="paramname"><em>opt</em>&#160;</td>
         </tr>
         <tr>
@@ -404,8 +414,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d9/dfa/group__rocks__db.html#ga257f0abdd99c2b5664445e047fb1a391">RocksStorageWriteRobustness</a>&#160;</td>
-          <td class="paramname"><em>robustness</em> = <code><a class="el" href="../../d9/dfa/group__rocks__db.html#gga257f0abdd99c2b5664445e047fb1a391a870c44f978e44fdedd06c0fed04bc946">ROCKSSTG_DEFAULT</a></code>, </td>
+          <td class="paramtype"><a class="el" href="../../d0/dd9/group___enums___rocksdb.html#ga257f0abdd99c2b5664445e047fb1a391">RocksStorageWriteRobustness</a>&#160;</td>
+          <td class="paramname"><em>robustness</em> = <code><a class="el" href="../../d0/dd9/group___enums___rocksdb.html#gga257f0abdd99c2b5664445e047fb1a391a870c44f978e44fdedd06c0fed04bc946">ROCKSSTG_DEFAULT</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -497,7 +507,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00474">474</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00486">486</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
 
 </div>
 </div>
@@ -527,8 +537,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>first ':' in the name will be treated as wild prefix so you can set db_name to "abc:" and all column famlity with db_name starts with "abc:" will be applied the specified options </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Set DB Open Option. </p>
+<p>first ':' in the name will be treated as wild prefix, so you can set db_name to "abc:" and all column famlity with db_name starts with "abc:" will be applied the specified options </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">db_name</td><td></td></tr>
     <tr><td class="paramname">opt</td><td></td></tr>
@@ -561,7 +571,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00411">411</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00421">421</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
 
 </div>
 </div>
@@ -586,7 +596,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00453">453</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00463">463</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
 
 </div>
 </div>
@@ -610,7 +620,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00454">454</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00464">464</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
 
 </div>
 </div>
@@ -634,7 +644,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00445">445</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/df1/rocksdb_8h_source.html#l00455">455</a> of file <a class="el" href="../../df/df1/rocksdb_8h_source.html">rocksdb.h</a>.</p>
 
 </div>
 </div>

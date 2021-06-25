@@ -90,6 +90,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="title">test_ext.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
+<p><br  />
+</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;../../core/ext/sparsehash/sparsehash.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;../../core/ext/rocksdb/rocksdb.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;../../core/ext/rocksdb/rocksdb_serving.h&quot;</span></div>
@@ -127,8 +129,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">        <span class="keywordflow">for</span>(UINT i=0;i&lt;100000;i++)</div>
 <div class="line">            Expr.<a name="a8"></a><a class="code" href="../../de/d66/classrt_1_1_expression.html#ace6fa4246aa954c79b2e6974aef89a34">Compute</a>();</div>
 <div class="line">        </div>
-<div class="line">        <a name="a9"></a><a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;ExprTk: &quot;</span>&lt;&lt;<a name="_a10"></a><a class="code" href="../../db/da0/structrt_1_1tos_1_1_time_span.html">rt::tos::TimeSpan&lt;false&gt;</a>(tm.<a name="a11"></a><a class="code" href="../../d4/d7c/structos_1_1_timestamp.html#a8919464b1a3a0872f2e0b01c5ec40c9d">TimeLapse</a>()));</div>
-<div class="line">        <a name="a12"></a><a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(x[0]);</div>
+<div class="line">        <a name="a9"></a><a class="code" href="../../df/d5e/runtime__base_8h.html#a12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;ExprTk: &quot;</span>&lt;&lt;<a name="_a10"></a><a class="code" href="../../db/da0/structrt_1_1tos_1_1_time_span.html">rt::tos::TimeSpan&lt;false&gt;</a>(tm.<a name="a11"></a><a class="code" href="../../d4/d7c/structos_1_1_timestamp.html#a8919464b1a3a0872f2e0b01c5ec40c9d">TimeLapse</a>()));</div>
+<div class="line">        <a name="a12"></a><a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(x[0]);</div>
 <div class="line">        </div>
 <div class="line">        <span class="keywordflow">for</span>(UINT i=0;i&lt;<a class="code" href="../../d5/dde/group___macros__predefines.html#ga9879f8ef4e651f01c6888dd86b31b50c">sizeofArray</a>(x);i++)x[i] = 0.1f;</div>
 <div class="line">        tm.<a class="code" href="../../d4/d7c/structos_1_1_timestamp.html#a2e17494817e13368fb4371a06cd32f76">LoadCurrentTime</a>();</div>
@@ -138,11 +140,11 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">            {    x[i-1] = x[i] - 0.1;</div>
 <div class="line">            }</div>
 <div class="line">        </div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;Native: &quot;</span>&lt;&lt;<a class="code" href="../../db/da0/structrt_1_1tos_1_1_time_span.html">rt::tos::TimeSpan&lt;false&gt;</a>(tm.<a class="code" href="../../d4/d7c/structos_1_1_timestamp.html#a8919464b1a3a0872f2e0b01c5ec40c9d">TimeLapse</a>()));</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(x[0]);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;Native: &quot;</span>&lt;&lt;<a class="code" href="../../db/da0/structrt_1_1tos_1_1_time_span.html">rt::tos::TimeSpan&lt;false&gt;</a>(tm.<a class="code" href="../../d4/d7c/structos_1_1_timestamp.html#a8919464b1a3a0872f2e0b01c5ec40c9d">TimeLapse</a>()));</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(x[0]);</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">else</span></div>
-<div class="line">    {    <a name="a13"></a><a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7214f168f9fb66818944932eda9b4247">_LOG_ERROR</a>(Expr.<a name="a14"></a><a class="code" href="../../de/d66/classrt_1_1_expression.html#a812cd31355d10cc12566fe7db72f3359">GetLastError</a>());</div>
+<div class="line">    {    <a name="a13"></a><a class="code" href="../../df/d5e/runtime__base_8h.html#a7214f168f9fb66818944932eda9b4247">_LOG_ERROR</a>(Expr.<a name="a14"></a><a class="code" href="../../de/d66/classrt_1_1_expression.html#a812cd31355d10cc12566fe7db72f3359">GetLastError</a>());</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -171,7 +173,7 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">            a.<a name="a17"></a><a class="code" href="../../d0/d1a/classrt_1_1_buffer_ex.html#ac90bdbecc160470c508dc8dc1998fbef">push_back</a>(it);</div>
 <div class="line"> </div>
 <div class="line">        a.<a name="a18"></a><a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#a0265ce239d4f9fbb869c2b6db27320f6">Sort</a>();</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    {</div>
@@ -196,7 +198,7 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">            a.<a class="code" href="../../d0/d1a/classrt_1_1_buffer_ex.html#ac90bdbecc160470c508dc8dc1998fbef">push_back</a>(it.first);</div>
 <div class="line"> </div>
 <div class="line">        a.<a class="code" href="../../d0/da6/classrt_1_1_buffer___ref.html#a0265ce239d4f9fbb869c2b6db27320f6">Sort</a>();</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -219,7 +221,7 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line"> </div>
 <div class="line">        std::string ws;</div>
 <div class="line">        <span class="keyword">auto</span>* b = db.GetPaged(100, 0, ws);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b-&gt;TotalSize&lt;&lt;<span class="stringliteral">&quot;, &quot;</span>&lt;&lt;b-&gt;ExtraDataSize);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b-&gt;TotalSize&lt;&lt;<span class="stringliteral">&quot;, &quot;</span>&lt;&lt;b-&gt;ExtraDataSize);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    {</div>
@@ -242,12 +244,12 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">        {   <a name="_a30"></a><a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> str;</div>
 <div class="line">            <span class="keyword">auto</span> it = db.<a name="a31"></a><a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#a2ec3cbd3358f4d4efd60f93a6a6eed20">First</a>();</div>
 <div class="line">            <span class="keywordflow">while</span>(it.IsValid()){ str += <a name="a32"></a><a class="code" href="../../d6/d97/namespacert_1_1tos.html#a27b8c6c159b3ec53681ba0e3085a1bde">rt::tos::Number</a>(it.Key&lt;UINT&gt;()) + <span class="charliteral">&#39; &#39;</span>; it.Next(); }</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(str);</div>
+<div class="line">            <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(str);</div>
 <div class="line"> </div>
-<div class="line">            str.<a name="a33"></a><a class="code" href="../../d2/d96/classrt_1_1_string.html#adbeedcc8b9b784a4abe6c28ecf36f947">Empty</a>();</div>
+<div class="line">            str.<a name="a33"></a><a class="code" href="../../d2/d96/classrt_1_1_string.html#a5e548b848b28931873a4705c4811e335">Empty</a>();</div>
 <div class="line">            it = db2.<a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#a2ec3cbd3358f4d4efd60f93a6a6eed20">First</a>();</div>
 <div class="line">            <span class="keywordflow">while</span>(it.IsValid()){ str += <a class="code" href="../../d6/d97/namespacert_1_1tos.html#a27b8c6c159b3ec53681ba0e3085a1bde">rt::tos::Number</a>(it.Key&lt;UINT&gt;()) + <span class="charliteral">&#39; &#39;</span>; it.Next(); }</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(str);</div>
+<div class="line">            <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(str);</div>
 <div class="line">        }</div>
 <div class="line">        store.<a name="a34"></a><a class="code" href="../../d5/dff/classext_1_1_rocks_storage.html#aa99ee5a342ea61fdd121bd5539f44605">Close</a>();</div>
 <div class="line">    }</div>
@@ -261,14 +263,14 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">        <a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html">ext::RocksDB</a> db = store.<a class="code" href="../../d5/dff/classext_1_1_rocks_storage.html#a622ead40fd25146e3168893e80fcaa1a">Get</a>(<span class="stringliteral">&quot;t&quot;</span>);</div>
 <div class="line">        <a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html">ext::RocksDB</a> db2 = store.<a class="code" href="../../d5/dff/classext_1_1_rocks_storage.html#a622ead40fd25146e3168893e80fcaa1a">Get</a>(<span class="stringliteral">&quot;t2&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db.<a name="a35"></a><a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#a0eda856c34430029ca377c24a94b391f">GetAs</a>&lt;<span class="keywordtype">int</span>&gt;(200));</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db2.<a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#a0eda856c34430029ca377c24a94b391f">GetAs</a>&lt;<span class="keywordtype">int</span>&gt;(200));</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db.<a name="a35"></a><a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#a0eda856c34430029ca377c24a94b391f">GetAs</a>&lt;<span class="keywordtype">int</span>&gt;(200));</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db2.<a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#a0eda856c34430029ca377c24a94b391f">GetAs</a>&lt;<span class="keywordtype">int</span>&gt;(200));</div>
 <div class="line"> </div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db.<a name="a36"></a><a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#aafcd7eb3c5acd789eb55ffbe49776167">Last</a>().<a name="a37"></a><a class="code" href="../../dc/dd5/classext_1_1_rocks_cursor.html#a95fd474a5216750bceee9e98a6aa8fda">Key</a>&lt;<span class="keywordtype">int</span>&gt;());</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db2.<a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#aafcd7eb3c5acd789eb55ffbe49776167">Last</a>().<a class="code" href="../../dc/dd5/classext_1_1_rocks_cursor.html#a95fd474a5216750bceee9e98a6aa8fda">Key</a>&lt;<span class="keywordtype">int</span>&gt;());</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db.<a name="a36"></a><a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#aafcd7eb3c5acd789eb55ffbe49776167">Last</a>().<a name="a37"></a><a class="code" href="../../dc/dd5/classext_1_1_rocks_cursor.html#a95fd474a5216750bceee9e98a6aa8fda">Key</a>&lt;<span class="keywordtype">int</span>&gt;());</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db2.<a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#aafcd7eb3c5acd789eb55ffbe49776167">Last</a>().<a class="code" href="../../dc/dd5/classext_1_1_rocks_cursor.html#a95fd474a5216750bceee9e98a6aa8fda">Key</a>&lt;<span class="keywordtype">int</span>&gt;());</div>
 <div class="line"> </div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db.<a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#a2ec3cbd3358f4d4efd60f93a6a6eed20">First</a>().<a class="code" href="../../dc/dd5/classext_1_1_rocks_cursor.html#a95fd474a5216750bceee9e98a6aa8fda">Key</a>&lt;<span class="keywordtype">int</span>&gt;());</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db2.<a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#a2ec3cbd3358f4d4efd60f93a6a6eed20">First</a>().<a class="code" href="../../dc/dd5/classext_1_1_rocks_cursor.html#a95fd474a5216750bceee9e98a6aa8fda">Key</a>&lt;<span class="keywordtype">int</span>&gt;());</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db.<a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#a2ec3cbd3358f4d4efd60f93a6a6eed20">First</a>().<a class="code" href="../../dc/dd5/classext_1_1_rocks_cursor.html#a95fd474a5216750bceee9e98a6aa8fda">Key</a>&lt;<span class="keywordtype">int</span>&gt;());</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(db2.<a class="code" href="../../dd/d4c/classext_1_1_rocks_d_b.html#a2ec3cbd3358f4d4efd60f93a6a6eed20">First</a>().<a class="code" href="../../dc/dd5/classext_1_1_rocks_cursor.html#a95fd474a5216750bceee9e98a6aa8fda">Key</a>&lt;<span class="keywordtype">int</span>&gt;());</div>
 <div class="line">        store.<a class="code" href="../../d5/dff/classext_1_1_rocks_storage.html#aa99ee5a342ea61fdd121bd5539f44605">Close</a>();</div>
 <div class="line">    }</div>
 <div class="line">    <a class="code" href="../../d5/dff/classext_1_1_rocks_storage.html#a8df8d52316669856267c8508bbc7c0bb">ext::RocksStorage::Nuke</a>(fn);</div>
@@ -293,13 +295,13 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">            <a class="code" href="../../d3/db8/classrt_1_1_buffer.html">rt::Buffer&lt;BYTE&gt;</a> load;</div>
 <div class="line">            load.<a class="code" href="../../d3/db8/classrt_1_1_buffer.html#a3b88c05d4a3725c1fe885a653527ecdb">SetSize</a>(1000);</div>
 <div class="line">            <span class="keywordflow">if</span>(paged.<a name="a45"></a><a class="code" href="../../db/d4e/classext_1_1__details_1_1_rocks_paged_base_t.html#ac509f26b66d2e4e4ae7b529a94926d6b">LoadAllPages</a>(123, d, load) &amp;&amp; memcmp(org, load, 1000) == 0)</div>
-<div class="line">            {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;RocksDBStandalonePaged: Passed&quot;</span>);</div>
+<div class="line">            {   <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;RocksDBStandalonePaged: Passed&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">            <span class="keywordflow">else</span></div>
-<div class="line">            {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;RocksDBStandalonePaged: Data mismatch&quot;</span>);</div>
+<div class="line">            {   <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;RocksDBStandalonePaged: Data mismatch&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
-<div class="line">        <span class="keywordflow">else</span> <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;RocksDBStandalonePaged: Loading failed&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">else</span> <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;RocksDBStandalonePaged: Loading failed&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="../../d5/dff/classext_1_1_rocks_storage.html#a8df8d52316669856267c8508bbc7c0bb">ext::RocksStorage::Nuke</a>(fn);</div>
@@ -797,7 +799,7 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> rt::UnitTests::async_queue()</div>
 <div class="line">{</div>
-<div class="line">    {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Multiple Reader/Writer&quot;</span>);     </div>
+<div class="line">    {   <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Multiple Reader/Writer&quot;</span>);     </div>
 <div class="line">        <span class="keyword">typedef</span> <a name="_a50"></a><a class="code" href="../../d5/d88/classext_1_1_async_data_queue.html">ext::AsyncDataQueue&lt;DWORD, true, 2&gt;</a> CQ;</div>
 <div class="line">        </div>
 <div class="line">        UINT capacity = 4;</div>
@@ -806,30 +808,30 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">        {   CQ cq(capacity);</div>
 <div class="line">            <span class="keywordflow">for</span>(UINT i=0;i&lt;5;i++)</div>
 <div class="line">            {</div>
-<div class="line">                <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Push[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;cq.Push(i));</div>
+<div class="line">                <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Push[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;cq.Push(i));</div>
 <div class="line">            }</div>
 <div class="line"> </div>
 <div class="line">            <span class="keywordflow">for</span>(UINT i=0;i&lt;4;i++)</div>
 <div class="line">            {   </div>
 <div class="line">                <span class="keywordtype">int</span> ret = cq.Pop(t);</div>
-<div class="line">                <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Pop[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;ret&lt;&lt;<span class="stringliteral">&quot; VAL=&quot;</span>&lt;&lt;t);</div>
+<div class="line">                <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Pop[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;ret&lt;&lt;<span class="stringliteral">&quot; VAL=&quot;</span>&lt;&lt;t);</div>
 <div class="line">            }</div>
 <div class="line"> </div>
 <div class="line">            <a class="code" href="../../d4/d7c/structos_1_1_timestamp.html">os::Timestamp</a> tm;</div>
 <div class="line">            tm.<a class="code" href="../../d4/d7c/structos_1_1_timestamp.html#a2e17494817e13368fb4371a06cd32f76">LoadCurrentTime</a>();</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Pop[4]: &quot;</span>&lt;&lt;cq.Pop(t, 1100));</div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;WAIT=&quot;</span>&lt;&lt;(<span class="keywordtype">int</span>)(tm.<a class="code" href="../../d4/d7c/structos_1_1_timestamp.html#a8919464b1a3a0872f2e0b01c5ec40c9d">TimeLapse</a>()/1000));</div>
+<div class="line">            <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Pop[4]: &quot;</span>&lt;&lt;cq.Pop(t, 1100));</div>
+<div class="line">            <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;WAIT=&quot;</span>&lt;&lt;(<span class="keywordtype">int</span>)(tm.<a class="code" href="../../d4/d7c/structos_1_1_timestamp.html#a8919464b1a3a0872f2e0b01c5ec40c9d">TimeLapse</a>()/1000));</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        {   CQ cq(capacity);</div>
 <div class="line">            <span class="keywordflow">for</span>(UINT i=0;i&lt;5;i++)</div>
 <div class="line">            {</div>
-<div class="line">                <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Push[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;cq.Push(i, <span class="keyword">true</span>));</div>
+<div class="line">                <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Push[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;cq.Push(i, <span class="keyword">true</span>));</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">    </div>
-<div class="line">    {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Single Reader/Writer&quot;</span>);</div>
+<div class="line">    {   <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Single Reader/Writer&quot;</span>);</div>
 <div class="line">        <span class="keyword">typedef</span> <a class="code" href="../../d5/d88/classext_1_1_async_data_queue.html">ext::AsyncDataQueue&lt;DWORD, true, 2, true&gt;</a> CQ;</div>
 <div class="line"> </div>
 <div class="line">        UINT capacity = 7;</div>
@@ -838,22 +840,22 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">        {   CQ cq(capacity);</div>
 <div class="line">            <span class="keywordflow">for</span>(UINT i=0;i&lt;8;i++)</div>
 <div class="line">            {</div>
-<div class="line">                <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Push[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;cq.Push(i));</div>
+<div class="line">                <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Push[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;cq.Push(i));</div>
 <div class="line">            }</div>
 <div class="line"> </div>
 <div class="line">            <span class="keywordflow">for</span>(UINT i=0;i&lt;7;i++)</div>
 <div class="line">            {   </div>
 <div class="line">                <span class="keywordtype">int</span> ret = cq.Pop(t);</div>
-<div class="line">                <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Pop[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;ret&lt;&lt;<span class="stringliteral">&quot; VAL=&quot;</span>&lt;&lt;t);</div>
+<div class="line">                <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Pop[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;ret&lt;&lt;<span class="stringliteral">&quot; VAL=&quot;</span>&lt;&lt;t);</div>
 <div class="line">            }</div>
 <div class="line"> </div>
-<div class="line">            <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Pop[7]: &quot;</span>&lt;&lt;cq.Pop(t));</div>
+<div class="line">            <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Pop[7]: &quot;</span>&lt;&lt;cq.Pop(t));</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        {   CQ cq(capacity);</div>
 <div class="line">            <span class="keywordflow">for</span>(UINT i=0;i&lt;8;i++)</div>
 <div class="line">            {</div>
-<div class="line">                <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Push[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;cq.Push(i, <span class="keyword">true</span>));</div>
+<div class="line">                <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Push[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;]: &quot;</span>&lt;&lt;cq.Push(i, <span class="keyword">true</span>));</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
@@ -876,7 +878,7 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">            cq.Push(10000); cq.Push(10000); cq.Push(10000); cq.Push(10000); cq.Push(10000);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;CQ Push: &quot;</span>&lt;&lt;10e9*steps*25/tm.<a name="a54"></a><a class="code" href="../../dc/d1b/classos_1_1_high_performance_counter.html#a3672dcd76e8682f792dbb7a3b5151f3a">TimeLapse</a>()&lt;&lt;<span class="stringliteral">&quot; qps&quot;</span>);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;CQ Push: &quot;</span>&lt;&lt;10e9*steps*25/tm.<a name="a54"></a><a class="code" href="../../dc/d1b/classos_1_1_high_performance_counter.html#a3672dcd76e8682f792dbb7a3b5151f3a">TimeLapse</a>()&lt;&lt;<span class="stringliteral">&quot; qps&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">        tm.<a class="code" href="../../dc/d1b/classos_1_1_high_performance_counter.html#af258295e2ba469eee6d5d47cc7a6a7fe">LoadCurrentCount</a>();</div>
 <div class="line">        <span class="keywordflow">for</span>(UINT i=0; i&lt;steps; i++)</div>
@@ -888,7 +890,7 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">            cq.Push(10000); cq.Push(10000); cq.Push(10000); cq.Push(10000); cq.Push(10000);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;CQ Pop: &quot;</span>&lt;&lt;10e9*steps*25/tm.<a class="code" href="../../dc/d1b/classos_1_1_high_performance_counter.html#a3672dcd76e8682f792dbb7a3b5151f3a">TimeLapse</a>()&lt;&lt;<span class="stringliteral">&quot; qps&quot;</span>);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;CQ Pop: &quot;</span>&lt;&lt;10e9*steps*25/tm.<a class="code" href="../../dc/d1b/classos_1_1_high_performance_counter.html#a3672dcd76e8682f792dbb7a3b5151f3a">TimeLapse</a>()&lt;&lt;<span class="stringliteral">&quot; qps&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">        tm.<a class="code" href="../../dc/d1b/classos_1_1_high_performance_counter.html#af258295e2ba469eee6d5d47cc7a6a7fe">LoadCurrentCount</a>();</div>
 <div class="line">        <span class="keywordflow">for</span>(UINT i=0; i&lt;steps; i++)</div>
@@ -900,11 +902,11 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">            cq.Push(10000); cq.Push(10000); cq.Push(10000); cq.Push(10000); cq.Push(10000);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <a class="code" href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;CQ Push: &quot;</span>&lt;&lt;10e9*steps*25/tm.<a class="code" href="../../dc/d1b/classos_1_1_high_performance_counter.html#a3672dcd76e8682f792dbb7a3b5151f3a">TimeLapse</a>()&lt;&lt;<span class="stringliteral">&quot; qps&quot;</span>);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a12e244ee457ec371bbadf2f027e1d440">_LOGC</a>(<span class="stringliteral">&quot;CQ Push: &quot;</span>&lt;&lt;10e9*steps*25/tm.<a class="code" href="../../dc/d1b/classos_1_1_high_performance_counter.html#a3672dcd76e8682f792dbb7a3b5151f3a">TimeLapse</a>()&lt;&lt;<span class="stringliteral">&quot; qps&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;DeJitter Reader/Writer&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;DeJitter Reader/Writer&quot;</span>);</div>
 <div class="line">    <span class="keyword">struct </span>DeJitter: <span class="keyword">public</span> <a name="_a55"></a><a class="code" href="../../d7/dd3/classext_1_1_de_jittered_queue.html">ext::DeJitteredQueue</a>&lt;ext::AsyncDataQueue&lt;UINT, true&gt;&gt;</div>
 <div class="line">    {</div>
 <div class="line">        UINT seq_base;</div>
@@ -958,25 +960,25 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">        <span class="keywordflow">if</span>(!queue.<a name="a60"></a><a class="code" href="../../de/d17/classext_1_1_async_data_queue_infinite.html#ae2e8416278f4d9e031cc0bb5d0f54db5">Pop</a>(val))<span class="keywordflow">break</span>;</div>
 <div class="line">        out += <a name="a61"></a><a class="code" href="../../df/dc5/group___typedefs__string__type__ops.html#gadafa8c4e9201fb0cdf4d6b4ef3cd5a42">rt::SS</a>(<span class="stringliteral">&quot;,&quot;</span>) + val;</div>
 <div class="line">    }</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Jittered: &quot;</span>&lt;&lt;out.<a name="a62"></a><a class="code" href="../../d7/dad/classrt_1_1_string___base.html#aa3d78140b53164a76214792adb50dcce">SubStr</a>(1));</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Jittered: &quot;</span>&lt;&lt;out.<a name="a62"></a><a class="code" href="../../d7/dad/classrt_1_1_string___base.html#a4ff0cc67c18d3157863d4ae57d79a0de">SubStr</a>(1));</div>
 <div class="line"> </div>
-<div class="line">    out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#adbeedcc8b9b784a4abe6c28ecf36f947">Empty</a>();</div>
+<div class="line">    out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#a5e548b848b28931873a4705c4811e335">Empty</a>();</div>
 <div class="line">    <span class="keywordflow">for</span>(;;)</div>
 <div class="line">    {</div>
 <div class="line">        UINT val;</div>
 <div class="line">        <span class="keywordflow">if</span>(!dejittered_queue.Pop(&amp;val))<span class="keywordflow">break</span>;</div>
 <div class="line">        out += <a class="code" href="../../df/dc5/group___typedefs__string__type__ops.html#gadafa8c4e9201fb0cdf4d6b4ef3cd5a42">rt::SS</a>(<span class="stringliteral">&quot;,&quot;</span>) + val;</div>
 <div class="line">    }</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;DeJittered: &quot;</span>&lt;&lt;out.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#aa3d78140b53164a76214792adb50dcce">SubStr</a>(1));</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;DeJittered: &quot;</span>&lt;&lt;out.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#a4ff0cc67c18d3157863d4ae57d79a0de">SubStr</a>(1));</div>
 <div class="line"> </div>
-<div class="line">    out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#adbeedcc8b9b784a4abe6c28ecf36f947">Empty</a>();</div>
+<div class="line">    out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#a5e548b848b28931873a4705c4811e335">Empty</a>();</div>
 <div class="line">    <span class="keywordflow">for</span>(;;)</div>
 <div class="line">    {</div>
 <div class="line">        UINT val;</div>
 <div class="line">        <span class="keywordflow">if</span>(!dejittered_queue_boundry.Pop(&amp;val))<span class="keywordflow">break</span>;</div>
 <div class="line">        out += <a class="code" href="../../df/dc5/group___typedefs__string__type__ops.html#gadafa8c4e9201fb0cdf4d6b4ef3cd5a42">rt::SS</a>(<span class="stringliteral">&quot;,&quot;</span>) + val;</div>
 <div class="line">    }</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;DeJittered at Boundary: &quot;</span>&lt;&lt;out.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#aa3d78140b53164a76214792adb50dcce">SubStr</a>(1));</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;DeJittered at Boundary: &quot;</span>&lt;&lt;out.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#a4ff0cc67c18d3157863d4ae57d79a0de">SubStr</a>(1));</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -994,7 +996,7 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    server.<a name="a68"></a><a class="code" href="../../d2/d6a/classext_1_1_rocks_d_b_serve.html#a0354f5092f49f0b94877b32b11f563f2">RocksMap</a>(&amp;db, <span class="stringliteral">&quot;/test&quot;</span>, <a name="a69"></a><a class="code" href="../../d2/d6a/classext_1_1_rocks_d_b_serve.html#a2666a118b6cb640531ee62300a31444aabc766b4dc0d8c59eab6833d0bdad9f7a">ext::RocksDBServe::KF_STRING</a>, <a name="a70"></a><a class="code" href="../../d5/dc0/classinet_1_1_tiny_httpd.html#a1e92f6eaf844ab3cdc57b7a15ac1443d">inet::TinyHttpd::MIME_STRING_TEXT</a>);</div>
 <div class="line">    server.<a name="a71"></a><a class="code" href="../../d5/dc0/classinet_1_1_tiny_httpd.html#a85cc96a85b2ef7207496e5c1682e91ae">Start</a>(1230);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;RocksServing at http://&quot;</span>&lt;&lt;<a name="_a72"></a><a class="code" href="../../d5/d45/structrt_1_1tos_1_1ip.html">rt::tos::ip</a>(server.<a name="a73"></a><a class="code" href="../../d5/dc0/classinet_1_1_tiny_httpd.html#ab8ffcabc37967a19d5f89080d2367026">GetBindedAddress</a>()));</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;RocksServing at http://&quot;</span>&lt;&lt;<a name="_a72"></a><a class="code" href="../../d5/d45/structrt_1_1tos_1_1ip.html">rt::tos::ip</a>(server.<a name="a73"></a><a class="code" href="../../d5/dc0/classinet_1_1_tiny_httpd.html#ab8ffcabc37967a19d5f89080d2367026">GetBindedAddress</a>()));</div>
 <div class="line"> </div>
 <div class="line">    <a name="a74"></a><a class="code" href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a>();</div>
 <div class="line">}</div>
@@ -1040,8 +1042,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;147573952589676410001249&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;368934881474191030431&quot;</span>);</div>
 <div class="line">    <a name="a75"></a><a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//-399</span></div>
 <div class="line">    <span class="comment">//-368934881474188859280</span></div>
@@ -1049,32 +1051,32 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;-147573952589676410001249&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;368934881474191030431&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//-399</span></div>
 <div class="line">    <span class="comment">//368934881474188859280</span></div>
 <div class="line">    u.FromString(<span class="stringliteral">&quot;147573952589676410001249&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;-368934881474191030431&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//399</span></div>
 <div class="line">    <span class="comment">//-368934881474188859280</span></div>
 <div class="line">    u.FromString(<span class="stringliteral">&quot;-147573952589676410001249&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;-368934881474191030431&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//2</span></div>
 <div class="line">    <span class="comment">//0</span></div>
 <div class="line">    u.FromString(<span class="stringliteral">&quot;2&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;1&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 20,000,000,000,000,000,102.45289519125589431657, b ~ 2^132 (3 blocks), a ~ 68, Bad</span></div>
 <div class="line">    <span class="comment">//20000000000000000101</span></div>
@@ -1082,8 +1084,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;7378697629483820646418446744073709551616&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;368934881474191030431&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 139,248,928,633,429,192,196,931.51549477934584516444, b ~ 2^175 (3 blocks), a ~ 98, also the special case from the book</span></div>
 <div class="line">    <span class="comment">//139248928633429192196931</span></div>
@@ -1091,8 +1093,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;51373786976452895191329483820646418446744073709551616&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;368934881443100023474191030431&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 5106324723863291849166480709076251125153902953460815077695792418627975612684228900723432001147710626581013673144599360242442907941844522541928464957468785962437.15063829409088928096, b ~ 2^640 (10 blocks), a ~ 109</span></div>
 <div class="line">    <span class="comment">//5106324723863291849166480709076251125153902953460815077695792418627975612684228900723432001147710626581013673144599360242442907941844522541928464957468785962437</span></div>
@@ -1100,8 +1102,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;4562440617622195218641171605700291324893228507248559930579192517347675167208677386505912811317371399778642309573594407310688704721375437998252661319722214188251994674360264950082874192246603776&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;893488147414641844674407389348814&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 272368421052631578947368421052631578947.3684210540650969529, b ~ 283, a ~ 155</span></div>
 <div class="line">    <span class="comment">//272368421052631578947368421052631578947</span></div>
@@ -1109,8 +1111,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;23000000000000000000000000000000000000000000000000000000000000000000000000000000000007&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;84444444444444444444444444444444444444444444444&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 2723684210526315789473684210526315789473.68421054065096952908, b ~ 286, a ~ 155</span></div>
 <div class="line">    <span class="comment">//2723684210526315789473684210526315789473</span></div>
@@ -1118,8 +1120,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;230000000000000000000000000000000000000000000000000000000000000000000000000000000000007&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;84444444444444444444444444444444444444444444444&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 431359146674410236714672241630210905942867727272214328073781831763641.00000000000007235718, b ~ 342, a ~ 114, diff = 128</span></div>
 <div class="line">    <span class="comment">//431359146674410236714672241630210905942867727272214328073781831763641</span></div>
@@ -1127,8 +1129,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;8958978968711216842229769122273777112486581988938598139599956403855167484720643781523488428731772010670&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;20769187434139310514121985305426069&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 107,839,786,668,602,559,178,668,060,407,552,726,485,716,931,818,053,582,018,445,457,940,910.25000000000001808929</span></div>
 <div class="line">    <span class="comment">//107839786668602559178668060407552726485716931818053582018445457940910</span></div>
@@ -1136,8 +1138,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;8958978968711216842229769122273777112486581988938598139599956403855167484720643781523488428731772010670&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;83076749736557242056487941221704276&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 18,446,744,073,709,551,616, b ~ 255, a ~ 191, diff = 126</span></div>
 <div class="line">    <span class="comment">//18446744073709551616</span></div>
@@ -1145,8 +1147,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;57896044618658097705508390768957273162799202909612615603626436559492530307072&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;3138550867693340381577612344682894744587803114800249044992&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 55365106547251187979686850736174759588956853304879202009049268523840669787352347279472705278372566769864758105890971829737223256827255515010930910433219532001736482266227175758322609122416905443347738284523965467765091350045486387150050073456354064882262455296626801147894627536448407815835060751939243782776076531010759921010725497696875933100911336561671801564967841007210383549221764785643872137873204518419782313700546399494990571937447419040965882886702010145067406415421926189224296322929556295751795766570945679521448780084877474272563958448580796034737590793477225980246701467244969486534908877489247387329176401471931142260175929557014377713846677185315299440589884013953328024192707.70250284824299847133, b ~ 8000, a ~ 191, diff = 126</span></div>
 <div class="line">    <span class="comment">//55365106547251187979686850736174759588956853304879202009049268523840669787352347279472705278372566769864758105890971829737223256827255515010930910433219532001736482266227175758322609122416905443347738284523965467765091350045486387150050073456354064882262455296626801147894627536448407815835060751939243782776076531010759921010725497696875933100911336561671801564967841007210383549221764785643872137873204518419782313700546399494990571937447419040965882886702010145067406415421926189224296322929556295751795766570945679521448780084877474272563958448580796034737590793477225980246701467244969486534908877489247387329176401471931142260175929557014377713846677185315299440589884013953328024192707</span></div>
@@ -1154,8 +1156,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;173766203193809456599982445949435627061939786100117250547173286503262376022458008465094333630120854338003194362163007597987225472483598640843335685441710193966274131338557192586399006789292714554767500194796127964596906605976605873665859580600161998556511368530960400907199253450604168622770350228527124626728538626805418833470107651091641919900725415994689920112219170907023561354484047025713734651608777544579846111001059482132180956689444108315785401642188044178788629853592228467331730519810763559577944882016286493908631503101121166109571682295769470379514531105239965209245314082665518579335511291525230373316486697786532335206274149240813489201828773854353041855598709390675430960381072270432383913542702130202430186637321862331068861776780210&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;3138550867693340381577612344682894744587803114800249044992&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 3.2, b ~ 8000, a ~ 7995, diff = 5</span></div>
 <div class="line">    <span class="comment">//3</span></div>
@@ -1163,8 +1165,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;173766203193809456599982445949435627061939786100117250547173286503262376022458008465094333630120854338003194362163007597987225472483598640843335685441710193966274131338557192586399006789292714554767500194796127964596906605976605873665859580600161998556511368530960400907199253450604168622770350228527124626728538626805418833470107651091641919900725415994689920112219170907023561354484047025713734651608777544579846111001059482132180956689444108315785401642188044178788629853592228467331730519810763559577944882016286493908631503101121166109571682295769470379514531105239965209245314082665518579335511291525230373316486697786532335206274149240813489201828773854353041855598709390675430960381072270432383913542702130202430186637321862331068861776780210&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;54301938498065455187494514359198633456856183156286640795991652032269492507018127645341979259412766980625998238175939874371007960151124575263542401700534435614460666043299122683249689621653973298364843810873789988936533314367689335520581118937550624548909802665925125283499766703313802694615734446414726445852668320876693385459408640966138099968976692498340600035068490908444862923276264695535542078627742982681201909687831088166306548965451283848682938013183763805871446829247571396041165787440863612368107775630089529346447344719100364409241150717427959493598290970387489127889160650832974556042347278601634491661402093058291354751960671637754215375571491829485325579874596684586072175119085084510119972982094415688259433324163081978459019305243815&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 4709942375182145298276880012525051054447110875461494985601937707265845059046761836066099659749564687995400227690784625484127220314885650601049171962546871819532400865329906336086287501276577875869159742455177622850367075352213374436810999675846625737034110518481222943136165508200442303984150364677574999807951564099730202549461188871715066128849418560157035626700634370036818627670525327187605296611386163665412428962888440068238148514729736805104869970284277633047705684016211464055463672577569977613374718718009797591363073461434258747928499499789744370745044312955321461751468565644447458396824469795963413366654036229718163319987098116236654639328887749426023679930278638109716214589426954958809726658171131125791029324257054.05568806636653863894</span></div>
 <div class="line">    <span class="comment">//4709942375182145298276880012525051054447110875461494985601937707265845059046761836066099659749564687995400227690784625484127220314885650601049171962546871819532400865329906336086287501276577875869159742455177622850367075352213374436810999675846625737034110518481222943136165508200442303984150364677574999807951564099730202549461188871715066128849418560157035626700634370036818627670525327187605296611386163665412428962888440068238148514729736805104869970284277633047705684016211464055463672577569977613374718718009797591363073461434258747928499499789744370745044312955321461751468565644447458396824469795963413366654036229718163319987098116236654639328887749426023679930278638109716214589426954958809726658171131125791029324257054</span></div>
@@ -1172,8 +1174,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;173766203193809456599982445949435627061939786100117250547173286503262376022458008465094333630120854338003194362163007597987225472483598640843335685441710193966274131338557192586399006789292714554767500194796127964596906605976605873665859580600161998556511368530960400907199253450604168622770350228527124626728538626805418833470107651091641919900725415994689920112219170907023561354484047025713734651608777544579846111001059482132180956689444108315785401642188044178788629853592228467331730519810763559577944882016286493908631503101121166109571682295769470379514531105239965209245314082665518579335511291525230373316486697786532335206274149240813489201828773854353041855598709390675430960381072270432383913542702130202430186637321862331068861776780210&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;36893488147419103232&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">//correct answer: 132457.39695849051846594959, b ~ 57, a ~ 40</span></div>
 <div class="line">    <span class="comment">//8577251</span></div>
@@ -1181,8 +1183,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;288230376151558121&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;2176023255552&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 132457.39695849051846594959</span></div>
 <div class="line">    <span class="comment">//8577251</span></div>
@@ -1190,8 +1192,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;1375319331471&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;160345&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 132457.39695849051846594959</span></div>
 <div class="line">    <span class="comment">//8577251</span></div>
@@ -1199,8 +1201,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;-1375319331471&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;-160345&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 132457.39695849051846594959</span></div>
 <div class="line">    <span class="comment">//-8577251</span></div>
@@ -1208,8 +1210,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;-1375319331471&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;160345&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 132457.39695849051846594959</span></div>
 <div class="line">    <span class="comment">//-8577251</span></div>
@@ -1217,8 +1219,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;1375319331471&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;-160345&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 241615780097735011624260892830535199701244446623002250532788947617386337880789906984991787400888860622598937632320807467890311064322341210098299858508685112525131442493933670084983824430594555155241913327877327588762968316837701997911326698870055505345657534832477364495315876674959632893349059807402729519467255426713356850917300233447409730890461155969390197935742690197534374171956059959222861815069269539616907649504242978336810825448625259065531771621988314782849215018120854283926965171375842009246513940822218644892866781103474446191199584940390039794426087211673181284963672832912743580690770778445057694993891268140743307979980296058885471870660045071015264321228933611809260162046252795435359954535559926531221754985263663166962643463.67579089634919575518</span></div>
 <div class="line">    <span class="comment">//241615780097735011624260892830535199701244446623002250532788947617386337880789906984991787400888860622598937632320807467890311064322341210098299858508685112525131442493933670084983824430594555155241913327877327588762968316837701997911326698870055505345657534832477364495315876674959632893349059807402729519467255426713356850917300233447409730890461155969390197935742690197534374171956059959222861815069269539616907649504242978336810825448625259065531771621988314782849215018120854283926965171375842009246513940822218644892866781103474446191199584940390039794426087211673181284963672832912743580690770778445057694993891268140743307979980296058885471870660045071015264321228933611809260162046252795435359954535559926531221754985263663166962643463</span></div>
@@ -1226,8 +1228,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;173766203193809456599982445949435627061939786100117250547173286503262376022458008465094333630120854338003194362163007597987225472483598640843335685441710193966274131338557192586399006789292714554767500194796127964596906605976605873665859580600161998556511368530960400907199253450604168622770350228527124626728538626805418833470107651091641919900725415994689920112219170907023561354484047025713734651608777544579846111001059482132180956689444108315785401642188044178788629853592228467331730519810763559577944882016286493908631503101121166109571682295769470379514531105239965209245314082665518579335511291525230373316486697786532335206274149240813489201828773854353041855598709390675430960381072270432383913542702130202430186637321862331068861776780210&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;719184&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 9.33702779817126076219</span></div>
 <div class="line">    <span class="comment">//9</span></div>
@@ -1235,8 +1237,8 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;6715041&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;719184&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 173766203193809456599982445949435627061939786100117250547173286503262376022458008465094333630120854338003194362163007597987225472483598640843335685441710193966274131338557192586399006789292714554767500194796127964596906605976605873665859580600161998556511368530960400907199253450604168622770350228527124626728538626805418833470107651091641919900725415994689920112219170907023561354484047025713734651608777544579846111001059482132180956689444108315785401642188044178788629853592228467331730519810763559577944882016286493908631503101121166109571682295769470379514531105239965209245314082665518579335511291525230373316486697786532335206274149240813489201828773854353041855598709390675430960381072270432383913542702130202430186637321862331068861776780210</span></div>
 <div class="line">    <span class="comment">//173766203193809456599982445949435627061939786100117250547173286503262376022458008465094333630120854338003194362163007597987225472483598640843335685441710193966274131338557192586399006789292714554767500194796127964596906605976605873665859580600161998556511368530960400907199253450604168622770350228527124626728538626805418833470107651091641919900725415994689920112219170907023561354484047025713734651608777544579846111001059482132180956689444108315785401642188044178788629853592228467331730519810763559577944882016286493908631503101121166109571682295769470379514531105239965209245314082665518579335511291525230373316486697786532335206274149240813489201828773854353041855598709390675430960381072270432383913542702130202430186637321862331068861776780210</span></div>
@@ -1244,50 +1246,50 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;173766203193809456599982445949435627061939786100117250547173286503262376022458008465094333630120854338003194362163007597987225472483598640843335685441710193966274131338557192586399006789292714554767500194796127964596906605976605873665859580600161998556511368530960400907199253450604168622770350228527124626728538626805418833470107651091641919900725415994689920112219170907023561354484047025713734651608777544579846111001059482132180956689444108315785401642188044178788629853592228467331730519810763559577944882016286493908631503101121166109571682295769470379514531105239965209245314082665518579335511291525230373316486697786532335206274149240813489201828773854353041855598709390675430960381072270432383913542702130202430186637321862331068861776780210&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;1&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//early out test case</span></div>
 <div class="line">    u.FromString(<span class="stringliteral">&quot;73465160877754457984611100105&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;2714554767500194796127964596906605976605873665859580600161998556511368530960400907199253450604168622770350228527124626728538626805418833470107651091641919900725415994689920112219170907023561354484047025713&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//early out test case</span></div>
 <div class="line">    u.FromString(<span class="stringliteral">&quot;-73465160877754457984611100105&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;2714554767500194796127964596906605976605873665859580600161998556511368530960400907199253450604168622770350228527124626728538626805418833470107651091641919900725415994689920112219170907023561354484047025713&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">//early out test case</span></div>
 <div class="line">    u.FromString(<span class="stringliteral">&quot;73465160877754457984611100105&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;-2714554767500194796127964596906605976605873665859580600161998556511368530960400907199253450604168622770350228527124626728538626805418833470107651091641919900725415994689920112219170907023561354484047025713&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//early out test case</span></div>
 <div class="line">    u.FromString(<span class="stringliteral">&quot;-73465160877754457984611100105&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;-2714554767500194796127964596906605976605873665859580600161998556511368530960400907199253450604168622770350228527124626728538626805418833470107651091641919900725415994689920112219170907023561354484047025713&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//early out test case</span></div>
 <div class="line">    u.FromString(<span class="stringliteral">&quot;73465160877754457984611100105&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;0&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">//early out test case</span></div>
 <div class="line">    u.FromString(<span class="stringliteral">&quot;0&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;73465160877754457984611100105&quot;</span>);</div>
 <div class="line">    <a class="code" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a>(u, v, &amp;remainder, q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(q);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">//correct answer: 8,576,756,358.81833278971357075972</span></div>
 <div class="line">    <span class="comment">//8576756358</span></div>
@@ -1296,229 +1298,229 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="line">    u.FromString(<span class="stringliteral">&quot;1375319341434165787331471&quot;</span>);</div>
 <div class="line">    v.FromString(<span class="stringliteral">&quot;160354250942445&quot;</span>);</div>
 <div class="line">    k.Div(u,v,&amp;remainder);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(k);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(k);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(remainder);</div>
 <div class="line"> </div>
 <div class="line">    </div>
 <div class="line">    {</div>
-<div class="line">        <a name="a76"></a><a class="code" href="../../d0/dc2/group__precision__num.html#ga9b944d819d538df9e41feedc7fd42e11">Float256</a> a(<span class="stringliteral">&quot;1.23456789987654321123456789987654321123456789987654321&quot;</span>);</div>
+<div class="line">        <a name="a76"></a><a class="code" href="../../d4/d18/group___typedefs___big_num.html#ga9b944d819d538df9e41feedc7fd42e11">Float256</a> a(<span class="stringliteral">&quot;1.23456789987654321123456789987654321123456789987654321&quot;</span>);</div>
 <div class="line">        a.Pow(100U);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    {</div>
-<div class="line">        <a name="a77"></a><a class="code" href="../../d0/dc2/group__precision__num.html#ga7c380faf6efd7455921f2d2b484d437c">Float2048</a> a(<span class="stringliteral">&quot;1.23456789987654321123456789987654321123456789987654321&quot;</span>);</div>
+<div class="line">        <a name="a77"></a><a class="code" href="../../d4/d18/group___typedefs___big_num.html#ga7c380faf6efd7455921f2d2b484d437c">Float2048</a> a(<span class="stringliteral">&quot;1.23456789987654321123456789987654321123456789987654321&quot;</span>);</div>
 <div class="line">        a.Pow(100U);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    {</div>
-<div class="line">        <a name="a78"></a><a class="code" href="../../d0/dc2/group__precision__num.html#ga741b8c32e5151f0aaf4871a64ae27468">Float1024</a> a(<span class="stringliteral">&quot;123456789987654321123456789987654321123456789987654321&quot;</span>);</div>
-<div class="line">        <a class="code" href="../../d0/dc2/group__precision__num.html#ga741b8c32e5151f0aaf4871a64ae27468">Float1024</a> b(a);</div>
+<div class="line">        <a name="a78"></a><a class="code" href="../../d4/d18/group___typedefs___big_num.html#ga741b8c32e5151f0aaf4871a64ae27468">Float1024</a> a(<span class="stringliteral">&quot;123456789987654321123456789987654321123456789987654321&quot;</span>);</div>
+<div class="line">        <a class="code" href="../../d4/d18/group___typedefs___big_num.html#ga741b8c32e5151f0aaf4871a64ae27468">Float1024</a> b(a);</div>
 <div class="line">        b.Add(a);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Float2048     = &quot;</span> &lt;&lt; b);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Float2048     = &quot;</span> &lt;&lt; b);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nString&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nString&quot;</span>);</div>
 <div class="line">    BigNumMutable a;</div>
 <div class="line">    a = (ULONGLONG)0x1234567890abcdefULL;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line">    </div>
 <div class="line">    a = (LONGLONG)-0x567890abcdefLL;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line"> </div>
 <div class="line">    a.SetZero();</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line"> </div>
 <div class="line">    a.FromString(<span class="stringliteral">&quot;10000000000000000000000000&quot;</span>);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line"> </div>
 <div class="line">    a.FromString(<span class="stringliteral">&quot;0x8111222333444555666777888999000aaabbbcccdddeeefff&quot;</span>);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> out;</div>
-<div class="line">    {   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nGet Mantissa&quot;</span>);</div>
+<div class="line">    {   <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nGet Mantissa&quot;</span>);</div>
 <div class="line">        a &lt;&lt;= 1;</div>
 <div class="line"> </div>
-<div class="line">        out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#adbeedcc8b9b784a4abe6c28ecf36f947">Empty</a>();</div>
-<div class="line">        a.<a name="a79"></a><a class="code" href="../../d7/dad/classrt_1_1_string___base.html#ae0bddd53784fa0384e193025481060b7">ToString</a>(out, 16);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(out);</div>
+<div class="line">        out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#a5e548b848b28931873a4705c4811e335">Empty</a>();</div>
+<div class="line">        a.<a name="a79"></a><a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af10e0382db88f05262f6e68c8cab2cdb">ToString</a>(out, 16);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(out);</div>
 <div class="line">        BigNumMutable b;</div>
 <div class="line">        <span class="keywordtype">int</span> exp;</div>
 <div class="line"> </div>
 <div class="line">        UINT m = <a name="a80"></a><a class="code" href="../../d5/d47/namespaceext_1_1__details.html#a972c3ef38a2b35018778de4d908e2d2d">ext::_details::BN_Mantissa32</a>(a, &amp;exp);</div>
-<div class="line">        b = m;  b &lt;&lt;= exp;  out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#adbeedcc8b9b784a4abe6c28ecf36f947">Empty</a>(); b.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#ae0bddd53784fa0384e193025481060b7">ToString</a>(out, 16);   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a name="_a81"></a><a class="code" href="../../d4/d70/structrt_1_1tos_1_1_hex_num.html">rt::tos::HexNum&lt;&gt;</a>(m)&lt;&lt;<span class="stringliteral">&quot;*2^&quot;</span>&lt;&lt;exp&lt;&lt;<span class="stringliteral">&quot; =\n&quot;</span>&lt;&lt;out);</div>
+<div class="line">        b = m;  b &lt;&lt;= exp;  out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#a5e548b848b28931873a4705c4811e335">Empty</a>(); b.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af10e0382db88f05262f6e68c8cab2cdb">ToString</a>(out, 16);   <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a name="_a81"></a><a class="code" href="../../d4/d70/structrt_1_1tos_1_1_hex_num.html">rt::tos::HexNum&lt;&gt;</a>(m)&lt;&lt;<span class="stringliteral">&quot;*2^&quot;</span>&lt;&lt;exp&lt;&lt;<span class="stringliteral">&quot; =\n&quot;</span>&lt;&lt;out);</div>
 <div class="line"> </div>
 <div class="line">        ULONGLONG mm = <a name="a82"></a><a class="code" href="../../d5/d47/namespaceext_1_1__details.html#acf37f2a86b2b566bf359254edf381e84">ext::_details::BN_Mantissa64</a>(a, &amp;exp);</div>
-<div class="line">        b = mm; b &lt;&lt;= exp;  out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#adbeedcc8b9b784a4abe6c28ecf36f947">Empty</a>(); b.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#ae0bddd53784fa0384e193025481060b7">ToString</a>(out, 16);   <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a class="code" href="../../d4/d70/structrt_1_1tos_1_1_hex_num.html">rt::tos::HexNum&lt;&gt;</a>(mm)&lt;&lt;<span class="stringliteral">&quot;*2^&quot;</span>&lt;&lt;exp&lt;&lt;<span class="stringliteral">&quot; =\n&quot;</span>&lt;&lt;out);</div>
+<div class="line">        b = mm; b &lt;&lt;= exp;  out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#a5e548b848b28931873a4705c4811e335">Empty</a>(); b.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af10e0382db88f05262f6e68c8cab2cdb">ToString</a>(out, 16);   <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<a class="code" href="../../d4/d70/structrt_1_1tos_1_1_hex_num.html">rt::tos::HexNum&lt;&gt;</a>(mm)&lt;&lt;<span class="stringliteral">&quot;*2^&quot;</span>&lt;&lt;exp&lt;&lt;<span class="stringliteral">&quot; =\n&quot;</span>&lt;&lt;out);</div>
 <div class="line">        a &gt;&gt;= 1;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#adbeedcc8b9b784a4abe6c28ecf36f947">Empty</a>();</div>
-<div class="line">    a.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#ae0bddd53784fa0384e193025481060b7">ToString</a>(out, 10);</div>
+<div class="line">    out.<a class="code" href="../../d2/d96/classrt_1_1_string.html#a5e548b848b28931873a4705c4811e335">Empty</a>();</div>
+<div class="line">    a.<a class="code" href="../../d7/dad/classrt_1_1_string___base.html#af10e0382db88f05262f6e68c8cab2cdb">ToString</a>(out, 10);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nSimple Math&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nSimple Math&quot;</span>);</div>
 <div class="line">    BigNumMutable b,c,d;</div>
 <div class="line"> </div>
 <div class="line">    b.FromString(out);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line"> </div>
 <div class="line">    b.Add(a, 1);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">    a.Sub(b, 1);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a&lt;&lt;<span class="stringliteral">&quot; Check:&quot;</span>&lt;&lt;(a == b));</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a&lt;&lt;<span class="stringliteral">&quot; Check:&quot;</span>&lt;&lt;(a == b));</div>
 <div class="line"> </div>
 <div class="line">    b.Add(a,a);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">    c.Sub(b, a);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c&lt;&lt;<span class="stringliteral">&quot; Check:&quot;</span>&lt;&lt;(a == c));</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c&lt;&lt;<span class="stringliteral">&quot; Check:&quot;</span>&lt;&lt;(a == c));</div>
 <div class="line">    a *= 2;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line"> </div>
 <div class="line">    b.Mul(a, 2);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">    c.Sub(b, a);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c&lt;&lt;<span class="stringliteral">&quot; Check:&quot;</span>&lt;&lt;(a == c));</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c&lt;&lt;<span class="stringliteral">&quot; Check:&quot;</span>&lt;&lt;(a == c));</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nBit Ops&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nBit Ops&quot;</span>);</div>
 <div class="line">    c &gt;&gt;= 40;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
 <div class="line"> </div>
 <div class="line">    c &lt;&lt;= 40;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
 <div class="line"> </div>
 <div class="line">    c &gt;&gt;= 103;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
 <div class="line"> </div>
 <div class="line">    c &lt;&lt;= 103;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
 <div class="line"> </div>
 <div class="line">    BigNumMutable e;</div>
 <div class="line">    e.CopyLowBits(79, a);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(e&lt;&lt;<span class="stringliteral">&quot; &lt;- &quot;</span>&lt;&lt;a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(e&lt;&lt;<span class="stringliteral">&quot; &lt;- &quot;</span>&lt;&lt;a);</div>
 <div class="line">    e.SetToPowerOfTwo(79);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(e);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(e);</div>
 <div class="line">    e.CopyLowBits(64, a);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(e&lt;&lt;<span class="stringliteral">&quot; &lt;- &quot;</span>&lt;&lt;a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(e&lt;&lt;<span class="stringliteral">&quot; &lt;- &quot;</span>&lt;&lt;a);</div>
 <div class="line">    e.SetToPowerOfTwo(64);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(e);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(e);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nFloat&quot;</span>);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nFloat&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">    c.Mul(b, 0.25f);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
 <div class="line">    c.Mul(b, 0.25);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c);</div>
 <div class="line">    a.Mul(c, 4);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nInplace&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nInplace&quot;</span>);</div>
 <div class="line">    b.Mul(a, 2);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">    a += a;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a&lt;&lt;<span class="stringliteral">&quot; Check:&quot;</span>&lt;&lt;(a == b));</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a&lt;&lt;<span class="stringliteral">&quot; Check:&quot;</span>&lt;&lt;(a == b));</div>
 <div class="line">    a *= 2;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line">    a *= -0.5;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line"> </div>
 <div class="line">    a *= -1;</div>
 <div class="line">    b *= 0.5;</div>
 <div class="line">    b -= a;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">    b *= 0.5;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">    b -= a;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line"> </div>
 <div class="line">    UINT reminder;</div>
 <div class="line">    b.Div(a, 16, &amp;reminder);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b&lt;&lt;<span class="stringliteral">&quot; R=&quot;</span>&lt;&lt;<a name="_a83"></a><a class="code" href="../../d0/dda/structrt_1_1tos_1_1_base16_on_stack.html">rt::tos::Base16OnStack&lt;&gt;</a>(reminder));</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b&lt;&lt;<span class="stringliteral">&quot; R=&quot;</span>&lt;&lt;<a name="_a83"></a><a class="code" href="../../d0/dda/structrt_1_1tos_1_1_base16_on_stack.html">rt::tos::Base16OnStack&lt;&gt;</a>(reminder));</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nMultiplication&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nMultiplication&quot;</span>);</div>
 <div class="line">    b.Mul(a, (ULONGLONG)0x123456789abcdULL);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">    d.Mul(a, BigNumMutable((ULONGLONG)0x123456789abcdULL));</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(d&lt;&lt;<span class="stringliteral">&quot; Check:&quot;</span>&lt;&lt;(b == d));</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(d&lt;&lt;<span class="stringliteral">&quot; Check:&quot;</span>&lt;&lt;(b == d));</div>
 <div class="line"> </div>
 <div class="line">    b.Mul(a, a);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="charliteral">&#39;(&#39;</span>&lt;&lt;a&lt;&lt;<span class="stringliteral">&quot;)^2\n = &quot;</span>&lt;&lt;b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="charliteral">&#39;(&#39;</span>&lt;&lt;a&lt;&lt;<span class="stringliteral">&quot;)^2\n = &quot;</span>&lt;&lt;b);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nDivision&quot;</span>);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nDivision&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(a);</div>
 <div class="line">    c.DivRough(b, a);</div>
 <div class="line">    d.Sub(a,c);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c&lt;&lt;<span class="stringliteral">&quot; ERR/Rough=&quot;</span>&lt;&lt;d);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c&lt;&lt;<span class="stringliteral">&quot; ERR/Rough=&quot;</span>&lt;&lt;d);</div>
 <div class="line">    c.DivFast(b, a);</div>
 <div class="line">    d.Sub(a,c);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c&lt;&lt;<span class="stringliteral">&quot; ERR/Fast =&quot;</span>&lt;&lt;d);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(c&lt;&lt;<span class="stringliteral">&quot; ERR/Fast =&quot;</span>&lt;&lt;d);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nTo floating point&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;\nTo floating point&quot;</span>);</div>
 <div class="line">    b = 3.14156789e30f;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToFloat());</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToFloat());</div>
 <div class="line"> </div>
 <div class="line">    b = -3.14156789e20f;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToFloat());</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToFloat());</div>
 <div class="line"> </div>
 <div class="line">    b = 3.14156789e10f;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToFloat());</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToFloat());</div>
 <div class="line"> </div>
 <div class="line">    b = 3.14156789e70;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToDouble());</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToDouble());</div>
 <div class="line"> </div>
 <div class="line">    b = -3.14156789e40;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToDouble());</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToDouble());</div>
 <div class="line"> </div>
 <div class="line">    b = 3.14156789e25;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToDouble());</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToDouble());</div>
 <div class="line"> </div>
 <div class="line">    b = -3.14156789e10;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToDouble());</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b.ToDouble());</div>
 <div class="line"> </div>
 <div class="line">    b = (ULONGLONG)0x0fedcba987654321ULL;</div>
 <div class="line">    b &lt;&lt;= 4;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">    b &lt;&lt;= 1;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">    b &gt;&gt;= 1;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">    b &lt;&lt;= 234;</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(b);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassext_1_1__details_1_1_rocks_paged_base_html_a3cc24bfb91db8489d71fed92a6883350"><div class="ttname"><a href="../../d9/dba/classext_1_1__details_1_1_rocks_paged_base.html#a3cc24bfb91db8489d71fed92a6883350">ext::_details::RocksPagedBase::VALUE_PREFIX_SIZE</a></div><div class="ttdeci">static const UINT VALUE_PREFIX_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00538">rocksdb.h:538</a></div></div>
-<div class="ttc" id="aclassext_1_1__details_1_1_rocks_paged_base_t_html"><div class="ttname"><a href="../../db/d4e/classext_1_1__details_1_1_rocks_paged_base_t.html">ext::_details::RocksPagedBaseT</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00735">rocksdb.h:736</a></div></div>
-<div class="ttc" id="aclassext_1_1__details_1_1_rocks_paged_base_t_html_a3735885451584ae4be32ab8b56d65636"><div class="ttname"><a href="../../db/d4e/classext_1_1__details_1_1_rocks_paged_base_t.html#a3735885451584ae4be32ab8b56d65636">ext::_details::RocksPagedBaseT::GetPaged</a></div><div class="ttdeci">ValueType * GetPaged(const T_KEYVAL &amp;b, T_PAGE page_no, std::string &amp;ws) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00747">rocksdb.h:747</a></div></div>
-<div class="ttc" id="aclassext_1_1__details_1_1_rocks_paged_base_t_html_a803c239edef45a3d5865d667a2739143"><div class="ttname"><a href="../../db/d4e/classext_1_1__details_1_1_rocks_paged_base_t.html#a803c239edef45a3d5865d667a2739143">ext::_details::RocksPagedBaseT::SetPaged</a></div><div class="ttdeci">bool SetPaged(const T_KEYVAL &amp;b, const T_METADATA &amp;metadata, LPCVOID data, UINT size)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00752">rocksdb.h:752</a></div></div>
-<div class="ttc" id="aclassext_1_1__details_1_1_rocks_paged_base_t_html_ac509f26b66d2e4e4ae7b529a94926d6b"><div class="ttname"><a href="../../db/d4e/classext_1_1__details_1_1_rocks_paged_base_t.html#ac509f26b66d2e4e4ae7b529a94926d6b">ext::_details::RocksPagedBaseT::LoadAllPages</a></div><div class="ttdeci">bool LoadAllPages(const T_KEYVAL &amp;b, const ValueType *first_page, LPVOID data_out) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00748">rocksdb.h:748</a></div></div>
+<div class="ttc" id="aclassext_1_1__details_1_1_rocks_paged_base_html_a3cc24bfb91db8489d71fed92a6883350"><div class="ttname"><a href="../../d9/dba/classext_1_1__details_1_1_rocks_paged_base.html#a3cc24bfb91db8489d71fed92a6883350">ext::_details::RocksPagedBase::VALUE_PREFIX_SIZE</a></div><div class="ttdeci">static const UINT VALUE_PREFIX_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00556">rocksdb.h:556</a></div></div>
+<div class="ttc" id="aclassext_1_1__details_1_1_rocks_paged_base_t_html"><div class="ttname"><a href="../../db/d4e/classext_1_1__details_1_1_rocks_paged_base_t.html">ext::_details::RocksPagedBaseT</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00753">rocksdb.h:754</a></div></div>
+<div class="ttc" id="aclassext_1_1__details_1_1_rocks_paged_base_t_html_a3735885451584ae4be32ab8b56d65636"><div class="ttname"><a href="../../db/d4e/classext_1_1__details_1_1_rocks_paged_base_t.html#a3735885451584ae4be32ab8b56d65636">ext::_details::RocksPagedBaseT::GetPaged</a></div><div class="ttdeci">ValueType * GetPaged(const T_KEYVAL &amp;b, T_PAGE page_no, std::string &amp;ws) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00765">rocksdb.h:765</a></div></div>
+<div class="ttc" id="aclassext_1_1__details_1_1_rocks_paged_base_t_html_a803c239edef45a3d5865d667a2739143"><div class="ttname"><a href="../../db/d4e/classext_1_1__details_1_1_rocks_paged_base_t.html#a803c239edef45a3d5865d667a2739143">ext::_details::RocksPagedBaseT::SetPaged</a></div><div class="ttdeci">bool SetPaged(const T_KEYVAL &amp;b, const T_METADATA &amp;metadata, LPCVOID data, UINT size)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00770">rocksdb.h:770</a></div></div>
+<div class="ttc" id="aclassext_1_1__details_1_1_rocks_paged_base_t_html_ac509f26b66d2e4e4ae7b529a94926d6b"><div class="ttname"><a href="../../db/d4e/classext_1_1__details_1_1_rocks_paged_base_t.html#ac509f26b66d2e4e4ae7b529a94926d6b">ext::_details::RocksPagedBaseT::LoadAllPages</a></div><div class="ttdeci">bool LoadAllPages(const T_KEYVAL &amp;b, const ValueType *first_page, LPVOID data_out) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00766">rocksdb.h:766</a></div></div>
 <div class="ttc" id="aclassext_1_1_async_data_queue_html"><div class="ttname"><a href="../../d5/d88/classext_1_1_async_data_queue.html">ext::AsyncDataQueue</a></div><div class="ttdoc">the reserved size in the ctor will be round to multiple of BLOCK_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6e/async__queue_8h_source.html#l00244">async_queue.h:245</a></div></div>
-<div class="ttc" id="aclassext_1_1_async_data_queue_html_a1643eaa980e0602c5a9ff1c649f0c7c8"><div class="ttname"><a href="../../d5/d88/classext_1_1_async_data_queue.html#a1643eaa980e0602c5a9ff1c649f0c7c8">ext::AsyncDataQueue::Push</a></div><div class="ttdeci">INLFUNC bool Push(const T &amp;t, bool force_grow=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6e/async__queue_8h_source.html#l00254">async_queue.h:254</a></div></div>
+<div class="ttc" id="aclassext_1_1_async_data_queue_html_a1643eaa980e0602c5a9ff1c649f0c7c8"><div class="ttname"><a href="../../d5/d88/classext_1_1_async_data_queue.html#a1643eaa980e0602c5a9ff1c649f0c7c8">ext::AsyncDataQueue::Push</a></div><div class="ttdeci">INLFUNC bool Push(const T &amp;t, bool force_grow=false)</div><div class="ttdoc">Push.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6e/async__queue_8h_source.html#l00260">async_queue.h:260</a></div></div>
 <div class="ttc" id="aclassext_1_1_async_data_queue_infinite_html"><div class="ttname"><a href="../../de/d17/classext_1_1_async_data_queue_infinite.html">ext::AsyncDataQueueInfinite</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6e/async__queue_8h_source.html#l00219">async_queue.h:220</a></div></div>
 <div class="ttc" id="aclassext_1_1_async_data_queue_infinite_html_ae2e8416278f4d9e031cc0bb5d0f54db5"><div class="ttname"><a href="../../de/d17/classext_1_1_async_data_queue_infinite.html#ae2e8416278f4d9e031cc0bb5d0f54db5">ext::AsyncDataQueueInfinite::Pop</a></div><div class="ttdeci">bool Pop(T &amp;t, UINT timeout=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6e/async__queue_8h_source.html#l00232">async_queue.h:232</a></div></div>
-<div class="ttc" id="aclassext_1_1_de_jittered_queue_html"><div class="ttname"><a href="../../d7/dd3/classext_1_1_de_jittered_queue.html">ext::DeJitteredQueue</a></div><div class="ttdoc">only for single reader</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6e/async__queue_8h_source.html#l00269">async_queue.h:270</a></div></div>
-<div class="ttc" id="aclassext_1_1_de_jittered_queue_html_ae94e200463008841eed7240c2455c878"><div class="ttname"><a href="../../d7/dd3/classext_1_1_de_jittered_queue.html#ae94e200463008841eed7240c2455c878">ext::DeJitteredQueue::Push</a></div><div class="ttdeci">auto Push(const TYPE &amp;t, ARGS... args)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6e/async__queue_8h_source.html#l00305">async_queue.h:305</a></div></div>
-<div class="ttc" id="aclassext_1_1_rocks_cursor_html_a95fd474a5216750bceee9e98a6aa8fda"><div class="ttname"><a href="../../dc/dd5/classext_1_1_rocks_cursor.html#a95fd474a5216750bceee9e98a6aa8fda">ext::RocksCursor::Key</a></div><div class="ttdeci">INLFUNC const T &amp; Key() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00157">rocksdb.h:157</a></div></div>
-<div class="ttc" id="aclassext_1_1_rocks_d_b_html"><div class="ttname"><a href="../../dd/d4c/classext_1_1_rocks_d_b.html">ext::RocksDB</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00172">rocksdb.h:173</a></div></div>
-<div class="ttc" id="aclassext_1_1_rocks_d_b_html_a0eda856c34430029ca377c24a94b391f"><div class="ttname"><a href="../../dd/d4c/classext_1_1_rocks_d_b.html#a0eda856c34430029ca377c24a94b391f">ext::RocksDB::GetAs</a></div><div class="ttdeci">t_NUM GetAs(const SliceValue &amp;k, t_NUM default_val=0, const ReadOptions *opt=ReadOptionsDefault) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00217">rocksdb.h:217</a></div></div>
-<div class="ttc" id="aclassext_1_1_rocks_d_b_html_a2ec3cbd3358f4d4efd60f93a6a6eed20"><div class="ttname"><a href="../../dd/d4c/classext_1_1_rocks_d_b.html#a2ec3cbd3358f4d4efd60f93a6a6eed20">ext::RocksDB::First</a></div><div class="ttdeci">RocksCursor First(const ReadOptions *opt=ReadOptionsDefault) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00251">rocksdb.h:251</a></div></div>
-<div class="ttc" id="aclassext_1_1_rocks_d_b_html_aafcd7eb3c5acd789eb55ffbe49776167"><div class="ttname"><a href="../../dd/d4c/classext_1_1_rocks_d_b.html#aafcd7eb3c5acd789eb55ffbe49776167">ext::RocksDB::Last</a></div><div class="ttdeci">RocksCursor Last(const ReadOptions *opt=ReadOptionsDefault) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00257">rocksdb.h:257</a></div></div>
-<div class="ttc" id="aclassext_1_1_rocks_d_b_html_abbc5e4e17825146df30b2be74eda22b1"><div class="ttname"><a href="../../dd/d4c/classext_1_1_rocks_d_b.html#abbc5e4e17825146df30b2be74eda22b1">ext::RocksDB::Set</a></div><div class="ttdeci">bool Set(const SliceValue &amp;k, const SliceValue &amp;val, const WriteOptions *opt=WriteOptionsDefault)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00202">rocksdb.h:202</a></div></div>
-<div class="ttc" id="aclassext_1_1_rocks_d_b_open_option_html"><div class="ttname"><a href="../../d0/d4e/classext_1_1_rocks_d_b_open_option.html">ext::RocksDBOpenOption</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00369">rocksdb.h:370</a></div></div>
+<div class="ttc" id="aclassext_1_1_de_jittered_queue_html"><div class="ttname"><a href="../../d7/dd3/classext_1_1_de_jittered_queue.html">ext::DeJitteredQueue</a></div><div class="ttdoc">only for single reader</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6e/async__queue_8h_source.html#l00275">async_queue.h:276</a></div></div>
+<div class="ttc" id="aclassext_1_1_de_jittered_queue_html_ae94e200463008841eed7240c2455c878"><div class="ttname"><a href="../../d7/dd3/classext_1_1_de_jittered_queue.html#ae94e200463008841eed7240c2455c878">ext::DeJitteredQueue::Push</a></div><div class="ttdeci">auto Push(const TYPE &amp;t, ARGS... args)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6e/async__queue_8h_source.html#l00311">async_queue.h:311</a></div></div>
+<div class="ttc" id="aclassext_1_1_rocks_cursor_html_a95fd474a5216750bceee9e98a6aa8fda"><div class="ttname"><a href="../../dc/dd5/classext_1_1_rocks_cursor.html#a95fd474a5216750bceee9e98a6aa8fda">ext::RocksCursor::Key</a></div><div class="ttdeci">INLFUNC const T &amp; Key() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00164">rocksdb.h:164</a></div></div>
+<div class="ttc" id="aclassext_1_1_rocks_d_b_html"><div class="ttname"><a href="../../dd/d4c/classext_1_1_rocks_d_b.html">ext::RocksDB</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00179">rocksdb.h:180</a></div></div>
+<div class="ttc" id="aclassext_1_1_rocks_d_b_html_a0eda856c34430029ca377c24a94b391f"><div class="ttname"><a href="../../dd/d4c/classext_1_1_rocks_d_b.html#a0eda856c34430029ca377c24a94b391f">ext::RocksDB::GetAs</a></div><div class="ttdeci">t_NUM GetAs(const SliceValue &amp;k, t_NUM default_val=0, const ReadOptions *opt=ReadOptionsDefault) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00224">rocksdb.h:224</a></div></div>
+<div class="ttc" id="aclassext_1_1_rocks_d_b_html_a2ec3cbd3358f4d4efd60f93a6a6eed20"><div class="ttname"><a href="../../dd/d4c/classext_1_1_rocks_d_b.html#a2ec3cbd3358f4d4efd60f93a6a6eed20">ext::RocksDB::First</a></div><div class="ttdeci">RocksCursor First(const ReadOptions *opt=ReadOptionsDefault) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00258">rocksdb.h:258</a></div></div>
+<div class="ttc" id="aclassext_1_1_rocks_d_b_html_aafcd7eb3c5acd789eb55ffbe49776167"><div class="ttname"><a href="../../dd/d4c/classext_1_1_rocks_d_b.html#aafcd7eb3c5acd789eb55ffbe49776167">ext::RocksDB::Last</a></div><div class="ttdeci">RocksCursor Last(const ReadOptions *opt=ReadOptionsDefault) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00264">rocksdb.h:264</a></div></div>
+<div class="ttc" id="aclassext_1_1_rocks_d_b_html_abbc5e4e17825146df30b2be74eda22b1"><div class="ttname"><a href="../../dd/d4c/classext_1_1_rocks_d_b.html#abbc5e4e17825146df30b2be74eda22b1">ext::RocksDB::Set</a></div><div class="ttdeci">bool Set(const SliceValue &amp;k, const SliceValue &amp;val, const WriteOptions *opt=WriteOptionsDefault)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00209">rocksdb.h:209</a></div></div>
+<div class="ttc" id="aclassext_1_1_rocks_d_b_open_option_html"><div class="ttname"><a href="../../d0/d4e/classext_1_1_rocks_d_b_open_option.html">ext::RocksDBOpenOption</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00379">rocksdb.h:380</a></div></div>
 <div class="ttc" id="aclassext_1_1_rocks_d_b_serve_html"><div class="ttname"><a href="../../d2/d6a/classext_1_1_rocks_d_b_serve.html">ext::RocksDBServe</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/rocksdb__serving_8h_source.html#l00054">rocksdb_serving.h:55</a></div></div>
 <div class="ttc" id="aclassext_1_1_rocks_d_b_serve_html_a0354f5092f49f0b94877b32b11f563f2"><div class="ttname"><a href="../../d2/d6a/classext_1_1_rocks_d_b_serve.html#a0354f5092f49f0b94877b32b11f563f2">ext::RocksDBServe::RocksMap</a></div><div class="ttdeci">void RocksMap(RocksDB *pDB, const rt::String_Ref &amp;L1_path, KeyFormat key_format=KF_STRING, LPCSTR mime=inet::TinyHttpd::MIME_STRING_JSON)</div></div>
 <div class="ttc" id="aclassext_1_1_rocks_d_b_serve_html_a2666a118b6cb640531ee62300a31444aabc766b4dc0d8c59eab6833d0bdad9f7a"><div class="ttname"><a href="../../d2/d6a/classext_1_1_rocks_d_b_serve.html#a2666a118b6cb640531ee62300a31444aabc766b4dc0d8c59eab6833d0bdad9f7a">ext::RocksDBServe::KF_STRING</a></div><div class="ttdeci">@ KF_STRING</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/rocksdb__serving_8h_source.html#l00059">rocksdb_serving.h:59</a></div></div>
-<div class="ttc" id="aclassext_1_1_rocks_d_b_standalone_html"><div class="ttname"><a href="../../d5/df4/classext_1_1_rocks_d_b_standalone.html">ext::RocksDBStandalone</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00480">rocksdb.h:481</a></div></div>
+<div class="ttc" id="aclassext_1_1_rocks_d_b_standalone_html"><div class="ttname"><a href="../../d5/df4/classext_1_1_rocks_d_b_standalone.html">ext::RocksDBStandalone</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00498">rocksdb.h:499</a></div></div>
 <div class="ttc" id="aclassext_1_1_rocks_d_b_standalone_html_a4ae522866114ea4c7b268316eb866465"><div class="ttname"><a href="../../d5/df4/classext_1_1_rocks_d_b_standalone.html#a4ae522866114ea4c7b268316eb866465">ext::RocksDBStandalone::Open</a></div><div class="ttdeci">bool Open(LPCSTR db_path, RocksStorageWriteRobustness robustness=ROCKSSTG_DEFAULT, bool open_existed_only=false, UINT file_thread_co=2, UINT logfile_num_max=1)</div></div>
-<div class="ttc" id="aclassext_1_1_rocks_storage_html"><div class="ttname"><a href="../../d5/dff/classext_1_1_rocks_storage.html">ext::RocksStorage</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00409">rocksdb.h:410</a></div></div>
+<div class="ttc" id="aclassext_1_1_rocks_storage_html"><div class="ttname"><a href="../../d5/dff/classext_1_1_rocks_storage.html">ext::RocksStorage</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/df1/rocksdb_8h_source.html#l00419">rocksdb.h:420</a></div></div>
 <div class="ttc" id="aclassext_1_1_rocks_storage_html_a622ead40fd25146e3168893e80fcaa1a"><div class="ttname"><a href="../../d5/dff/classext_1_1_rocks_storage.html#a622ead40fd25146e3168893e80fcaa1a">ext::RocksStorage::Get</a></div><div class="ttdeci">RocksDB Get(const rt::String_Ref &amp;name, bool create_auto=true)</div><div class="ttdoc">get db</div></div>
-<div class="ttc" id="aclassext_1_1_rocks_storage_html_a8df8d52316669856267c8508bbc7c0bb"><div class="ttname"><a href="../../d5/dff/classext_1_1_rocks_storage.html#a8df8d52316669856267c8508bbc7c0bb">ext::RocksStorage::Nuke</a></div><div class="ttdeci">static bool Nuke(LPCSTR db_path)</div></div>
-<div class="ttc" id="aclassext_1_1_rocks_storage_html_a9276cb97d0c74237ada223dac4e05dac"><div class="ttname"><a href="../../d5/dff/classext_1_1_rocks_storage.html#a9276cb97d0c74237ada223dac4e05dac">ext::RocksStorage::SetDBOpenOption</a></div><div class="ttdeci">void SetDBOpenOption(LPCSTR db_name, const RocksDBOpenOption &amp;opt)</div><div class="ttdoc">first ':' in the name will be treated as wild prefix so you can set db_name to &quot;abc:&quot; and all column ...</div></div>
+<div class="ttc" id="aclassext_1_1_rocks_storage_html_a8df8d52316669856267c8508bbc7c0bb"><div class="ttname"><a href="../../d5/dff/classext_1_1_rocks_storage.html#a8df8d52316669856267c8508bbc7c0bb">ext::RocksStorage::Nuke</a></div><div class="ttdeci">static bool Nuke(LPCSTR db_path)</div><div class="ttdoc">Nuke.</div></div>
+<div class="ttc" id="aclassext_1_1_rocks_storage_html_a9276cb97d0c74237ada223dac4e05dac"><div class="ttname"><a href="../../d5/dff/classext_1_1_rocks_storage.html#a9276cb97d0c74237ada223dac4e05dac">ext::RocksStorage::SetDBOpenOption</a></div><div class="ttdeci">void SetDBOpenOption(LPCSTR db_name, const RocksDBOpenOption &amp;opt)</div><div class="ttdoc">Set DB Open Option.</div></div>
 <div class="ttc" id="aclassext_1_1_rocks_storage_html_a9e889e17a8b4b52e55b4a51b7ea286aa"><div class="ttname"><a href="../../d5/dff/classext_1_1_rocks_storage.html#a9e889e17a8b4b52e55b4a51b7ea286aa">ext::RocksStorage::Open</a></div><div class="ttdeci">bool Open(LPCSTR db_path, RocksStorageWriteRobustness robustness=ROCKSSTG_DEFAULT, bool open_existed_only=false, UINT file_thread_co=2, UINT logfile_num_max=1)</div></div>
 <div class="ttc" id="aclassext_1_1_rocks_storage_html_aa99ee5a342ea61fdd121bd5539f44605"><div class="ttname"><a href="../../d5/dff/classext_1_1_rocks_storage.html#aa99ee5a342ea61fdd121bd5539f44605">ext::RocksStorage::Close</a></div><div class="ttdeci">void Close(bool clear_alldbs=true)</div></div>
 <div class="ttc" id="aclassext_1_1fast__map_html"><div class="ttname"><a href="../../db/de3/classext_1_1fast__map.html">ext::fast_map</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db8/sparsehash_8h_source.html#l00103">sparsehash.h:104</a></div></div>
@@ -1535,38 +1537,38 @@ $(document).ready(function(){initNavTree('d9/d17/test_ext_8cpp-example.html','..
 <div class="ttc" id="aclassrt_1_1_buffer___ref_html_a9c49154815c7b452336300325ef6df50"><div class="ttname"><a href="../../d0/da6/classrt_1_1_buffer___ref.html#a9c49154815c7b452336300325ef6df50">rt::Buffer_Ref::Begin</a></div><div class="ttdeci">LPCItemType Begin() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00090">buffer_type.h:90</a></div></div>
 <div class="ttc" id="aclassrt_1_1_buffer___ref_html_ab587f71dfd1be2162c02a186e4c6c8fa"><div class="ttname"><a href="../../d0/da6/classrt_1_1_buffer___ref.html#ab587f71dfd1be2162c02a186e4c6c8fa">rt::Buffer_Ref::CopyFrom</a></div><div class="ttdeci">void CopyFrom(const Buffer_Ref&lt; T &gt; &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00201">buffer_type.h:201</a></div></div>
 <div class="ttc" id="aclassrt_1_1_buffer___ref_html_ad7443dc12fc2a4fd9107fe00c3d96a58"><div class="ttname"><a href="../../d0/da6/classrt_1_1_buffer___ref.html#ad7443dc12fc2a4fd9107fe00c3d96a58">rt::Buffer_Ref::GetSize</a></div><div class="ttdeci">t_Index GetSize() const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00108">buffer_type.h:108</a></div></div>
-<div class="ttc" id="aclassrt_1_1_buffer_ex_html"><div class="ttname"><a href="../../d0/d1a/classrt_1_1_buffer_ex.html">rt::BufferEx</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00492">buffer_type.h:493</a></div></div>
-<div class="ttc" id="aclassrt_1_1_buffer_ex_html_ac90bdbecc160470c508dc8dc1998fbef"><div class="ttname"><a href="../../d0/d1a/classrt_1_1_buffer_ex.html#ac90bdbecc160470c508dc8dc1998fbef">rt::BufferEx::push_back</a></div><div class="ttdeci">t_Val &amp; push_back()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00657">buffer_type.h:657</a></div></div>
+<div class="ttc" id="aclassrt_1_1_buffer_ex_html"><div class="ttname"><a href="../../d0/d1a/classrt_1_1_buffer_ex.html">rt::BufferEx</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00493">buffer_type.h:494</a></div></div>
+<div class="ttc" id="aclassrt_1_1_buffer_ex_html_ac90bdbecc160470c508dc8dc1998fbef"><div class="ttname"><a href="../../d0/d1a/classrt_1_1_buffer_ex.html#ac90bdbecc160470c508dc8dc1998fbef">rt::BufferEx::push_back</a></div><div class="ttdeci">t_Val &amp; push_back()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00659">buffer_type.h:659</a></div></div>
 <div class="ttc" id="aclassrt_1_1_buffer_html"><div class="ttname"><a href="../../d3/db8/classrt_1_1_buffer.html">rt::Buffer&lt; BYTE &gt;</a></div></div>
-<div class="ttc" id="aclassrt_1_1_buffer_html_a3b88c05d4a3725c1fe885a653527ecdb"><div class="ttname"><a href="../../d3/db8/classrt_1_1_buffer.html#a3b88c05d4a3725c1fe885a653527ecdb">rt::Buffer::SetSize</a></div><div class="ttdeci">bool SetSize(SIZE_T co=0)</div><div class="ttdoc">Set buffer size.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00411">buffer_type.h:411</a></div></div>
+<div class="ttc" id="aclassrt_1_1_buffer_html_a3b88c05d4a3725c1fe885a653527ecdb"><div class="ttname"><a href="../../d3/db8/classrt_1_1_buffer.html#a3b88c05d4a3725c1fe885a653527ecdb">rt::Buffer::SetSize</a></div><div class="ttdeci">bool SetSize(SIZE_T co=0)</div><div class="ttdoc">Set buffer size.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd4/buffer__type_8h_source.html#l00412">buffer_type.h:412</a></div></div>
 <div class="ttc" id="aclassrt_1_1_expression_html"><div class="ttname"><a href="../../de/d66/classrt_1_1_expression.html">rt::Expression</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da2/exprtk_8h_source.html#l00056">exprtk.h:57</a></div></div>
-<div class="ttc" id="aclassrt_1_1_expression_html_a812cd31355d10cc12566fe7db72f3359"><div class="ttname"><a href="../../de/d66/classrt_1_1_expression.html#a812cd31355d10cc12566fe7db72f3359">rt::Expression::GetLastError</a></div><div class="ttdeci">const rt::String &amp; GetLastError() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da2/exprtk_8h_source.html#l00112">exprtk.h:112</a></div></div>
+<div class="ttc" id="aclassrt_1_1_expression_html_a812cd31355d10cc12566fe7db72f3359"><div class="ttname"><a href="../../de/d66/classrt_1_1_expression.html#a812cd31355d10cc12566fe7db72f3359">rt::Expression::GetLastError</a></div><div class="ttdeci">const rt::String &amp; GetLastError() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da2/exprtk_8h_source.html#l00116">exprtk.h:116</a></div></div>
 <div class="ttc" id="aclassrt_1_1_expression_html_a87a1970be2ba136eef9f6de6fbddb86e"><div class="ttname"><a href="../../de/d66/classrt_1_1_expression.html#a87a1970be2ba136eef9f6de6fbddb86e">rt::Expression::Compile</a></div><div class="ttdeci">bool Compile(const rt::String_Ref &amp;code)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da2/exprtk_8h_source.html#l00066">exprtk.h:66</a></div></div>
-<div class="ttc" id="aclassrt_1_1_expression_html_ace6fa4246aa954c79b2e6974aef89a34"><div class="ttname"><a href="../../de/d66/classrt_1_1_expression.html#ace6fa4246aa954c79b2e6974aef89a34">rt::Expression::Compute</a></div><div class="ttdeci">INLFUNC T Compute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da2/exprtk_8h_source.html#l00111">exprtk.h:111</a></div></div>
+<div class="ttc" id="aclassrt_1_1_expression_html_ace6fa4246aa954c79b2e6974aef89a34"><div class="ttname"><a href="../../de/d66/classrt_1_1_expression.html#ace6fa4246aa954c79b2e6974aef89a34">rt::Expression::Compute</a></div><div class="ttdeci">INLFUNC T Compute()</div><div class="ttdoc">Compute Expression(Performance is worse than normal)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da2/exprtk_8h_source.html#l00115">exprtk.h:115</a></div></div>
 <div class="ttc" id="aclassrt_1_1_expression_html_af1dddebac93677436500d7db9109288b"><div class="ttname"><a href="../../de/d66/classrt_1_1_expression.html#af1dddebac93677436500d7db9109288b">rt::Expression::BindVariable</a></div><div class="ttdeci">INLFUNC void BindVariable(const rt::String_Ref &amp;symbol, T &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da2/exprtk_8h_source.html#l00101">exprtk.h:101</a></div></div>
-<div class="ttc" id="aclassrt_1_1_string___base_html_aa3d78140b53164a76214792adb50dcce"><div class="ttname"><a href="../../d7/dad/classrt_1_1_string___base.html#aa3d78140b53164a76214792adb50dcce">rt::String_Base::SubStr</a></div><div class="ttdeci">t_StrRef SubStr(SIZE_T start, SIZE_T len) const</div><div class="ttdoc">Get sub str.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l00452">string_type.h:452</a></div></div>
-<div class="ttc" id="aclassrt_1_1_string___base_html_ae0bddd53784fa0384e193025481060b7"><div class="ttname"><a href="../../d7/dad/classrt_1_1_string___base.html#ae0bddd53784fa0384e193025481060b7">rt::String_Base::ToString</a></div><div class="ttdeci">void ToString(t_Str &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l00373">string_type.h:373</a></div></div>
-<div class="ttc" id="aclassrt_1_1_string___ref_html"><div class="ttname"><a href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a></div><div class="ttdoc">String_Ref represent a string with length, the string is not necessary zero-terminated.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01387">string_type.h:1388</a></div></div>
-<div class="ttc" id="aclassrt_1_1_string_html"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html">rt::String</a></div><div class="ttdoc">Memory efficient strings operations and expression.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01804">string_type.h:1805</a></div></div>
-<div class="ttc" id="aclassrt_1_1_string_html_adbeedcc8b9b784a4abe6c28ecf36f947"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html#adbeedcc8b9b784a4abe6c28ecf36f947">rt::String::Empty</a></div><div class="ttdeci">String &amp; Empty()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01831">string_type.h:1831</a></div></div>
-<div class="ttc" id="aclassrt_1_1tos_1_1_s___html"><div class="ttname"><a href="../../d4/d04/classrt_1_1tos_1_1_s__.html">rt::tos::S_</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01513">string_type.h:1514</a></div></div>
-<div class="ttc" id="agroup___both__consoleand__file_html_ga7214f168f9fb66818944932eda9b4247"><div class="ttname"><a href="../../d5/d96/group___both__consoleand__file.html#ga7214f168f9fb66818944932eda9b4247">_LOG_ERROR</a></div><div class="ttdeci">#define _LOG_ERROR(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00221">runtime_base.h:221</a></div></div>
-<div class="ttc" id="agroup___both__consoleand__file_html_ga7263964d3be25fc05cdc28e40b88409e"><div class="ttname"><a href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a></div><div class="ttdeci">#define _LOG(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00218">runtime_base.h:218</a></div></div>
+<div class="ttc" id="aclassrt_1_1_string___base_html_a4ff0cc67c18d3157863d4ae57d79a0de"><div class="ttname"><a href="../../d7/dad/classrt_1_1_string___base.html#a4ff0cc67c18d3157863d4ae57d79a0de">rt::String_Base::SubStr</a></div><div class="ttdeci">FORCEINL t_String_Ref SubStr(SIZE_T start, SIZE_T len) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l00356">string_type.h:356</a></div></div>
+<div class="ttc" id="aclassrt_1_1_string___base_html_af10e0382db88f05262f6e68c8cab2cdb"><div class="ttname"><a href="../../d7/dad/classrt_1_1_string___base.html#af10e0382db88f05262f6e68c8cab2cdb">rt::String_Base::ToString</a></div><div class="ttdeci">FORCEINL void ToString(t_Str &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l00314">string_type.h:314</a></div></div>
+<div class="ttc" id="aclassrt_1_1_string___ref_html"><div class="ttname"><a href="../../d2/db4/classrt_1_1_string___ref.html">rt::String_Ref</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01005">string_type.h:1006</a></div></div>
+<div class="ttc" id="aclassrt_1_1_string_html"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html">rt::String</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01400">string_type.h:1401</a></div></div>
+<div class="ttc" id="aclassrt_1_1_string_html_a5e548b848b28931873a4705c4811e335"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html#a5e548b848b28931873a4705c4811e335">rt::String::Empty</a></div><div class="ttdeci">FORCEINL String &amp; Empty()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01427">string_type.h:1427</a></div></div>
+<div class="ttc" id="aclassrt_1_1tos_1_1_s___html"><div class="ttname"><a href="../../d4/d04/classrt_1_1tos_1_1_s__.html">rt::tos::S_</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01125">string_type.h:1126</a></div></div>
 <div class="ttc" id="agroup___enums__kernel_html_ggaa54eb7650ce3f9a55c35d5e7f95c604ea2ddf5d0044cef45009eb4aae589129cf"><div class="ttname"><a href="../../d5/d51/group___enums__kernel.html#ggaa54eb7650ce3f9a55c35d5e7f95c604ea2ddf5d0044cef45009eb4aae589129cf">os::PROCPRIO_REALTIME</a></div><div class="ttdeci">@ PROCPRIO_REALTIME</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00330">kernel.h:330</a></div></div>
 <div class="ttc" id="agroup___functions__kernel_html_ga9960ae963c6991636765a353d7dd2d03"><div class="ttname"><a href="../../da/ddf/group___functions__kernel.html#ga9960ae963c6991636765a353d7dd2d03">os::SetProcessPriority</a></div><div class="ttdeci">void SetProcessPriority(int prio=PROCPRIO_HIGH)</div></div>
 <div class="ttc" id="agroup___functions__kernel_html_gae28a7736b963f4b1ed2f183641e6d865"><div class="ttname"><a href="../../da/ddf/group___functions__kernel.html#gae28a7736b963f4b1ed2f183641e6d865">os::Sleep</a></div><div class="ttdeci">void Sleep(DWORD msec=INFINITE, const bool *interrupt_flag=nullptr)</div></div>
 <div class="ttc" id="agroup___macros__predefines_html_ga1b76fcdf95579856aa612e285fee5d09"><div class="ttname"><a href="../../d5/dde/group___macros__predefines.html#ga1b76fcdf95579856aa612e285fee5d09">__STRING</a></div><div class="ttdeci">#define __STRING(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db2/predefines_8h_source.html#l00217">predefines.h:217</a></div></div>
 <div class="ttc" id="agroup___macros__predefines_html_ga9879f8ef4e651f01c6888dd86b31b50c"><div class="ttname"><a href="../../d5/dde/group___macros__predefines.html#ga9879f8ef4e651f01c6888dd86b31b50c">sizeofArray</a></div><div class="ttdeci">#define sizeofArray(array_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db2/predefines_8h_source.html#l00204">predefines.h:204</a></div></div>
-<div class="ttc" id="agroup___only__log__to__console_html_ga12e244ee457ec371bbadf2f027e1d440"><div class="ttname"><a href="../../d3/d8f/group___only__log__to__console.html#ga12e244ee457ec371bbadf2f027e1d440">_LOGC</a></div><div class="ttdeci">#define _LOGC(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00232">runtime_base.h:232</a></div></div>
+<div class="ttc" id="agroup___typedefs___big_num_html_ga741b8c32e5151f0aaf4871a64ae27468"><div class="ttname"><a href="../../d4/d18/group___typedefs___big_num.html#ga741b8c32e5151f0aaf4871a64ae27468">ext::Float1024</a></div><div class="ttdeci">_details::PrecisionFloat&lt; 1024 &gt; Float1024</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db7/precision__num_8h_source.html#l00093">precision_num.h:93</a></div></div>
+<div class="ttc" id="agroup___typedefs___big_num_html_ga7c380faf6efd7455921f2d2b484d437c"><div class="ttname"><a href="../../d4/d18/group___typedefs___big_num.html#ga7c380faf6efd7455921f2d2b484d437c">ext::Float2048</a></div><div class="ttdeci">_details::PrecisionFloat&lt; 2048 &gt; Float2048</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db7/precision__num_8h_source.html#l00092">precision_num.h:92</a></div></div>
+<div class="ttc" id="agroup___typedefs___big_num_html_ga9b944d819d538df9e41feedc7fd42e11"><div class="ttname"><a href="../../d4/d18/group___typedefs___big_num.html#ga9b944d819d538df9e41feedc7fd42e11">ext::Float256</a></div><div class="ttdeci">_details::PrecisionFloat&lt; 256 &gt; Float256</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db7/precision__num_8h_source.html#l00095">precision_num.h:95</a></div></div>
 <div class="ttc" id="agroup___typedefs__string__type__ops_html_gadafa8c4e9201fb0cdf4d6b4ef3cd5a42"><div class="ttname"><a href="../../df/dc5/group___typedefs__string__type__ops.html#gadafa8c4e9201fb0cdf4d6b4ef3cd5a42">rt::SS</a></div><div class="ttdeci">tos::StaticString SS</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5f/string__type__ops_8h_source.html#l00370">string_type_ops.h:370</a></div></div>
-<div class="ttc" id="agroup__precision__num_html_ga741b8c32e5151f0aaf4871a64ae27468"><div class="ttname"><a href="../../d0/dc2/group__precision__num.html#ga741b8c32e5151f0aaf4871a64ae27468">ext::Float1024</a></div><div class="ttdeci">_details::PrecisionFloat&lt; 1024 &gt; Float1024</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db7/precision__num_8h_source.html#l00090">precision_num.h:90</a></div></div>
-<div class="ttc" id="agroup__precision__num_html_ga7c380faf6efd7455921f2d2b484d437c"><div class="ttname"><a href="../../d0/dc2/group__precision__num.html#ga7c380faf6efd7455921f2d2b484d437c">ext::Float2048</a></div><div class="ttdeci">_details::PrecisionFloat&lt; 2048 &gt; Float2048</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db7/precision__num_8h_source.html#l00089">precision_num.h:89</a></div></div>
-<div class="ttc" id="agroup__precision__num_html_ga9b944d819d538df9e41feedc7fd42e11"><div class="ttname"><a href="../../d0/dc2/group__precision__num.html#ga9b944d819d538df9e41feedc7fd42e11">ext::Float256</a></div><div class="ttdeci">_details::PrecisionFloat&lt; 256 &gt; Float256</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db7/precision__num_8h_source.html#l00092">precision_num.h:92</a></div></div>
 <div class="ttc" id="anamespaceext_1_1__details_html_a972c3ef38a2b35018778de4d908e2d2d"><div class="ttname"><a href="../../d5/d47/namespaceext_1_1__details.html#a972c3ef38a2b35018778de4d908e2d2d">ext::_details::BN_Mantissa32</a></div><div class="ttdeci">UINT BN_Mantissa32(const BN_Unsigned &amp;b, int *exp)</div></div>
 <div class="ttc" id="anamespaceext_1_1__details_html_acf37f2a86b2b566bf359254edf381e84"><div class="ttname"><a href="../../d5/d47/namespaceext_1_1__details.html#acf37f2a86b2b566bf359254edf381e84">ext::_details::BN_Mantissa64</a></div><div class="ttdeci">auto BN_Mantissa64(const BN_Unsigned &amp;b, int *exp) -&gt; ULONGLONG</div></div>
 <div class="ttc" id="anamespaceext_1_1__details_html_adee9f1d30f55e3b2f3497fb1a728be79"><div class="ttname"><a href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">ext::_details::BN_Div</a></div><div class="ttdeci">bool BN_Div(const BN_Unsigned &amp;a, UINT b, UINT *reminder, ext::BigNumMutable &amp;ret)</div><div class="ttdoc">ret = (a - *reminder)/b</div></div>
 <div class="ttc" id="anamespaceext_html"><div class="ttname"><a href="../../db/d3c/namespaceext.html">ext</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d86/big__num_8h_source.html#l00047">big_num.h:48</a></div></div>
 <div class="ttc" id="anamespacert_1_1tos_html_a27b8c6c159b3ec53681ba0e3085a1bde"><div class="ttname"><a href="../../d6/d97/namespacert_1_1tos.html#a27b8c6c159b3ec53681ba0e3085a1bde">rt::tos::Number</a></div><div class="ttdeci">::rt::tos::S_ Number</div><div class="ttdoc">Number to String.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5f/string__type__ops_8h_source.html#l00073">string_type_ops.h:73</a></div></div>
+<div class="ttc" id="aruntime__base_8h_html_a12e244ee457ec371bbadf2f027e1d440"><div class="ttname"><a href="../../df/d5e/runtime__base_8h.html#a12e244ee457ec371bbadf2f027e1d440">_LOGC</a></div><div class="ttdeci">#define _LOGC(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00193">runtime_base.h:193</a></div></div>
+<div class="ttc" id="aruntime__base_8h_html_a7214f168f9fb66818944932eda9b4247"><div class="ttname"><a href="../../df/d5e/runtime__base_8h.html#a7214f168f9fb66818944932eda9b4247">_LOG_ERROR</a></div><div class="ttdeci">#define _LOG_ERROR(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00186">runtime_base.h:186</a></div></div>
+<div class="ttc" id="aruntime__base_8h_html_a7263964d3be25fc05cdc28e40b88409e"><div class="ttname"><a href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a></div><div class="ttdeci">#define _LOG(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00183">runtime_base.h:183</a></div></div>
 <div class="ttc" id="astructos_1_1_timestamp_html"><div class="ttname"><a href="../../d4/d7c/structos_1_1_timestamp.html">os::Timestamp</a></div><div class="ttdoc">UNIX time (UTC) in millisecond, compatible to javascript's (new Date(x))</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00353">kernel.h:354</a></div></div>
 <div class="ttc" id="astructos_1_1_timestamp_html_a2e17494817e13368fb4371a06cd32f76"><div class="ttname"><a href="../../d4/d7c/structos_1_1_timestamp.html#a2e17494817e13368fb4371a06cd32f76">os::Timestamp::LoadCurrentTime</a></div><div class="ttdeci">FORCEINL void LoadCurrentTime()</div><div class="ttdoc">Set _Timestamp as microseconds since 00:00:00 January 1, 1970.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00393">kernel.h:393</a></div></div>
 <div class="ttc" id="astructos_1_1_timestamp_html_a8919464b1a3a0872f2e0b01c5ec40c9d"><div class="ttname"><a href="../../d4/d7c/structos_1_1_timestamp.html#a8919464b1a3a0872f2e0b01c5ec40c9d">os::Timestamp::TimeLapse</a></div><div class="ttdeci">FORCEINL LONGLONG TimeLapse() const</div><div class="ttdoc">The time elapsed since the last LoadCurrentTime.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/daa/kernel_8h_source.html#l00399">kernel.h:399</a></div></div>

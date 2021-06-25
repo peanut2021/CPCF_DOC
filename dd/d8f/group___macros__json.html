@@ -87,17 +87,25 @@ $(document).ready(function(){initNavTree('dd/d8f/group___macros__json.html','../
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">Macros_json<div class="ingroups"><a class="el" href="../../da/de8/group__rt.html">Rt</a> &raquo; <a class="el" href="../../d8/d91/group__json.html">Json</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d64/structrt_1_1___j_tag.html">rt::_JTag</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:gaa28234733b33f2f61993e11722c7d270"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8f/group___macros__json.html#gaa28234733b33f2f61993e11722c7d270">J</a>(x)&#160;&#160;&#160;<a class="el" href="../../da/d64/structrt_1_1___j_tag.html">rt::_JTag</a>(#x)</td></tr>
 <tr class="memdesc:gaa28234733b33f2f61993e11722c7d270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make x to json key.  <a href="../../dd/d8f/group___macros__json.html#gaa28234733b33f2f61993e11722c7d270">More...</a><br /></td></tr>
 <tr class="separator:gaa28234733b33f2f61993e11722c7d270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00317b0dfcce743265db7e94f0a776a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8f/group___macros__json.html#ga00317b0dfcce743265db7e94f0a776a7">J_EXPR_CONNECT_OP</a>(type,  type_in,  vt)</td></tr>
+<tr class="separator:ga00317b0dfcce743265db7e94f0a776a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa5f2cd8713bbc1f431e852d91cc9e95e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8f/group___macros__json.html#gaa5f2cd8713bbc1f431e852d91cc9e95e">J_IF</a>(cond,  definition)&#160;&#160;&#160;((cond) ? (definition) : decltype(definition)())</td></tr>
 <tr class="memdesc:gaa5f2cd8713bbc1f431e852d91cc9e95e"><td class="mdescLeft">&#160;</td><td class="mdescRight">from right to left  <a href="../../dd/d8f/group___macros__json.html#gaa5f2cd8713bbc1f431e852d91cc9e95e">More...</a><br /></td></tr>
 <tr class="separator:gaa5f2cd8713bbc1f431e852d91cc9e95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,7 +135,51 @@ Macros</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d3/de8/test_rt_json_8cpp-example.html#a10">test_rt_json.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00359">359</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00363">363</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
+
+</div>
+</div>
+<a id="ga00317b0dfcce743265db7e94f0a776a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00317b0dfcce743265db7e94f0a776a7">&#9670;&nbsp;</a></span>J_EXPR_CONNECT_OP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define J_EXPR_CONNECT_OP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type_in, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">vt&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> _JVar&lt;LPVOID, type, vt&gt;                                \</div>
+<div class="line">operator = (type_in p)                                          \</div>
+<div class="line">{   <span class="keywordflow">if</span>(tagname.IsEmpty())                                       \</div>
+<div class="line">    {   <span class="keyword">static</span> type __empty_p;                                  \</div>
+<div class="line">        return _JVar&lt;LPVOID, type, vt&gt;(tagname, __empty_p);     \</div>
+<div class="line">    } <span class="keywordflow">else</span> { <span class="keywordflow">return</span> _JVar&lt;LPVOID, type, vt&gt;(tagname, p); }      \</div>
+<div class="line">}                                                               \</div>
+<div class="ttc" id="agroup___macros__predefines_html_gae54184968638eb550208ae9a1a888471"><div class="ttname"><a href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a></div><div class="ttdeci">#define FORCEINL</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db2/predefines_8h_source.html#l00227">predefines.h:227</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00272">272</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
 
 </div>
 </div>
@@ -161,7 +213,7 @@ Macros</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d3/de8/test_rt_json_8cpp-example.html#a9">test_rt_json.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00360">360</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00364">364</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
 
 </div>
 </div>
@@ -185,7 +237,7 @@ Macros</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d3/de8/test_rt_json_8cpp-example.html#a19">test_rt_json.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00361">361</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00365">365</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
 
 </div>
 </div>

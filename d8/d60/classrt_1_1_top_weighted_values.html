@@ -111,6 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a44cc035cbf641ff6513dc75fcf77904c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9650fe257b4c64be05116afc182b056"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d60/classrt_1_1_top_weighted_values.html#ad9650fe257b4c64be05116afc182b056">ClampWeight</a> (T_WEIGHT weight_max)</td></tr>
 <tr class="separator:ad9650fe257b4c64be05116afc182b056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d39a58e6c32fbb5ff73346133883fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d09/group___macros__type__traits.html#ga8f91a2d43b8639eb05b76f588d3ee657">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d60/classrt_1_1_top_weighted_values.html#ac0d39a58e6c32fbb5ff73346133883fe">FindValue</a> (const T &amp;v) const</td></tr>
+<tr class="separator:ac0d39a58e6c32fbb5ff73346133883fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79848e9c04a4c576c094a42074ce1669"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d60/classrt_1_1_top_weighted_values.html#a79848e9c04a4c576c094a42074ce1669">Get</a> (UINT i, T *val, T_WEIGHT *wei, UINT *count=nullptr) const</td></tr>
 <tr class="separator:a79848e9c04a4c576c094a42074ce1669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e7add9f9124cd7bcbf6a7a27154aeb7"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d60/classrt_1_1_top_weighted_values.html#a2e7add9f9124cd7bcbf6a7a27154aeb7">Get</a> (UINT i=0)</td></tr>
@@ -125,6 +127,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7a611e59edbce0a355c95c9b724c8e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eec02706d4f7314720cb68411334373"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d60/classrt_1_1_top_weighted_values.html#a4eec02706d4f7314720cb68411334373">GetSignificantRatio</a> (T_WEIGHT min_weight=0) const</td></tr>
 <tr class="separator:a4eec02706d4f7314720cb68411334373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dfa91b3887c10dcc20dcfc4877ab3f9"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d60/classrt_1_1_top_weighted_values.html#a8dfa91b3887c10dcc20dcfc4877ab3f9">GetUniqueValueCount</a> () const</td></tr>
+<tr class="separator:a8dfa91b3887c10dcc20dcfc4877ab3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8698b771b488b66576591976dc2dae4e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d60/classrt_1_1_top_weighted_values.html#a8698b771b488b66576591976dc2dae4e">GetWeight</a> () const</td></tr>
 <tr class="separator:a8698b771b488b66576591976dc2dae4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9abafd78984abdafe8295f023be5818c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d60/classrt_1_1_top_weighted_values.html#a9abafd78984abdafe8295f023be5818c">GetWeight</a> (UINT i) const</td></tr>
@@ -200,7 +204,7 @@ class rt::TopWeightedValues&lt; T, TOP_K, T_WEIGHT, keep_latest_value &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01459">1459</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01461">1461</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a44cc035cbf641ff6513dc75fcf77904c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44cc035cbf641ff6513dc75fcf77904c">&#9670;&nbsp;</a></span>TopWeightedValues()</h2>
@@ -227,7 +231,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01499">1499</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01501">1501</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -274,7 +278,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01474">1474</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01476">1476</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -303,7 +307,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01497">1497</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01499">1499</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -333,7 +337,37 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01502">1502</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01516">1516</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+
+</div>
+</div>
+<a id="ac0d39a58e6c32fbb5ff73346133883fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d39a58e6c32fbb5ff73346133883fe">&#9670;&nbsp;</a></span>FindValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_latest_value = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d09/group___macros__type__traits.html#ga8f91a2d43b8639eb05b76f588d3ee657">int</a> <a class="el" href="../../d8/d60/classrt_1_1_top_weighted_values.html">rt::TopWeightedValues</a>&lt; T, TOP_K, T_WEIGHT, keep_latest_value &gt;::FindValue </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01508">1508</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -385,7 +419,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01556">1556</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01570">1570</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -415,7 +449,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01555">1555</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01569">1569</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -445,7 +479,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01553">1553</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01567">1567</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -474,7 +508,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01546">1546</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01560">1560</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -503,7 +537,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01550">1550</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01564">1564</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -533,7 +567,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01551">1551</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01565">1565</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -563,7 +597,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01570">1570</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01584">1584</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -592,7 +626,36 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01500">1500</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01502">1502</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a8dfa91b3887c10dcc20dcfc4877ab3f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dfa91b3887c10dcc20dcfc4877ab3f9">&#9670;&nbsp;</a></span>GetUniqueValueCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_latest_value = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT <a class="el" href="../../d8/d60/classrt_1_1_top_weighted_values.html">rt::TopWeightedValues</a>&lt; T, TOP_K, T_WEIGHT, keep_latest_value &gt;::GetUniqueValueCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01503">1503</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -621,7 +684,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01548">1548</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01562">1562</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -651,7 +714,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01549">1549</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01563">1563</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -680,7 +743,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01547">1547</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01561">1561</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -710,7 +773,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01569">1569</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01583">1583</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -740,7 +803,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01554">1554</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01568">1568</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -770,7 +833,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01552">1552</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01566">1566</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -800,7 +863,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01564">1564</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01578">1578</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -829,7 +892,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01501">1501</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01515">1515</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -881,7 +944,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01521">1521</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01535">1535</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -910,7 +973,7 @@ template&lt;typename _T , UINT _TOP_K, typename _WEIGHT , bool s&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01461">1461</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01463">1463</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -937,7 +1000,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01473">1473</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01475">1475</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -963,7 +1026,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01470">1470</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01472">1472</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -989,7 +1052,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01471">1471</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01473">1473</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -1017,7 +1080,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 
 <p>all weight will be halfed if top exceeds TOP_WEIGHT_CLAMP </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01468">1468</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01470">1470</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1106,7 @@ template&lt;typename T , UINT TOP_K = 1, typename T_WEIGHT  = int, bool keep_lat
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01469">1469</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd4/buffer__type_8h_source.html#l01471">1471</a> of file <a class="el" href="../../de/dd4/buffer__type_8h_source.html">buffer_type.h</a>.</p>
 
 </div>
 </div>

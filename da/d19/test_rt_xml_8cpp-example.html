@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('da/d19/test_rt_xml_8cpp-example.html',
 <div class="line">{</div>
 <div class="line">    {   <a name="_a0"></a><a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> val;</div>
 <div class="line">    <a name="a1"></a><a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a85f03b5c5bdbfa222a6b306571b61306">rt::XMLParser::_convert_xml_to_text</a>(<span class="stringliteral">&quot;abcd &amp; fff-&amp;lt;-&lt;cdnsion cnindi&gt;!&lt;/v&gt;??&quot;</span>, val, <span class="keyword">true</span>);</div>
-<div class="line">    <a name="a2"></a><a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(val);</div>
+<div class="line">    <a name="a2"></a><a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(val);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <a name="_a3"></a><a class="code" href="../../dd/d89/classrt_1_1_x_m_l_composer.html">rt::XMLComposer</a> xml;</div>
@@ -127,22 +127,22 @@ $(document).ready(function(){initNavTree('da/d19/test_rt_xml_8cpp-example.html',
 <div class="line"> </div>
 <div class="line">    xml.<a class="code" href="../../dd/d89/classrt_1_1_x_m_l_composer.html#ad4ab750bb5759d1a7bf2e628aff22ead">ExitNode</a>();</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(xml.<a name="a9"></a><a class="code" href="../../dd/d89/classrt_1_1_x_m_l_composer.html#aaa9861249c27f8943b91addff8b94dff">GetDocument</a>());</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(xml.<a name="a9"></a><a class="code" href="../../dd/d89/classrt_1_1_x_m_l_composer.html#aaa9861249c27f8943b91addff8b94dff">GetDocument</a>());</div>
 <div class="line"> </div>
 <div class="line">    <a name="_a10"></a><a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html">rt::XMLParser</a>   xmlp;</div>
 <div class="line">    <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a>      val;</div>
 <div class="line">    xmlp.<a name="a11"></a><a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a7005d4d169783123174b99f758450a1a">Load</a>(xml.<a name="a12"></a><a class="code" href="../../dd/d89/classrt_1_1_x_m_l_composer.html#a47a7258cbae8aef40b4dff53e0fd702e">GetDocumentBuffer</a>(), <span class="keyword">true</span>, xml.<a name="a13"></a><a class="code" href="../../dd/d89/classrt_1_1_x_m_l_composer.html#a1bb4e51a8b59708206d8dcc905999084">GetDocumentLength</a>());</div>
 <div class="line">    <span class="keywordflow">if</span> (xmlp.<a name="a14"></a><a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a09969324c3bd5bf6b329cfba02a992f6">EnterXPath</a>(<span class="stringliteral">&quot;/root/item[@key=&#39;no&#39;]&quot;</span>) &amp;&amp; xmlp.<a name="a15"></a><a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a0f3f028d825faf86e67ff94dde9dab23">GetInnerText</a>(val))</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;EnterXPath: &quot;</span> &lt;&lt; val);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;EnterXPath: &quot;</span> &lt;&lt; val);</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html">rt::XMLParser</a> node = xmlp.<a name="a16"></a><a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#abcb08697c5d07aa5ddc45a03c9e79a90">GetNodeDocument</a>();</div>
 <div class="line">    node.<a name="a17"></a><a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a12ec00c43fd6e5229ae4984aae85b744">GetAttribute</a>(<span class="stringliteral">&quot;key&quot;</span>, val);</div>
-<div class="line">    <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;key = &quot;</span> &lt;&lt; val);</div>
+<div class="line">    <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;key = &quot;</span> &lt;&lt; val);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (xmlp.<a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a09969324c3bd5bf6b329cfba02a992f6">EnterXPath</a>(<span class="stringliteral">&quot;/root&quot;</span>))</div>
 <div class="line">    {</div>
 <div class="line">        xmlp.<a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a0f3f028d825faf86e67ff94dde9dab23">GetInnerText</a>(val);</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;mixed inner text: &quot;</span> &lt;&lt; val);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;mixed inner text: &quot;</span> &lt;&lt; val);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    xmlp.<a name="a18"></a><a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a4132a98494af0400bb25208b8a453a6f">EnterRootNode</a>();</div>
@@ -156,22 +156,22 @@ $(document).ready(function(){initNavTree('da/d19/test_rt_xml_8cpp-example.html',
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (html.<a name="a21"></a><a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a27a27cb802859ff2363cb5253ab18b26">LoadHTML</a>(file, (UINT)file.GetSize()))</div>
 <div class="line">    {</div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Loaded&quot;</span>);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(<span class="stringliteral">&quot;Loaded&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">        <a class="code" href="../../d2/d96/classrt_1_1_string.html">rt::String</a> xml;</div>
 <div class="line">        html.<a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a09969324c3bd5bf6b329cfba02a992f6">EnterXPath</a>(<span class="stringliteral">&quot;/html/head/meta&quot;</span>);</div>
 <div class="line">        html.<a name="a22"></a><a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#aca8a647ad36de76a9e2bcd5727804e8a">GetOuterXML</a>(xml);</div>
 <div class="line"> </div>
-<div class="line">        <a class="code" href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a>(xml);</div>
+<div class="line">        <a class="code" href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a>(xml);</div>
 <div class="line"> </div>
 <div class="line">        <a name="_a23"></a><a class="code" href="../../d5/d92/classos_1_1_file.html">os::File</a>(<span class="stringliteral">&quot;xhtml.htm&quot;</span>, <a name="a24"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#a84555d6862248f8a6013df2f252455f7">os::File::Normal_Write</a>).<a name="a25"></a><a class="code" href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">Write</a>(html.<a name="a26"></a><a class="code" href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a181c8fccd50c9dfe05b653283afc5dc1">GetConvertedXHTML</a>());</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassos_1_1_file_html"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html">os::File</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00092">file_dir.h:93</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_html_a84555d6862248f8a6013df2f252455f7"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#a84555d6862248f8a6013df2f252455f7">os::File::Normal_Write</a></div><div class="ttdeci">static const LPCSTR Normal_Write</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00104">file_dir.h:104</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_html_aafd99e7d9e1701e423ec169deeef0f63"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">os::File::Write</a></div><div class="ttdeci">SIZE_T Write(const rt::String_Ref &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00123">file_dir.h:123</a></div></div>
-<div class="ttc" id="aclassos_1_1_file_read_html"><div class="ttname"><a href="../../d6/d34/classos_1_1_file_read.html">os::FileRead</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00236">file_dir.h:237</a></div></div>
-<div class="ttc" id="aclassrt_1_1_string_html"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html">rt::String</a></div><div class="ttdoc">Memory efficient strings operations and expression.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01804">string_type.h:1805</a></div></div>
+<div class="ttc" id="aclassos_1_1_file_html_a84555d6862248f8a6013df2f252455f7"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#a84555d6862248f8a6013df2f252455f7">os::File::Normal_Write</a></div><div class="ttdeci">static const LPCSTR Normal_Write</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00105">file_dir.h:105</a></div></div>
+<div class="ttc" id="aclassos_1_1_file_html_aafd99e7d9e1701e423ec169deeef0f63"><div class="ttname"><a href="../../d5/d92/classos_1_1_file.html#aafd99e7d9e1701e423ec169deeef0f63">os::File::Write</a></div><div class="ttdeci">SIZE_T Write(const rt::String_Ref &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00128">file_dir.h:128</a></div></div>
+<div class="ttc" id="aclassos_1_1_file_read_html"><div class="ttname"><a href="../../d6/d34/classos_1_1_file_read.html">os::FileRead</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/file__dir_8h_source.html#l00242">file_dir.h:243</a></div></div>
+<div class="ttc" id="aclassrt_1_1_string_html"><div class="ttname"><a href="../../d2/d96/classrt_1_1_string.html">rt::String</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d1d/string__type_8h_source.html#l01400">string_type.h:1401</a></div></div>
 <div class="ttc" id="aclassrt_1_1_x_m_l_composer_html"><div class="ttname"><a href="../../dd/d89/classrt_1_1_x_m_l_composer.html">rt::XMLComposer</a></div><div class="ttdoc">XML composer support xpath expression.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d4a/xml__xhtml_8h_source.html#l00056">xml_xhtml.h:57</a></div></div>
 <div class="ttc" id="aclassrt_1_1_x_m_l_composer_html_a05b60c7148c40b8a421810884216eb76"><div class="ttname"><a href="../../dd/d89/classrt_1_1_x_m_l_composer.html#a05b60c7148c40b8a421810884216eb76">rt::XMLComposer::AddText</a></div><div class="ttdeci">void AddText(LPCSTR text)</div></div>
 <div class="ttc" id="aclassrt_1_1_x_m_l_composer_html_a1bb4e51a8b59708206d8dcc905999084"><div class="ttname"><a href="../../dd/d89/classrt_1_1_x_m_l_composer.html#a1bb4e51a8b59708206d8dcc905999084">rt::XMLComposer::GetDocumentLength</a></div><div class="ttdeci">UINT GetDocumentLength(bool withHeader=true) const</div><div class="ttdoc">size of XML document in byte, not include teminator zero</div></div>
@@ -193,7 +193,7 @@ $(document).ready(function(){initNavTree('da/d19/test_rt_xml_8cpp-example.html',
 <div class="ttc" id="aclassrt_1_1_x_m_l_parser_html_a85f03b5c5bdbfa222a6b306571b61306"><div class="ttname"><a href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#a85f03b5c5bdbfa222a6b306571b61306">rt::XMLParser::_convert_xml_to_text</a></div><div class="ttdeci">static void _convert_xml_to_text(const rt::String_Ref &amp;string, rt::String &amp;text, bool TrimXMLCode=false, bool TrimSubnodes=false, char sep=' ')</div></div>
 <div class="ttc" id="aclassrt_1_1_x_m_l_parser_html_abcb08697c5d07aa5ddc45a03c9e79a90"><div class="ttname"><a href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#abcb08697c5d07aa5ddc45a03c9e79a90">rt::XMLParser::GetNodeDocument</a></div><div class="ttdeci">bool GetNodeDocument(rt::String &amp;doc_out)</div></div>
 <div class="ttc" id="aclassrt_1_1_x_m_l_parser_html_aca8a647ad36de76a9e2bcd5727804e8a"><div class="ttname"><a href="../../d0/d2c/classrt_1_1_x_m_l_parser.html#aca8a647ad36de76a9e2bcd5727804e8a">rt::XMLParser::GetOuterXML</a></div><div class="ttdeci">bool GetOuterXML(rt::String &amp;text) const</div></div>
-<div class="ttc" id="agroup___both__consoleand__file_html_ga7263964d3be25fc05cdc28e40b88409e"><div class="ttname"><a href="../../d5/d96/group___both__consoleand__file.html#ga7263964d3be25fc05cdc28e40b88409e">_LOG</a></div><div class="ttdeci">#define _LOG(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00218">runtime_base.h:218</a></div></div>
+<div class="ttc" id="aruntime__base_8h_html_a7263964d3be25fc05cdc28e40b88409e"><div class="ttname"><a href="../../df/d5e/runtime__base_8h.html#a7263964d3be25fc05cdc28e40b88409e">_LOG</a></div><div class="ttdeci">#define _LOG(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d5e/runtime__base_8h_source.html#l00183">runtime_base.h:183</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

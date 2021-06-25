@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['platform_5f32bit_8026',['PLATFORM_32BIT',['../de/d03/platform_8h.html#a5feb8b0a62907253f718e4122db9e139',1,'platform.h']]],
-  ['platform_5fintel_5fipp_5fsupport_8027',['PLATFORM_INTEL_IPP_SUPPORT',['../de/d03/platform_8h.html#a10fe3ae3dc8248728da29e19bef6e078',1,'platform.h']]],
-  ['platform_5fintel_5fmkl_5fsupport_8028',['PLATFORM_INTEL_MKL_SUPPORT',['../de/d03/platform_8h.html#ab46aab5d6dfe9e9f729cc073884e5314',1,'platform.h']]],
-  ['platform_5fopengl_5fsupport_8029',['PLATFORM_OPENGL_SUPPORT',['../de/d03/platform_8h.html#a5042739f6e25e77a27401846bf4f2037',1,'platform.h']]],
-  ['platform_5frelease_5fbuild_8030',['PLATFORM_RELEASE_BUILD',['../de/d03/platform_8h.html#a89e70b0b73c480801bd37065898f09ec',1,'platform.h']]]
+  ['assert_8454',['ASSERT',['../df/d5e/runtime__base_8h.html#aca68c0d4ac8df0838e209fb5300f7be3',1,'runtime_base.h']]],
+  ['assert_5ffloat_8455',['ASSERT_FLOAT',['../df/d5e/runtime__base_8h.html#aac3fae3ed4dfbc0edaf3b8a17e14f3e1',1,'runtime_base.h']]],
+  ['asserth_8456',['ASSERTH',['../df/d5e/runtime__base_8h.html#a08579e90cb3e5e43f4af418104aef5cf',1,'runtime_base.h']]]
 ];

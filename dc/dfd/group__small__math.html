@@ -88,8 +88,7 @@ $(document).ready(function(){initNavTree('dc/dfd/group__small__math.html','../..
 <div class="header">
   <div class="summary">
 <a href="#groups">Modules</a> &#124;
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">Small_math<div class="ingroups"><a class="el" href="../../da/de8/group__rt.html">Rt</a></div></div>  </div>
 </div><!--header-->
@@ -128,49 +127,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d58/structrt_1_1_vec_3_01t___val_00_014_01_4.html">rt::Vec&lt; t_Val, 4 &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:gae7c7404b285545cb5d9fead7498ecfdf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dfd/group__small__math.html#gae7c7404b285545cb5d9fead7498ecfdf">CPF_STRING_VEC_CONNECT_OP</a>(T)</td></tr>
-<tr class="separator:gae7c7404b285545cb5d9fead7498ecfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="gae7c7404b285545cb5d9fead7498ecfdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae7c7404b285545cb5d9fead7498ecfdf">&#9670;&nbsp;</a></span>CPF_STRING_VEC_CONNECT_OP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CPF_STRING_VEC_CONNECT_OP</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">T</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> chan&gt; \</div>
-<div class="line">FORCEINL _SE&lt;String_Ref, tos::S_&lt;chan&gt; &gt;  <a class="code" href="../../d1/d64/group___functions__json.html#gaf71ddcc9172b68fbfef49958e854ba6a">operator + </a>(<span class="keyword">const</span> String_Ref&amp; left, <span class="keyword">const</span> Vec&lt;T,chan&gt;&amp; right) \</div>
-<div class="line">{ <span class="keywordflow">return</span> _SE&lt;String_Ref, tos::S_&lt;chan&gt; &gt; ( (left), (right) ); } \</div>
-<div class="line">template&lt;int chan&gt; \</div>
-<div class="line">FORCEINL _SE&lt;tos::S_&lt;chan&gt;, String_Ref&gt;  <a class="code" href="../../d1/d64/group___functions__json.html#gaf71ddcc9172b68fbfef49958e854ba6a">operator + </a>(<span class="keyword">const</span> Vec&lt;T,chan&gt;&amp; left, <span class="keyword">const</span> String_Ref&amp; right) \</div>
-<div class="line">{ <span class="keywordflow">return</span> _SE&lt;tos::S_&lt;chan&gt;, String_Ref&gt; ( (left), (right) ); }      \</div>
-<div class="line">template&lt;typename t_Left, typename t_Right, int chan&gt; FORCEINL      \</div>
-<div class="line">_SE&lt;tos::S_&lt;chan&gt;, _SE&lt;t_Left,t_Right&gt; &gt;                            \</div>
-<div class="line">operator + (<span class="keyword">const</span> Vec&lt;T,chan&gt;&amp; p, <span class="keyword">const</span> _SE&lt;t_Left,t_Right&gt;&amp; x)     \</div>
-<div class="line">{ <span class="keywordflow">return</span> _SE&lt;tos::S_&lt;chan&gt;, _SE&lt;t_Left,t_Right&gt; &gt;((p),x); }         \</div>
-<div class="line">template&lt;typename t_Left, typename t_Right, int chan&gt; FORCEINL      \</div>
-<div class="line">_SE&lt;_SE&lt;t_Left,t_Right&gt; , tos::S_&lt;chan&gt;&gt;                                        \</div>
-<div class="line">operator + (<span class="keyword">const</span> _SE&lt;t_Left,t_Right&gt;&amp; x, <span class="keyword">const</span> Vec&lt;T,chan&gt;&amp; p)     \</div>
-<div class="line">{ <span class="keywordflow">return</span> _SE&lt;_SE&lt;t_Left,t_Right&gt;, tos::S_&lt;chan&gt;&gt;(x, (p)); }         \</div>
-<div class="ttc" id="agroup___functions__json_html_gaf71ddcc9172b68fbfef49958e854ba6a"><div class="ttname"><a href="../../d1/d64/group___functions__json.html#gaf71ddcc9172b68fbfef49958e854ba6a">rt::operator+</a></div><div class="ttdeci">FORCEINL auto operator+(const String_Ref &amp;left, const _JVar&lt; LEFT, T, VAL_TYPE &gt; &amp;right)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d05/json_8h_source.html#l00333">json.h:333</a></div></div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../da/d52/small__math_8h_source.html#l00526">526</a> of file <a class="el" href="../../da/d52/small__math_8h_source.html">small_math.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

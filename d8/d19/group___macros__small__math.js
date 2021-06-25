@@ -1,5 +1,6 @@
 var group___macros__small__math =
 [
+    [ "CPF_STRING_VEC_CONNECT_OP", "d8/d19/group___macros__small__math.html#gae7c7404b285545cb5d9fead7498ecfdf", null ],
     [ "DEF_VEC_FUNC", "d8/d19/group___macros__small__math.html#gae5d89f3d0d6c0b18df28332077e89b74", null ],
     [ "DEF_VEC_OP", "d8/d19/group___macros__small__math.html#ga7fcc00f34b6bfc02850675f08c678097", null ],
     [ "DEF_VEC_OP", "d8/d19/group___macros__small__math.html#ga7fcc00f34b6bfc02850675f08c678097", null ],

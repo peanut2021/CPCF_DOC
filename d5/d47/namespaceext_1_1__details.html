@@ -224,6 +224,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a35ce7012a5af12e01118f221dbd59e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">a &lt; b: -1, a == b:0, a &gt; b:1  <a href="../../d5/d47/namespaceext_1_1__details.html#a35ce7012a5af12e01118f221dbd59e62">More...</a><br /></td></tr>
 <tr class="separator:a35ce7012a5af12e01118f221dbd59e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a825573db2d5c6d3e55b6e49324fd9d53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d47/namespaceext_1_1__details.html#a825573db2d5c6d3e55b6e49324fd9d53">BN_Div</a> (const <a class="el" href="../../de/d00/classext_1_1__details_1_1_b_n___ref.html">BN_Ref</a> &amp;a, const <a class="el" href="../../de/d00/classext_1_1__details_1_1_b_n___ref.html">BN_Ref</a> &amp;b, <a class="el" href="../../d2/d9e/classext_1_1_big_num_mutable.html">ext::BigNumMutable</a> *remainder, <a class="el" href="../../d2/d9e/classext_1_1_big_num_mutable.html">ext::BigNumMutable</a> &amp;ret)</td></tr>
+<tr class="memdesc:a825573db2d5c6d3e55b6e49324fd9d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">ret = (a - *reminder)/b  <a href="../../d5/d47/namespaceext_1_1__details.html#a825573db2d5c6d3e55b6e49324fd9d53">More...</a><br /></td></tr>
 <tr class="separator:a825573db2d5c6d3e55b6e49324fd9d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adee9f1d30f55e3b2f3497fb1a728be79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">BN_Div</a> (const <a class="el" href="../../db/dc1/classext_1_1__details_1_1_b_n___unsigned.html">BN_Unsigned</a> &amp;a, UINT b, UINT *reminder, <a class="el" href="../../d2/d9e/classext_1_1_big_num_mutable.html">ext::BigNumMutable</a> &amp;ret)</td></tr>
 <tr class="memdesc:adee9f1d30f55e3b2f3497fb1a728be79"><td class="mdescLeft">&#160;</td><td class="mdescRight">ret = (a - *reminder)/b  <a href="../../d5/d47/namespaceext_1_1__details.html#adee9f1d30f55e3b2f3497fb1a728be79">More...</a><br /></td></tr>
@@ -823,6 +824,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>ret = (a - *reminder)/b </p>
+<p>if it is an early out case, quotient and remainder will both be 0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td></td></tr>
+    <tr><td class="paramname">b</td><td></td></tr>
+    <tr><td class="paramname">remainder</td><td></td></tr>
+    <tr><td class="paramname">ret</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="adee9f1d30f55e3b2f3497fb1a728be79"></a>
@@ -864,6 +876,16 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>ret = (a - *reminder)/b </p>
+<p>if it is an early out case, quotient and remainder will both be 0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td></td></tr>
+    <tr><td class="paramname">b</td><td></td></tr>
+    <tr><td class="paramname">reminder</td><td></td></tr>
+    <tr><td class="paramname">ret</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d9/d17/test_ext_8cpp-example.html#a75">test_ext.cpp</a>.</dd>
 </dl>
 

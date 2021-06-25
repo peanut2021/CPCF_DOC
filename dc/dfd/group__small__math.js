@@ -238,6 +238,5 @@ var group__small__math =
       [ "x", "d6/d58/structrt_1_1_vec_3_01t___val_00_014_01_4.html#a0a84dd73a1a65a7d3b9fb7d4eae2ee41", null ],
       [ "y", "d6/d58/structrt_1_1_vec_3_01t___val_00_014_01_4.html#a152bd7e183d5b6ef4a9f85e17e6b778b", null ],
       [ "z", "d6/d58/structrt_1_1_vec_3_01t___val_00_014_01_4.html#a3862c29bc88f4143d7e4194c64f842a3", null ]
-    ] ],
-    [ "CPF_STRING_VEC_CONNECT_OP", "dc/dfd/group__small__math.html#gae7c7404b285545cb5d9fead7498ecfdf", null ]
+    ] ]
 ];

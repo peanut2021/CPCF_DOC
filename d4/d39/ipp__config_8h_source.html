@@ -130,8 +130,8 @@ $(document).ready(function(){initNavTree('d4/d39/ipp__config_8h_source.html','..
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#define IPP_LINK_STATIC_LIB_PX</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../d5/dd4/group__ipp__config.html#ga03b0734c647bfc7c3d89a0da63e67e5f">   87</a></span>&#160;<span class="preprocessor">#define PNG_USE_GLOBAL_ARRAYS</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="../../d5/dd4/group__ipp__config.html#ga65052d120bde525b96cccef6664a69d9">   88</a></span>&#160;<span class="preprocessor">#define PNG_SETJMP_SUPPORTED</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../d9/d5e/group___macros___ipp.html#ga03b0734c647bfc7c3d89a0da63e67e5f">   87</a></span>&#160;<span class="preprocessor">#define PNG_USE_GLOBAL_ARRAYS</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="../../d9/d5e/group___macros___ipp.html#ga65052d120bde525b96cccef6664a69d9">   88</a></span>&#160;<span class="preprocessor">#define PNG_SETJMP_SUPPORTED</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">// #define NEED_SIGNAL_CATCHER for libjpg</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
@@ -146,7 +146,7 @@ $(document).ready(function(){initNavTree('d4/d39/ipp__config_8h_source.html','..
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#if defined(PLATFORM_WIN) </span></div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="../../d5/dd4/group__ipp__config.html#ga881e011004a24ba2e8fa634255dcc6c4">  103</a></span>&#160;<span class="preprocessor">#define _IPP_SEQUENTIAL_STATIC</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="../../d9/d5e/group___macros___ipp.html#ga881e011004a24ba2e8fa634255dcc6c4">  103</a></span>&#160;<span class="preprocessor">#define _IPP_SEQUENTIAL_STATIC</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define IPP_NO_DEFAULT_LIB</span></div>
@@ -190,16 +190,16 @@ $(document).ready(function(){initNavTree('d4/d39/ipp__config_8h_source.html','..
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#elif defined(IPP_LINK_STATIC_LIB_V8)</span></div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">    #define IPPAPI(type,name,arg) extern type IPP_STDCALL v8_##name arg;</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">    #define IPPCALL(name) v8_##name</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="../../d5/dd4/group__ipp__config.html#gaa950e82d2e401f414eef08337bc76d58">  147</a></span>&#160;<span class="preprocessor">#elif defined(IPP_LINK_STATIC_LIB_P8)</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="../../d9/d5e/group___macros___ipp.html#gaa950e82d2e401f414eef08337bc76d58">  147</a></span>&#160;<span class="preprocessor">#elif defined(IPP_LINK_STATIC_LIB_P8)</span></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">    #define IPPAPI(type,name,arg) extern type IPP_STDCALL p8_##name arg;</span></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">    #define IPPCALL(name) p8_##name</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="../../d5/dd4/group__ipp__config.html#gab918169c9d8336a5ca9bcf8ee31859f3">  151</a></span>&#160;<span class="preprocessor">    #define IPP_LINK_STATIC_LIB_PX </span></div>
-<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="../../d5/dd4/group__ipp__config.html#ga56073683f5d14a7052edc3095ef9c96a">  152</a></span>&#160;<span class="preprocessor">    #define IPPAPI(type,name,arg) extern type IPP_STDCALL name arg;</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="../../d5/dd4/group__ipp__config.html#gaf6706db70b4cbbdcfe820d21cf179c84">  153</a></span>&#160;<span class="preprocessor">    #define IPPCALL(name) name</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="../../d9/d5e/group___macros___ipp.html#gab918169c9d8336a5ca9bcf8ee31859f3">  151</a></span>&#160;<span class="preprocessor">    #define IPP_LINK_STATIC_LIB_PX </span></div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="../../d9/d5e/group___macros___ipp.html#ga56073683f5d14a7052edc3095ef9c96a">  152</a></span>&#160;<span class="preprocessor">    #define IPPAPI(type,name,arg) extern type IPP_STDCALL name arg;</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="../../d9/d5e/group___macros___ipp.html#gaf6706db70b4cbbdcfe820d21cf179c84">  153</a></span>&#160;<span class="preprocessor">    #define IPPCALL(name) name</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="../../d5/dd4/group__ipp__config.html#gaa4032710d3ba495197fc86d55d530aac">  156</a></span>&#160;<span class="preprocessor">#define IPPAPI_NOPREFIX(type,name,arg) extern type IPP_STDCALL name arg;</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="../../d9/d5e/group___macros___ipp.html#gaa4032710d3ba495197fc86d55d530aac">  156</a></span>&#160;<span class="preprocessor">#define IPPAPI_NOPREFIX(type,name,arg) extern type IPP_STDCALL name arg;</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#if defined(PLATFORM_WIN)</span></div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">//#pragma comment(lib,&quot;ippac90lgc.lib&quot;)</span></div>

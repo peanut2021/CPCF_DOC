@@ -9,22 +9,6 @@ var group__json =
       [ "CopyTo", "d7/dda/classrt_1_1___j_array.html#a9b90289a78dd92a5be34c0c9a142989b", null ],
       [ "GetLength", "d7/dda/classrt_1_1___j_array.html#af2041676363926dee58bea7fe529f784", null ]
     ] ],
-    [ "_JTag", "da/d64/structrt_1_1___j_tag.html", [
-      [ "_O", "d2/d3f/structrt_1_1___j_tag_1_1___o.html", [
-        [ "_O", "d2/d3f/structrt_1_1___j_tag_1_1___o.html#a09756c3b0a1b86da9b110644b7130aff", null ],
-        [ "_O", "d2/d3f/structrt_1_1___j_tag_1_1___o.html#ae689e5b2ee1250c9da5caab48287eede", null ],
-        [ "CopyTo", "d2/d3f/structrt_1_1___j_tag_1_1___o.html#a99bf08d984b2d4a9ae5ed8b7ae3941f9", null ],
-        [ "GetLength", "d2/d3f/structrt_1_1___j_tag_1_1___o.html#a08574c8cb47eb72cc0a71a0ebd3bb874", null ],
-        [ "_Obj", "d2/d3f/structrt_1_1___j_tag_1_1___o.html#a4750476cbeb1b164cb7ffb900a9c8c59", null ]
-      ] ],
-      [ "_JTag", "da/d64/structrt_1_1___j_tag.html#a2e27e7b1edc946cbee2b34e2a213f17c", null ],
-      [ "_JTag", "da/d64/structrt_1_1___j_tag.html#adc49f5bf490d944ce91d0c3eedccf502", null ],
-      [ "operator=", "da/d64/structrt_1_1___j_tag.html#a9b5278efa040742abdb01cce9309217e", null ],
-      [ "operator=", "da/d64/structrt_1_1___j_tag.html#ad2a4036443c27c9066636e99445f75e2", null ],
-      [ "operator=", "da/d64/structrt_1_1___j_tag.html#a51198a80c0064c82b45dc867890e3908", null ],
-      [ "operator=", "da/d64/structrt_1_1___j_tag.html#af209fce61d6fab475db383494f8f8f33", null ],
-      [ "tagname", "da/d64/structrt_1_1___j_tag.html#a537f06322daebe1a8abddf8f28cb92aa", null ]
-    ] ],
     [ "_JVal", "d4/dfd/classrt_1_1___j_val.html", [
       [ "_tagVARTYPE", "d4/dfd/classrt_1_1___j_val.html#a77f5e53f9c232817ea189f6bb48fb1c1", [
         [ "VARTYPE_BUILTIN", "d4/dfd/classrt_1_1___j_val.html#a77f5e53f9c232817ea189f6bb48fb1c1a1ed27e50ad37e4e36aafffe09d1dca25", null ],
@@ -223,6 +207,5 @@ var group__json =
     ] ],
     [ "JsonUnescapeString", "db/d92/classrt_1_1_json_unescape_string.html", [
       [ "JsonUnescapeString", "db/d92/classrt_1_1_json_unescape_string.html#a4f5b889ded02974207c2efc70ac0d270", null ]
-    ] ],
-    [ "J_EXPR_CONNECT_OP", "d8/d91/group__json.html#ga00317b0dfcce743265db7e94f0a776a7", null ]
+    ] ]
 ];

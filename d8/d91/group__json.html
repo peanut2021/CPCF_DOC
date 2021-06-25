@@ -88,8 +88,7 @@ $(document).ready(function(){initNavTree('d8/d91/group__json.html','../../'); in
 <div class="header">
   <div class="summary">
 <a href="#groups">Modules</a> &#124;
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">Json<div class="ingroups"><a class="el" href="../../da/de8/group__rt.html">Rt</a></div></div>  </div>
 </div><!--header-->
@@ -108,8 +107,6 @@ Modules</h2></td></tr>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classrt_1_1___j_array.html">rt::_JArray&lt; t_String &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/db6/classrt_1_1_json.html" title="Memory efficient simply Json parser and composer.">Json</a> K-V array at same level.  <a href="../../d7/dda/classrt_1_1___j_array.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d64/structrt_1_1___j_tag.html">rt::_JTag</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfd/classrt_1_1___j_val.html">rt::_JVal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,58 +130,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d92/classrt_1_1_json_unescape_string.html">rt::JsonUnescapeString</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escape string to unescape string.  <a href="../../db/d92/classrt_1_1_json_unescape_string.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga00317b0dfcce743265db7e94f0a776a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d91/group__json.html#ga00317b0dfcce743265db7e94f0a776a7">J_EXPR_CONNECT_OP</a>(type,  type_in,  vt)</td></tr>
-<tr class="separator:ga00317b0dfcce743265db7e94f0a776a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga00317b0dfcce743265db7e94f0a776a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga00317b0dfcce743265db7e94f0a776a7">&#9670;&nbsp;</a></span>J_EXPR_CONNECT_OP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define J_EXPR_CONNECT_OP</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">type, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">type_in, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">vt&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a> _JVar&lt;LPVOID, type, vt&gt;                                \</div>
-<div class="line">operator = (type_in p)                                          \</div>
-<div class="line">{   <span class="keywordflow">if</span>(tagname.IsEmpty())                                       \</div>
-<div class="line">    {   <span class="keyword">static</span> type __empty_p;                                  \</div>
-<div class="line">        return _JVar&lt;LPVOID, type, vt&gt;(tagname, __empty_p);     \</div>
-<div class="line">    } <span class="keywordflow">else</span> { <span class="keywordflow">return</span> _JVar&lt;LPVOID, type, vt&gt;(tagname, p); }      \</div>
-<div class="line">}                                                               \</div>
-<div class="ttc" id="agroup___macros__predefines_html_gae54184968638eb550208ae9a1a888471"><div class="ttname"><a href="../../d5/dde/group___macros__predefines.html#gae54184968638eb550208ae9a1a888471">FORCEINL</a></div><div class="ttdeci">#define FORCEINL</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db2/predefines_8h_source.html#l00227">predefines.h:227</a></div></div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00269">269</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
